@@ -14,3 +14,8 @@ Hier treffen sich Technikbegeisterte, Kreative und Neugierige aus dem Partheland
 {% comment %} Startseite: Header + kurzer Teaser; Sponsor dezent unterhalb des Heros sichtbar {% endcomment %}
 {% include home-sponsors.html %}
 
+
+### Projekte
+
+- [Smart City](/projekte/smart-city/)
+
