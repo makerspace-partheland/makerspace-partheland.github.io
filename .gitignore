@@ -6,3 +6,5 @@ vendor/
 
 
 github-pages-fahrplan.md
+/hugo-export
+.DS_Store
