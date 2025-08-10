@@ -4,9 +4,19 @@
 @import "minimal-mistakes";
 
 /* Hero-Bild weniger stark beschneiden */
-.page__hero--overlay {
+.masthead { background: #ffffff; }
+.masthead__inner-wrap { background: transparent; }
+
+/* Hero auf Startseite: komplette Grafik ohne Beschnitt anzeigen */
+.layout--splash .page__hero--overlay {
   background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 22%; /* Bild-Seitenverhältnis ~223/1024 */
+  min-height: 0;
 }
+.layout--splash .page__hero--overlay .page__title,
+.layout--splash .page__hero--overlay .page__lead { display: none; }
 
 /* Sponsor-Block auf der Startseite */
 .home-sponsors { text-align: center; margin: 2rem 0; }

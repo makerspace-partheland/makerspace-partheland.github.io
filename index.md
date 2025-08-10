@@ -1,7 +1,7 @@
 ---
 layout: splash
-title: ""
-excerpt: ""
+title: " "
+excerpt: " "
 header:
   overlay_image: /assets/images/header-startseite.png
   overlay_filter: 0.2
@@ -9,8 +9,6 @@ header:
 feature_row:
   - title: ""
 ---
-{% comment %} Startseite: reine Header‑Bildbühne; Sponsoren dezent unterhalb des Inhalts {% endcomment %}
-
+{% comment %} Startseite: reine Header‑Bildbühne; Sponsor dezent unterhalb des Heros sichtbar {% endcomment %}
 {% include home-sponsors.html %}
-
 
