@@ -1,0 +1,33 @@
+{%- assign u = include.user | strip -%}
+{%- assign d = include.domain | strip -%}
+{%- assign lbl = include.label | default: '' -%}
+<span class="obf-email{%- if include.class %} {{ include.class }}{%- endif -%}"
+      data-u="{{ u | escape }}"
+      data-d="{{ d | escape }}"
+      {%- if include.subject %} data-s="{{ include.subject | escape }}"{%- endif -%}
+      {%- if include.body %} data-b="{{ include.body | escape }}"{%- endif -%}
+      {%- if lbl != '' %} data-l="{{ lbl | escape }}"{%- endif -%}></span>
+<script>(function(){
+  try {
+    var el = document.currentScript && document.currentScript.previousElementSibling;
+    if(!el) return;
+    var u = el.dataset.u || '';
+    var d = el.dataset.d || '';
+    if(!u || !d) return;
+    var l = el.dataset.l || (u + '@' + d);
+    var params = [];
+    if (el.dataset.s) params.push('subject=' + encodeURIComponent(el.dataset.s));
+    if (el.dataset.b) params.push('body=' + encodeURIComponent(el.dataset.b));
+    var href = 'mailto:' + u + '@' + d + (params.length ? ('?' + params.join('&')) : '');
+    var a = document.createElement('a');
+    a.href = href;
+    a.textContent = l;
+    el.parentNode.replaceChild(a, el);
+  } catch(e) { /* noop */ }
+})();</script>
+<noscript>
+  <span class="obf-email-noscript">E-Mail: {{ u }} [at] {{ d | replace: '.', ' [dot] ' }}</span>
+  <!-- Aktivieren Sie JavaScript, um die anklickbare Adresse zu sehen. -->
+</noscript>
+
+

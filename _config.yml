@@ -1,0 +1,24 @@
+title: Makerspace Partheland
+description: Verein, Projekte & Smart City
+url: https://makerspace-partheland.de
+theme: minimal-mistakes-jekyll
+
+markdown: kramdown
+permalink: /:path/
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-include-cache
+
+minimal_mistakes_skin: default
+logo: /assets/images/logo.png
+
+collections:
+  projects:
+    output: true
+    permalink: /projekte/:name/
+  events:
+    output: true
+    permalink: /termine/:name/
+
+
