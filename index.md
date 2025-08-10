@@ -3,8 +3,8 @@ layout: splash
 title: " "
 excerpt: " "
 header:
-  overlay_image: /assets/images/header-startseite.png
-  overlay_filter: 0.2
+  overlay_image: /assets/images/header-startseite-full.png
+  overlay_filter: 0.0
   show_overlay_excerpt: false
 feature_row:
   - title: ""
