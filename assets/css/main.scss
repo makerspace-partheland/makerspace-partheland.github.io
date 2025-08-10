@@ -3,4 +3,16 @@
 @import "minimal-mistakes/skins/default";
 @import "minimal-mistakes";
 
+/* Hero-Bild weniger stark beschneiden */
+.page__hero--overlay {
+  background-position: center top;
+}
+
+/* Sponsor-Block auf der Startseite */
+.home-sponsors { text-align: center; margin: 2rem 0; }
+.home-sponsors__title { font-size: 1rem; text-transform: uppercase; letter-spacing: .03em; margin-bottom: .5rem; opacity: .8; }
+.home-sponsors__logos { display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap; }
+.home-sponsors__item img { max-width: 280px; height: auto; filter: grayscale(10%); transition: filter .2s ease; }
+.home-sponsors__item:hover img { filter: none; }
+
 

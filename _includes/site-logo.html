@@ -1,0 +1,10 @@
+<a class="site-title" href="{{ '/' | absolute_url }}">
+  <span class="brand-line-1">{{ site.title }}</span>
+  {% if site.subtitle %}<span class="brand-line-2">{{ site.subtitle }}</span>{% endif %}
+</a>
+<style>
+  .site-title { display: inline-flex; flex-direction: column; line-height: 1.1; }
+  .brand-line-1 { font-weight: 700; font-size: 1.05rem; }
+  .brand-line-2 { font-weight: 400; font-size: .8rem; opacity: .9; margin-top: .1rem; }
+</style>
+

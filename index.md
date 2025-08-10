@@ -1,25 +1,16 @@
 ---
 layout: splash
-title: Makerspace Partheland e.V.
-excerpt: "die Mitmachwerkstatt"
+title: ""
+excerpt: ""
 header:
   overlay_image: /assets/images/header-startseite.png
+  overlay_filter: 0.2
+  show_overlay_excerpt: false
 feature_row:
-  - title: "Verein"
-    excerpt: "Über uns, Ziele und Mitmachen"
-    url: "/verein/"
-  - title: "Projekte"
-    excerpt: "Aktivitäten und Entwicklungen"
-    url: "/projekte/"
-  - title: "Termine"
-    excerpt: "Treffen und Veranstaltungen"
-    url: "/termine/"
-feature_row2:
-  - title: "Sponsoren"
-    excerpt: "Unsere Unterstützer"
-    url: "/sponsoren/"
+  - title: ""
 ---
-{% include feature_row %}
-{% include feature_row id="feature_row2" %}
+{% comment %} Startseite: reine Header‑Bildbühne; Sponsoren dezent unterhalb des Inhalts {% endcomment %}
+
+{% include home-sponsors.html %}
 
 

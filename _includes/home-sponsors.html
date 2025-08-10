@@ -1,0 +1,13 @@
+{% if site.data.sponsors and site.data.sponsors.size > 0 %}
+<section class="home-sponsors">
+  <h2 class="home-sponsors__title">Unterstützt von</h2>
+  <div class="home-sponsors__logos">
+    {% for s in site.data.sponsors %}
+      <a href="{{ s.url }}" target="_blank" rel="noopener" class="home-sponsors__item">
+        <img src="{{ s.logo }}" alt="{{ s.alt | default: s.name }}" />
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
