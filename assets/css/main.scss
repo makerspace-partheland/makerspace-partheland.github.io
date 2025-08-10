@@ -1,5 +1,6 @@
 ---
 ---
+/* stylelint-disable */
 @import "minimal-mistakes/skins/default";
 @import "minimal-mistakes";
 
@@ -29,5 +30,16 @@
 .layout--splash .page__content,
 .layout--splash .page__inner-wrap { margin-bottom: 0; padding-bottom: 0; }
 .page__footer { margin-top: 0; }
+
+/* Vereinsseite: volle Breite nutzen, Inhalt linksbündig */
+/* Globale volle Breite für Seiten mit Klasse 'wide' */
+.wide .initial-content,
+.wide .page,
+.wide .page__inner-wrap,
+.wide .page__content { max-width: 100%; width: 100%; }
+.wide .initial-content,
+.wide .page__inner-wrap { padding-left: 0; padding-right: 0; }
+.page__content { text-align: left; }
+.page__content img { display: block; margin: 0 0 1rem 0; }
 
 

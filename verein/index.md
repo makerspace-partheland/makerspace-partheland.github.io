@@ -2,6 +2,7 @@
 layout: single
 title: Verein
 permalink: /verein/
+classes: [wide, page-verein]
 ---
 
 ![](/assets/images/verein/Bildschirmfoto-vom-2022-04-09-17-53-59.png)

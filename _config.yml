@@ -26,3 +26,25 @@ sass:
   quiet_deps: true
 
 
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      classes: wide
+  - scope:
+      path: ""
+      type: posts
+    values:
+      classes: wide
+  - scope:
+      path: ""
+      type: projects
+    values:
+      classes: wide
+  - scope:
+      path: ""
+      type: events
+    values:
+      classes: wide
+
