@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Smart City
-excerpt: Unterstützung von Smart‑City‑Aktivitäten mit LoRaWAN‑Sensorik und Daten.
+permalink: /projekte/smart-city/
 classes: wide
 ---
 
