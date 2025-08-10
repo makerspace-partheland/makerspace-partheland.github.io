@@ -2,6 +2,7 @@
 layout: splash
 title: " "
 excerpt: " "
+classes: wide
 header:
   overlay_image: /assets/images/header-startseite-full.png
   overlay_filter: 0.0

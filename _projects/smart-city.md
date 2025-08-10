@@ -1,6 +1,8 @@
 ---
+layout: single
 title: Smart City
 excerpt: Unterstützung von Smart‑City‑Aktivitäten mit LoRaWAN‑Sensorik und Daten.
+classes: wide
 ---
 
 (aktualisiert am 28.07.2023)
