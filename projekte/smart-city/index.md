@@ -5,8 +5,6 @@ permalink: /projekte/smart-city/
 classes: wide
 ---
 
-(aktualisiert am 28.07.2023)
-
 Im Rahmen des <a rel="noreferrer noopener" href="https://open-government-kommunen.de/" target="_blank">Regionalen Open Government Labor</a> der Stadt Brandis beteiligen wir uns seit 2022 am Aufbau und dem stetigen Betrieb von Bürger-Umweltmessstationen und eines LoRaWAN Netzwerkes in der Gemeinde Brandis. Hier kümmern wir uns ehrenamtlich um alle anfallenden Dinge.
 
 Seit Dezember 2022 unterstützen wir alle weiteren <a rel="noreferrer noopener" href="https://partheland.de" target="_blank">Partheland</a> Kommunen (Borsdorf, Naunhof mit Belgershain und Parthenstein, Großpösna und Machern) im Rahmen des Smart City Projektes durch Schulung von sogenannten Multiplikatoren, welche vor Ort die jeweiligen Ansprechpartner sind. Zudem stellen wir hierfür ehrenamtlich die Software für die jeweiligen Umweltmessstationen zur Verfügung, bereiten im Hintergrund alles für den Datentransfer vor, überwachen stetig die Stationen und Infrastruktur und viele weitere Dinge die man nicht sieht.

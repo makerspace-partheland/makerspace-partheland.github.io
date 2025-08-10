@@ -25,6 +25,7 @@ Details und Hinweise findest du hier: [Reparatur‑Treff](/termine/reparatur-tre
   <p>Aktuell sind keine Termine geplant.</p>
 {% endif %}
 
+
 ### Vergangen
 {% if past and past.size > 0 %}
 <ul>
