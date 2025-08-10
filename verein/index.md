@@ -5,7 +5,7 @@ permalink: /verein/
 classes: [wide, page-verein]
 ---
 
-![](/assets/images/verein/Bildschirmfoto-vom-2022-04-09-17-53-59.png)
+![](/assets/images/verein/Bildschirmfoto-vom-2022-04-09-17-53-59.png){: width="420" }
 
 ## Der Makerspace Partheland e.V.
 

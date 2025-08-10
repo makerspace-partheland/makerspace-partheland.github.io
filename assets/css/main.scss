@@ -42,4 +42,7 @@
 .page__content { text-align: left; }
 .page__content img { display: block; margin: 0 0 1rem 0; }
 
+/* Gemeinsame Bildgrößenkontrolle via Markdown-Kürzel {: width="..." } */
+img[width] { height: auto; }
+
 
