@@ -1,13 +1,11 @@
 ---
 layout: single
-title: Verein
+title: Der Makerspace Partheland e.V.
 permalink: /verein/
 classes: [wide, page-verein]
 ---
 
 ![](/assets/images/verein/Bildschirmfoto-vom-2022-04-09-17-53-59.png){: width="420" }
-
-## Der Makerspace Partheland e.V.
 
 Der Makerspace Partheland e.V. ist seit 2022 ein gemeinnütziger Verein mit Sitz in Brandis, Ortsteil Beucha. Unser Ziel ist es, eine offene Plattform für **„Selbermacher“** zu schaffen – einen Raum, in dem Wissen und Fertigkeiten geteilt, erlernt und kreativ umgesetzt werden können.
 
