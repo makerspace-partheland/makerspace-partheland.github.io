@@ -3,14 +3,13 @@ main:
     url: /
   - title: Verein
     url: /verein/
-  - title: Smart City
-    url: /smart-city/
+    children:
+      - title: Mitglied werden
+        url: /mitglied-werden/
   - title: Projekte
     url: /projekte/
   - title: Termine
     url: /termine/
-  - title: Mitglied werden
-    url: /mitglied-werden/
   - title: Kontakt
     url: /kontakt/
   - title: Sponsoren

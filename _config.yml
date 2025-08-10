@@ -1,5 +1,5 @@
-title: Makerspace Partheland
-description: Verein, Projekte & Smart City
+title: Makerspace Partheland e.V.
+description: die Mitmachwerkstatt
 url: https://makerspace-partheland.de
 theme: minimal-mistakes-jekyll
 
@@ -20,5 +20,8 @@ collections:
   events:
     output: true
     permalink: /termine/:name/
+
+sass:
+  quiet_deps: true
 
 

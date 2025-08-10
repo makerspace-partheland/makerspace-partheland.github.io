@@ -9,4 +9,7 @@ group :jekyll_plugins do
   gem "jekyll-include-cache"
 end
 
+# Optional: unterdrückt Faraday-Warnung bzgl. Retry-Middleware
+gem "faraday-retry", "~> 2"
+
 

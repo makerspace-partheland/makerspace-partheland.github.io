@@ -1,18 +1,25 @@
 ---
 layout: splash
-title: Makerspace Partheland
-excerpt: "Reparatur‑Treff, Smart‑City‑Sensorik, 3D‑Druck & mehr."
+title: Makerspace Partheland e.V.
+excerpt: "die Mitmachwerkstatt"
+header:
+  overlay_image: /assets/images/header-startseite.png
 feature_row:
-  - title: "Smart City"
-    excerpt: "Sensorik, LoRaWAN, Live‑Daten"
-    url: "/smart-city/"
+  - title: "Verein"
+    excerpt: "Über uns, Ziele und Mitmachen"
+    url: "/verein/"
   - title: "Projekte"
-    excerpt: "Von Gateways bis 3D‑Druck"
+    excerpt: "Aktivitäten und Entwicklungen"
     url: "/projekte/"
-  - title: "Mitglied werden"
-    excerpt: "Mitmachen & unterstützen"
-    url: "/mitglied-werden/"
+  - title: "Termine"
+    excerpt: "Treffen und Veranstaltungen"
+    url: "/termine/"
+feature_row2:
+  - title: "Sponsoren"
+    excerpt: "Unsere Unterstützer"
+    url: "/sponsoren/"
 ---
 {% include feature_row %}
+{% include feature_row id="feature_row2" %}
 
 
