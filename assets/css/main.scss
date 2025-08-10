@@ -9,16 +9,16 @@
 
 /* Hero auf Startseite: komplette Grafik ohne Beschnitt anzeigen */
 .layout--splash .page__hero--overlay {
-  background-position: center top;
+  background-position: center 12%; /* Focus: oberen Bereich zeigen */
   background-size: cover; /* füllt die Breite */
   background-repeat: no-repeat;
-  min-height: 58vh; /* großzügiger Hero */
+  min-height: 70vh; /* größerer Hero */
 }
 .layout--splash .page__hero--overlay .page__title,
 .layout--splash .page__hero--overlay .page__lead { display: none; }
 
 /* Sponsor-Block auf der Startseite */
-.home-sponsors { text-align: center; margin: 2rem 0; }
+.home-sponsors { text-align: center; margin: 1rem 0 0; }
 .home-sponsors__title { font-size: 1rem; text-transform: uppercase; letter-spacing: .03em; margin-bottom: .5rem; opacity: .8; }
 .home-sponsors__logos { display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap; }
 .home-sponsors__item img { max-width: 280px; height: auto; filter: grayscale(10%); transition: filter .2s ease; }
