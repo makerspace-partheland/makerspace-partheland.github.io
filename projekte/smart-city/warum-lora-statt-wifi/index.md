@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Warum nutzen wir LoRa und kein WiFi für die Umweltsensoren?
-permalink: /smart-city/warum-nutzen-wir-lora-und-kein-wifi-fuer-die-umweltsensoren/
+permalink: /projekte/smart-city/warum-lora-statt-wifi/
 ---
 
 LoRaWAN (Long Range Wide Area Network) ist ein Netzwerkprotokoll, das speziell für den Einsatz im Internet of Things (IoT) entwickelt wurde. Es ermöglicht die Übertragung von Daten über lange Distanzen und mit geringem Stromverbrauch.
@@ -22,5 +22,4 @@ TTN bietet einige Vorteile für Entwickler und Anwender:
 - Globale Abdeckung: TTN hat eine globale Community von Entwicklern und Anwendern, die das Netzwerk erweitern und unterstützen und daher kann es eine breite Abdeckung bieten.
 - Kosteneffizienz: TTN nutzt LoRaWAN, ein niedrigenergiespezifisches Protokoll, das es ermöglicht, IoT-Geräte mit geringem Stromverbrauch und geringen Kosten zu betreiben.
 - Sicherheit: TTN nutzt Advanced Encryption Standard (AES) für die Datenverschlüsselung und Authentifizierung, was es sehr sicher macht.
-
 
