@@ -4,17 +4,21 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-/* Hero-Bild weniger stark beschneiden */
+/* Masthead / Navigation vollflächig einfärben */
 .masthead { background: #ffffff; }
 .masthead__inner-wrap { background: transparent; }
+.masthead .greedy-nav { background: transparent; }
 
-/* Hero auf Startseite: komplette Grafik ohne Beschnitt anzeigen */
+/* Hero auf Startseite: skalieren mit Limit, nicht zu hoch auf großen Screens */
 .layout--splash .page__hero--overlay {
-  background-position: center top;
-  background-size: 100% auto; /* volle Breite, kein Beschnitt */
+  background-position: center center;
+  background-size: cover;
   background-repeat: no-repeat;
-  padding-top: 40.1%; /* Seitenverhältnis ~602/1503 */
-  min-height: 0;
+  /* Feste Höhe statt padding-aspect-hack, mit sinnvollen Grenzen */
+  height: clamp(260px, 45vh, 520px);
+  max-height: 55vh;
+  min-height: 260px;
+  padding-top: 0;
 }
 .layout--splash .page__hero--overlay .page__title,
 .layout--splash .page__hero--overlay .page__lead { display: none; }
