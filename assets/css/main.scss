@@ -5,9 +5,15 @@
 @import "minimal-mistakes";
 
 /* Masthead / Navigation vollflächig einfärben */
-.masthead { background: #ffffff; }
+.masthead { background: transparent; }
 .masthead__inner-wrap { background: transparent; }
 .masthead .greedy-nav { background: transparent; }
+
+/* Globale Grundflächen harmonisieren */
+html, body { background: #f5f5f7; }
+.initial-content, .page, .page__inner-wrap { background: #ffffff; }
+.page__footer { background: #227ea8; color: #ffffff; }
+.page__footer a { color: #ffffff; }
 
 /* Hero auf Startseite: Höhe begrenzen, angenehmer Crop */
 .layout--splash .page__hero--overlay {
@@ -18,7 +24,7 @@
   /* Höhe begrenzen, volle Breite zulassen */
   height: clamp(240px, 32vw, 420px);
   width: 100%;
-  background-color: #ffffff;
+  background-color: inherit;
   padding-top: 0;
 }
 .layout--splash .page__hero--overlay .page__title,
