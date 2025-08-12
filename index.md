@@ -4,7 +4,7 @@ title: " "
 excerpt: " "
 classes: wide
 header:
-  overlay_image: /assets/images/Header_Webseite2-1200x514.png
+  overlay_image: /assets/images/header-startseite.png
   overlay_filter: 0.0
   show_overlay_excerpt: false
 ---

@@ -9,19 +9,17 @@
 .masthead__inner-wrap { background: transparent; }
 .masthead .greedy-nav { background: transparent; }
 
-/* Hero auf Startseite: Bild vollständig anzeigen (nicht beschneiden) */
+/* Hero auf Startseite: Höhe begrenzen, angenehmer Crop */
 .layout--splash .page__hero--overlay {
+  /* Vollständige Bildsichtbarkeit, kein Beschnitt */
   background-position: center center;
   background-repeat: no-repeat;
-  /* Bild vollständig einpassen, kein Beschnitt */
   background-size: contain;
-  /* Höhe aus Seitenverhältnis ableiten (moderne Browser) */
-  aspect-ratio: 1200 / 514;
-  /* Fallback für ältere Browser ohne aspect-ratio */
-  height: auto;
-  min-height: 0;
-  max-height: none;
-  padding-top: 42.8333%; /* 514/1200 * 100 */
+  /* Höhe begrenzen, volle Breite zulassen */
+  height: clamp(240px, 32vw, 420px);
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 0;
 }
 .layout--splash .page__hero--overlay .page__title,
 .layout--splash .page__hero--overlay .page__lead { display: none; }

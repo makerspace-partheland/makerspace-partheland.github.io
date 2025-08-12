@@ -12,7 +12,8 @@ plugins:
   - jekyll-include-cache
 
 minimal_mistakes_skin: air
-logo: /assets/images/logo.png
+# Deaktiviert Bild-Logo in der Navbar, damit nicht doppelt gebrandet wird
+logo: 
 
 collections:
   projects:
