@@ -9,16 +9,19 @@
 .masthead__inner-wrap { background: transparent; }
 .masthead .greedy-nav { background: transparent; }
 
-/* Hero auf Startseite: skalieren mit Limit, nicht zu hoch auf großen Screens */
+/* Hero auf Startseite: Bild vollständig anzeigen (nicht beschneiden) */
 .layout--splash .page__hero--overlay {
   background-position: center center;
-  background-size: cover;
   background-repeat: no-repeat;
-  /* Feste Höhe statt padding-aspect-hack, mit sinnvollen Grenzen */
-  height: clamp(260px, 45vh, 520px);
-  max-height: 55vh;
-  min-height: 260px;
-  padding-top: 0;
+  /* Bild vollständig einpassen, kein Beschnitt */
+  background-size: contain;
+  /* Höhe aus Seitenverhältnis ableiten (moderne Browser) */
+  aspect-ratio: 1200 / 514;
+  /* Fallback für ältere Browser ohne aspect-ratio */
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  padding-top: 42.8333%; /* 514/1200 * 100 */
 }
 .layout--splash .page__hero--overlay .page__title,
 .layout--splash .page__hero--overlay .page__lead { display: none; }
