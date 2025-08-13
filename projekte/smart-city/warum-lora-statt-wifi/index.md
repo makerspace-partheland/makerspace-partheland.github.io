@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Warum nutzen wir LoRa und kein WiFi für die Umweltsensoren?
 permalink: /projekte/smart-city/warum-lora-statt-wifi/
 ---

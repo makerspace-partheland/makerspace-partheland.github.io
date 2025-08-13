@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Der Makerspace Partheland e.V.
 permalink: /verein/
 classes: [wide, page-verein]

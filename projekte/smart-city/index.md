@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: page
 title: Smart City
 permalink: /projekte/smart-city/
-classes: wide
+# classes: wide
 ---
 
 Im Rahmen des <a rel="noreferrer noopener" href="https://open-government-kommunen.de/" target="_blank">Regionalen Open Government Labor</a> der Stadt Brandis beteiligen wir uns seit 2022 am Aufbau und dem stetigen Betrieb von Bürger-Umweltmessstationen und eines LoRaWAN Netzwerkes in der Gemeinde Brandis. Hier kümmern wir uns ehrenamtlich um alle anfallenden Dinge.

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Reparatur‑Treff
 permalink: /termine/reparatur-treff/
 ---

@@ -1,0 +1,35 @@
+{% assign is_home = false %}
+{% if page.url == '/' or page.permalink == '/' or page.path == 'index.md' %}
+  {% assign is_home = true %}
+{% endif %}
+{% if is_home and page.hide_hero != true %}
+  {% assign show_hero_title = page.hero_show_title | default: false %}
+  {% assign show_hero_subtitle = page.hero_show_subtitle | default: false %}
+  {% assign hero_fit = page.hero_fit | default: 'cover' %}
+  {% assign hero_position = page.hero_position | default: 'center center' %}
+  {% assign hero_render_mode = page.hero_render_mode | default: 'background' %}
+
+  {% if hero_render_mode == 'image' %}
+    <section class="section hero-image-section">
+      <div class="container is-fluid px-4">
+        <img src="{{ page.hero_image }}"
+             alt="{{ page.title }}"
+             class="hero-image"
+             {% if page.hero_max_height %}style="max-height: {{ page.hero_max_height }};"{% endif %}>
+        {% if show_hero_title %}<h1 class="title is-2 has-text-centered">{{ page.title }}</h1>{% endif %}
+        {% if show_hero_subtitle and page.subtitle %}<p class="subtitle is-3 has-text-centered">{{ page.subtitle }}</p>{% endif %}
+      </div>
+    </section>
+  {% else %}
+    <section class="hero is-medium is-bold is-primary" style="background: url('{{ page.hero_image }}') no-repeat {{ hero_position }}; background-size: {{ hero_fit }};">
+      <div class="hero-body">
+        <div class="container is-fluid px-4">
+          {% if show_hero_title %}<h1 class="title is-2">{{ page.title }}</h1>{% endif %}
+          {% if show_hero_subtitle and page.subtitle %}<p class="subtitle is-3">{{ page.subtitle }}</p>{% endif %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+{% endif %}
+
+

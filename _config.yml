@@ -6,11 +6,15 @@ theme: bulma-clean-theme
 
 markdown: kramdown
 permalink: /:path/
-locale: de
+lang: de
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-include-cache
+
+# Bulma Clean Theme Optionen (Navigation/Branding)
+fixed_navbar: top
+force_theme: 
 
 ## minimal-mistakes spezifische Optionen vorerst deaktiviert
 # minimal_mistakes_skin: air
@@ -29,28 +33,16 @@ sass:
   quiet_deps: true
 
 
-## Minimal Mistakes Defaults vorerst deaktiviert
-# defaults:
-#   - scope:
-#       path: ""
-#       type: pages
-#     values:
-#       classes: wide
-#   - scope:
-#       path: ""
-#       type: posts
-#     values:
-#       classes: wide
-#   - scope:
-#       path: ""
-#       type: projects
-#     values:
-#       classes: wide
-#   - scope:
-#       path: ""
-#       type: events
-#     values:
-#       layout: default
-#       show_date: false
-#       classes: wide
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      hide_hero: true
+  - scope:
+      path: ""
+      type: events
+    values:
+      layout: page
+      hide_hero: true
 

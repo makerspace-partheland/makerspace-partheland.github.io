@@ -1,0 +1,211 @@
+---
+---
+/* bulma-clean-theme Einstiegspunkt ohne @import-Deprecation */
+@use "main";
+
+/* Globale Breitenanpassung: gleiche seitliche Innenabstände wie Navbar/Footer */
+:root {}
+.section .container.is-fluid,
+.hero .container.is-fluid,
+.footer .container.is-fluid,
+.navbar .container.is-fluid {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Kompaktere Typografie für Content-Bereich */
+.content {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Navigation: Menüeinträge in der Mitte ausrichten */
+.navbar .navbar-menu {
+  justify-content: center;
+}
+.navbar .navbar-start {
+  flex-grow: 1;
+  justify-content: center;
+}
+
+/* Burger-Farbe anpassen an Primary-Leiste */
+.navbar-burger span {
+  background-color: rgba(255,255,255,0.9);
+}
+.navbar.is-primary .navbar-burger:hover span {
+  background-color: #fff;
+}
+
+/* Footer: nicht auf Content-Maxbreite einschränken */
+.footer .content {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.footer .footer-legal p,
+.footer .footer-meta p {
+  text-align: center;
+}
+
+.footer .footer-legal p a,
+.footer .footer-meta p a {
+  white-space: nowrap;
+}
+
+/* Hero-Bild (image mode) */
+.hero-image-section .hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Hero-Höhe begrenzen für große Screens */
+.hero-image-section .hero-image {
+  max-height: 600px;
+}
+
+/* Footer-Höhe kompakter */
+.footer {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Hero-Bild auf Content-Breite einschränken wie .content */
+.hero-image-section .container.is-fluid {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mobile: Burger-Menü Inhalte mittig untereinander */
+@media (max-width: 1023px) {
+  .navbar .navbar-menu {
+    justify-content: flex-start;
+  }
+  .navbar .navbar-start {
+    justify-content: flex-start;
+  }
+}
+
+/* Desktop: Menü absolut über gesamte Breite mittig, unabhängig vom Brand links */
+@media (min-width: 1024px) {
+  .navbar {
+    position: relative;
+  }
+  .navbar .navbar-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+  }
+  .navbar .navbar-brand {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+
+
+
+
+/* Galerie: kleinere Thumbnails und Navigation im Modal */
+.gallery-grid .image {
+  /* Verhältnis beibehalten, aber Thumbs begrenzen */
+}
+.gallery-thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* 3D/Shadow-Effekt wie im Theme-Beispiel */
+.gallery-grid .card {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.gallery-grid .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+.gallery-grid .card-image {
+  overflow: hidden;
+}
+.gallery-grid .card-image img {
+  transition: transform .2s ease;
+}
+.gallery-grid .card:hover .card-image img {
+  transform: scale(1.02);
+}
+
+.modal .modal-content {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90vw;
+  max-height: none; /* verhindert interne Scrollbalken von Bulma */
+  overflow: visible; /* keine Scrollbars im Modal-Inhalt */
+  padding: 0; /* kein zusätzlicher Innenabstand, verhindert Überlauf */
+}
+
+.modal .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  max-width: 90vw;
+}
+
+.modal .image img {
+  display: block;
+  max-height: 80vh;
+  max-width: 90vw;
+  width: auto;
+  height: auto;
+}
+
+.gallery-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  pointer-events: none;
+}
+.gallery-nav .button {
+  pointer-events: auto;
+}
+
+/* Alpine.js: Elemente mit x-cloak vor Init verstecken */
+[x-cloak] { display: none !important; }
+
+/* Übergang: WordPress-Content-Bilder im Fließtext kleiner darstellen */
+.content .wp-block-image img {
+  display: block;
+  max-height: 420px;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content .wp-block-gallery img {
+  max-height: 160px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Mehr Abstand zwischen Text und Galerie */
+.gallery-grid { margin: 2rem 7rem 0rem 7rem; }

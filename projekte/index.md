@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: page
 title: Projekte
 permalink: /projekte/
-classes: wide
+# classes: wide
 ---
 
 ## Eine Übersicht über unsere Projekte

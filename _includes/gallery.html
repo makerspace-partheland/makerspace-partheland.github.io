@@ -1,0 +1,139 @@
+{% comment %}
+Dieses Include unterstützt zwei Modi:
+1) Bulma Clean Theme Daten-gestützte Galerie: page.gallery verweist auf einen Key in site.data.<key>
+2) Frontmatter-Array wie in unserer Migration (page.gallery = [ { image_path, alt } ]).
+In beiden Fällen wird die Theme-Lightbox via image-modal.html genutzt.
+{% endcomment %}
+
+{% if page.gallery %}
+  {%- comment -%}
+  Frontmatter-Array-Modus: page.gallery = [ { image_path, large_link?, alt? } ]
+  {%- endcomment -%}
+  {%- if page.gallery.first and page.gallery.first.image_path -%}
+    <div
+      class="gallery-grid"
+      x-data='{
+        open: false,
+        index: 0,
+        items: [
+          {%- for item in page.gallery -%}
+          { link: "{{ item.image_path | relative_url }}", large: "{{ item.large_link | default: item.image_path | relative_url }}", alt: {{ item.alt | jsonify }} }{%- if forloop.last == false -%},{%- endif -%}
+          {%- endfor -%}
+        ],
+        openAt(i){ this.index=i; this.open=true; },
+        close(){ this.open=false; },
+        next(){ this.index = (this.index + 1) % this.items.length; },
+        prev(){ this.index = (this.index - 1 + this.items.length) % this.items.length; },
+        currentItem(){ return this.items[this.index] }
+      }'
+      x-on:keydown.window="if(open && $event.key==='ArrowRight'){next()} else if(open && $event.key==='ArrowLeft'){prev()} else if(open && $event.key==='Escape'){close()}"
+    >
+      <div class="columns is-multiline is-variable is-2">
+        {%- for item in page.gallery -%}
+          <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+            <div class="card">
+              <div class="card-image">
+                <a href="#" data-index="{{ forloop.index0 }}" x-on:click.prevent="openAt({{ forloop.index0 }})">
+                  <figure class="image">
+                    <img class="gallery-thumb" src="{{ item.image_path | relative_url }}" alt="{{ item.alt | default: '' }}" loading="lazy">
+                  </figure>
+                </a>
+              </div>
+              {% assign caption = item.caption | default: item.description | default: item.alt %}
+              {% if caption %}
+              <div class="card-content">
+                <div class="content is-size-7 has-text-centered">{{ caption }}</div>
+              </div>
+              {% endif %}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      <template x-if="open">
+        <div class="modal is-active" x-cloak>
+          <div class="modal-background" x-on:click="close()"></div>
+          <div class="modal-content">
+            <p class="image">
+              <img x-bind:src="currentItem().large || currentItem().link" x-bind:alt="currentItem().alt || ''">
+            </p>
+          </div>
+          <button class="modal-close is-large" aria-label="close" x-on:click="close()"></button>
+          <div class="gallery-nav">
+            <button class="button is-light" aria-label="Vorheriges Bild" x-on:click.stop="prev()"><span class="icon"><i class="fa-solid fa-chevron-left"></i></span></button>
+            <button class="button is-light" aria-label="Nächstes Bild" x-on:click.stop="next()"><span class="icon"><i class="fa-solid fa-chevron-right"></i></span></button>
+          </div>
+        </div>
+      </template>
+    </div>
+  {%- else -%}
+    {%- comment -%}
+    Datenmodus: page.gallery = 'key' → site.data[key] liefert eine oder mehrere Galerien
+    {%- endcomment -%}
+    {%- assign galleries = site.data.[page.gallery] -%}
+    {%- for group in galleries -%}
+      <div
+        class="gallery-grid"
+        x-data='{
+          open: false,
+          index: 0,
+          items: [
+            {%- for image in group.images -%}
+            { link: "{{ image.link | relative_url }}", large: "{{ image.large_link | default: image.link | relative_url }}", alt: {{ image.alt | jsonify }} }{%- if forloop.last == false -%},{%- endif -%}
+            {%- endfor -%}
+          ],
+          openAt(i){ this.index=i; this.open=true; },
+          close(){ this.open=false; },
+          next(){ this.index = (this.index + 1) % this.items.length; },
+          prev(){ this.index = (this.index - 1 + this.items.length) % this.items.length; },
+          currentItem(){ return this.items[this.index] }
+        }'
+        x-on:keydown.window="if(open && $event.key==='ArrowRight'){next()} else if(open && $event.key==='ArrowLeft'){prev()} else if(open && $event.key==='Escape'){close()}"
+      >
+        {% if group.title %}
+          <div class="column is-12">
+            <p class="title is-4 has-text-centered">{{ group.title }}</p>
+          </div>
+        {% endif %}
+        <div class="columns is-multiline is-variable is-2">
+          {%- for image in group.images -%}
+            <div class="column is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+              <div class="card">
+                <div class="card-image">
+                  <a href="#" data-index="{{ forloop.index0 }}" x-on:click.prevent="openAt({{ forloop.index0 }})">
+                    <figure class="image">
+                      <img class="gallery-thumb" src="{{ image.link | relative_url }}" alt="{{ image.alt | default: '' }}" loading="lazy">
+                    </figure>
+                  </a>
+                </div>
+                {% assign caption = image.caption | default: image.description | default: image.alt %}
+                {% if caption %}
+                <div class="card-content">
+                  <div class="content is-size-7 has-text-centered">{{ caption }}</div>
+                </div>
+                {% endif %}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+        <template x-if="open">
+          <div class="modal is-active" x-cloak>
+            <div class="modal-background" x-on:click="close()"></div>
+            <div class="modal-content">
+              <p class="image">
+                <img x-bind:src="currentItem().large || currentItem().link" x-bind:alt="currentItem().alt || ''">
+              </p>
+            </div>
+            <button class="modal-close is-large" aria-label="close" x-on:click="close()"></button>
+            <div class="gallery-nav">
+              <button class="button is-light" aria-label="Vorheriges Bild" x-on:click.stop="prev()"><span class="icon"><i class="fa-solid fa-chevron-left"></i></span></button>
+              <button class="button is-light" aria-label="Nächstes Bild" x-on:click.stop="next()"><span class="icon"><i class="fa-solid fa-chevron-right"></i></span></button>
+            </div>
+          </div>
+        </template>
+      </div>
+    {%- endfor -%}
+  {%- endif -%}
+{% endif %}
+
+

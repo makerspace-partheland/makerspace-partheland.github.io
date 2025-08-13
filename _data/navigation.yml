@@ -1,14 +1,17 @@
-main:
-  - title: Verein
-    url: /verein/
-    children:
-      - title: Mitglied werden
-        url: /mitglied-werden/
-  - title: Projekte
-    url: /projekte/
-  - title: Termine
-    url: /termine/
-  - title: Kontakt
-    url: /kontakt/
+-
+  name: Verein
+  link: /verein/
+  dropdown:
+    - name: Mitglied werden
+      link: /mitglied-werden/
+-
+  name: Projekte
+  link: /projekte/
+-
+  name: Termine
+  link: /termine/
+-
+  name: Kontakt
+  link: /kontakt/
 
 
