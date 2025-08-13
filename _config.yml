@@ -47,5 +47,6 @@ defaults:
       path: ""
       type: events
     values:
+      layout: single
       classes: wide
 
