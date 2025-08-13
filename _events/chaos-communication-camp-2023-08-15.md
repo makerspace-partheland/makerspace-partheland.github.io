@@ -8,14 +8,19 @@ header:
 gallery:
   - image_path: /assets/images/events/2023-08-15/Unicorn_t.jpg
     alt: unicorn
+    url: /assets/images/events/2023-08-15/Unicorn_t.jpg
   - image_path: /assets/images/events/2023-08-15/neuland_t.jpg
     alt: ""
+    url: /assets/images/events/2023-08-15/neuland_t.jpg
   - image_path: /assets/images/events/2023-08-15/batch_t.jpg
     alt: ""
+    url: /assets/images/events/2023-08-15/batch_t.jpg
   - image_path: /assets/images/events/2023-08-15/camp_t.jpg
     alt: ""
+    url: /assets/images/events/2023-08-15/camp_t.jpg
   - image_path: /assets/images/events/2023-08-15/Rocket_t.jpg
     alt: ""
+    url: /assets/images/events/2023-08-15/Rocket_t.jpg
 ---
 Vom 15. bis 19. August 2023 fand das lang ersehnte Chaos Communication Camp statt. Unter dem Motto “Sicherheit, Technologie und Spaß” versammelten sich Technologieenthusiasten, Hacker, Kryptographen, Programmierer und viele weitere Interessierte aus aller Welt an einem abgelegenen Ort inmitten der Natur. Dieser Bericht fasst unsere Eindrücke und Erfahrungen während dieser aufregenden Veranstaltung zusammen.
 

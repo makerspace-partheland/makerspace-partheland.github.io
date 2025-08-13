@@ -6,6 +6,7 @@ theme: minimal-mistakes-jekyll
 
 markdown: kramdown
 permalink: /:path/
+locale: de
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -48,5 +49,6 @@ defaults:
       type: events
     values:
       layout: single
+      show_date: false
       classes: wide
 
