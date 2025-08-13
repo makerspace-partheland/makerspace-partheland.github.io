@@ -1,6 +1,4 @@
 main:
-  - title: Start
-    url: /
   - title: Verein
     url: /verein/
     children:
