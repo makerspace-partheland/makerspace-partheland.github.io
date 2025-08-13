@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Termine
 permalink: /termine/
 ---

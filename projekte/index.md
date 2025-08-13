@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Projekte
 permalink: /projekte/
 classes: wide

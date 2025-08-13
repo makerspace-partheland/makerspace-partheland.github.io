@@ -1,8 +1,8 @@
 ---
 ---
 /* stylelint-disable */
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
-@import "minimal-mistakes";
+/* Theme-Wechsel: bulma-clean-theme bringt sein eigenes CSS mit.
+   Vorerst keine Imports, um das Plain-Theme zu sehen. */
 
 // BEGIN: lokale Overrides vorübergehend deaktiviert
 // /* Masthead / Navigation vollflächig einfärben */

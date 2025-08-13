@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: default
 title: Smart City
 permalink: /projekte/smart-city/
 classes: wide

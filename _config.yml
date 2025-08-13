@@ -2,7 +2,7 @@ title: Makerspace Partheland
 subtitle: die Mitmachwerkstatt
 description: die Mitmachwerkstatt
 url: https://makerspace-partheland.de
-theme: minimal-mistakes-jekyll
+theme: bulma-clean-theme
 
 markdown: kramdown
 permalink: /:path/
@@ -12,9 +12,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-include-cache
 
-minimal_mistakes_skin: air
+## minimal-mistakes spezifische Optionen vorerst deaktiviert
+# minimal_mistakes_skin: air
 # Deaktiviert Bild-Logo in der Navbar, damit nicht doppelt gebrandet wird
-logo: 
+# logo:
 
 collections:
   projects:
@@ -28,27 +29,28 @@ sass:
   quiet_deps: true
 
 
-defaults:
-  - scope:
-      path: ""
-      type: pages
-    values:
-      classes: wide
-  - scope:
-      path: ""
-      type: posts
-    values:
-      classes: wide
-  - scope:
-      path: ""
-      type: projects
-    values:
-      classes: wide
-  - scope:
-      path: ""
-      type: events
-    values:
-      layout: single
-      show_date: false
-      classes: wide
+## Minimal Mistakes Defaults vorerst deaktiviert
+# defaults:
+#   - scope:
+#       path: ""
+#       type: pages
+#     values:
+#       classes: wide
+#   - scope:
+#       path: ""
+#       type: posts
+#     values:
+#       classes: wide
+#   - scope:
+#       path: ""
+#       type: projects
+#     values:
+#       classes: wide
+#   - scope:
+#       path: ""
+#       type: events
+#     values:
+#       layout: default
+#       show_date: false
+#       classes: wide
 

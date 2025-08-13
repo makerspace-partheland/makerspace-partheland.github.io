@@ -1,12 +1,12 @@
 ---
-layout: splash
+layout: default
 title: " "
 excerpt: " "
 classes: wide
-header:
-  overlay_image: /assets/images/header-startseite.png
-  overlay_filter: 0.0
-  show_overlay_excerpt: false
+# header: (Minimal Mistakes spezifisch) vorerst deaktiviert
+#   overlay_image: /assets/images/header-startseite.png
+#   overlay_filter: 0.0
+#   show_overlay_excerpt: false
 ---
 ## Makerspace Partheland – Dein Raum zum Machen
 
