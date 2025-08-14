@@ -41,30 +41,37 @@ Bevor wir in die detaillierte Analyse der Sensordaten eintauchen, ist es wichtig
   - Median: 28,6°C
   - Maximal: 31,3°C um 11:59 Uhr
   - **Beurteilung**: Die Temperaturen waren am Morgen angenehm und stiegen allmählich an, was auf einen sonnigen Start in den Tag hinweist. Besucher konnten die frische Morgenluft genießen, bevor die Hitze des Tages einsetzte.
+
 - **Relative Luftfeuchtigkeit**
   - Median: 54,3%
   - Maximal: 59,5% um 10:00 Uhr
   - **Beurteilung**: Die Luftfeuchtigkeit war am Morgen relativ hoch, was typisch für die frühen Stunden eines Sommertages ist. Dies könnte das Wohlbefinden der Besucher leicht beeinträchtigt haben, insbesondere bei körperlicher Aktivität.
+
 - **Beleuchtungsstärke**
   - Median: 6.298 Lux
   - Maximal: 7.275 Lux um 11:30 Uhr
   - **Beurteilung**: Die Lichtverhältnisse waren hell und klar, was auf einen sonnigen Morgen hinweist. Dies schuf eine angenehme Atmosphäre für die Besucher, die die verschiedenen Stände und Aktivitäten erkunden konnten.
+
 - **UV-Intensität**
   - Median: 376 μW/cm²
   - Maximal: 416 μW/cm² um 11:45 Uhr
   - **Beurteilung**: Die UV-Intensität war moderat, was auf eine zunehmende Sonneneinstrahlung hinweist. Besucher sollten sich bewusst sein, Sonnenschutz zu verwenden, um Hautschäden zu vermeiden.
+
 - **Luftdruck**
   - Median: 998 hPa
   - Maximal: 998 hPa
   - **Beurteilung**: Der Luftdruck blieb stabil, was auf ruhige Wetterbedingungen ohne signifikante Änderungen hinweist.
+
 - **Lautstärke**
   - Median: 67 dB
   - Maximal: 89,1 dB um 10:31 Uhr
   - **Beurteilung**: Die Geräuschkulisse war lebhaft, vergleichbar mit starkem Straßenverkehr oder einem lauten Restaurant. Dies deutet auf eine hohe Besucherzahl und viele Aktivitäten hin.
+
 - **Feinstaub PM2.5**
   - Median: 8,4 µg/m³
   - Maximal: 45,5 µg/m³ um 10:47 Uhr
   - **Beurteilung**: Die Luftqualität war größtenteils gut, mit einigen Spitzenwerten, die auf Aktivitäten wie das Anzünden von Grillständen oder das Rauchen in der Nähe des Sensors hinweisen könnten. Diese Spitzenwerte könnten auch durch die erhöhte Besucherzahl und deren Aktivitäten verursacht worden sein.
+
 - **Feinstaub PM10**
   - Median: 9,1 µg/m³
   - Maximal: 93,5 µg/m³ um 10:47 Uhr
@@ -76,30 +83,37 @@ Bevor wir in die detaillierte Analyse der Sensordaten eintauchen, ist es wichtig
   - Median: 32,1°C
   - Maximal: 32,9°C um 12:29 Uhr
   - **Beurteilung**: Die Temperaturen erreichten zur Mittagszeit ihren Höhepunkt, was typisch für einen heißen Sommertag ist. Besucher sollten sich in den Schatten begeben und ausreichend Flüssigkeit zu sich nehmen, um Überhitzung zu vermeiden.
+
 - **Relative Luftfeuchtigkeit**
   - Median: 52,2%
   - Maximal: 55,6% um 13:00 Uhr
   - **Beurteilung**: Die Luftfeuchtigkeit blieb moderat, was das Gefühl der Hitze verstärken könnte. Besucher sollten darauf achten, sich regelmäßig abzukühlen.
+  
 - **Beleuchtungsstärke**
   - Median: 8.603 Lux
   - Maximal: 9.931 Lux um 12:15 Uhr
   - **Beurteilung**: Die Lichtverhältnisse waren sehr hell, was auf eine starke Sonneneinstrahlung hinweist. Dies schuf eine lebendige und energiegeladene Atmosphäre, aber Besucher sollten Sonnenschutz verwenden.
+
 - **UV-Intensität**
   - Median: 517 μW/cm²
   - Maximal: 618 μW/cm² um 12:22 Uhr
   - **Beurteilung**: Die UV-Intensität war hoch, was auf eine starke Sonneneinstrahlung hinweist. Besucher sollten sich bewusst sein, Sonnenschutz zu verwenden, um Hautschäden zu vermeiden.
+
 - **Luftdruck**
   - Median: 997 hPa
   - Maximal: 997 hPa
   - **Beurteilung**: Der Luftdruck blieb stabil, was auf ruhige Wetterbedingungen ohne signifikante Änderungen hinweist.
+
 - **Lautstärke**
   - Median: 68 dB
   - Maximal: 90,7 dB um 13:28 Uhr
   - **Beurteilung**: Die Geräuschkulisse war hoch, vergleichbar mit einem Rasenmäher oder einem lauten Restaurant. Dies deutet auf eine hohe Besucherzahl und viele Aktivitäten hin.
+
 - **Feinstaub PM2.5**
   - Median: 18,4 µg/m³
   - Maximal: 61,9 µg/m³ um 13:48 Uhr
   - **Beurteilung**: Die Luftqualität war moderat bis ungesund für empfindliche Gruppen, mit Spitzenwerten, die auf intensive Aktivitäten hinweisen könnten. Diese Spitzenwerte könnten durch Grillen, eine hohe Besucherzahl oder durch das Kochen und Braten an den Ständen verursacht worden sein.
+  
 - **Feinstaub PM10**
   - Median: 42,3 µg/m³
   - Maximal: 134 µg/m³ um 13:48 Uhr
@@ -111,26 +125,32 @@ Bevor wir in die detaillierte Analyse der Sensordaten eintauchen, ist es wichtig
   - Median: 33,2°C
   - Maximal: 34,3°C um 15:17 Uhr
   - **Beurteilung**: Die Temperaturen blieben am Nachmittag sehr hoch, was typisch für einen heißen Sommertag ist. Besucher sollten sich in den Schatten begeben und ausreichend Flüssigkeit zu sich nehmen, um Überhitzung zu vermeiden.
+
 - **Relative Luftfeuchtigkeit**
   - Median: 45,2%
   - Maximal: 49,1% um 14:00 Uhr
   - **Beurteilung**: Die Luftfeuchtigkeit war niedriger als am Morgen, was das Gefühl der Hitze etwas mildern könnte. Besucher sollten darauf achten, sich regelmäßig abzukühlen.
+
 - **Beleuchtungsstärke**
   - Median: 7.830 Lux
   - Maximal: 8.605 Lux um 13:26 Uhr
   - **Beurteilung**: Die Lichtverhältnisse blieben hell, was auf eine starke Sonneneinstrahlung hinweist. Dies schuf eine lebendige und energiegeladene Atmosphäre, aber Besucher sollten Sonnenschutz verwenden.
+
 - **UV-Intensität**
   - Median: 452 μW/cm²
   - Maximal: 483 μW/cm² um 14:19 Uhr
   - **Beurteilung**: Die UV-Intensität war hoch, was auf eine starke Sonneneinstrahlung hinweist. Besucher sollten sich bewusst sein, Sonnenschutz zu verwenden, um Hautschäden zu vermeiden.
+
 - **Luftdruck**
   - Median: 996 hPa
   - Maximal: 996 hPa
   - **Beurteilung**: Der Luftdruck blieb stabil, was auf ruhige Wetterbedingungen ohne signifikante Änderungen hinweist.
+
 - **Lautstärke**
   - Median: 70 dB
   - Maximal: 93,1 dB um 16:13 Uhr
   - **Beurteilung**: Die Geräuschkulisse war sehr hoch, vergleichbar mit einem Motorrad oder einem Konzert. Dies deutet auf eine lebhafte und fröhliche Atmosphäre hin.
+
 - **Feinstaub PM2.5**
   - Median: 14,3 µg/m³
   - Maximal: 25,9 µg/m³ um 16:22 Uhr
