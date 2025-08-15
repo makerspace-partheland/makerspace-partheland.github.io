@@ -41,7 +41,7 @@ Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wi
 Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
 
 **Nutzung von Texten, Bilder und sonstigem Inhalt unserer Webseite durch Andere**  
-_Bevor_ irgendein Content, seien es Bilder, Texte, ganze Beiträge, nur Auszüge, oder sonstiger Inhalt von uns zitiert, abgedruckt, publiziert oder anderweitig verwendet wird, ist immer eine kurze Vorabinformation via E-Mail oder Telegram, siehe <a href="/kontakt/">Kontakt</a>, an uns notwendig und eine Quellenangabe auf unsere Webseite zu setzen.
+_Bevor_ irgendein Content, seien es Bilder, Texte, ganze Beiträge, nur Auszüge, oder sonstiger Inhalt von uns zitiert, abgedruckt, publiziert oder anderweitig verwendet wird, ist immer eine kurze Vorabinformation via E-Mail oder Telegram, siehe <a href="/austausch/">Austausch</a>, an uns notwendig und eine Quellenangabe auf unsere Webseite zu setzen.
 
 **4. Datenschutz**
 

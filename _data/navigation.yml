@@ -5,13 +5,10 @@
     - name: Mitglied werden
       link: /mitglied-werden/
 -
-  name: Projekte
-  link: /projekte/
--
   name: Termine
   link: /termine/
 -
   name: Kontakt
-  link: /kontakt/
+  link: /austausch/
 
 
