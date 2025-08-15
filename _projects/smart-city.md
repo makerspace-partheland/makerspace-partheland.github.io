@@ -1,15 +1,22 @@
 ---
 layout: page
-title: Smart City
+title: Smart City - Umweltsensoren und mehr
 permalink: /projekte/smart-city/
-# classes: wide
+excerpt: LoRaWAN-basierte Umweltsensoren für die intelligente Stadt der Zukunft
+category: Smart City & IoT
 ---
+
+<img src="/assets/images/projekte/smart-city/smart-city-header.jpg" alt="Smart City Partheland - Umweltsensoren" class="title-image">
+
+# Smart City Partheland
 
 Im Rahmen des <a rel="noreferrer noopener" href="https://open-government-kommunen.de/" target="_blank">Regionalen Open Government Labor</a> der Stadt Brandis beteiligen wir uns seit 2022 am Aufbau und dem stetigen Betrieb von Bürger-Umweltmessstationen und eines LoRaWAN Netzwerkes in der Gemeinde Brandis. Hier kümmern wir uns ehrenamtlich um alle anfallenden Dinge.
 
 Seit Dezember 2022 unterstützen wir alle weiteren <a rel="noreferrer noopener" href="https://partheland.de" target="_blank">Partheland</a> Kommunen (Borsdorf, Naunhof mit Belgershain und Parthenstein, Großpösna und Machern) im Rahmen des Smart City Projektes durch Schulung von sogenannten Multiplikatoren, welche vor Ort die jeweiligen Ansprechpartner sind. Zudem stellen wir hierfür ehrenamtlich die Software für die jeweiligen Umweltmessstationen zur Verfügung, bereiten im Hintergrund alles für den Datentransfer vor, überwachen stetig die Stationen und Infrastruktur und viele weitere Dinge die man nicht sieht.
 
 Alle stationären Umweltsensoren werden mittels <a rel="noreferrer noopener" href="home" target="_blank">senseBox:home</a> und mit der stromsparenden <a href="https://www.thethingsnetwork.org" target="_blank" rel="noreferrer noopener">LoRaWAN </a>Anbindung realisiert und im gesamten Partheland aufgebaut.
+
+![LoRaWAN Station mit Sensorik](/assets/images/projekte/smart-city/lorawan-station.jpg)
 
 Wissenstransfer und Austausch mit Bürgern, Multiplikatoren und uns, erfolgt im eigenen Telegram Kanal: <a rel="noreferrer noopener" href="https://t.me/MakerspacePartheland_SmartCity" target="_blank">https://t.me/MakerspacePartheland_SmartCity</a>
 
@@ -47,6 +54,8 @@ Alles befindet sich aktuell im Aufbau, es kommen stetig mehr Stationen, Sensoren
 
 Damit die Messstationen unabhängig von Internet-Infrastruktur die Daten senden können, also auch vom Feld oder einer Wiese, nutzen wir die LoRaWAN Technik. Diese Abkürzung steht für _Long Range Wide Area Network_ und wurde für energieeffizientes Senden von Daten über größere Entfernungen entwickelt. Dies ermöglicht somit auch Batterie oder Photovoltaik-Akku-betriebene Sensoren, wie die beiden vom Makerspace aufgebauten Umweltmessstationen <a rel="noreferrer noopener" href="https://sensoren.makerspace-partheland.de/d/l2eL6qr4x/station-brandis-nummer-3" target="_blank">Station Brandis Nummer 3</a> oder <a rel="noreferrer noopener" href="https://sensoren.makerspace-partheland.de/d/erweVEQnG/station-naunhof" target="_blank">Station Naunhof</a>
 
+![senseBox:home solarbetrieben](/assets/images/projekte/smart-city/sensebox-home-solar.jpg)
+
 Damit die Daten der Sensoren bei uns ankommen, werden so genannte LoRa Gateways benötigt. Einfach erklärt: befindet sich ein Sensor im Empfangsgebiet eines beliebigen LoRa Gateways, empfängt dieser die Sensoren-Pakete, mittels einer ca. 80cm langen Stabantenne. Da das Gateway mit dem Internet verbunden ist, leitet es dann das Sensoren-Paket an uns weiter.
 
 Gesendet werden die Datenpakete auf einer Frequenz von 863 bis 870 MHz, welche europaweit lizenzfrei durch jeden nutzbar ist. Viel wird dieser Frequenzbereich auch für Alarmanlagen, Funktastaturen, Garagentorfernbedienungen und vieles mehr genutzt; ohne dass sich die Geräte in ihrem Betrieb gegenseitig stören.
@@ -55,5 +64,3 @@ Der Betrieb und die Wartung der LoRaWAN Gateways in Brandis, samt Sensoren-Webse
 Der Betrieb und die Wartung der LoRaWAN Gateways in allen weiteren Partheland Kommunen erfolgt durch die jeweiligen Multiplikatoren.
 
 Mehr Hintergründe zu unserer Technologieentscheidung: <a href="/projekte/smart-city/warum-lora-statt-wifi/">Warum nutzen wir LoRa und kein WiFi für die Umweltsensoren?</a>
-
-

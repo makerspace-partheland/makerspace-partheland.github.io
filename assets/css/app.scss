@@ -1,10 +1,9 @@
 ---
 ---
-/* bulma-clean-theme Einstiegspunkt ohne @import-Deprecation */
-@use "main";
+/* bulma-clean-theme Einstiegspunkt */
+@import "main";
 
 /* Globale Breitenanpassung: gleiche seitliche Innenabstände wie Navbar/Footer */
-:root {}
 .section .container.is-fluid,
 .hero .container.is-fluid,
 .footer .container.is-fluid,
@@ -19,7 +18,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
 
 /* Navigation: Menüeinträge in der Mitte ausrichten */
 .navbar .navbar-menu {
@@ -107,10 +105,6 @@
     z-index: 2;
   }
 }
-
-
-
-
 
 /* Galerie: kleinere Thumbnails und Navigation im Modal */
 .gallery-grid .image {
@@ -209,3 +203,38 @@
 
 /* Mehr Abstand zwischen Text und Galerie */
 .gallery-grid { margin: 2rem 7rem 0rem 7rem; }
+
+/* Titelbilder für Projektseiten - professionelles Design */
+.title-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover-Effekte */
+.title-image:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Anpassungen für Titelbilder */
+@media (max-width: 768px) {
+  .title-image {
+    height: 250px;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-image {
+    height: 200px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+}
