@@ -16,7 +16,7 @@ permalink: /termine/reparatur-treff/
     <!-- Konzept Card -->
     <div class="columns is-centered" style="margin-bottom: 3rem;">
       <div class="column is-8-desktop is-10-tablet">
-        <div class="card modern-card" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);">
+        <div class="card modern-card" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px;">
           <div class="card-content" style="padding: 2.5rem 2rem;">
             <h2 class="title is-3 has-text-weight-bold has-text-centered" style="color: #2c3e50; margin-bottom: 1.5rem;">
               Unser Reparatur‑Konzept
@@ -113,8 +113,7 @@ permalink: /termine/reparatur-treff/
             </div>
             <div class="buttons is-centered" style="gap: 1rem;">
               <a href="/austausch/" 
-                 class="button is-primary is-medium is-rounded has-text-weight-semibold"
-                 style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none;">
+                 class="button is-primary is-medium is-rounded has-text-weight-semibold">
                 Telegram-Kanäle
               </a>
               <a href="/termine/" 

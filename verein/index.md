@@ -30,7 +30,7 @@ permalink: /verein/
     <!-- Über uns -->
     <div class="columns is-centered" style="margin-bottom: 4rem;">
       <div class="column is-10-desktop is-12-tablet">
-        <div class="card modern-card" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);">
+        <div class="card modern-card" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; background: var(--brand-blue-bg);">
           <div class="card-content" style="padding: 2.5rem 2rem; text-align: center;">
             <h2 class="title is-3 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1.5rem;">
               Gemeinnütziger Verein seit 2022
@@ -155,7 +155,7 @@ permalink: /verein/
             <div class="buttons is-centered" style="gap: 1rem;">
               <a href="/mitglied-werden/" 
                  class="button is-primary is-medium is-rounded has-text-weight-semibold"
-                 style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none;">
+                 class="button is-primary is-medium is-rounded has-text-weight-semibold">
                 Mitglied werden
               </a>
               <a href="https://t.me/makerspacepartheland" target="_blank" rel="noreferrer noopener"
@@ -237,7 +237,7 @@ permalink: /verein/
           </p>
           <a href="/austausch/" 
              class="button is-primary is-medium is-rounded has-text-weight-semibold"
-             style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none;">
+             class="button is-primary is-medium is-rounded has-text-weight-semibold">
             Kontakt aufnehmen
           </a>
         </div>

@@ -1,7 +1,63 @@
 ---
 ---
-/* bulma-clean-theme Einstiegspunkt */
+
+// === BULMA SASS VARIABLES - VOR Import === 
+$primary: #006DB6;      // Logo-Blau
+$success: #00AA00;      // ORIGINALE Vereinsfarbe Grün
+$info: #006DB6;         // Logo-Blau für Info-Elemente
+$link: #006DB6;         // Logo-Blau für Links
+$warning: #ffdd57;      // Bulma's Standard-Warning
+$danger: #ff3860;       // Bulma's Standard-Danger
+$text: #2c3e50;         // Standard-Text-Farbe
+
+// Import Main CSS file from theme
 @import "main";
+
+// === CSS VARIABLEN FÜR ERWEITERTE NUTZUNG ===
+:root {
+  --brand-blue: #006DB6;
+  --brand-green: #00AA00;  /* ORIGINALE Vereinsfarbe */
+  --brand-blue-light: #4d9de0;
+  --brand-blue-dark: #004c8a;
+  --brand-green-dark: #008800;
+  
+  --brand-blue-bg: rgba(0, 109, 182, 0.05);
+  --brand-green-bg: rgba(0, 170, 0, 0.05);
+  --brand-blue-hover: rgba(0, 109, 182, 0.1);
+  --brand-green-hover: rgba(0, 170, 0, 0.1);
+  --brand-blue-active: rgba(0, 109, 182, 0.15);
+  --brand-green-active: rgba(0, 170, 0, 0.15);
+}
+
+// === HARMONIE: Navigation & Hero fast identisch ===
+.navbar.is-primary {
+  background: linear-gradient(135deg, hsl(204, 100%, 36%) 0%, hsl(204, 100%, 35%) 100%) !important;
+}
+
+.hero.is-primary, 
+.hero.modern-hero {
+  background: linear-gradient(135deg, hsl(204, 100%, 35%) 0%, hsl(204, 100%, 34%) 100%) !important;
+}
+
+/* === CUSTOM COMPONENTS - Erweiterte CSS-Variablen === */
+
+/* Spezielle Card-Hintergründe */
+.card.eco-card {
+  background: var(--brand-green-bg) !important;
+}
+
+.card.tech-card {
+  background: var(--bulma-primary-soft) !important;  /* Bulma Color Palette nutzen */
+}
+
+/* Bulma CSS Variables Override für Success Button */
+:root {
+  --bulma-button-color-l: 100%;  /* Weiße Text-Farbe für Success Buttons */
+}
+
+.button.is-success {
+  color: white !important;  /* Explizit weißer Text für Vereinsgrün */
+}
 
 /* Globale Breitenanpassung: gleiche seitliche Innenabstände wie Navbar/Footer */
 .section .container.is-fluid,
@@ -19,7 +75,8 @@
   margin-right: auto;
 }
 
-/* Navigation: Menüeinträge in der Mitte ausrichten */
+/* Navigation: Mittig-Ausrichtung (Farben via Sass-Variablen) */
+
 .navbar .navbar-menu {
   justify-content: center;
 }
@@ -43,30 +100,37 @@
   min-height: 3.25rem;
 }
 
-/* Hover-Effekte über gesamte Höhe */
+/* Text-Selection (Markierung) in Logo-Blau - dunkler für bessere Lesbarkeit */
+::selection {
+  background: var(--brand-blue);
+  color: white;
+}
+
+::-moz-selection {
+  background: var(--brand-blue);
+  color: white;
+}
+
+/* Navigation Hover: Einfach und harmonisch (ohne Layout-Verschiebung) */
 .navbar.is-primary .navbar-item:hover,
 .navbar.is-primary .navbar-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 0.2s ease;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transition: background-color 0.3s ease !important;
 }
 
-/* Active State */
-.navbar.is-primary .navbar-item.is-active,
-.navbar.is-primary .navbar-link.is-active {
-  background-color: rgba(255, 255, 255, 0.15);
+/* Dropdown Items: Deutlich sichtbare Hover-Effekte für Submenü */
+.navbar.is-primary .navbar-dropdown .navbar-item:hover {
+  background-color: rgba(0, 109, 182, 0.2) !important;
+  color: var(--brand-blue-dark) !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
 }
 
-/* Focus State für Accessibility */
+/* Focus für Accessibility */
 .navbar.is-primary .navbar-item:focus,
 .navbar.is-primary .navbar-link:focus {
-  background-color: rgba(255, 255, 255, 0.1);
-  outline: 3px solid rgba(255, 255, 255, 0.3);
+  outline: 3px solid var(--bulma-primary) !important;
   outline-offset: -2px;
-}
-
-/* Dropdown-Hover-States */
-.navbar.is-primary .navbar-item.has-dropdown:hover .navbar-link {
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Burger-Farbe anpassen an Primary-Leiste */
@@ -92,6 +156,29 @@
 .footer .footer-legal p a,
 .footer .footer-meta p a {
   white-space: nowrap;
+}
+
+/* Footer Links: DEUTLICH vom Fließtext unterscheidbar (nur Farbe + Gewicht) */
+.footer a {
+  color: var(--brand-blue) !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.footer a:hover {
+  color: white !important;
+  background-color: var(--brand-blue) !important;
+  text-decoration: none !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 8px rgba(0, 109, 182, 0.3) !important;
+}
+
+.footer a:focus {
+  outline: 3px solid var(--brand-blue) !important;
+  outline-offset: 2px !important;
+  border-radius: 3px !important;
+  background-color: var(--brand-blue-bg) !important;
 }
 
 /* Hero-Bild (image mode) */
@@ -120,9 +207,15 @@
   margin-right: auto;
 }
 
-/* Modern Hero 2025 Design */
+/* Modern Hero 2025 Design (Grundfarben via Sass-Variablen) */
 .hero.modern-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Smart City Hero (Grün) */
+.hero.eco-hero {
+  background: linear-gradient(135deg, var(--brand-green) 0%, var(--brand-green-dark) 100%) !important;
   position: relative;
   overflow: hidden;
 }
@@ -162,17 +255,17 @@ a.card.modern-card {
 
 a.card.modern-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 45px rgba(102, 126, 234, 0.2) !important;
+  box-shadow: 0 15px 45px var(--brand-blue-hover) !important;
 }
 
 a.card.modern-card:active {
   transform: translateY(-6px);
 }
 
-/* Accessibility: Focus States */
+/* Accessibility: Focus States (Farben via Sass-Variablen) */
 .button:focus,
 .card.modern-card:focus-within {
-  outline: 3px solid #667eea;
+  outline: 3px solid var(--brand-blue) !important;
   outline-offset: 2px;
 }
 

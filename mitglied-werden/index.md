@@ -28,24 +28,24 @@ permalink: /mitglied-werden/
               
               <!-- Schritt 1 -->
               <div class="column is-6-desktop is-12-tablet">
-                <div class="content" style="padding: 1.5rem; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%); border-radius: 12px; height: 100%;">
+                <div class="content" style="padding: 1.5rem; background: var(--brand-blue-bg); border-radius: 12px; height: 100%;">
                   <h3 class="title is-6 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
                     1. Dokumente lesen
                   </h3>
                   <p style="color: #5a6c7d; line-height: 1.6;">
-                    Lies dir unsere <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" style="color: #667eea;">Satzung</a></strong> und <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Beitragsordnung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" style="color: #667eea;">Beitragsordnung</a></strong> durch und befolge sie.
+                    Lies dir unsere <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" style="color: var(--brand-blue);">Satzung</a></strong> und <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Beitragsordnung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" style="color: var(--brand-blue);">Beitragsordnung</a></strong> durch und befolge sie.
                   </p>
                 </div>
               </div>
 
               <!-- Schritt 2 -->
               <div class="column is-6-desktop is-12-tablet">
-                <div class="content" style="padding: 1.5rem; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%); border-radius: 12px; height: 100%;">
+                <div class="content" style="padding: 1.5rem; background: var(--brand-blue-bg); border-radius: 12px; height: 100%;">
                   <h3 class="title is-6 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
                     2. Antrag ausfüllen
                   </h3>
                   <p style="color: #5a6c7d; line-height: 1.6; margin-bottom: 1rem;">
-                    Lade dir den <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/main/Mitgliedsantrag%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" style="color: #667eea;">Mitgliedsantrag</a></strong> und das <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/main/SEPA%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" style="color: #667eea;">SEPA-Formular</a></strong> herunter.
+                    Lade dir den <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/main/Mitgliedsantrag%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" style="color: var(--brand-blue);">Mitgliedsantrag</a></strong> und das <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/main/SEPA%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" style="color: var(--brand-blue);">SEPA-Formular</a></strong> herunter.
                   </p>
                   <p style="color: #5a6c7d; line-height: 1.6;">
                     Fülle beide Formulare vollständig aus.
@@ -55,12 +55,12 @@ permalink: /mitglied-werden/
 
               <!-- Schritt 3 -->
               <div class="column is-12">
-                <div class="content" style="padding: 1.5rem; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%); border-radius: 12px;">
+                <div class="content" style="padding: 1.5rem; background: var(--brand-blue-bg); border-radius: 12px;">
                   <h3 class="title is-6 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
                     3. Antrag einreichen
                   </h3>
                   <p style="color: #5a6c7d; line-height: 1.6;">
-                    <strong><a href="/austausch/" style="color: #667eea;">Sende uns</a></strong> den ausgefüllten <strong>Mitgliedsantrag</strong> und das ausgefüllte <strong>SEPA-Formular</strong>. Nach Prüfung durch den Vorstand bekommst du Bescheid.
+                    <strong><a href="/austausch/" style="color: var(--brand-blue);">Sende uns</a></strong> den ausgefüllten <strong>Mitgliedsantrag</strong> und das ausgefüllte <strong>SEPA-Formular</strong>. Nach Prüfung durch den Vorstand bekommst du Bescheid.
                   </p>
                 </div>
               </div>

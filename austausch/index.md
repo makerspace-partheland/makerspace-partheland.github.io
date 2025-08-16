@@ -29,11 +29,11 @@ permalink: /austausch/
             <div class="buttons is-centered" style="flex-direction: column; gap: 1rem;">
               <a href="https://t.me/makerspacepartheland" target="_blank" rel="noreferrer noopener" 
                  class="button is-primary is-large is-rounded has-text-weight-semibold" 
-                 style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; width: 100%;">
+                 class="button is-primary is-large is-rounded has-text-weight-semibold" style="width: 100%;">
                 Makerspace Partheland Public
               </a>
               <a href="https://t.me/+J04U0UCk43MxNTMy" target="_blank" rel="noreferrer noopener" 
-                 class="button is-info is-large is-rounded has-text-weight-semibold" 
+                 class="button is-success is-large is-rounded has-text-weight-semibold" 
                  style="width: 100%;">
                 Unsere Themenwelt
               </a>

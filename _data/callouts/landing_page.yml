@@ -1,14 +1,6 @@
 style: is-light
 height: is-medium
 items:
-  - title: Smart City
-    subtitle: Umweltsensoren und Messnetzwerk
-    description: >
-      Aufbau und Betrieb von Bürger-Umweltmessstationen im gesamten Partheland. 
-      Mit LoRaWAN-Technologie erfassen wir Temperatur, Luftfeuchtigkeit, Feinstaub 
-      und weitere Umweltdaten für eine intelligente Region.
-    call_to_action_name: Erkunden
-    call_to_action_link: /projekte/smart-city/
   - title: Austausch & Begegnung
     subtitle: Für Neugierige und Interessierte
     description: >
@@ -17,6 +9,14 @@ items:
       Ob nur zuschauen oder aktiv dabei – jeder ist willkommen.
     call_to_action_name: Entdecken
     call_to_action_link: /austausch/
+  - title: Smart City
+    subtitle: Umweltsensoren und Messnetzwerk
+    description: >
+      Aufbau und Betrieb von Bürger-Umweltmessstationen im gesamten Partheland. 
+      Mit LoRaWAN-Technologie erfassen wir Temperatur, Luftfeuchtigkeit, Feinstaub 
+      und weitere Umweltdaten für eine intelligente Region.
+    call_to_action_name: Erkunden
+    call_to_action_link: /projekte/smart-city/
   - title: Projekte
     subtitle: Kreative Lösungen und Innovationen
     description: >

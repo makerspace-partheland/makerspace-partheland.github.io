@@ -18,7 +18,7 @@ permalink: /termine/
       
       <!-- Reparatur-Treff -->
       <div class="column is-6-desktop is-12-tablet">
-        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);">
+        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px;">
           <div class="card-content" style="padding: 2.5rem 2rem; text-align: center;">
             <h2 class="title is-3 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
               Reparatur‑Treff
@@ -30,8 +30,7 @@ permalink: /termine/
               <p>Gemeinsam reparieren statt wegwerfen. Ehrenamtliche unterstützen beim Analysieren und Reparieren defekter Alltagsgeräte.</p>
             </div>
             <a href="/termine/reparatur-treff/" 
-               class="button is-primary is-medium is-rounded has-text-weight-semibold"
-               style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none;">
+               class="button is-primary is-medium is-rounded has-text-weight-semibold">
               Details erfahren
             </a>
           </div>
@@ -94,7 +93,7 @@ permalink: /termine/
                   <a href="{{ e.url }}" style="color: #2c3e50; text-decoration: none;">{{ e.title }}</a>
                 </h3>
                 {% if e.date %}
-                  <p class="subtitle is-6 has-text-weight-medium" style="color: #667eea; margin-bottom: 1rem;">
+                  <p class="subtitle is-6 has-text-weight-medium" style="color: var(--brand-blue); margin-bottom: 1rem;">
                     {{ e.date | date: "%d.%m.%Y" }}
                   </p>
                 {% endif %}
