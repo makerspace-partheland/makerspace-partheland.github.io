@@ -30,7 +30,7 @@ permalink: /austausch/
               <a href="https://t.me/makerspacepartheland" target="_blank" rel="noreferrer noopener" 
                  class="button is-primary is-large is-rounded has-text-weight-semibold" 
                  class="button is-primary is-large is-rounded has-text-weight-semibold" style="width: 100%;">
-                Makerspace Partheland Public
+                Hauptkanal
               </a>
               <a href="https://t.me/+J04U0UCk43MxNTMy" target="_blank" rel="noreferrer noopener" 
                  class="button is-success is-large is-rounded has-text-weight-semibold" 
@@ -71,7 +71,7 @@ permalink: /austausch/
             </div>
             <div class="has-text-centered" style="margin-top: 2rem;">
               <a href="/termine/" class="button is-primary is-medium is-rounded has-text-weight-semibold">
-                Vergangene Termine ansehen
+                Vergangene ansehen
               </a>
             </div>
           </div>
