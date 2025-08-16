@@ -5,7 +5,7 @@
       <p class="subtitle is-6 mb-2">Unterstützt von</p>
       {% for sponsor in site.data.sponsors %}
         <a href="{{ sponsor.url }}" target="_blank" rel="noopener">
-          <img src="{{ sponsor.logo }}" alt="{{ sponsor.alt | default: sponsor.name }}" style="height: 80px; width: auto; object-fit: contain;">
+          <img src="{{ sponsor.logo }}" alt="{{ sponsor.alt | default: sponsor.name }}" class="sponsor-logo">
         </a>
       {% endfor %}
     </div>
