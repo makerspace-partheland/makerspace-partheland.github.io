@@ -1,6 +1,9 @@
 ---
 ---
 
+// === BULMA DARK MODE SUPPORT ===
+// Hinweis: Reine CSS-Regeln ohne Bulma @use, damit Jekyll ohne SCSS-Module kompiliert
+
 // === BULMA SASS VARIABLES - VOR Import === 
 $primary: #006DB6;      // Logo-Blau
 $success: #00AA00;      // ORIGINALE Vereinsfarbe Grün
@@ -12,6 +15,91 @@ $text: #2c3e50;         // Standard-Text-Farbe
 
 // Import Main CSS file from theme
 @import "main";
+
+/* Dark Mode: Nur Vereinsfarben anpassen, Layout unverändert */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Vereinsfarben für Dark Mode - basierend auf Design-Richtlinien */
+    --brand-blue: #4d9de0;        /* Helleres Blau für Dark Mode */
+    --brand-green: #44cc44;       /* Helleres Grün für Dark Mode */
+    --brand-blue-dark: #2d5a8a;   /* Angepasstes Dunkelblau */
+    --brand-green-dark: #2a662a;  /* Angepasstes Dunkelgrün */
+    
+    /* Bulma CSS Variablen für Dark Mode */
+    --bulma-scheme-main: #0d1117;
+    --bulma-scheme-main-bis: #161b22;
+    --bulma-scheme-main-ter: #21262d;
+    --bulma-scheme-invert: #f0f6fc;
+    --bulma-scheme-invert-bis: #f0f6fc;
+    --bulma-scheme-invert-ter: #e6edf3;
+    
+    /* Text-Farben */
+    --bulma-text: #e6edf3;
+    --bulma-text-strong: #f0f6fc;
+    --bulma-text-light: #7d8590;
+    
+    /* Primary & Success Farben (Vereinsfarben) */
+    --bulma-primary: #4d9de0;
+    --bulma-primary-dark: #2d5a8a;
+    --bulma-success: #44cc44;
+    --bulma-success-dark: #2a662a;
+  }
+
+  /* Spezifische Überschreibungen für alle Karten mit Inline-Styles */
+  .card.modern-card {
+    background: var(--bulma-scheme-main-bis) !important;
+    border-color: var(--bulma-scheme-main-ter) !important;
+    color: var(--bulma-text) !important;
+  }
+
+  .card.modern-card .title {
+    color: var(--bulma-text-strong) !important;
+  }
+
+  .card.modern-card .subtitle {
+    color: var(--bulma-text) !important;
+  }
+
+  .card.modern-card .content {
+    color: var(--bulma-text-light) !important;
+  }
+
+  .card.modern-card .card-content {
+    color: var(--bulma-text) !important;
+  }
+
+  /* Alle anderen Karten/Boxen auch überschreiben */
+  .card, .box {
+    background: var(--bulma-scheme-main-bis) !important;
+    border-color: var(--bulma-scheme-main-ter) !important;
+    color: var(--bulma-text) !important;
+  }
+
+  /* Projekt-Buttons (is-light) für Dark Mode - echter 3D-Effekt */
+  .button.is-light {
+    background: var(--bulma-scheme-main-bis) !important;
+    border: 1px solid var(--bulma-scheme-main-ter) !important;
+    color: var(--bulma-text) !important;
+    /* Echter 3D-Effekt mit scharfem Schatten */
+    box-shadow: 0 2px 0 #404040 !important;
+  }
+
+  .button.is-light:hover {
+    background: var(--bulma-scheme-main-ter) !important;
+    border-color: #404040 !important;
+    color: var(--bulma-text-strong) !important;
+    /* 3D-Hover-Effekt */
+    box-shadow: 0 3px 0 #404040 !important;
+  }
+
+  .button.is-light:active {
+    background: var(--bulma-scheme-main-ter) !important;
+    border-color: #404040 !important;
+    color: var(--bulma-text-strong) !important;
+    /* 3D-Active-Effekt */
+    box-shadow: 0 1px 0 #404040 !important;
+  }
+}
 
 // === CSS VARIABLEN FÜR ERWEITERTE NUTZUNG ===
 :root {
@@ -502,6 +590,25 @@ a.card.modern-card:active {
 
 /* Alpine.js: Elemente mit x-cloak vor Init verstecken */
 [x-cloak] { display: none !important; }
+
+/* Echter 3D-Effekt für Projekt-Buttons - Light Mode */
+.button.is-light {
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 2px 0 #d4d4d4;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  /* Eckiger wie native Boxen - überschreibt is-rounded */
+  border-radius: 12px !important;
+}
+
+.button.is-light:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 0 #d4d4d4;
+}
+
+.button.is-light:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 #d4d4d4;
+}
 
 
 

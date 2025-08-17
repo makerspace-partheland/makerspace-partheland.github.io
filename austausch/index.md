@@ -82,25 +82,31 @@ permalink: /austausch/
   </div>
 </section>
 
-<section class="section" style="padding: 2rem 1.5rem; background-color: #f8f9fa;">
+<section class="section" style="padding: 2rem 1.5rem;">
   <div class="container">
-    <div class="has-text-centered">
-      <h2 class="title is-4" style="color: #2c3e50; margin-bottom: 1rem;">
-        Vor Ort besuchen
-      </h2>
-      <div class="content" style="color: #5a6c7d;">
-        <p><strong>Temporärer Makerspace:</strong><br>
-        August-Bebel-Straße 12, 04824 Brandis, OT Beucha<br>
-        (Hintereingang, 1. Etage)</p>
-        
-        <p><strong>Öffnungszeiten:</strong><br>
-        Nach Kontaktaufnahme per Telegram oder E-Mail</p>
-        
-        <p><strong>E-Mail:</strong> {% include email.html user="info" domain="makerspace-partheland.de" %}</p>
-        
-        <p style="font-size: 0.9rem; font-style: italic;">
-          Ehrenamtliche können über Telegram flexibler antworten und sich ihre Zeit frei einteilen.
-        </p>
+    <div class="columns is-centered">
+      <div class="column is-8-desktop is-10-tablet is-12-mobile">
+        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px;">
+          <div class="card-content" style="padding: 2.5rem 2rem; text-align: center;">
+            <h2 class="title is-3 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+              Vor Ort besuchen
+            </h2>
+            <div class="content" style="color: #5a6c7d; line-height: 1.6;">
+              <p><strong>Temporärer Makerspace:</strong><br>
+              August-Bebel-Straße 12, 04824 Brandis, OT Beucha<br>
+              (Hintereingang, 1. Etage)</p>
+              
+              <p><strong>Öffnungszeiten:</strong><br>
+              Nach Kontaktaufnahme per Telegram oder E-Mail</p>
+              
+              <p><strong>E-Mail:</strong> {% include email.html user="info" domain="makerspace-partheland.de" %}</p>
+              
+              <p style="font-size: 0.9rem; font-style: italic;">
+                Ehrenamtliche können über Telegram flexibler antworten und sich ihre Zeit frei einteilen.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
