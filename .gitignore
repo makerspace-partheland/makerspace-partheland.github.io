@@ -10,3 +10,5 @@ github-pages-fahrplan.md
 .DS_Store
 /source
 /docs
+/.claude
+start-jekyll.ps1

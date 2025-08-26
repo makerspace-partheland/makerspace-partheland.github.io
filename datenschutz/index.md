@@ -125,33 +125,55 @@ Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Si
 
 ## 4. Datenerfassung auf dieser Website
 
-### Kommentar­funktion auf dieser Website
+### Technisch notwendige Cookies
 
-Für die Kommentarfunktion auf dieser Seite werden neben Ihrem Kommentar auch Angaben zum Zeitpunkt der Erstellung des Kommentars, Ihre E-Mail-Adresse und, wenn Sie nicht anonym posten, der von Ihnen gewählte Nutzername gespeichert.
+Diese Website verwendet ausschließlich technisch notwendige Cookies, die für die ordnungsgemäße Funktion der Website erforderlich sind. Diese Cookies werden automatisch gesetzt und erfordern keine Einwilligung.
 
-#### Speicherdauer der Kommentare
+**Verwendete technisch notwendige Cookies:**
+- **Cloudflare Security Cookies**: Dienen der Website-Sicherheit, dem Schutz vor schädlichen Anfragen und der Optimierung der Ladezeiten über das Content Delivery Network (CDN). Diese Cookies haben verschiedene Namen (z.B. cfz_*, CF_VERIFIED_DEVICE_*, kndctr_*) und werden automatisch von Cloudflare gesetzt.
+- **Session-Cookies**: Ermöglichen die grundlegende Funktionalität der Website während Ihres Besuchs.
 
-Die Kommentare und die damit verbundenen Daten werden gespeichert und verbleiben auf dieser Website, bis der kommentierte Inhalt vollständig gelöscht wurde oder die Kommentare aus rechtlichen Gründen gelöscht werden müssen (z. B. beleidigende Kommentare).
+Die Speicherung dieser Cookies erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an der technisch fehlerfreien und sicheren Bereitstellung unserer Website.
 
-#### Rechtsgrundlage
+Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden oder Cookies generell ablehnen. Bei der Deaktivierung von technisch notwendigen Cookies kann die Funktionalität dieser Website eingeschränkt sein.
 
-Die Speicherung der Kommentare erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können eine von Ihnen erteilte Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der bereits erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt.
+### Content Delivery Networks (CDN)
+
+Diese Website nutzt externe Content Delivery Networks zur Bereitstellung von JavaScript-Bibliotheken und Stylesheets. Dies dient der Optimierung der Ladezeiten und der zuverlässigen Bereitstellung technisch notwendiger Ressourcen.
+
+**Verwendete CDN-Anbieter:**
+
+#### unpkg.com
+Für die Bereitstellung von Alpine.js (JavaScript-Framework für Website-Interaktivität). Anbieter: Michael Jackson. Der Anbieter versichert, dass keine nutzerbezogenen Daten gesammelt werden.
+
+
+**Datenübertragung:**
+Die Einbindung setzt voraus, dass der CDN-Anbieter die IP-Adresse der Webseitenbesucher verarbeitet, da dies für die Auslieferung der Inhalte technisch erforderlich ist. Die IP-Adresse wird nur für die Bereitstellung der angefragten Ressourcen verwendet.
+
+**Rechtsgrundlage:**
+Die Nutzung des CDN-Dienstes erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an der optimierten, schnellen und sicheren Bereitstellung unserer Website. Die CDN-Nutzung ist technisch erforderlich für die ordnungsgemäße Funktion der Website.
 
 ## 5. Analyse-Tools und Werbung
 
-### WP Statistics
+### Cloudflare
 
-Diese Website nutzt das Analysetool WP Statistics, um Besucherzugriffe statistisch auszuwerten. Anbieter ist Veronalabs, ARENCO Tower, 27th Floor, Dubai Media City, Dubai, Dubai 23816, UAE (<a href="https://veronalabs.com" target="_blank" rel="noopener noreferrer">https://veronalabs.com</a>).
+Diese Website nutzt den Content Delivery Network (CDN) Dienst von Cloudflare. Anbieter ist die Cloudflare Germany GmbH, Rosental 7, c/o Mindspace, 80331 München (nachfolgend Cloudflare).
 
-Mit WP Statistics können wir die Nutzung unserer Website analysieren. WP Statistics erfasst dabei u. a. Logdateien (IP-Adresse, Referrer, verwendete Browser, Herkunft des Nutzers, verwendete Suchmaschine) und Aktionen, die die Websitebesucher auf der Seite getätigt haben (z. B. Klicks und Ansichten).
+Cloudflare bietet ein weltweit verteiltes Content Delivery Network mit DNS an. Dabei wird technisch der Informationsaustausch zwischen Ihrem Browser und unserer Website über das Netzwerk von Cloudflare geleitet. Das versetzt Cloudflare in die Lage, den Datenverkehr zwischen Ihrem Browser und unserer Website zu analysieren und als Filter zwischen unseren Servern und potenziell böswilligem Datenverkehr aus dem Internet zu dienen. Hierbei kann Cloudflare auch Cookies oder sonstige Technologien zur Wiedererkennung von Internetnutzern einsetzen, die jedoch allein zum hier beschriebenen Zweck verwendet werden.
 
-Die mit WP Statistics erfassten Daten werden ausschließlich auf unserem eigenen Server gespeichert.
+Cloudflare erfasst dabei u. a. folgende Nutzerdaten:
+- Aufgerufene Webseite
+- Browsertyp und Browserversion
+- Verwendetes Betriebssystem
+- Referrer URL
+- IP-Adresse
+- Anfragender Provider
 
-Die Nutzung dieses Analyse-Tools erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an der anonymisierten Analyse des Nutzerverhaltens, um sowohl unser Webangebot als auch unsere Werbung zu optimieren. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar.
+Die Verwendung von Cloudflare beruht auf unserem berechtigten Interesse an einer möglichst fehlerfreien und sicheren Bereitstellung unseres Webangebotes (Art. 6 Abs. 1 lit. f DSGVO). Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar.
 
-#### IP-Anonymisierung
+Die Datenübertragung in die USA wird auf die Standardvertragsklauseln der EU-Kommission gestützt. Details finden Sie hier: https://www.cloudflare.com/privacypolicy/
 
-Wir verwenden WP Statistics mit anonymisierter IP. Ihre IP-Adresse wird dabei gekürzt, sodass diese Ihnen nicht mehr direkt zugeordnet werden kann.
+Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US Data Privacy Framework" (DPF). Der DPF ist ein Übereinkommen zwischen der Europäischen Union und den USA, der die Einhaltung europäischer Datenschutzstandards bei Datenverarbeitungen in den USA gewährleisten soll. Jedes nach dem DPF zertifizierte Unternehmen verpflichtet sich, diese Datenschutzstandards einzuhalten. Weitere Informationen hierzu erhalten Sie vom Anbieter unter folgendem Link: https://www.dataprivacyframework.gov/participant/4639
 
 ## 6. Plugins und Tools
 

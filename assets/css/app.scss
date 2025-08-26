@@ -4,8 +4,11 @@
 // === BULMA DARK MODE SUPPORT ===
 // Hinweis: Reine CSS-Regeln ohne Bulma @use, damit Jekyll ohne SCSS-Module kompiliert
 
+// Use modern Sass syntax for our custom fonts configuration (includes primary color)
+@use "fonts";
+
 // === BULMA SASS VARIABLES - VOR Import === 
-$primary: #006DB6;      // Logo-Blau
+$primary: #006DB6;      // Logo-Blau (override fonts.$primary)
 $success: #00AA00;      // ORIGINALE Vereinsfarbe Grün
 $info: #006DB6;         // Logo-Blau für Info-Elemente
 $link: #006DB6;         // Logo-Blau für Links
@@ -13,8 +16,13 @@ $warning: #ffdd57;      // Bulma's Standard-Warning
 $danger: #ff3860;       // Bulma's Standard-Danger
 $text: #2c3e50;         // Standard-Text-Farbe
 
-// Import Main CSS file from theme
+// Import theme main SCSS (update-safe) 
 @import "main";
+
+// Hero styling (after theme import so $dark is available)
+$hero-darken: $dark !default;
+
+// === Google Fonts erfolgreich blockiert durch lokale main.scss ===
 
 /* Dark Mode: Nur Vereinsfarben anpassen, Layout unverändert */
 @media (prefers-color-scheme: dark) {
@@ -586,6 +594,26 @@ a.card.modern-card:active {
 }
 .gallery-nav .button {
   pointer-events: auto;
+  min-width: 3.5rem;
+  min-height: 3.5rem;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-nav .button .icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-nav .button svg {
+  width: 24px;
+  height: 24px;
 }
 
 /* Alpine.js: Elemente mit x-cloak vor Init verstecken */
@@ -700,4 +728,28 @@ a.card.modern-card:active {
   .sponsor-logo {
     height: 50px;
   }
+}
+
+/* Hero Event Banner */
+.hero-event-banner {
+  background: rgba(255, 255, 255, 0.97);
+  border-top: 2px solid var(--brand-blue);
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-event-banner .event-label {
+  margin-right: 0.5rem;
+}
+
+.hero-event-banner .event-link {
+  text-decoration: none;
+}
+
+.hero-event-banner .event-additional {
+  margin-left: 0.5rem;
+}
+
+.hero-event-banner .event-separator {
+  margin: 0 0.5rem;
 }

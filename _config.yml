@@ -15,11 +15,14 @@ plugins:
 # Bulma Clean Theme Optionen (Navigation/Branding)
 fixed_navbar: top
 force_theme: 
+hide_share_buttons: true 
 
 ## minimal-mistakes spezifische Optionen vorerst deaktiviert
 # minimal_mistakes_skin: air
 # Deaktiviert Bild-Logo in der Navbar, damit nicht doppelt gebrandet wird
 # logo:
+
+# Cookie-Banner deaktiviert - nur technisch notwendige Cloudflare Cookies
 
 collections:
   projects:
@@ -29,8 +32,15 @@ collections:
     output: true
     permalink: /termine/:name/
 
+future: true
+
 sass:
   quiet_deps: true
+
+exclude:
+  - jekyll-env/
+  - vendor/
+  - start-jekyll.ps1
 
 
 defaults:

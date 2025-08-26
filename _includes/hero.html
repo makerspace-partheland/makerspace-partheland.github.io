@@ -23,6 +23,18 @@
             </p>
           </div>
         {% endif %}
+        {% comment %} Check for upcoming events {% endcomment %}
+        {% assign today = site.time | date: "%Y-%m-%d" %}
+        {% assign all_events = site.events | sort: "date" %}
+        {% assign upcoming_events = "" | split: "" %}
+        {% for event in all_events %}
+          {% assign event_date = event.date | date: "%Y-%m-%d" %}
+          {% if event_date >= today %}
+            {% assign upcoming_events = upcoming_events | push: event %}
+          {% endif %}
+        {% endfor %}
+        {% assign upcoming_events = upcoming_events | slice: 0, 3 %}
+        
         {% if page.hero_link and page.hero_link_text %}
           <div class="buttons is-centered" style="margin-top: 2rem;">
             <a href="{{ page.hero_link | relative_url }}" class="button is-white is-large is-rounded has-text-weight-semibold">
@@ -33,6 +45,24 @@
       </div>
     </div>
   </section>
+
+  {% comment %} Event notification banner - professional positioning {% endcomment %}
+  {% if upcoming_events.size > 0 %}
+    <div class="hero-event-banner">
+      <div class="container has-text-centered">
+        {% assign next_event = upcoming_events[0] %}
+        <span class="has-text-grey-dark is-size-6 event-label">Nächster Termin:</span>
+        <a href="/termine/" class="has-text-primary has-text-weight-semibold event-link">
+          <span>{{ next_event.date | date: "%d.%m.%Y" }}</span>
+          <span class="event-separator">•</span>
+          <span>{{ next_event.title }}</span>
+        </a>
+        {% if upcoming_events.size > 1 %}
+          <span class="has-text-grey-dark is-size-6 event-additional">…und weitere</span>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
 {% endif %}
 
 

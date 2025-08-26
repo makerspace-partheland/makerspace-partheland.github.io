@@ -60,8 +60,22 @@ In beiden Fällen wird die Theme-Lightbox via image-modal.html genutzt.
           </div>
           <button class="modal-close is-large" aria-label="close" x-on:click="close()"></button>
           <div class="gallery-nav">
-            <button class="button is-light" aria-label="Vorheriges Bild" x-on:click.stop="prev()"><span class="icon"><i class="fa-solid fa-chevron-left"></i></span></button>
-            <button class="button is-light" aria-label="Nächstes Bild" x-on:click.stop="next()"><span class="icon"><i class="fa-solid fa-chevron-right"></i></span></button>
+            <button class="button is-light" aria-label="Vorheriges Bild" x-on:click.stop="prev()">
+              <span class="icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12,19 5,12 12,5"></polyline>
+                </svg>
+              </span>
+            </button>
+            <button class="button is-light" aria-label="Nächstes Bild" x-on:click.stop="next()">
+              <span class="icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12,5 19,12 12,19"></polyline>
+                </svg>
+              </span>
+            </button>
           </div>
         </div>
       </template>
@@ -126,8 +140,22 @@ In beiden Fällen wird die Theme-Lightbox via image-modal.html genutzt.
             </div>
             <button class="modal-close is-large" aria-label="close" x-on:click="close()"></button>
             <div class="gallery-nav">
-              <button class="button is-light" aria-label="Vorheriges Bild" x-on:click.stop="prev()"><span class="icon"><i class="fa-solid fa-chevron-left"></i></span></button>
-              <button class="button is-light" aria-label="Nächstes Bild" x-on:click.stop="next()"><span class="icon"><i class="fa-solid fa-chevron-right"></i></span></button>
+              <button class="button is-light" aria-label="Vorheriges Bild" x-on:click.stop="prev()">
+                <span class="icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12,19 5,12 12,5"></polyline>
+                  </svg>
+                </span>
+              </button>
+              <button class="button is-light" aria-label="Nächstes Bild" x-on:click.stop="next()">
+                <span class="icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12,5 19,12 12,19"></polyline>
+                  </svg>
+                </span>
+              </button>
             </div>
           </div>
         </template>

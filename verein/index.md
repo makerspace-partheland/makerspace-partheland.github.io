@@ -154,12 +154,11 @@ permalink: /verein/
             </div>
             <div class="buttons is-centered" style="gap: 1rem;">
               <a href="/mitglied-werden/" 
-                 class="button is-primary is-medium is-rounded has-text-weight-semibold"
-                 class="button is-primary is-medium is-rounded has-text-weight-semibold">
+                 class="button is-success is-medium is-rounded has-text-weight-semibold">
                 Mitglied werden
               </a>
               <a href="https://t.me/makerspacepartheland" target="_blank" rel="noreferrer noopener"
-                 class="button is-light is-medium is-rounded has-text-weight-semibold">
+                 class="button is-info is-medium is-rounded has-text-weight-semibold">
                 Telegram-Kanal
               </a>
             </div>
@@ -182,7 +181,7 @@ permalink: /verein/
               <p class="is-size-7">Satzung, Beitragsordnung und weitere Informationen</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente" target="_blank" rel="noreferrer noopener"
-               class="button is-small is-primary is-rounded">
+               class="button is-small is-light is-rounded">
               GitHub Repository
             </a>
           </div>
@@ -200,7 +199,7 @@ permalink: /verein/
               <p class="is-size-7">Regelt wie der Makerspace funktioniert</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener"
-               class="button is-small is-primary is-rounded">
+               class="button is-small is-light is-rounded">
               Aktuelle Fassung
             </a>
           </div>
@@ -218,7 +217,7 @@ permalink: /verein/
               <p class="is-size-7">Mitgliedsbeiträge und Abwicklung</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Beitragsordnung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener"
-               class="button is-small is-primary is-rounded">
+               class="button is-small is-light is-rounded">
               Beiträge ansehen
             </a>
           </div>
