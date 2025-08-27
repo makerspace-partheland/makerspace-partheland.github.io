@@ -12,15 +12,15 @@ hero_link_text: Antrag stellen
 permalink: /mitglied-werden/
 ---
 
-<section class="section" style="padding: 4rem 1.5rem;">
+<section class="section main-section">
   <div class="container">
     
     <!-- Mitgliedsantrag Prozess -->
-    <div class="columns is-centered" style="margin-bottom: 4rem;">
+    <div class="columns is-centered mb-4rem">
       <div class="column is-10-desktop is-12-tablet">
-        <div class="card modern-card" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px;">
-          <div class="card-content" style="padding: 2.5rem 2rem;">
-            <h2 class="title is-4 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 2rem; text-align: center;">
+        <div class="card modern-card standard-card">
+          <div class="card-content standard-card-content large">
+            <h2 class="title is-4 has-text-weight-bold primary-title mb-2rem has-text-centered">
               Wie werde ich Mitglied?
             </h2>
             
@@ -28,26 +28,26 @@ permalink: /mitglied-werden/
               
               <!-- Schritt 1 -->
               <div class="column is-6-desktop is-12-tablet">
-                <div class="content" style="padding: 1.5rem; background: var(--brand-blue-bg); border-radius: 12px; height: 100%;">
-                  <h3 class="title is-6 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+                <div class="content process-step">
+                  <h3 class="title is-6 has-text-weight-bold">
                     1. Dokumente lesen
                   </h3>
-                  <p style="color: #5a6c7d; line-height: 1.6;">
-                    Lies dir unsere <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" style="color: var(--brand-blue);">Satzung</a></strong> und <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Beitragsordnung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" style="color: var(--brand-blue);">Beitragsordnung</a></strong> durch und befolge sie.
+                  <p>
+                    Lies dir unsere <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener">Satzung</a></strong> und <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Beitragsordnung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener">Beitragsordnung</a></strong> durch und befolge sie.
                   </p>
                 </div>
               </div>
 
               <!-- Schritt 2 -->
               <div class="column is-6-desktop is-12-tablet">
-                <div class="content" style="padding: 1.5rem; background: var(--brand-blue-bg); border-radius: 12px; height: 100%;">
-                  <h3 class="title is-6 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+                <div class="content process-step">
+                  <h3 class="title is-6 has-text-weight-bold">
                     2. Antrag ausfüllen
                   </h3>
-                  <p style="color: #5a6c7d; line-height: 1.6; margin-bottom: 1rem;">
-                    Lade dir den <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/main/Mitgliedsantrag%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" style="color: var(--brand-blue);">Mitgliedsantrag</a></strong> und das <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/main/SEPA%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" style="color: var(--brand-blue);">SEPA-Formular</a></strong> herunter.
+                  <p class="mb-1rem">
+                    Lade dir den <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/main/Mitgliedsantrag%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener">Mitgliedsantrag</a></strong> und das <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/main/SEPA%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener">SEPA-Formular</a></strong> herunter.
                   </p>
-                  <p style="color: #5a6c7d; line-height: 1.6;">
+                  <p>
                     Fülle beide Formulare vollständig aus.
                   </p>
                 </div>
@@ -55,12 +55,12 @@ permalink: /mitglied-werden/
 
               <!-- Schritt 3 -->
               <div class="column is-12">
-                <div class="content" style="padding: 1.5rem; background: var(--brand-blue-bg); border-radius: 12px;">
-                  <h3 class="title is-6 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+                <div class="content process-step">
+                  <h3 class="title is-6 has-text-weight-bold">
                     3. Antrag einreichen
                   </h3>
-                  <p style="color: #5a6c7d; line-height: 1.6;">
-                    <strong><a href="/austausch/" style="color: var(--brand-blue);">Sende uns</a></strong> den ausgefüllten <strong>Mitgliedsantrag</strong> und das ausgefüllte <strong>SEPA-Formular</strong>. Nach Prüfung durch den Vorstand bekommst du Bescheid.
+                  <p>
+                    <strong><a href="/austausch/">Sende uns</a></strong> den ausgefüllten <strong>Mitgliedsantrag</strong> und das ausgefüllte <strong>SEPA-Formular</strong>. Nach Prüfung durch den Vorstand bekommst du Bescheid.
                   </p>
                 </div>
               </div>
@@ -72,33 +72,33 @@ permalink: /mitglied-werden/
     </div>
 
     <!-- Mitgliedschaftsarten -->
-    <div style="margin-bottom: 4rem;">
-      <h2 class="title is-4 has-text-centered" style="color: #2c3e50; margin-bottom: 2rem;">
+    <div class="mb-4rem">
+      <h2 class="title is-4 has-text-centered primary-title mb-2rem">
         Unsere Mitgliedschaftsarten
       </h2>
       <div class="columns is-multiline is-centered">
         
         <!-- Aktive Mitgliedschaft -->
         <div class="column is-6-desktop is-12-tablet">
-          <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease;">
-            <div class="card-content" style="padding: 2.5rem 2rem; height: 100%; display: flex; flex-direction: column;">
-              <h3 class="title is-5 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+          <div class="card modern-card standard-card full-height">
+            <div class="card-content membership-card-content">
+              <h3 class="title is-5 has-text-weight-bold">
                 Aktive Mitgliedschaft
               </h3>
-              <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1;">
-                <p style="margin-bottom: 1rem;">
+              <div class="content">
+                <p>
                   <strong>Für alle, die aktiv mitmachen möchten:</strong>
                 </p>
-                <ul style="margin-bottom: 1.5rem;">
+                <ul>
                   <li>Stimmrecht bei Mitgliederversammlungen</li>
                   <li>Aktive Teilnahme an Vereinsaufgaben</li>
                   <li>Nutzung der Vereinseinrichtungen</li>
                   <li>Ideal für Selbermacher und Technik-Interessierte</li>
                 </ul>
-                <p class="has-text-weight-medium" style="color: #2c3e50; margin-bottom: 1rem;">
+                <p class="has-text-weight-medium membership-price">
                   <strong>Beitrag:</strong> 5,- € je Monat
                 </p>
-                <p class="is-size-7" style="color: #34495e;">
+                <p class="is-size-7 membership-note">
                   Auf freiwilliger Basis kann ein höherer Beitrag gezahlt werden.
                 </p>
               </div>
@@ -108,25 +108,25 @@ permalink: /mitglied-werden/
 
         <!-- Fördernde Mitgliedschaft -->
         <div class="column is-6-desktop is-12-tablet">
-          <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease;">
-            <div class="card-content" style="padding: 2.5rem 2rem; height: 100%; display: flex; flex-direction: column;">
-              <h3 class="title is-5 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+          <div class="card modern-card standard-card full-height">
+            <div class="card-content membership-card-content">
+              <h3 class="title is-5 has-text-weight-bold">
                 Fördernde Mitgliedschaft
               </h3>
-              <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1;">
-                <p style="margin-bottom: 1rem;">
+              <div class="content">
+                <p>
                   <strong>Für alle, die uns unterstützen möchten:</strong>
                 </p>
-                <ul style="margin-bottom: 1.5rem;">
+                <ul>
                   <li>Kein Stimmrecht bei Mitgliederversammlungen</li>
                   <li>Unterstützung ohne aktive Tätigkeit</li>
                   <li>Information über Vereinsaktivitäten</li>
                   <li>Ideal für Unternehmen und Kooperationspartner</li>
                 </ul>
-                <p class="has-text-weight-medium" style="color: #2c3e50; margin-bottom: 1rem;">
+                <p class="has-text-weight-medium membership-price">
                   <strong>Beitrag:</strong> Individuell verhandelt
                 </p>
-                <p class="is-size-7" style="color: #34495e;">
+                <p class="is-size-7 membership-note">
                   Beiträge werden mit Vorstand individuell festgelegt.
                 </p>
               </div>
@@ -142,12 +142,12 @@ permalink: /mitglied-werden/
       
       <!-- Vereinssatzung -->
       <div class="column is-4-desktop is-6-tablet is-12-mobile">
-        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease;">
-          <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column; text-align: center;">
-            <h3 class="title is-6 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+        <div class="card modern-card standard-card full-height">
+          <div class="card-content standard-card-content centered">
+            <h3 class="title is-6 has-text-weight-bold primary-title mb-1rem">
               Vereinssatzung
             </h3>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1; margin-bottom: 1.5rem;">
+            <div class="content body-text card-content-body mb-1-5rem">
               <p class="is-size-7">Unsere Satzung regelt wie der Makerspace funktioniert und definiert Rechte und Pflichten der Mitglieder.</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" 
@@ -161,12 +161,12 @@ permalink: /mitglied-werden/
 
       <!-- Beitragsordnung -->
       <div class="column is-4-desktop is-6-tablet is-12-mobile">
-        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease;">
-          <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column; text-align: center;">
-            <h3 class="title is-6 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+        <div class="card modern-card standard-card full-height">
+          <div class="card-content standard-card-content centered">
+            <h3 class="title is-6 has-text-weight-bold primary-title mb-1rem">
               Beitragsordnung
             </h3>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1; margin-bottom: 1.5rem;">
+            <div class="content body-text card-content-body mb-1-5rem">
               <p class="is-size-7">Aktuelle Mitgliedsbeiträge, Zahlungsmodalitäten und soziale Staffelung für alle Mitgliedschaftsarten.</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Beitragsordnung%20-%20Makerspace%20Partheland%20e.V.pdf" 
@@ -180,12 +180,12 @@ permalink: /mitglied-werden/
 
       <!-- Alle Dokumente -->
       <div class="column is-4-desktop is-12-tablet is-12-mobile">
-        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease;">
-          <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column; text-align: center;">
-            <h3 class="title is-6 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+        <div class="card modern-card standard-card full-height">
+          <div class="card-content standard-card-content centered">
+            <h3 class="title is-6 has-text-weight-bold primary-title mb-1rem">
               Vereinsdokumente
             </h3>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1; margin-bottom: 1.5rem;">
+            <div class="content body-text card-content-body mb-1-5rem">
               <p class="is-size-7">Alle Vereinsdokumente, Sitzungsprotokolle und Transparenz-Informationen in unserem öffentlichen Repository.</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente" 

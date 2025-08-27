@@ -10,19 +10,19 @@ hero_description: Ehrenamtliche unterstützen beim Analysieren und Reparieren de
 permalink: /termine/reparatur-treff/
 ---
 
-<section class="section" style="padding: 4rem 1.5rem;">
+<section class="section main-section">
   <div class="container">
     
     <!-- Konzept Card -->
-    <div class="columns is-centered" style="margin-bottom: 3rem;">
+    <div class="columns is-centered mb-4rem">
       <div class="column is-8-desktop is-10-tablet">
-        <div class="card modern-card" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px;">
-          <div class="card-content" style="padding: 2.5rem 2rem;">
-            <h2 class="title is-3 has-text-weight-bold has-text-centered" style="color: #2c3e50; margin-bottom: 1.5rem;">
+        <div class="card modern-card standard-card">
+          <div class="card-content standard-card-content large">
+            <h2 class="title is-3 has-text-weight-bold has-text-centered primary-title mb-1-5rem">
               Unser Reparatur‑Konzept
             </h2>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6; text-align: center;">
-              <p class="is-size-5" style="margin-bottom: 1.5rem;">
+            <div class="content body-text has-text-centered">
+              <p class="is-size-5 mb-1-5rem">
                 Der Makerspace Partheland e.V. lädt unregelmäßig zum Reparatur‑Treff ein. Gemeinsam reparieren wir defekte Geräte, verlängern ihre Lebensdauer und vermeiden Müll.
               </p>
               <p class="is-size-6">
@@ -35,16 +35,16 @@ permalink: /termine/reparatur-treff/
     </div>
 
     <!-- Informationen Grid -->
-    <div class="columns is-multiline is-centered" style="margin-bottom: 3rem;">
+    <div class="columns is-multiline is-centered mb-4rem">
       
       <!-- Was mitbringen -->
       <div class="column is-4-desktop is-6-tablet is-12-mobile">
-        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease;">
-          <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column;">
-            <h3 class="title is-5 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+        <div class="card modern-card standard-card full-height">
+          <div class="card-content standard-card-content">
+            <h3 class="title is-5 has-text-weight-bold primary-title mb-1rem">
               Was mitbringen?
             </h3>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1;">
+            <div class="content body-text card-content-body">
               <ul>
                 <li>Defekte Alltagsgeräte</li>
                 <li>Bedienungsanleitungen (falls vorhanden)</li>
@@ -59,12 +59,12 @@ permalink: /termine/reparatur-treff/
 
       <!-- Ort & Zeit -->
       <div class="column is-4-desktop is-6-tablet is-12-mobile">
-        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease;">
-          <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column;">
-            <h3 class="title is-5 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+        <div class="card modern-card standard-card full-height">
+          <div class="card-content standard-card-content">
+            <h3 class="title is-5 has-text-weight-bold primary-title mb-1rem">
               Wann & Wo?
             </h3>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1;">
+            <div class="content body-text card-content-body">
               <p><strong>Ort:</strong><br>
               August‑Bebel‑Straße 12<br>
               (Hintereingang, 1. Etage)<br>
@@ -80,12 +80,12 @@ permalink: /termine/reparatur-treff/
 
       <!-- Wichtige Hinweise -->
       <div class="column is-4-desktop is-12-tablet is-12-mobile">
-        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease;">
-          <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column;">
-            <h3 class="title is-5 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+        <div class="card modern-card standard-card full-height">
+          <div class="card-content standard-card-content">
+            <h3 class="title is-5 has-text-weight-bold primary-title mb-1rem">
               Wichtige Hinweise
             </h3>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1;">
+            <div class="content body-text card-content-body">
               <ul>
                 <li><strong>Ehrenamtlich:</strong> Keine Garantie auf Erfolg</li>
                 <li><strong>Unregelmäßig:</strong> Termine nach Verfügbarkeit</li>
@@ -102,16 +102,16 @@ permalink: /termine/reparatur-treff/
     <!-- Termine & Kontakt -->
     <div class="columns is-centered">
       <div class="column is-8-desktop is-10-tablet">
-        <div class="card modern-card" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px;">
-          <div class="card-content" style="padding: 2.5rem 2rem; text-align: center;">
-            <h2 class="title is-4 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+        <div class="card modern-card standard-card">
+          <div class="card-content standard-card-content large centered">
+            <h2 class="title is-4 has-text-weight-bold primary-title mb-1rem">
               Nächste Termine
             </h2>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6; margin-bottom: 2rem;">
+            <div class="content body-text mb-2rem">
               <p>Konkrete Termine werden hier veröffentlicht, sobald sie festgelegt sind.</p>
               <p><em>Aktuelle Planungen und spontane Aufrufe in unseren Telegram-Kanälen!</em></p>
             </div>
-            <div class="buttons is-centered" style="gap: 1rem;">
+            <div class="buttons is-centered button-group">
               <a href="/austausch/" 
                  class="button is-primary is-medium is-rounded has-text-weight-semibold">
                 Telegram-Kanäle

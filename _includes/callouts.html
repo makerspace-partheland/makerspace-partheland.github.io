@@ -1,7 +1,7 @@
 {% if page.callouts %}
     {% assign callouts = site.data.callouts[page.callouts] %}
     {% if callouts %}
-        <section class="section" style="padding: 4rem 1.5rem;">
+        <section class="section main-section">
             <div class="container">
                 <div class="columns is-multiline is-centered">
                     {% for callout in callouts.items %}
@@ -12,25 +12,25 @@
                         {% endif %}
                         
                         <div class="column is-4-desktop is-6-tablet is-12-mobile">
-                            <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease;">
-                                <div class="card-content" style="padding: 2.5rem 2rem; height: 100%; display: flex; flex-direction: column;">
-                                    <div style="flex-grow: 1;">
-                                        <h2 class="title is-3 has-text-weight-bold has-text-centered" style="color: #2c3e50; margin-bottom: 1rem;">
+                            <div class="card modern-card standard-card full-height">
+                                <div class="card-content callout-card-content">
+                                    <div class="callout-card-body">
+                                        <h2 class="title is-3 has-text-weight-bold has-text-centered callout-title">
                                             {{ callout.title }}
                                         </h2>
                                         {% if callout.subtitle %}
-                                            <h3 class="subtitle is-5 has-text-weight-medium has-text-centered" style="color: #34495e; margin-bottom: 1.5rem;">
+                                            <h3 class="subtitle is-5 has-text-weight-medium has-text-centered callout-subtitle">
                                                 {{ callout.subtitle }}
                                             </h3>
                                         {% endif %}
                                         {% if callout.description %}
-                                            <div class="content has-text-centered" style="color: #5a6c7d; line-height: 1.6;">
+                                            <div class="content has-text-centered callout-content">
                                                 {{ callout.description | markdownify }}
                                             </div>
                                         {% endif %}
                                     </div>
                                                         {% if callout.call_to_action_name and callout.call_to_action_link %}
-                        <div class="has-text-centered" style="margin-top: 2rem;">
+                        <div class="has-text-centered callout-actions">
                             {% if is_smart_city %}
                                 <a href="{{ callout.call_to_action_link | relative_url }}" 
                                    class="button is-success is-medium is-rounded has-text-weight-semibold"

@@ -9,32 +9,32 @@ hero_show_subtitle: true
 permalink: /austausch/
 ---
 
-<section class="section" style="padding: 4rem 1.5rem;">
+<section class="section main-section">
   <div class="container">
     <div class="columns is-multiline is-centered">
       
       <!-- Telegram Kanäle -->
       <div class="column is-6-desktop is-12-tablet">
-        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px;">
-          <div class="card-content" style="padding: 2.5rem 2rem; text-align: center;">
-            <h2 class="title is-3 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+        <div class="card modern-card standard-card full-height">
+          <div class="card-content standard-card-content large centered">
+            <h2 class="title is-3 has-text-weight-bold primary-title mb-1rem">
               Täglich aktive Telegram-Kanäle
             </h2>
-            <h3 class="subtitle is-5 has-text-weight-medium" style="color: #34495e; margin-bottom: 1.5rem;">
+            <h3 class="subtitle is-5 has-text-weight-medium secondary-title mb-1-5rem">
               Hier ist immer etwas los
             </h3>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6; margin-bottom: 2rem;">
+            <div class="content body-text mb-2rem">
               <p>Täglich neue Ideen, Fragen und spannende Diskussionen in unseren Telegram-Kanälen.</p>
             </div>
-            <div class="buttons is-centered" style="flex-direction: column; gap: 1rem;">
+            <div class="buttons is-centered button-group column">
               <a href="https://t.me/makerspacepartheland" target="_blank" rel="noreferrer noopener" 
                  class="button is-primary is-large is-rounded has-text-weight-semibold" 
-                 class="button is-primary is-large is-rounded has-text-weight-semibold" style="width: 100%;">
+                 class="button is-primary is-large is-rounded has-text-weight-semibold full-width">
                 Hauptkanal
               </a>
               <a href="https://t.me/+J04U0UCk43MxNTMy" target="_blank" rel="noreferrer noopener" 
                  class="button is-success is-large is-rounded has-text-weight-semibold" 
-                 style="width: 100%;">
+                 class="full-width">
                 Unsere Themenwelt
               </a>
             </div>
@@ -44,19 +44,19 @@ permalink: /austausch/
 
       <!-- Termine vor Ort -->
       <div class="column is-6-desktop is-12-tablet">
-        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px;">
-          <div class="card-content" style="padding: 2.5rem 2rem; text-align: center;">
-            <h2 class="title is-3 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+        <div class="card modern-card standard-card full-height">
+          <div class="card-content standard-card-content large centered">
+            <h2 class="title is-3 has-text-weight-bold primary-title mb-1rem">
               Termine vor Ort
             </h2>
-            <h3 class="subtitle is-5 has-text-weight-medium" style="color: #34495e; margin-bottom: 1.5rem;">
+            <h3 class="subtitle is-5 has-text-weight-medium secondary-title mb-1-5rem">
               Ehrenamtlich & unregelmäßig
             </h3>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6;">
+            <div class="content body-text">
               {% assign upcoming = site.events | where_exp: "e", "e.date" | where_exp: "e", "e.date >= site.time" | sort: "date" %}
               {% if upcoming and upcoming.size > 0 %}
                 <p><strong>Anstehende Termine:</strong></p>
-                <ul style="text-align: left;">
+                <ul class="text-left">
                   {% for e in upcoming limit: 3 %}
                     <li>
                       <a href="{{ e.url }}">{{ e.title }}</a>
@@ -69,7 +69,7 @@ permalink: /austausch/
                 <p><em>Aber in unseren Telegram-Kanälen ist immer etwas los!</em></p>
               {% endif %}
             </div>
-            <div class="has-text-centered" style="margin-top: 2rem;">
+            <div class="has-text-centered mb-2rem">
               <a href="/termine/" class="button is-primary is-medium is-rounded has-text-weight-semibold">
                 Vergangene ansehen
               </a>
@@ -82,16 +82,16 @@ permalink: /austausch/
   </div>
 </section>
 
-<section class="section" style="padding: 2rem 1.5rem;">
+<section class="section secondary-section">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8-desktop is-10-tablet is-12-mobile">
-        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px;">
-          <div class="card-content" style="padding: 2.5rem 2rem; text-align: center;">
-            <h2 class="title is-3 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+        <div class="card modern-card standard-card full-height">
+          <div class="card-content standard-card-content large centered">
+            <h2 class="title is-3 has-text-weight-bold primary-title mb-1rem">
               Vor Ort besuchen
             </h2>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6;">
+            <div class="content body-text">
               <p><strong>Temporärer Makerspace:</strong><br>
               August-Bebel-Straße 12, 04824 Brandis, OT Beucha<br>
               (Hintereingang, 1. Etage)</p>
@@ -101,7 +101,7 @@ permalink: /austausch/
               
               <p><strong>E-Mail:</strong> {% include email.html user="info" domain="makerspace-partheland.de" %}</p>
               
-              <p style="font-size: 0.9rem; font-style: italic;">
+              <p class="font-small">
                 Ehrenamtliche können über Telegram flexibler antworten und sich ihre Zeit frei einteilen.
               </p>
             </div>

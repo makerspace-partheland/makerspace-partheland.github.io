@@ -25,9 +25,28 @@ permalink: /termine/
 
 <!-- Anstehende Termine (falls vorhanden) -->
 {% if upcoming and upcoming.size > 0 %}
-<section class="section" style="padding: 4rem 1.5rem;">
+<section class="section termine-upcoming-section">
   <div class="container">
-    <h2 class="title is-4 has-text-centered" style="color: #2c3e50; margin-bottom: 2rem;">
+    <!-- Farblegende -->
+    <div class="event-legend">
+      <div class="event-legend-item">
+        <div class="event-legend-color featured"></div>
+        <span class="event-legend-text">Besonderes</span>
+      </div>
+      <div class="event-legend-item">
+        <div class="event-legend-color members-only"></div>
+        <span class="event-legend-text">
+          <span class="members-only-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM15.1 8H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/>
+            </svg>
+          </span>
+          Vereinsintern
+        </span>
+      </div>
+    </div>
+    
+    <h2 class="title is-4 has-text-centered termine-section-title">
       Anstehende Termine
     </h2>
     <div class="columns is-multiline is-centered">
@@ -36,25 +55,34 @@ permalink: /termine/
       {% if next_reparatur %}
         <div class="column is-4-desktop is-6-tablet is-12-mobile">
           {% if next_reparatur.featured %}
-            <div class="card modern-card" style="height: 100%; box-shadow: 0 6px 25px rgba(0, 170, 0, 0.15); border-radius: 12px; border-left: 4px solid var(--brand-green); transition: all 0.3s ease;">
+            <div class="card modern-card termine-card featured">
+          {% elsif next_reparatur.members_only %}
+            <div class="card modern-card members-only-event termine-card">
           {% else %}
-            <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease;">
+            <div class="card modern-card termine-card standard">
           {% endif %}
-            <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column;">
-              <div style="flex-grow: 1;">
-                <h3 class="title is-5 has-text-weight-bold has-text-centered" style="color: #2c3e50; margin-bottom: 0.5rem;">
-                  <a href="{{ next_reparatur.url }}" style="color: #2c3e50; text-decoration: none;">{{ next_reparatur.title }}</a>
+            <div class="card-content termine-card-content">
+              <div class="termine-card-body">
+                <h3 class="title is-5 has-text-weight-bold has-text-centered termine-event-title">
+                  {% if next_reparatur.members_only %}
+                    <span class="members-only-icon">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM15.1 8H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/>
+                      </svg>
+                    </span>
+                  {% endif %}
+                  <a href="{{ next_reparatur.url }}">{{ next_reparatur.title }}</a>
                 </h3>
-                <p class="subtitle is-6 has-text-weight-medium has-text-centered" style="color: var(--brand-blue); margin-bottom: 1rem;">
+                <p class="subtitle is-6 has-text-weight-medium has-text-centered termine-event-date">
                   {{ next_reparatur.date | date: "%d.%m.%Y" }}
                 </p>
                 {% if next_reparatur.excerpt %}
-                  <div class="content is-size-6 has-text-centered" style="color: #5a6c7d; line-height: 1.5;">
+                  <div class="content is-size-6 has-text-centered termine-event-content">
                     {{ next_reparatur.excerpt }}
                   </div>
                 {% endif %}
               </div>
-              <div class="has-text-centered" style="margin-top: 1rem;">
+              <div class="has-text-centered termine-card-actions">
                 <a href="{{ next_reparatur.url }}" class="button is-small is-primary is-rounded">
                   Details
                 </a>
@@ -68,27 +96,36 @@ permalink: /termine/
       {% for e in other_upcoming %}
         <div class="column is-4-desktop is-6-tablet is-12-mobile">
           {% if e.featured %}
-            <div class="card modern-card" style="height: 100%; box-shadow: 0 6px 25px rgba(0, 170, 0, 0.15); border-radius: 12px; border-left: 4px solid var(--brand-green); transition: all 0.3s ease;">
+            <div class="card modern-card termine-card featured">
+          {% elsif e.members_only %}
+            <div class="card modern-card members-only-event termine-card">
           {% else %}
-            <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease;">
+            <div class="card modern-card termine-card standard">
           {% endif %}
-            <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column;">
-              <div style="flex-grow: 1;">
-                <h3 class="title is-5 has-text-weight-bold has-text-centered" style="color: #2c3e50; margin-bottom: 0.5rem;">
-                  <a href="{{ e.url }}" style="color: #2c3e50; text-decoration: none;">{{ e.title }}</a>
+            <div class="card-content termine-card-content">
+              <div class="termine-card-body">
+                <h3 class="title is-5 has-text-weight-bold has-text-centered termine-event-title">
+                  {% if e.members_only %}
+                    <span class="members-only-icon">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM15.1 8H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/>
+                      </svg>
+                    </span>
+                  {% endif %}
+                  <a href="{{ e.url }}">{{ e.title }}</a>
                 </h3>
                 {% if e.date %}
-                  <p class="subtitle is-6 has-text-weight-medium has-text-centered" style="color: var(--brand-blue); margin-bottom: 1rem;">
+                  <p class="subtitle is-6 has-text-weight-medium has-text-centered termine-event-date">
                     {{ e.date | date: "%d.%m.%Y" }}
                   </p>
                 {% endif %}
                 {% if e.excerpt %}
-                  <div class="content is-size-6 has-text-centered" style="color: #5a6c7d; line-height: 1.5;">
+                  <div class="content is-size-6 has-text-centered termine-event-content">
                     {{ e.excerpt }}
                   </div>
                 {% endif %}
               </div>
-              <div class="has-text-centered" style="margin-top: 1rem;">
+              <div class="has-text-centered termine-card-actions">
                 <a href="{{ e.url }}" class="button is-small is-primary is-rounded">
                   Details
                 </a>
@@ -104,32 +141,32 @@ permalink: /termine/
 
 <!-- Vergangene Termine -->
 {% if past and past.size > 0 %}
-<section class="section" style="padding: 2rem 1.5rem;">
+<section class="section termine-past-section">
   <div class="container">
-    <h2 class="title is-4 has-text-centered" style="color: #2c3e50; margin-bottom: 2rem;">
+    <h2 class="title is-4 has-text-centered termine-section-title">
       Vergangene Termine
     </h2>
     <div class="columns is-multiline is-centered">
       {% for e in past limit: 6 %}
         <div class="column is-4-desktop is-6-tablet is-12-mobile">
-          <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-radius: 12px; transition: all 0.3s ease; opacity: 0.9;">
-            <div class="card-content" style="padding: 1.5rem 1.25rem; height: 100%; display: flex; flex-direction: column;">
-              <div style="flex-grow: 1;">
-                <h3 class="title is-6 has-text-weight-semibold has-text-centered" style="color: #34495e; margin-bottom: 0.5rem;">
-                  <a href="{{ e.url }}" style="color: #34495e; text-decoration: none;">{{ e.title }}</a>
+          <div class="card modern-card termine-card past">
+            <div class="card-content termine-card-content past">
+              <div class="termine-card-body">
+                <h3 class="title is-6 has-text-weight-semibold has-text-centered termine-event-title past">
+                  <a href="{{ e.url }}">{{ e.title }}</a>
                 </h3>
                 {% if e.date %}
-                  <p class="subtitle is-7 has-text-weight-medium has-text-centered" style="color: #5a6c7d; margin-bottom: 0.75rem;">
+                  <p class="subtitle is-7 has-text-weight-medium has-text-centered termine-event-date past">
                     {{ e.date | date: "%d.%m.%Y" }}
                   </p>
                 {% endif %}
                 {% if e.excerpt %}
-                  <div class="content is-size-6 has-text-centered" style="color: #5a6c7d; line-height: 1.4;">
+                  <div class="content is-size-6 has-text-centered termine-event-content past">
                     {{ e.excerpt | truncate: 120 }}
                   </div>
                 {% endif %}
               </div>
-              <div class="has-text-centered" style="margin-top: 1rem;">
+              <div class="has-text-centered termine-card-actions">
                 <a href="{{ e.url }}" class="button is-small is-light is-rounded">
                   Ansehen
                 </a>

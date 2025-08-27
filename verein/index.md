@@ -12,31 +12,31 @@ hero_link_text: Mitglied werden
 permalink: /verein/
 ---
 
-<section class="section" style="padding: 4rem 1.5rem;">
+<section class="section main-section">
   <div class="container">
     
     <!-- Titelbild -->
-    <div class="columns is-centered" style="margin-bottom: 4rem;">
+    <div class="columns is-centered mb-4rem">
       <div class="column is-10-desktop is-12-tablet">
         <figure class="image">
           <img src="/assets/images/header-startseite.png" 
                alt="Makerspace Partheland - Header" 
                class="title-image"
-               style="width: 100%; max-width: 1100px; margin: 0 auto;">
+               class="centered-image">
         </figure>
       </div>
     </div>
 
     <!-- Über uns -->
-    <div class="columns is-centered" style="margin-bottom: 4rem;">
+    <div class="columns is-centered mb-4rem">
       <div class="column is-10-desktop is-12-tablet">
-        <div class="card modern-card" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; background: var(--brand-blue-bg);">
-          <div class="card-content" style="padding: 2.5rem 2rem; text-align: center;">
-            <h2 class="title is-3 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1.5rem;">
+        <div class="card modern-card standard-card blue-bg">
+          <div class="card-content standard-card-content large centered">
+            <h2 class="title is-3 has-text-weight-bold primary-title mb-1-5rem">
               Gemeinnütziger Verein seit 2022
             </h2>
-            <div class="content" style="color: #5a6c7d; line-height: 1.7;">
-              <p class="is-size-5" style="margin-bottom: 1.5rem;">
+            <div class="content body-text large">
+              <p class="is-size-5 mb-1-5rem">
                 <strong>Zweck des Vereins</strong> ist die Förderung der Erziehung, Volks- und Berufsbildung.
               </p>
               <p class="is-size-6">
@@ -49,20 +49,20 @@ permalink: /verein/
     </div>
 
     <!-- Was wir machen Grid -->
-    <div style="margin-bottom: 4rem;">
-      <h2 class="title is-4 has-text-centered" style="color: #2c3e50; margin-bottom: 2rem;">
+    <div class="mb-4rem">
+      <h2 class="title is-4 has-text-centered primary-title mb-2rem">
         Was wir machen
       </h2>
       <div class="columns is-multiline is-centered">
         
         <!-- Makerspace Werkstatt -->
         <div class="column is-6-desktop is-12-tablet">
-          <a href="/projekte/" class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease; text-decoration: none; color: inherit; display: block;">
-            <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column;">
-              <h3 class="title is-5 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+          <a href="/projekte/" class="card modern-card standard-card full-height clickable">
+            <div class="card-content standard-card-content">
+              <h3 class="title is-5 has-text-weight-bold primary-title mb-1rem">
                 Makerspace & Workshops
               </h3>
-              <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1;">
+              <div class="content body-text card-content-body">
                 <p>Aufbau und Betrieb eines Makerspace als Werkstatt für gemeinsames Arbeiten und Lernen.</p>
                 <p><strong>Themen:</strong> 3D-Druck, Elektronik, Programmierung, Nähen und handwerkliche Techniken</p>
               </div>
@@ -72,12 +72,12 @@ permalink: /verein/
 
         <!-- Smart City Projekt -->
         <div class="column is-6-desktop is-12-tablet">
-          <a href="/projekte/smart-city/" class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease; text-decoration: none; color: inherit; display: block;">
-            <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column;">
-              <h3 class="title is-5 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+          <a href="/projekte/smart-city/" class="card modern-card standard-card full-height clickable">
+            <div class="card-content standard-card-content">
+              <h3 class="title is-5 has-text-weight-bold primary-title mb-1rem">
                 Smart City Partheland
               </h3>
-              <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1;">
+              <div class="content body-text card-content-body">
                 <p>Unterstützung, Aufbau und Betrieb von Bürger-Umweltmessstationen und Senoren mit LoRaWAN-Netzwerk für das gesamte Partheland.</p>
                 <p><strong>Tätigkeiten:</strong> Software-Bereitstellung, Schulungungen, Betrieb und Überwachung der Infrastruktur</p>
               </div>
@@ -87,12 +87,12 @@ permalink: /verein/
 
         <!-- Wissensaustausch -->
         <div class="column is-6-desktop is-12-tablet">
-          <a href="/austausch/" class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease; text-decoration: none; color: inherit; display: block;">
-            <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column;">
-              <h3 class="title is-5 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+          <a href="/austausch/" class="card modern-card standard-card full-height clickable">
+            <div class="card-content standard-card-content">
+              <h3 class="title is-5 has-text-weight-bold primary-title mb-1rem">
                 Wissensaustausch
               </h3>
-              <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1;">
+              <div class="content body-text card-content-body">
                 <p>Offener Austausch von Wissen und Erfahrungen mit allen Neugierigen und Interessierten.</p>
                 <p><strong>Kanäle:</strong> Telegram-Gruppen, Workshops, Mitmachaktionen</p>
               </div>
@@ -102,12 +102,12 @@ permalink: /verein/
 
         <!-- Standort -->
         <div class="column is-6-desktop is-12-tablet">
-          <a href="/austausch/" class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease; text-decoration: none; color: inherit; display: block;">
-            <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column;">
-              <h3 class="title is-5 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+          <a href="/austausch/" class="card modern-card standard-card full-height clickable">
+            <div class="card-content standard-card-content">
+              <h3 class="title is-5 has-text-weight-bold primary-title mb-1rem">
                 Unser Standort
               </h3>
-              <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1;">
+              <div class="content body-text card-content-body">
                 <p><strong>Aktuell:</strong> Temporärer Makerspace im alten Gemeindeamt Beucha</p>
                 <p><strong>Zukunft:</strong> Kulturhaus Beucha (nach Restaurierung)</p>
                 <p><strong>Philosophie:</strong> Aus Spaß an der Freude, ohne Zwang oder Druck</p>
@@ -120,16 +120,16 @@ permalink: /verein/
     </div>
 
     <!-- Gründungsmitglieder -->
-    <div class="columns is-centered" style="margin-bottom: 4rem;">
+    <div class="columns is-centered mb-4rem">
       <div class="column is-6-desktop is-8-tablet">
         <div class="has-text-centered">
-          <h2 class="title is-5" style="color: #2c3e50; margin-bottom: 1rem;">Unsere Anfänge</h2>
-          <figure class="image" style="margin-bottom: 1rem;">
+          <h2 class="title is-5 primary-title mb-1rem">Unsere Anfänge</h2>
+          <figure class="image mb-1rem">
             <img src="/assets/images/verein/Bildschirmfoto-vom-2022-04-09-17-53-59.png" 
                  alt="Gründungsmitglieder des Makerspace Partheland e.V." 
-                 style="max-width: 420px; margin: 0 auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                 class="small-rounded-image">
           </figure>
-          <p class="is-size-6" style="color: #5a6c7d;">
+          <p class="is-size-6 body-text">
             2022 offiziell als Verein organisiert – um gemeinsam noch mehr zu erreichen.
           </p>
         </div>
@@ -137,22 +137,22 @@ permalink: /verein/
     </div>
 
     <!-- Mitmachen Section -->
-    <div class="columns is-centered" style="margin-bottom: 4rem;">
+    <div class="columns is-centered mb-4rem">
       <div class="column is-8-desktop is-10-tablet">
-        <div class="card modern-card" style="box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px;">
-          <div class="card-content" style="padding: 2.5rem 2rem; text-align: center;">
-            <h2 class="title is-4 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+        <div class="card modern-card standard-card">
+          <div class="card-content standard-card-content large centered">
+            <h2 class="title is-4 has-text-weight-bold primary-title mb-1rem">
               Mitmachen & Unterstützen
             </h2>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6; margin-bottom: 2rem;">
-              <p class="is-size-5" style="margin-bottom: 1rem;">
+            <div class="content body-text mb-2rem">
+              <p class="is-size-5 mb-1rem">
                 Interesse geweckt? Wir freuen uns über neue Gesichter!
               </p>
               <p class="is-size-6">
                 Ob als aktives oder förderndes Mitglied – jede Unterstützung hilft uns bei unserem gemeinnützigen Auftrag.
               </p>
             </div>
-            <div class="buttons is-centered" style="gap: 1rem;">
+            <div class="buttons is-centered button-group">
               <a href="/mitglied-werden/" 
                  class="button is-success is-medium is-rounded has-text-weight-semibold">
                 Mitglied werden
@@ -168,16 +168,16 @@ permalink: /verein/
     </div>
 
     <!-- Dokumente & Links -->
-    <div class="columns is-multiline is-centered" style="margin-bottom: 4rem;">
+    <div class="columns is-multiline is-centered mb-4rem">
       
       <!-- Vereinsdokumente -->
       <div class="column is-4-desktop is-6-tablet is-12-mobile">
-        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease;">
-          <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column; text-align: center;">
-            <h3 class="title is-6 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+        <div class="card modern-card standard-card full-height">
+          <div class="card-content standard-card-content centered">
+            <h3 class="title is-6 has-text-weight-bold primary-title mb-1rem">
               Vereinsdokumente
             </h3>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1; margin-bottom: 1.5rem;">
+            <div class="content body-text card-content-body mb-1-5rem">
               <p class="is-size-7">Satzung, Beitragsordnung und weitere Informationen</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente" target="_blank" rel="noreferrer noopener"
@@ -190,12 +190,12 @@ permalink: /verein/
 
       <!-- Satzung -->
       <div class="column is-4-desktop is-6-tablet is-12-mobile">
-        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease;">
-          <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column; text-align: center;">
-            <h3 class="title is-6 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+        <div class="card modern-card standard-card full-height">
+          <div class="card-content standard-card-content centered">
+            <h3 class="title is-6 has-text-weight-bold primary-title mb-1rem">
               Vereinssatzung
             </h3>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1; margin-bottom: 1.5rem;">
+            <div class="content body-text card-content-body mb-1-5rem">
               <p class="is-size-7">Regelt wie der Makerspace funktioniert</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener"
@@ -208,12 +208,12 @@ permalink: /verein/
 
       <!-- Beitragsordnung -->
       <div class="column is-4-desktop is-12-tablet is-12-mobile">
-        <div class="card modern-card" style="height: 100%; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 12px; transition: all 0.3s ease;">
-          <div class="card-content" style="padding: 2rem 1.5rem; height: 100%; display: flex; flex-direction: column; text-align: center;">
-            <h3 class="title is-6 has-text-weight-bold" style="color: #2c3e50; margin-bottom: 1rem;">
+        <div class="card modern-card standard-card full-height">
+          <div class="card-content standard-card-content centered">
+            <h3 class="title is-6 has-text-weight-bold primary-title mb-1rem">
               Beitragsordnung
             </h3>
-            <div class="content" style="color: #5a6c7d; line-height: 1.6; flex-grow: 1; margin-bottom: 1.5rem;">
+            <div class="content body-text card-content-body mb-1-5rem">
               <p class="is-size-7">Mitgliedsbeiträge und Abwicklung</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Beitragsordnung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener"
@@ -230,8 +230,8 @@ permalink: /verein/
     <div class="columns is-centered">
       <div class="column is-6-desktop is-8-tablet">
         <div class="has-text-centered">
-          <h2 class="title is-5" style="color: #2c3e50; margin-bottom: 1rem;">Fragen?</h2>
-          <p style="color: #5a6c7d; margin-bottom: 1.5rem;">
+          <h2 class="title is-5 primary-title mb-1rem">Fragen?</h2>
+          <p class="body-text mb-1-5rem">
             Solltest Du noch Fragen haben, erreichst Du uns gerne:
           </p>
           <a href="/austausch/" 

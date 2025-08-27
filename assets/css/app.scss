@@ -30,8 +30,10 @@ $hero-darken: $dark !default;
     /* Vereinsfarben für Dark Mode - basierend auf Design-Richtlinien */
     --brand-blue: #4d9de0;        /* Helleres Blau für Dark Mode */
     --brand-green: #44cc44;       /* Helleres Grün für Dark Mode */
+    --brand-orange: #F39C12;      /* Helleres Orange für Dark Mode */
     --brand-blue-dark: #2d5a8a;   /* Angepasstes Dunkelblau */
     --brand-green-dark: #2a662a;  /* Angepasstes Dunkelgrün */
+    --brand-orange-dark: #E67E22; /* Angepasstes Dunkelorange */
     
     /* Bulma CSS Variablen für Dark Mode */
     --bulma-scheme-main: #0d1117;
@@ -113,16 +115,21 @@ $hero-darken: $dark !default;
 :root {
   --brand-blue: #006DB6;
   --brand-green: #00AA00;  /* ORIGINALE Vereinsfarbe */
+  --brand-orange: #E67E22; /* Harmonische Farbe für vereinsinterne Events */
   --brand-blue-light: #4d9de0;
   --brand-blue-dark: #004c8a;
   --brand-green-dark: #008800;
+  --brand-orange-dark: #D35400;
   
   --brand-blue-bg: rgba(0, 109, 182, 0.05);
   --brand-green-bg: rgba(0, 170, 0, 0.05);
+  --brand-orange-bg: rgba(230, 126, 34, 0.05);
   --brand-blue-hover: rgba(0, 109, 182, 0.1);
   --brand-green-hover: rgba(0, 170, 0, 0.1);
+  --brand-orange-hover: rgba(230, 126, 34, 0.1);
   --brand-blue-active: rgba(0, 109, 182, 0.15);
   --brand-green-active: rgba(0, 170, 0, 0.15);
+  --brand-orange-active: rgba(230, 126, 34, 0.15);
 }
 
 // === HARMONIE: Navigation & Hero fast identisch ===
@@ -752,4 +759,479 @@ a.card.modern-card:active {
 
 .hero-event-banner .event-separator {
   margin: 0 0.5rem;
+}
+
+/* === EVENT SYSTEM: Farben und Icons === */
+
+/* Event-Card Styling für vereinsinterne Events */
+.card.members-only-event {
+  border-left: 4px solid var(--brand-orange) !important;
+  box-shadow: 0 6px 25px rgba(230, 126, 34, 0.15) !important;
+}
+
+/* Schloss-Icon für vereinsinterne Events - nativ als SVG */
+.members-only-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+/* Icon in der Legende - höher setzen */
+.event-legend .members-only-icon {
+  vertical-align: text-top;
+  margin-top: -1px;
+}
+
+/* Icon in Event-Titeln - baseline Ausrichtung */
+.card .title .members-only-icon,
+h3.title .members-only-icon,
+.card-content h3.title .members-only-icon {
+  vertical-align: baseline;
+}
+
+.members-only-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--brand-orange);
+}
+
+/* Event-Legende Styling */
+.event-legend {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+.event-legend-item {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.event-legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.event-legend-color.featured {
+  background: var(--brand-green);
+}
+
+.event-legend-color.members-only {
+  background: var(--brand-orange);
+}
+
+.event-legend-text {
+  font-size: 0.875rem;
+  color: #5a6c7d;
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile Anpassungen für Event-Legende */
+@media (max-width: 768px) {
+  .event-legend {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .event-legend-item {
+    justify-content: flex-start;
+  }
+}
+
+/* Dark Mode Anpassungen für Event-Legende */
+@media (prefers-color-scheme: dark) {
+  .event-legend {
+    background: rgba(22, 27, 34, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .event-legend-text {
+    color: var(--bulma-text-light);
+  }
+  
+  .members-only-icon svg {
+    fill: var(--brand-orange);
+  }
+}
+
+/* === TERMINE PAGE STYLES === */
+
+/* Section Paddings */
+.termine-upcoming-section {
+  padding: 4rem 1.5rem;
+}
+
+.termine-past-section {
+  padding: 2rem 1.5rem;
+}
+
+/* Titles */
+.termine-section-title {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+/* Event Cards */
+.termine-card {
+  height: 100%;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.termine-card.featured {
+  box-shadow: 0 6px 25px rgba(0, 170, 0, 0.15);
+  border-left: 4px solid var(--brand-green);
+}
+
+.termine-card.standard {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.termine-card.past {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  opacity: 0.9;
+}
+
+.termine-card-content {
+  padding: 2rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.termine-card-content.past {
+  padding: 1.5rem 1.25rem;
+}
+
+.termine-card-body {
+  flex-grow: 1;
+}
+
+.termine-card-actions {
+  margin-top: 1rem;
+}
+
+/* Event Titles */
+.termine-event-title {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.termine-event-title a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.termine-event-title.past {
+  color: #34495e;
+}
+
+.termine-event-title.past a {
+  color: #34495e;
+}
+
+/* Event Dates */
+.termine-event-date {
+  color: var(--brand-blue);
+  margin-bottom: 1rem;
+}
+
+.termine-event-date.past {
+  color: #5a6c7d;
+  margin-bottom: 0.75rem;
+}
+
+/* Event Content */
+.termine-event-content {
+  color: #5a6c7d;
+  line-height: 1.5;
+}
+
+.termine-event-content.past {
+  line-height: 1.4;
+}
+
+/* === GLOBAL PAGE STYLES === */
+
+/* Common Section Paddings */
+.main-section {
+  padding: 4rem 1.5rem;
+}
+
+.secondary-section {
+  padding: 2rem 1.5rem;
+}
+
+/* Common Margins */
+.mb-4rem {
+  margin-bottom: 4rem;
+}
+
+.mb-2rem {
+  margin-bottom: 2rem;
+}
+
+.mb-1-5rem {
+  margin-bottom: 1.5rem;
+}
+
+.mb-1rem {
+  margin-bottom: 1rem;
+}
+
+/* Common Cards */
+.standard-card {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.standard-card.full-height {
+  height: 100%;
+}
+
+.standard-card.clickable {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.standard-card.blue-bg {
+  background: var(--brand-blue-bg);
+}
+
+/* Card Content */
+.standard-card-content {
+  padding: 2rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.standard-card-content.large {
+  padding: 2.5rem 2rem;
+}
+
+.standard-card-content.centered {
+  text-align: center;
+}
+
+.card-content-body {
+  flex-grow: 1;
+}
+
+/* Common Text Styles */
+.primary-title {
+  color: #2c3e50;
+}
+
+.secondary-title {
+  color: #34495e;
+}
+
+.body-text {
+  color: #5a6c7d;
+  line-height: 1.6;
+}
+
+.body-text.large {
+  line-height: 1.7;
+}
+
+/* Common Buttons */
+.button-group {
+  gap: 1rem;
+}
+
+.button-group.column {
+  flex-direction: column;
+}
+
+.button.full-width {
+  width: 100%;
+}
+
+/* Common Images */
+.centered-image {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.rounded-image {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.small-rounded-image {
+  max-width: 420px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Text Alignment */
+.text-left {
+  text-align: left;
+}
+
+/* Font Size Utilities */
+.font-small {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* === HERO STYLES === */
+.hero-subtitle {
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+.hero-description p {
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+}
+
+/* === SPONSOR STYLES === */
+.sponsor-container {
+  margin: 1rem auto;
+}
+
+.sponsor-card {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.sponsor-card-content {
+  padding: 0.75rem;
+}
+
+/* === MITGLIED-WERDEN PAGE STYLES === */
+
+/* Process Steps */
+.process-step {
+  padding: 1.5rem;
+  background: var(--brand-blue-bg);
+  border-radius: 12px;
+  height: 100%;
+}
+
+.process-step h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.process-step p {
+  color: #5a6c7d;
+  line-height: 1.6;
+}
+
+.process-step a {
+  color: var(--brand-blue);
+}
+
+/* Membership Cards */
+.membership-card-content {
+  padding: 2.5rem 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.membership-card-content h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.membership-card-content .content {
+  color: #5a6c7d;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.membership-card-content .content p {
+  margin-bottom: 1rem;
+}
+
+.membership-card-content .content ul {
+  margin-bottom: 1.5rem;
+}
+
+.membership-price {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.membership-note {
+  color: #34495e;
+}
+
+/* === PROJECT INDEX STYLES === */
+.project-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.project-buttons .button {
+  margin: 0;
+}
+
+/* === CALLOUT STYLES === */
+.callout-card-content {
+  padding: 2.5rem 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.callout-card-body {
+  flex-grow: 1;
+}
+
+.callout-title {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.callout-subtitle {
+  color: #34495e;
+  margin-bottom: 1.5rem;
+}
+
+.callout-content {
+  color: #5a6c7d;
+  line-height: 1.6;
+}
+
+.callout-actions {
+  margin-top: 2rem;
 }
