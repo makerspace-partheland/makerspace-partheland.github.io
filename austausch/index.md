@@ -50,7 +50,7 @@ permalink: /austausch/
             <h3 class="subtitle is-5 has-text-weight-medium secondary-title mb-1-5rem">
               Ehrenamtlich & unregelmäßig
             </h3>
-            <div class="content body-text">
+            <div class="content body-text mb-2rem">
               {% assign upcoming = site.events | where_exp: "e", "e.date" | where_exp: "e", "e.date >= site.time" | sort: "date" %}
               {% if upcoming and upcoming.size > 0 %}
                 <p><strong>Anstehende Termine:</strong></p>

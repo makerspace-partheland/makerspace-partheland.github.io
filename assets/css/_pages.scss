@@ -201,6 +201,11 @@
   flex-direction: column;
 }
 
+/* Bulma .buttons überschreiben für korrekten Abstand */
+.buttons.button-group.column .button:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 .button.full-width {
   width: 100%;
 }

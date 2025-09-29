@@ -25,7 +25,13 @@ jobs:
       - name: Check if update needed
         id: check-update
         run: |
-          CURRENT_VERSION=$(grep -o 'alpinejs@[0-9.]*' _includes/head.html | sed 's/alpinejs@//')
+          # Prüfe ob lokale Alpine.js-Datei existiert
+          if [ -f "assets/js/alpine.min.js" ]; then
+            # Extrahiere Version aus der lokalen Datei (erste Zeile enthält Kommentar mit Version)
+            CURRENT_VERSION=$(head -1 assets/js/alpine.min.js | grep -o 'v[0-9.]*' | sed 's/v//' || echo "unknown")
+          else
+            CURRENT_VERSION="not_found"
+          fi
           echo "current_version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
           echo "Current Alpine.js version: $CURRENT_VERSION"
           
@@ -37,11 +43,12 @@ jobs:
             echo "No update needed"
           fi
 
-      - name: Update Alpine.js version
+      - name: Download Alpine.js locally
         if: steps.check-update.outputs.update_needed == 'true'
         run: |
-          sed -i "s/alpinejs@[0-9.]*/alpinejs@${{ steps.get-version.outputs.latest_version }}/g" _includes/head.html
-          echo "Updated Alpine.js to version ${{ steps.get-version.outputs.latest_version }}"
+          mkdir -p assets/js
+          curl -o assets/js/alpine.min.js https://unpkg.com/alpinejs@${{ steps.get-version.outputs.latest_version }}/dist/cdn.min.js
+          echo "Downloaded Alpine.js ${{ steps.get-version.outputs.latest_version }} to assets/js/alpine.min.js"
 
       - name: Determine update type
         id: update-type
@@ -81,7 +88,7 @@ jobs:
             **Typ:** ${{ steps.update-type.outputs.update_type }}-Update
             
             ### Änderungen
-            - Alpine.js CDN-Link in `_includes/head.html` aktualisiert
+            - Alpine.js lokal in `assets/js/alpine.min.js` aktualisiert
             - Automatisches Update via GitHub Actions Workflow
             
             ### Auto-merge

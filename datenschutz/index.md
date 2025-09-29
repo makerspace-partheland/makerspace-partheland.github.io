@@ -137,21 +137,6 @@ Die Speicherung dieser Cookies erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DS
 
 Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden oder Cookies generell ablehnen. Bei der Deaktivierung von technisch notwendigen Cookies kann die Funktionalität dieser Website eingeschränkt sein.
 
-### Content Delivery Networks (CDN)
-
-Diese Website nutzt externe Content Delivery Networks zur Bereitstellung von JavaScript-Bibliotheken und Stylesheets. Dies dient der Optimierung der Ladezeiten und der zuverlässigen Bereitstellung technisch notwendiger Ressourcen.
-
-**Verwendete CDN-Anbieter:**
-
-#### unpkg.com
-Für die Bereitstellung von Alpine.js (JavaScript-Framework für Website-Interaktivität). Anbieter: Michael Jackson. Der Anbieter versichert, dass keine nutzerbezogenen Daten gesammelt werden.
-
-
-**Datenübertragung:**
-Die Einbindung setzt voraus, dass der CDN-Anbieter die IP-Adresse der Webseitenbesucher verarbeitet, da dies für die Auslieferung der Inhalte technisch erforderlich ist. Die IP-Adresse wird nur für die Bereitstellung der angefragten Ressourcen verwendet.
-
-**Rechtsgrundlage:**
-Die Nutzung des CDN-Dienstes erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an der optimierten, schnellen und sicheren Bereitstellung unserer Website. Die CDN-Nutzung ist technisch erforderlich für die ordnungsgemäße Funktion der Website.
 
 ## 5. Analyse-Tools und Werbung
 

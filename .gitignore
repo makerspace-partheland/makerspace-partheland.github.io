@@ -13,3 +13,4 @@ github-pages-fahrplan.md
 /.claude
 start-jekyll.ps1
 .vscode/extensions.json
+_plugins/livereload_patch.rb
