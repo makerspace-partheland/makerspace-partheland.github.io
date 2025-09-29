@@ -1,15 +1,15 @@
-name: Clean Dependabot PRs
+name: Clean Bot PRs
 
 on:
   pull_request_target:
     types: [opened, edited]
-    if: github.actor == 'dependabot[bot]'
+    if: github.actor == 'dependabot[bot]' || github.actor == 'github-actions[bot]'
 
 permissions:
   pull-requests: write
 
 jobs:
-  clean-dependabot-pr:
+  clean-bot-pr:
     runs-on: ubuntu-latest
     steps:
       - name: Remove Release Notes and Commits sections
@@ -44,7 +44,7 @@ jobs:
                 pull_number: context.payload.pull_request.number,
                 body: cleanedBody
               });
-              console.log('Dependabot PR cleaned: Removed Release Notes, Commits sections and @-mentions');
+              console.log('Bot PR cleaned: Removed Release Notes, Commits sections and @-mentions');
             } else {
               console.log('No changes needed');
             }
