@@ -1,0 +1,50 @@
+name: Clean Dependabot PRs
+
+on:
+  pull_request_target:
+    types: [opened, edited]
+    if: github.actor == 'dependabot[bot]'
+
+permissions:
+  pull-requests: write
+
+jobs:
+  clean-dependabot-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Remove Release Notes and Commits sections
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = context.payload.pull_request.body;
+            
+            // Entferne Release Notes Sektion
+            let cleanedBody = body.replace(/▼ Release notes[\s\S]*?(?=###|##|$)/g, '');
+            
+            // Entferne "What's Changed" Sektion (enthält Commits)
+            cleanedBody = cleanedBody.replace(/### What's Changed[\s\S]*?(?=###|##|$)/g, '');
+            
+            // Entferne "New Contributors" Sektion
+            cleanedBody = cleanedBody.replace(/### New Contributors[\s\S]*?(?=###|##|$)/g, '');
+            
+            // Entferne "Full Changelog" Sektion
+            cleanedBody = cleanedBody.replace(/### Full Changelog[\s\S]*?(?=###|##|$)/g, '');
+            
+            // Entferne alle @-Mentions (Tags)
+            cleanedBody = cleanedBody.replace(/@([a-zA-Z0-9_-]+)/g, '');
+            
+            // Entferne leere Zeilen und überflüssige Leerzeichen
+            cleanedBody = cleanedBody.replace(/\n\s*\n\s*\n/g, '\n\n');
+            
+            // Nur aktualisieren wenn sich etwas geändert hat
+            if (cleanedBody !== body) {
+              await github.rest.pulls.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.payload.pull_request.number,
+                body: cleanedBody
+              });
+              console.log('Dependabot PR cleaned: Removed Release Notes, Commits sections and @-mentions');
+            } else {
+              console.log('No changes needed');
+            }
