@@ -1,5 +1,5 @@
 # makerspace-partheland.github.io
 
-- Theme: Minimal Mistakes (Gem)
-  - Offizielle Doku: https://mmistakes.github.io/minimal-mistakes/
-  - Repository: https://github.com/mmistakes/minimal-mistakes
+- Theme: Bulma Clean Theme (Gem)
+  - Offizielle Doku: https://chrisrhymes.github.io/bulma-clean-theme/
+  - Repository: https://github.com/chrisrhymes/bulma-clean-theme

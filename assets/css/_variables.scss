@@ -1,0 +1,37 @@
+// === BULMA SASS VARIABLES - VOR Import === 
+$primary: #006DB6;      // Logo-Blau (override fonts.$primary)
+$success: #00AA00;      // ORIGINALE Vereinsfarbe Grün
+$info: #006DB6;         // Logo-Blau für Info-Elemente
+$link: #006DB6;         // Logo-Blau für Links
+$warning: #ffdd57;      // Bulma's Standard-Warning
+$danger: #ff3860;       // Bulma's Standard-Danger
+$text: #2c3e50;         // Standard-Text-Farbe
+
+// Hero styling (after theme import so $dark is available)
+$hero-darken: #363636 !default;
+
+// === CSS VARIABLEN FÜR ERWEITERTE NUTZUNG ===
+:root {
+  --brand-blue: #006DB6;
+  --brand-green: #00AA00;  /* ORIGINALE Vereinsfarbe */
+  --brand-orange: #E67E22; /* Harmonische Farbe für vereinsinterne Events */
+  --brand-blue-light: #4d9de0;
+  --brand-blue-dark: #004c8a;
+  --brand-green-dark: #008800;
+  --brand-orange-dark: #D35400;
+  
+  --brand-blue-bg: rgba(0, 109, 182, 0.05);
+  --brand-green-bg: rgba(0, 170, 0, 0.05);
+  --brand-orange-bg: rgba(230, 126, 34, 0.05);
+  --brand-blue-hover: rgba(0, 109, 182, 0.1);
+  --brand-green-hover: rgba(0, 170, 0, 0.1);
+  --brand-orange-hover: rgba(230, 126, 34, 0.1);
+  --brand-blue-active: rgba(0, 109, 182, 0.15);
+  --brand-green-active: rgba(0, 170, 0, 0.15);
+  --brand-orange-active: rgba(230, 126, 34, 0.15);
+}
+
+/* Bulma CSS Variables Override für Success Button */
+:root {
+  --bulma-button-color-l: 100%;  /* Weiße Text-Farbe für Success Buttons */
+}

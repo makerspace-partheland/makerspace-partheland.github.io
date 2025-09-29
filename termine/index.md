@@ -27,24 +27,7 @@ permalink: /termine/
 {% if upcoming and upcoming.size > 0 %}
 <section class="section termine-upcoming-section">
   <div class="container">
-    <!-- Farblegende -->
-    <div class="event-legend">
-      <div class="event-legend-item">
-        <div class="event-legend-color featured"></div>
-        <span class="event-legend-text">Besonderes</span>
-      </div>
-      <div class="event-legend-item">
-        <div class="event-legend-color members-only"></div>
-        <span class="event-legend-text">
-          <span class="members-only-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM15.1 8H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/>
-            </svg>
-          </span>
-          Vereinsintern
-        </span>
-      </div>
-    </div>
+    
     
     <h2 class="title is-4 has-text-centered termine-section-title">
       Anstehende Termine
@@ -54,23 +37,20 @@ permalink: /termine/
       <!-- Reparatur-Treff zuerst -->
       {% if next_reparatur %}
         <div class="column is-4-desktop is-6-tablet is-12-mobile">
-          {% if next_reparatur.featured %}
-            <div class="card modern-card termine-card featured">
-          {% elsif next_reparatur.members_only %}
-            <div class="card modern-card members-only-event termine-card">
+          {% assign accent_class = '' %}
+          {% if next_reparatur.accent == 'green' %}
+            {% assign accent_class = 'accent-green' %}
+          {% elsif next_reparatur.accent == 'orange' %}
+            {% assign accent_class = 'accent-orange' %}
+          {% endif %}
+          {% if accent_class != '' %}
+            <div class="card modern-card termine-card {{ accent_class }}">
           {% else %}
             <div class="card modern-card termine-card standard">
           {% endif %}
             <div class="card-content termine-card-content">
               <div class="termine-card-body">
                 <h3 class="title is-5 has-text-weight-bold has-text-centered termine-event-title">
-                  {% if next_reparatur.members_only %}
-                    <span class="members-only-icon">
-                      <svg viewBox="0 0 24 24">
-                        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM15.1 8H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/>
-                      </svg>
-                    </span>
-                  {% endif %}
                   <a href="{{ next_reparatur.url }}">{{ next_reparatur.title }}</a>
                 </h3>
                 <p class="subtitle is-6 has-text-weight-medium has-text-centered termine-event-date">
@@ -95,23 +75,20 @@ permalink: /termine/
       <!-- Andere Events -->
       {% for e in other_upcoming %}
         <div class="column is-4-desktop is-6-tablet is-12-mobile">
-          {% if e.featured %}
-            <div class="card modern-card termine-card featured">
-          {% elsif e.members_only %}
-            <div class="card modern-card members-only-event termine-card">
+          {% assign accent_class = '' %}
+          {% if e.accent == 'green' %}
+            {% assign accent_class = 'accent-green' %}
+          {% elsif e.accent == 'orange' %}
+            {% assign accent_class = 'accent-orange' %}
+          {% endif %}
+          {% if accent_class != '' %}
+            <div class="card modern-card termine-card {{ accent_class }}">
           {% else %}
             <div class="card modern-card termine-card standard">
           {% endif %}
             <div class="card-content termine-card-content">
               <div class="termine-card-body">
                 <h3 class="title is-5 has-text-weight-bold has-text-centered termine-event-title">
-                  {% if e.members_only %}
-                    <span class="members-only-icon">
-                      <svg viewBox="0 0 24 24">
-                        <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM15.1 8H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z"/>
-                      </svg>
-                    </span>
-                  {% endif %}
                   <a href="{{ e.url }}">{{ e.title }}</a>
                 </h3>
                 {% if e.date %}

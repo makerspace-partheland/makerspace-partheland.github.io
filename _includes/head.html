@@ -3,6 +3,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="{{ site.theme_color | default: '#ffffff' }}">
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/app.css">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link
         rel="shortcut icon"
         type="image/png"
@@ -12,7 +14,7 @@
             href="{{ site.baseurl }}/favicon.png"
         {% endif %}
     >
-    <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.14/dist/cdn.min.js"></script>
     <!-- js-cookie entfernt - wird nicht benötigt -->
     <!-- font-awesome entfernt - einfache Unicode-Zeichen für Galerie-Navigation -->
     <!-- bulma-social entfernt - hide_share_buttons: true -->

@@ -1,0 +1,481 @@
+// === HARMONIE: Navigation & Hero fast identisch ===
+.navbar.is-primary {
+  background: linear-gradient(135deg, hsl(204, 100%, 36%) 0%, hsl(204, 100%, 35%) 100%) !important;
+}
+
+.hero.is-primary, 
+.hero.modern-hero {
+  background: linear-gradient(135deg, hsl(204, 100%, 35%) 0%, hsl(204, 100%, 34%) 100%) !important;
+}
+
+/* === CUSTOM COMPONENTS - Erweiterte CSS-Variablen === */
+
+/* Spezielle Card-Hintergründe */
+.card.eco-card {
+  background: var(--brand-green-bg) !important;
+}
+
+.card.tech-card {
+  background: var(--bulma-primary-soft) !important;  /* Bulma Color Palette nutzen */
+}
+
+.button.is-success {
+  color: white !important;  /* Explizit weißer Text für Vereinsgrün */
+}
+
+/* Text-Selection (Markierung) in Logo-Blau - dunkler für bessere Lesbarkeit */
+::selection {
+  background: var(--brand-blue);
+  color: white;
+}
+
+::-moz-selection {
+  background: var(--brand-blue);
+  color: white;
+}
+
+/* Navigation Hover: Einfach und harmonisch (ohne Layout-Verschiebung) */
+.navbar.is-primary .navbar-item:hover,
+.navbar.is-primary .navbar-link:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transition: background-color 0.3s ease !important;
+}
+
+/* Dropdown Items: Deutlich sichtbare Hover-Effekte für Submenü */
+.navbar.is-primary .navbar-dropdown .navbar-item:hover {
+  background-color: rgba(0, 109, 182, 0.2) !important;
+  color: var(--brand-blue-dark) !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Focus für Accessibility */
+.navbar.is-primary .navbar-item:focus,
+.navbar.is-primary .navbar-link:focus {
+  outline: 3px solid var(--bulma-primary) !important;
+  outline-offset: -2px;
+}
+
+/* Burger-Farbe anpassen an Primary-Leiste */
+.navbar-burger span {
+  background-color: rgba(255,255,255,0.9);
+}
+.navbar.is-primary .navbar-burger:hover span {
+  background-color: #fff;
+}
+
+/* Hero-Bild (image mode) */
+.hero-image-section .hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Hero-Höhe begrenzen für große Screens */
+.hero-image-section .hero-image {
+  max-height: 600px;
+}
+
+/* Footer-Höhe kompakter */
+.footer {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Hero-Bild auf Content-Breite einschränken wie .content */
+.hero-image-section .container.is-fluid {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Modern Hero 2025 Design (Grundfarben via Sass-Variablen) */
+.hero.modern-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Smart City Hero (Grün) */
+.hero.eco-hero {
+  background: linear-gradient(135deg, var(--brand-green) 0%, var(--brand-green-dark) 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero.modern-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  pointer-events: none;
+}
+
+.hero.modern-hero .hero-body {
+  position: relative;
+  z-index: 1;
+}
+
+/* Modern Card Design mit Hover-Effekten */
+.card.modern-card {
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #ffffff;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card.modern-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15) !important;
+}
+
+/* Klickbare Cards - bessere UX */
+a.card.modern-card {
+  cursor: pointer;
+}
+
+a.card.modern-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 45px var(--brand-blue-hover) !important;
+}
+
+a.card.modern-card:active {
+  transform: translateY(-6px);
+}
+
+/* Accessibility: Focus States (Farben via Sass-Variablen) */
+.button:focus,
+.card.modern-card:focus-within {
+  outline: 3px solid var(--brand-blue) !important;
+  outline-offset: 2px;
+}
+
+/* Verbesserte Button-Designs */
+.button.is-rounded {
+  transition: all 0.3s ease;
+}
+
+.button.is-rounded:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Loading Animation für bessere UX */
+.card.modern-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.card.modern-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.card.modern-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .card.modern-card {
+    border: 2px solid #000;
+  }
+  
+  .hero.modern-hero {
+    background: #000;
+    color: #fff;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .card.modern-card,
+  .button.is-rounded,
+  .hero.modern-hero::before {
+    transition: none;
+    animation: none;
+  }
+  
+  .card.modern-card:hover {
+    transform: none;
+  }
+}
+
+/* Galerie: kleinere Thumbnails und Navigation im Modal */
+.gallery-thumb {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* 3D/Shadow-Effekt wie im Theme-Beispiel */
+.gallery-grid .card {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.gallery-grid .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+}
+.gallery-grid .card-image {
+  overflow: hidden;
+}
+.gallery-grid .card-image img {
+  transition: transform .2s ease;
+}
+.gallery-grid .card:hover .card-image img {
+  transform: scale(1.02);
+}
+
+.modal .modal-content {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90vw;
+  max-height: none; /* verhindert interne Scrollbalken von Bulma */
+  overflow: visible; /* keine Scrollbars im Modal-Inhalt */
+  padding: 0; /* kein zusätzlicher Innenabstand, verhindert Überlauf */
+}
+
+.modal .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  max-width: 90vw;
+}
+
+.modal .image img {
+  display: block;
+  max-height: 80vh;
+  max-width: 90vw;
+  width: auto;
+  height: auto;
+}
+
+.gallery-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  pointer-events: none;
+}
+.gallery-nav .button {
+  pointer-events: auto;
+  min-width: 3.5rem;
+  min-height: 3.5rem;
+  padding: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-nav .button .icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-nav .button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Alpine.js: Elemente mit x-cloak vor Init verstecken */
+[x-cloak] { display: none !important; }
+
+/* Echter 3D-Effekt für Projekt-Buttons - Light Mode */
+.button.is-light {
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 2px 0 #d4d4d4;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  /* Eckiger wie native Boxen - überschreibt is-rounded */
+  border-radius: 12px !important;
+}
+
+.button.is-light:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 0 #d4d4d4;
+}
+
+.button.is-light:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 #d4d4d4;
+}
+
+/* Übergang: WordPress-Content-Bilder im Fließtext kleiner darstellen */
+.content .wp-block-image img {
+  display: block;
+  max-height: 420px;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content .wp-block-gallery img {
+  max-height: 160px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Mehr Abstand zwischen Text und Galerie */
+.gallery-grid { 
+  margin: 2rem 7rem 0rem 7rem; 
+}
+
+/* Titelbilder für Projektseiten - professionelles Design */
+.title-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2rem;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover-Effekte */
+.title-image:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Sponsor Logos */
+.sponsor-logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Hero Event Banner */
+.hero-event-banner {
+  background: rgba(255, 255, 255, 0.97);
+  border-top: 2px solid var(--brand-blue);
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-event-banner .event-label {
+  margin-right: 0.5rem;
+}
+
+.hero-event-banner .event-link {
+  text-decoration: none;
+}
+
+.hero-event-banner .event-additional {
+  margin-left: 0.5rem;
+}
+
+.hero-event-banner .event-separator {
+  margin: 0 0.5rem;
+}
+
+/* === EVENT SYSTEM: Farben und Icons === */
+
+/* Event-Card Styling für vereinsinterne Events */
+.card.members-only-event {
+  border-left: 4px solid var(--brand-orange) !important;
+  box-shadow: 0 6px 25px rgba(230, 126, 34, 0.15) !important;
+}
+
+/* Schloss-Icon für vereinsinterne Events - nativ als SVG */
+.members-only-icon {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+/* Icon in der Legende - höher setzen */
+.event-legend .members-only-icon {
+  vertical-align: text-top;
+  margin-top: -1px;
+}
+
+/* Icon in Event-Titeln - baseline Ausrichtung */
+.card .title .members-only-icon,
+h3.title .members-only-icon,
+.card-content h3.title .members-only-icon {
+  vertical-align: baseline;
+}
+
+.members-only-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--brand-orange);
+}
+
+/* Event-Legende Styling */
+.event-legend {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+.event-legend-item {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+.event-legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.event-legend-color.featured {
+  background: var(--brand-green);
+}
+
+.event-legend-color.members-only {
+  background: var(--brand-orange);
+}
+
+.event-legend-text {
+  font-size: 0.875rem;
+  color: #5a6c7d;
+  display: flex;
+  align-items: center;
+}

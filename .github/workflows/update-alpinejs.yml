@@ -1,0 +1,116 @@
+name: Update Alpine.js
+
+on:
+  schedule:
+    # Läuft jeden Freitag um 8:00 UTC (9:00 CET)
+    - cron: '0 8 * * 5'
+  workflow_dispatch: # Manueller Trigger möglich
+
+jobs:
+  update-alpinejs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get latest Alpine.js version
+        id: get-version
+        run: |
+          LATEST_VERSION=$(curl -s https://api.github.com/repos/alpinejs/alpine/releases/latest | jq -r '.tag_name' | sed 's/v//')
+          echo "latest_version=$LATEST_VERSION" >> $GITHUB_OUTPUT
+          echo "Latest Alpine.js version: $LATEST_VERSION"
+
+      - name: Check if update needed
+        id: check-update
+        run: |
+          CURRENT_VERSION=$(grep -o 'alpinejs@[0-9.]*' _includes/head.html | sed 's/alpinejs@//')
+          echo "current_version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
+          echo "Current Alpine.js version: $CURRENT_VERSION"
+          
+          if [ "$CURRENT_VERSION" != "${{ steps.get-version.outputs.latest_version }}" ]; then
+            echo "update_needed=true" >> $GITHUB_OUTPUT
+            echo "Update needed: $CURRENT_VERSION -> ${{ steps.get-version.outputs.latest_version }}"
+          else
+            echo "update_needed=false" >> $GITHUB_OUTPUT
+            echo "No update needed"
+          fi
+
+      - name: Update Alpine.js version
+        if: steps.check-update.outputs.update_needed == 'true'
+        run: |
+          sed -i "s/alpinejs@[0-9.]*/alpinejs@${{ steps.get-version.outputs.latest_version }}/g" _includes/head.html
+          echo "Updated Alpine.js to version ${{ steps.get-version.outputs.latest_version }}"
+
+      - name: Determine update type
+        id: update-type
+        run: |
+          CURRENT_VERSION="${{ steps.check-update.outputs.current_version }}"
+          NEW_VERSION="${{ steps.get-version.outputs.latest_version }}"
+          
+          # Parse version numbers (e.g., 3.14.1 -> 3 14 1)
+          CURRENT_MAJOR=$(echo $CURRENT_VERSION | cut -d. -f1)
+          CURRENT_MINOR=$(echo $CURRENT_VERSION | cut -d. -f2)
+          CURRENT_PATCH=$(echo $CURRENT_VERSION | cut -d. -f3)
+          
+          NEW_MAJOR=$(echo $NEW_VERSION | cut -d. -f1)
+          NEW_MINOR=$(echo $NEW_VERSION | cut -d. -f2)
+          NEW_PATCH=$(echo $NEW_VERSION | cut -d. -f3)
+          
+          if [ "$CURRENT_MAJOR" != "$NEW_MAJOR" ]; then
+            echo "update_type=major" >> $GITHUB_OUTPUT
+          elif [ "$CURRENT_MINOR" != "$NEW_MINOR" ]; then
+            echo "update_type=minor" >> $GITHUB_OUTPUT
+          else
+            echo "update_type=patch" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create Pull Request
+        id: create-pr
+        if: steps.check-update.outputs.update_needed == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update Alpine.js to ${{ steps.get-version.outputs.latest_version }}"
+          title: "Update Alpine.js to ${{ steps.get-version.outputs.latest_version }} (${{ steps.update-type.outputs.update_type }})"
+          body: |
+            ## Alpine.js Update
+            
+            **Version:** ${{ steps.check-update.outputs.current_version }} → ${{ steps.get-version.outputs.latest_version }}
+            **Typ:** ${{ steps.update-type.outputs.update_type }}-Update
+            
+            ### Änderungen
+            - Alpine.js CDN-Link in `_includes/head.html` aktualisiert
+            - Automatisches Update via GitHub Actions Workflow
+            
+            ### Auto-merge
+            {% raw %}{% if steps.update-type.outputs.update_type == 'patch' or steps.update-type.outputs.update_type == 'minor' %}
+            **Dieser PR wird automatisch gemergt** (Patch/Minor-Update)
+            {% else %}
+            **Manuelle Prüfung erforderlich** (Major-Update)
+            
+            ### Prüfliste für Major-Updates:
+            - [ ] [Alpine.js Changelog](https://github.com/alpinejs/alpine/releases/tag/v${{ steps.get-version.outputs.latest_version }}) prüfen
+            - [ ] Breaking Changes und Migration Guide durchgehen
+            - [ ] Website lokal testen (GitHub Desktop: Branch auschecken, `bundle exec jekyll serve`)
+            - [ ] Browser-Konsole auf Fehler prüfen
+            - [ ] Alpine.js-Features testen:
+              - [ ] Galerie-Navigation funktioniert
+              - [ ] Mobile Navigation (Burger-Menü) funktioniert
+              - [ ] Alle Buttons und Links reagieren korrekt
+            - [ ] 1-2 Wochen auf Community-Feedback warten
+            {% endif %}{% endraw %}
+            
+            ---
+            *Dieser PR wurde automatisch vom Alpine.js-Update-Workflow erstellt.*
+          branch: update-alpinejs-${{ steps.get-version.outputs.latest_version }}
+          delete-branch: true
+
+      - name: Enable auto-merge for patch/minor
+        if: steps.check-update.outputs.update_needed == 'true' && (steps.update-type.outputs.update_type == 'patch' || steps.update-type.outputs.update_type == 'minor')
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ steps.create-pr.outputs.pull-request-number }}
+          merge-method: squash

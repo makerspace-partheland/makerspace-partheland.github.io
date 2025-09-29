@@ -1,0 +1,102 @@
+/* Dark Mode: Nur Vereinsfarben anpassen, Layout unverändert */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Vereinsfarben für Dark Mode - basierend auf Design-Richtlinien */
+    --brand-blue: #4d9de0;        /* Helleres Blau für Dark Mode */
+    --brand-green: #44cc44;       /* Helleres Grün für Dark Mode */
+    --brand-orange: #F39C12;      /* Helleres Orange für Dark Mode */
+    --brand-blue-dark: #2d5a8a;   /* Angepasstes Dunkelblau */
+    --brand-green-dark: #2a662a;  /* Angepasstes Dunkelgrün */
+    --brand-orange-dark: #E67E22; /* Angepasstes Dunkelorange */
+    
+    /* Bulma CSS Variablen für Dark Mode */
+    --bulma-scheme-main: #0d1117;
+    --bulma-scheme-main-bis: #161b22;
+    --bulma-scheme-main-ter: #21262d;
+    --bulma-scheme-invert: #f0f6fc;
+    --bulma-scheme-invert-bis: #f0f6fc;
+    --bulma-scheme-invert-ter: #e6edf3;
+    
+    /* Text-Farben */
+    --bulma-text: #e6edf3;
+    --bulma-text-strong: #f0f6fc;
+    --bulma-text-light: #7d8590;
+    
+    /* Primary & Success Farben (Vereinsfarben) */
+    --bulma-primary: #4d9de0;
+    --bulma-primary-dark: #2d5a8a;
+    --bulma-success: #44cc44;
+    --bulma-success-dark: #2a662a;
+  }
+
+  /* Spezifische Überschreibungen für alle Karten mit Inline-Styles */
+  .card.modern-card {
+    background: var(--bulma-scheme-main-bis) !important;
+    border-color: var(--bulma-scheme-main-ter) !important;
+    color: var(--bulma-text) !important;
+  }
+
+  .card.modern-card .title {
+    color: var(--bulma-text-strong) !important;
+  }
+
+  .card.modern-card .subtitle {
+    color: var(--bulma-text) !important;
+  }
+
+  .card.modern-card .content {
+    color: var(--bulma-text-light) !important;
+  }
+
+  .card.modern-card .card-content {
+    color: var(--bulma-text) !important;
+  }
+
+  /* Alle anderen Karten/Boxen auch überschreiben */
+  .card, .box {
+    background: var(--bulma-scheme-main-bis) !important;
+    border-color: var(--bulma-scheme-main-ter) !important;
+    color: var(--bulma-text) !important;
+  }
+
+  /* Projekt-Buttons (is-light) für Dark Mode - echter 3D-Effekt */
+  .button.is-light {
+    background: var(--bulma-scheme-main-bis) !important;
+    border: 1px solid var(--bulma-scheme-main-ter) !important;
+    color: var(--bulma-text) !important;
+    /* Echter 3D-Effekt mit scharfem Schatten */
+    box-shadow: 0 2px 0 #404040 !important;
+  }
+
+  .button.is-light:hover {
+    background: var(--bulma-scheme-main-ter) !important;
+    border-color: #404040 !important;
+    color: var(--bulma-text-strong) !important;
+    /* 3D-Hover-Effekt */
+    box-shadow: 0 3px 0 #404040 !important;
+  }
+
+  .button.is-light:active {
+    background: var(--bulma-scheme-main-ter) !important;
+    border-color: #404040 !important;
+    color: var(--bulma-text-strong) !important;
+    /* 3D-Active-Effekt */
+    box-shadow: 0 1px 0 #404040 !important;
+  }
+}
+
+/* Dark Mode Anpassungen für Event-Legende */
+@media (prefers-color-scheme: dark) {
+  .event-legend {
+    background: rgba(22, 27, 34, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .event-legend-text {
+    color: var(--bulma-text-light);
+  }
+  
+  .members-only-icon svg {
+    fill: var(--brand-orange);
+  }
+}

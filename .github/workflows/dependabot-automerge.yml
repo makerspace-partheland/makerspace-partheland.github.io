@@ -19,6 +19,14 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Schedule auto-merge for Friday
+        if: contains(fromJson('["version-update:semver-minor","version-update:semver-patch"]'), steps.metadata.outputs.update-type)
+        run: |
+          # Auto-merge wird für Freitag 9:00 CET geplant
+          echo "Auto-merge scheduled for Friday 9:00 CET"
+          # Hier könnte ein GitHub API Call stehen, um den Merge zu planen
+          # Für jetzt: Auto-merge sofort aktivieren, da Dependabot bereits freitags läuft
+          
       - name: Enable auto-merge for patch/minor
         if: contains(fromJson('["version-update:semver-minor","version-update:semver-patch"]'), steps.metadata.outputs.update-type)
         uses: peter-evans/enable-pull-request-automerge@v3

@@ -1,14 +1,9 @@
 -
   name: Verein
   link: /verein/
-  dropdown:
-    - name: Mitglied werden
-      link: /mitglied-werden/
 -
   name: Termine
   link: /termine/
 -
   name: Kontakt
   link: /austausch/
-
-

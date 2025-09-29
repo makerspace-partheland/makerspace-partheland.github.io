@@ -3,7 +3,7 @@ title: Reparatur-Treff
 date: 2025-11-01
 location: Makerspace Partheland e.V., August-Bebel-Straße 12 (Hintereingang, 1.OG), 04824 Beucha
 excerpt: Gemeinsam reparieren statt wegwerfen – Ehrenamtliche unterstützen beim Reparieren defekter Alltagsgeräte
-featured: true
+accent: green
 permalink: /termine/reparatur-treff-2025-11-01/
 ---
 # Reparatur-Treff
@@ -34,4 +34,3 @@ Gemeinsam reparieren statt wegwerfen – Ehrenamtliche unterstützen beim Analys
 **Anmeldung:** Vorab per Telegram oder E-Mail erwünscht, aber nicht erforderlich  
 **Kosten:** Kostenfrei, Spenden willkommen  
 **Hinweis:** Keine Garantie auf erfolgreiche Reparatur • Ehrenamtlich organisiert
-

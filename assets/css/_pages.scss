@@ -1,0 +1,372 @@
+/* === TERMINE PAGE STYLES === */
+
+/* Section Paddings */
+.termine-upcoming-section {
+  padding: 4rem 1.5rem;
+}
+
+.termine-past-section {
+  padding: 2rem 1.5rem;
+}
+
+/* Titles */
+.termine-section-title {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+/* Event Cards */
+.termine-card {
+  height: 100%;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.termine-card.featured {
+  box-shadow: 0 6px 25px rgba(0, 170, 0, 0.15);
+  border-left: 4px solid var(--brand-green);
+}
+
+.termine-card.accent-green {
+  box-shadow: 0 6px 25px rgba(0, 170, 0, 0.15);
+  border-left: 4px solid var(--brand-green);
+}
+
+.termine-card.accent-orange {
+  box-shadow: 0 6px 25px rgba(230, 126, 34, 0.15);
+  border-left: 4px solid var(--brand-orange);
+}
+
+.termine-card.standard {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.termine-card.past {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  opacity: 0.9;
+}
+
+.termine-card-content {
+  padding: 2rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.termine-card-content.past {
+  padding: 1.5rem 1.25rem;
+}
+
+.termine-card-body {
+  flex-grow: 1;
+}
+
+.termine-card-actions {
+  margin-top: 1rem;
+}
+
+/* Event Titles */
+.termine-event-title {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.termine-event-title a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.termine-event-title.past {
+  color: #34495e;
+}
+
+.termine-event-title.past a {
+  color: #34495e;
+}
+
+/* Event Dates */
+.termine-event-date {
+  color: var(--brand-blue);
+  margin-bottom: 1rem;
+}
+
+.termine-event-date.past {
+  color: #5a6c7d;
+  margin-bottom: 0.75rem;
+}
+
+/* Event Content */
+.termine-event-content {
+  color: #5a6c7d;
+  line-height: 1.5;
+}
+
+.termine-event-content.past {
+  line-height: 1.4;
+}
+
+/* === GLOBAL PAGE STYLES === */
+
+/* Common Section Paddings */
+.main-section {
+  padding: 4rem 1.5rem;
+}
+
+.secondary-section {
+  padding: 2rem 1.5rem;
+}
+
+/* Common Margins */
+.mb-4rem {
+  margin-bottom: 4rem;
+}
+
+.mb-2rem {
+  margin-bottom: 2rem;
+}
+
+.mb-1-5rem {
+  margin-bottom: 1.5rem;
+}
+
+.mb-1rem {
+  margin-bottom: 1rem;
+}
+
+/* Common Cards */
+.standard-card {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.standard-card.full-height {
+  height: 100%;
+}
+
+.standard-card.clickable {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.standard-card.blue-bg {
+  background: var(--brand-blue-bg);
+}
+
+/* Card Content */
+.standard-card-content {
+  padding: 2rem 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.standard-card-content.large {
+  padding: 2.5rem 2rem;
+}
+
+.standard-card-content.centered {
+  text-align: center;
+}
+
+.card-content-body {
+  flex-grow: 1;
+}
+
+/* Common Text Styles */
+.primary-title {
+  color: #2c3e50;
+}
+
+.secondary-title {
+  color: #34495e;
+}
+
+.body-text {
+  color: #5a6c7d;
+  line-height: 1.6;
+}
+
+.body-text.large {
+  line-height: 1.7;
+}
+
+/* Common Buttons */
+.button-group {
+  gap: 1rem;
+}
+
+.button-group.column {
+  flex-direction: column;
+}
+
+.button.full-width {
+  width: 100%;
+}
+
+/* Common Images */
+.centered-image {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.rounded-image {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.small-rounded-image {
+  max-width: 420px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Text Alignment */
+.text-left {
+  text-align: left;
+}
+
+/* Font Size Utilities */
+.font-small {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* === HERO STYLES === */
+.hero-subtitle {
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+.hero-description p {
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.hero-buttons {
+  margin-top: 2rem;
+}
+
+/* === SPONSOR STYLES === */
+.sponsor-container {
+  margin: 1rem auto;
+}
+
+.sponsor-card {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.sponsor-card-content {
+  padding: 0.75rem;
+}
+
+/* === MITGLIED-WERDEN PAGE STYLES === */
+
+/* Process Steps */
+.process-step {
+  padding: 1.5rem;
+  background: var(--brand-blue-bg);
+  border-radius: 12px;
+  height: 100%;
+}
+
+.process-step h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.process-step p {
+  color: #5a6c7d;
+  line-height: 1.6;
+}
+
+.process-step a {
+  color: var(--brand-blue);
+}
+
+/* Membership Cards */
+.membership-card-content {
+  padding: 2.5rem 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.membership-card-content h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.membership-card-content .content {
+  color: #5a6c7d;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.membership-card-content .content p {
+  margin-bottom: 1rem;
+}
+
+.membership-card-content .content ul {
+  margin-bottom: 1.5rem;
+}
+
+.membership-price {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.membership-note {
+  color: #34495e;
+}
+
+/* === PROJECT INDEX STYLES === */
+.project-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.project-buttons .button {
+  margin: 0;
+}
+
+/* === CALLOUT STYLES === */
+.callout-card-content {
+  padding: 2.5rem 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.callout-card-body {
+  flex-grow: 1;
+}
+
+.callout-title {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.callout-subtitle {
+  color: #34495e;
+  margin-bottom: 1.5rem;
+}
+
+.callout-content {
+  color: #5a6c7d;
+  line-height: 1.6;
+}
+
+.callout-actions {
+  margin-top: 2rem;
+}

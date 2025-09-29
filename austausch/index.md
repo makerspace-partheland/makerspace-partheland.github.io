@@ -28,13 +28,11 @@ permalink: /austausch/
             </div>
             <div class="buttons is-centered button-group column">
               <a href="https://t.me/makerspacepartheland" target="_blank" rel="noreferrer noopener" 
-                 class="button is-primary is-large is-rounded has-text-weight-semibold" 
                  class="button is-primary is-large is-rounded has-text-weight-semibold full-width">
                 Hauptkanal
               </a>
               <a href="https://t.me/+J04U0UCk43MxNTMy" target="_blank" rel="noreferrer noopener" 
-                 class="button is-success is-large is-rounded has-text-weight-semibold" 
-                 class="full-width">
+                 class="button is-success is-large is-rounded has-text-weight-semibold full-width">
                 Unsere Themenwelt
               </a>
             </div>
@@ -82,7 +80,7 @@ permalink: /austausch/
   </div>
 </section>
 
-<section class="section secondary-section">
+<section class="section secondary-section compact-top">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8-desktop is-10-tablet is-12-mobile">
