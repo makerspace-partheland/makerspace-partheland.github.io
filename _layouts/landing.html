@@ -5,14 +5,16 @@
     class="{% if site.fixed_navbar %} has-navbar-fixed-{{ site.fixed_navbar }} {% endif %} {% if site.force_theme %} theme-{{ site.force_theme }} {% endif %}"
 >
     {% include head.html %}
-    <body>
+    <body role="document">
         {% include skip-to-content.html %}
         {% include header.html %}
         {% unless page.hide_hero %}
             {% include hero.html %}
         {% endunless %}
-        {% include callouts.html %}
-        {% include sponsors.html %}
+        <main id="main-content">
+            {% include callouts.html %}
+            {% include sponsors.html %}
+        </main>
         {% unless page.hide_footer %}
             {% include footer.html %}
         {% endunless %}

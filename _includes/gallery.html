@@ -51,14 +51,14 @@ In beiden Fällen wird die Theme-Lightbox via image-modal.html genutzt.
       </div>
 
       <template x-if="open">
-        <div class="modal is-active" x-cloak>
-          <div class="modal-background" x-on:click="close()"></div>
+        <div class="modal is-active" x-cloak role="dialog" aria-modal="true" aria-label="Bildergalerie">
+          <div class="modal-background" x-on:click="close()" aria-hidden="true"></div>
           <div class="modal-content">
             <p class="image">
               <img x-bind:src="currentItem().large || currentItem().link" x-bind:alt="currentItem().alt || ''">
             </p>
           </div>
-          <button class="modal-close is-large" aria-label="close" x-on:click="close()"></button>
+          <button class="modal-close is-large" aria-label="Galerie schließen" x-on:click="close()"></button>
           <div class="gallery-nav">
             <button class="button is-light" aria-label="Vorheriges Bild" x-on:click.stop="prev()">
               <span class="icon">
@@ -131,14 +131,14 @@ In beiden Fällen wird die Theme-Lightbox via image-modal.html genutzt.
           {%- endfor -%}
         </div>
         <template x-if="open">
-          <div class="modal is-active" x-cloak>
-            <div class="modal-background" x-on:click="close()"></div>
+          <div class="modal is-active" x-cloak role="dialog" aria-modal="true" aria-label="Bildergalerie">
+            <div class="modal-background" x-on:click="close()" aria-hidden="true"></div>
             <div class="modal-content">
               <p class="image">
                 <img x-bind:src="currentItem().large || currentItem().link" x-bind:alt="currentItem().alt || ''">
               </p>
             </div>
-            <button class="modal-close is-large" aria-label="close" x-on:click="close()"></button>
+            <button class="modal-close is-large" aria-label="Galerie schließen" x-on:click="close()"></button>
             <div class="gallery-nav">
               <button class="button is-light" aria-label="Vorheriges Bild" x-on:click.stop="prev()">
                 <span class="icon">

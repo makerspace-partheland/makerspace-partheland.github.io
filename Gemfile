@@ -15,3 +15,7 @@ gem "faraday-retry", "~> 2"
 # Windows: vermeidet Polling für Dateiänderungen
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
+# Windows: Timezone-Unterstützung
+gem 'tzinfo', '~> 1.2' if Gem.win_platform?
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+

@@ -7,3 +7,38 @@
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/favicons/apple-touch-icon.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/images/favicons/android-chrome-192x192.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="150x150" href="{{ '/assets/images/favicons/mstile-150x150.png' | relative_url }}">
+
+{% if site.organization %}
+  {% assign org_logo = site.organization.logo | default: site.favicon | absolute_url %}
+  {% assign org_address = site.organization.address %}
+  {% assign org_contact = site.organization.contact_point %}
+  {% capture organization_json %}
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": {{ site.organization.name | jsonify }},
+    "legalName": {{ site.organization.legal_name | default: site.organization.name | jsonify }},
+    "url": {{ site.organization.url | default: site.url | jsonify }},
+    "logo": {{ org_logo | jsonify }}{% if site.organization.same_as %},
+    "sameAs": {{ site.organization.same_as | jsonify }}{% endif %}{% if org_address %},
+    "address": {
+      "@type": "PostalAddress"{% if org_address.street_address %},
+      "streetAddress": {{ org_address.street_address | jsonify }}{% endif %}{% if org_address.postal_code %},
+      "postalCode": {{ org_address.postal_code | jsonify }}{% endif %}{% if org_address.locality %},
+      "addressLocality": {{ org_address.locality | jsonify }}{% endif %}{% if org_address.region %},
+      "addressRegion": {{ org_address.region | jsonify }}{% endif %}{% if org_address.country %},
+      "addressCountry": {{ org_address.country | jsonify }}{% endif %}
+    }{% endif %}{% if org_contact %},
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": {{ org_contact.contact_type | default: 'customer support' | jsonify }},
+        "url": {{ org_contact.url | absolute_url | jsonify }}
+      }
+    ]{% endif %}
+  }
+  {% endcapture %}
+  <script type="application/ld+json">
+    {{ organization_json | strip }}
+  </script>
+{% endif %}

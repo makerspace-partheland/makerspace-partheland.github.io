@@ -10,14 +10,6 @@
 
 /* === CUSTOM COMPONENTS - Erweiterte CSS-Variablen === */
 
-/* Spezielle Card-Hintergründe */
-.card.eco-card {
-  background: var(--brand-green-bg) !important;
-}
-
-.card.tech-card {
-  background: var(--bulma-primary-soft) !important;  /* Bulma Color Palette nutzen */
-}
 
 .button.is-success {
   color: white !important;  /* Explizit weißer Text für Vereinsgrün */
@@ -41,13 +33,6 @@
   transition: background-color 0.3s ease !important;
 }
 
-/* Dropdown Items: Deutlich sichtbare Hover-Effekte für Submenü */
-.navbar.is-primary .navbar-dropdown .navbar-item:hover {
-  background-color: rgba(0, 109, 182, 0.2) !important;
-  color: var(--brand-blue-dark) !important;
-  font-weight: 500 !important;
-  transition: all 0.3s ease !important;
-}
 
 /* Focus für Accessibility */
 .navbar.is-primary .navbar-item:focus,
@@ -325,6 +310,7 @@ a.card.modern-card:active {
   box-shadow: 0 1px 0 #d4d4d4;
 }
 
+
 /* Übergang: WordPress-Content-Bilder im Fließtext kleiner darstellen */
 .content .wp-block-image img {
   display: block;
@@ -399,83 +385,3 @@ a.card.modern-card:active {
 
 /* === EVENT SYSTEM: Farben und Icons === */
 
-/* Event-Card Styling für vereinsinterne Events */
-.card.members-only-event {
-  border-left: 4px solid var(--brand-orange) !important;
-  box-shadow: 0 6px 25px rgba(230, 126, 34, 0.15) !important;
-}
-
-/* Schloss-Icon für vereinsinterne Events - nativ als SVG */
-.members-only-icon {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  vertical-align: middle;
-}
-
-/* Icon in der Legende - höher setzen */
-.event-legend .members-only-icon {
-  vertical-align: text-top;
-  margin-top: -1px;
-}
-
-/* Icon in Event-Titeln - baseline Ausrichtung */
-.card .title .members-only-icon,
-h3.title .members-only-icon,
-.card-content h3.title .members-only-icon {
-  vertical-align: baseline;
-}
-
-.members-only-icon svg {
-  width: 100%;
-  height: 100%;
-  fill: var(--brand-orange);
-}
-
-/* Event-Legende Styling */
-.event-legend {
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 0.75rem 1.5rem;
-  margin-bottom: 2rem;
-  width: 100%;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 2rem;
-}
-
-.event-legend-item {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  justify-content: center;
-}
-
-.event-legend-color {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  margin-right: 0.5rem;
-  flex-shrink: 0;
-}
-
-.event-legend-color.featured {
-  background: var(--brand-green);
-}
-
-.event-legend-color.members-only {
-  background: var(--brand-orange);
-}
-
-.event-legend-text {
-  font-size: 0.875rem;
-  color: #5a6c7d;
-  display: flex;
-  align-items: center;
-}

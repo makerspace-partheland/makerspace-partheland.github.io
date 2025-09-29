@@ -158,7 +158,8 @@ permalink: /verein/
                 Mitglied werden
               </a>
               <a href="https://t.me/makerspacepartheland" target="_blank" rel="noreferrer noopener"
-                 class="button is-info is-medium is-rounded has-text-weight-semibold">
+                 class="button is-info is-medium is-rounded has-text-weight-semibold"
+                 aria-label="Telegram-Kanal (öffnet in neuem Tab)">
                 Telegram-Kanal
               </a>
             </div>
@@ -181,7 +182,8 @@ permalink: /verein/
               <p class="is-size-7">Satzung, Beitragsordnung und weitere Informationen</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente" target="_blank" rel="noreferrer noopener"
-               class="button is-small is-light is-rounded">
+               class="button is-small is-light is-rounded"
+               aria-label="GitHub Repository (öffnet in neuem Tab)">
               GitHub Repository
             </a>
           </div>
@@ -199,7 +201,8 @@ permalink: /verein/
               <p class="is-size-7">Regelt wie der Makerspace funktioniert</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener"
-               class="button is-small is-light is-rounded">
+               class="button is-small is-light is-rounded"
+               aria-label="Aktuelle Fassung der Satzung (öffnet in neuem Tab)">
               Aktuelle Fassung
             </a>
           </div>
@@ -217,7 +220,8 @@ permalink: /verein/
               <p class="is-size-7">Mitgliedsbeiträge und Abwicklung</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Beitragsordnung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener"
-               class="button is-small is-light is-rounded">
+               class="button is-small is-light is-rounded"
+               aria-label="Beiträge ansehen (öffnet in neuem Tab)">
               Beiträge ansehen
             </a>
           </div>

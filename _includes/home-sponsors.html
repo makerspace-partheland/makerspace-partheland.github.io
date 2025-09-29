@@ -3,7 +3,7 @@
   <h2 class="home-sponsors__title">Unterstützt von</h2>
   <div class="home-sponsors__logos">
     {% for s in site.data.sponsors %}
-      <a href="{{ s.url }}" target="_blank" rel="noopener" class="home-sponsors__item">
+      <a href="{{ s.url }}" target="_blank" rel="noopener" class="home-sponsors__item" aria-label="{{ s.name }} (öffnet in neuem Tab)">
         <img src="{{ s.logo }}" alt="{{ s.alt | default: s.name }}" />
       </a>
     {% endfor %}

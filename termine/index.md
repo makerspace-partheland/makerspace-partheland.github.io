@@ -54,7 +54,7 @@ permalink: /termine/
                   <a href="{{ next_reparatur.url }}">{{ next_reparatur.title }}</a>
                 </h3>
                 <p class="subtitle is-6 has-text-weight-medium has-text-centered termine-event-date">
-                  {{ next_reparatur.date | date: "%d.%m.%Y" }}
+                  {{ next_reparatur.date | date: "%d.%m.%Y" }}{% if next_reparatur.start_time %}, {{ next_reparatur.start_time }}{% if next_reparatur.end_time %} - {{ next_reparatur.end_time }}{% endif %}{% endif %}
                 </p>
                 {% if next_reparatur.excerpt %}
                   <div class="content is-size-6 has-text-centered termine-event-content">
@@ -93,7 +93,7 @@ permalink: /termine/
                 </h3>
                 {% if e.date %}
                   <p class="subtitle is-6 has-text-weight-medium has-text-centered termine-event-date">
-                    {{ e.date | date: "%d.%m.%Y" }}
+                    {{ e.date | date: "%d.%m.%Y" }}{% if e.start_time %}, {{ e.start_time }}{% if e.end_time %} - {{ e.end_time }}{% endif %}{% endif %}
                   </p>
                 {% endif %}
                 {% if e.excerpt %}
@@ -134,7 +134,7 @@ permalink: /termine/
                 </h3>
                 {% if e.date %}
                   <p class="subtitle is-7 has-text-weight-medium has-text-centered termine-event-date past">
-                    {{ e.date | date: "%d.%m.%Y" }}
+                    {{ e.date | date: "%d.%m.%Y" }}{% if e.start_time %}, {{ e.start_time }}{% if e.end_time %} - {{ e.end_time }}{% endif %}{% endif %}
                   </p>
                 {% endif %}
                 {% if e.excerpt %}
@@ -156,3 +156,7 @@ permalink: /termine/
   </div>
 </section>
 {% endif %}
+{% include events-list-structured-data.html events=upcoming list_name='Anstehende Termine Makerspace Partheland' %}
+
+
+

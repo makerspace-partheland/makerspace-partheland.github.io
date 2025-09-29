@@ -1,0 +1,75 @@
+{% assign base_date = page.date | date: "%Y-%m-%d" %}
+{% if page.start_datetime %}
+  {% assign event_start_iso = page.start_datetime %}
+{% elsif page.start_time %}
+  {% assign start_source = base_date | append: " " | append: page.start_time %}
+  {% assign event_start_iso = start_source | date: "%Y-%m-%dT%H:%M:%S%:z" %}
+{% else %}
+  {% assign event_start_iso = page.date | date: "%Y-%m-%dT00:00:00%:z" %}
+{% endif %}
+{% if page.end_datetime %}
+  {% assign event_end_iso = page.end_datetime %}
+{% elsif page.end_time %}
+  {% assign end_source = base_date | append: " " | append: page.end_time %}
+  {% assign event_end_iso = end_source | date: "%Y-%m-%dT%H:%M:%S%:z" %}
+{% else %}
+  {% assign event_end_iso = nil %}
+{% endif %}
+{% assign event_location = page.location %}
+{% assign location_name = nil %}
+{% assign location_url = nil %}
+{% assign location_address = nil %}
+{% if event_location %}
+  {% if event_location.name %}
+    {% assign location_name = event_location.name %}
+    {% assign location_url = event_location.url %}
+    {% assign location_address = event_location %}
+  {% else %}
+    {% assign location_name = event_location %}
+  {% endif %}
+{% endif %}
+{% assign event_image = page.image | default: page.featured_image %}
+{% assign event_mode = page.event_attendance_mode | default: "https://schema.org/OfflineEventAttendanceMode" %}
+{% assign event_status = page.event_status | default: "https://schema.org/EventScheduled" %}
+{% assign event_description = page.description | default: page.excerpt %}
+{% assign event_offers = page.offers %}
+{% assign event_performer = page.performer %}
+{% assign registration_url = page.registration_url %}
+
+{% capture event_json %}
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": {{ page.title | jsonify }},
+  "startDate": {{ event_start_iso | jsonify }}{% if event_end_iso %},
+  "endDate": {{ event_end_iso | jsonify }}{% endif %},
+  "eventStatus": {{ event_status | jsonify }},
+  "eventAttendanceMode": {{ event_mode | jsonify }}{% if event_description %},
+  "description": {{ event_description | strip_html | strip_newlines | jsonify }}{% endif %}{% if event_image %},
+  "image": [{{ event_image | absolute_url | jsonify }}]{% endif %}{% if site.organization %},
+  "organizer": {
+    "@type": "Organization",
+    "name": {{ site.organization.name | jsonify }},
+    "url": {{ site.organization.url | default: site.url | jsonify }}
+  }{% endif %}{% if location_name %},
+  "location": {
+    "@type": "Place",
+    "name": {{ location_name | jsonify }}{% if location_url %},
+    "url": {{ location_url | jsonify }}{% endif %}{% if location_address and (location_address.street_address or location_address.postal_code or location_address.locality or location_address.region or location_address.country) %},
+    "address": {
+      "@type": "PostalAddress"{% if location_address.street_address %},
+      "streetAddress": {{ location_address.street_address | jsonify }}{% endif %}{% if location_address.postal_code %},
+      "postalCode": {{ location_address.postal_code | jsonify }}{% endif %}{% if location_address.locality %},
+      "addressLocality": {{ location_address.locality | jsonify }}{% endif %}{% if location_address.region %},
+      "addressRegion": {{ location_address.region | jsonify }}{% endif %}{% if location_address.country %},
+      "addressCountry": {{ location_address.country | jsonify }}{% endif %}
+    }{% endif %}
+  }{% endif %}{% if registration_url %},
+  "url": {{ registration_url | jsonify }}{% endif %}{% if event_offers %},
+  "offers": {{ event_offers | jsonify }}{% endif %}{% if event_performer %},
+  "performer": {{ event_performer | jsonify }}{% endif %}
+}
+{% endcapture %}
+<script type="application/ld+json">
+  {{ event_json | strip }}
+</script>

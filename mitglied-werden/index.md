@@ -33,7 +33,7 @@ permalink: /mitglied-werden/
                     1. Dokumente lesen
                   </h3>
                   <p>
-                    Lies dir unsere <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener">Satzung</a></strong> und <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Beitragsordnung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener">Beitragsordnung</a></strong> durch und befolge sie.
+                    Lies dir unsere <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" aria-label="Satzung (öffnet in neuem Tab)">Satzung</a></strong> und <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Beitragsordnung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" aria-label="Beitragsordnung (öffnet in neuem Tab)">Beitragsordnung</a></strong> durch und befolge sie.
                   </p>
                 </div>
               </div>
@@ -45,7 +45,7 @@ permalink: /mitglied-werden/
                     2. Antrag ausfüllen
                   </h3>
                   <p class="mb-1rem">
-                    Lade dir den <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/main/Mitgliedsantrag%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener">Mitgliedsantrag</a></strong> und das <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/main/SEPA%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener">SEPA-Formular</a></strong> herunter.
+                    Lade dir den <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/main/Mitgliedsantrag%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" aria-label="Mitgliedsantrag (öffnet in neuem Tab)">Mitgliedsantrag</a></strong> und das <strong><a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/main/SEPA%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener" aria-label="SEPA-Formular (öffnet in neuem Tab)">SEPA-Formular</a></strong> herunter.
                   </p>
                   <p>
                     Fülle beide Formulare vollständig aus.
@@ -152,7 +152,8 @@ permalink: /mitglied-werden/
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" 
                target="_blank" rel="noreferrer noopener"
-               class="button is-small is-primary is-rounded">
+               class="button is-small is-primary is-rounded"
+               aria-label="Satzung lesen (öffnet in neuem Tab)">
               Satzung lesen
             </a>
           </div>
@@ -171,7 +172,8 @@ permalink: /mitglied-werden/
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Beitragsordnung%20-%20Makerspace%20Partheland%20e.V.pdf" 
                target="_blank" rel="noreferrer noopener"
-               class="button is-small is-primary is-rounded">
+               class="button is-small is-primary is-rounded"
+               aria-label="Beiträge ansehen (öffnet in neuem Tab)">
               Beiträge ansehen
             </a>
           </div>
@@ -190,7 +192,8 @@ permalink: /mitglied-werden/
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente" 
                target="_blank" rel="noreferrer noopener"
-               class="button is-small is-primary is-rounded">
+               class="button is-small is-primary is-rounded"
+               aria-label="GitHub Repository (öffnet in neuem Tab)">
               GitHub Repository
             </a>
           </div>

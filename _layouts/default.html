@@ -17,7 +17,7 @@
     class="{% if site.fixed_navbar %} has-navbar-fixed-{{ site.fixed_navbar }} {% endif %} {% if site.force_theme %} theme-{{ site.force_theme }} {% endif %}"
 >
     {% include head.html %}
-    <body>
+    <body role="document">
         {% include skip-to-content.html %}
         {% include header.html %}
         {% unless page.hide_hero %}
@@ -41,6 +41,9 @@
                         {% include tabs.html %}
                         {% include showcase.html %}
                         {{ content }}
+                        {% if page.collection == 'events' %}
+                            {% include event-structured-data.html %}
+                        {% endif %}
                         {% include gallery.html %}
                     </main>
                     {% if site.posts and page.show_sidebar %}
@@ -57,5 +60,4 @@
         {%- include footer-scripts.html -%}
     </body>
     </html>
-
 

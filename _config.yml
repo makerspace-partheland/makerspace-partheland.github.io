@@ -4,9 +4,31 @@ description: "Makerspace Partheland - die Mitmachwerkstatt im Partheland."
 url: https://makerspace-partheland.de
 theme: bulma-clean-theme
 
+timezone: Europe/Berlin
+
 markdown: kramdown
 permalink: /:path/
 lang: de
+
+organization:
+  name: Makerspace Partheland e.V.
+  legal_name: Makerspace Partheland e.V.
+  url: https://makerspace-partheland.de
+  logo: /favicon.png
+  same_as:
+    - https://github.com/makerspace-partheland
+    - https://t.me/makerspacepartheland
+  contact_point:
+    contact_type: customer support
+    url: /austausch/
+  address:
+    street_address: August-Bebel-Strasse 12
+    postal_code: "04824"
+    locality: Beucha
+    country: DE
+
+theme_color: "#ffffff"
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
@@ -55,4 +77,12 @@ defaults:
     values:
       layout: page
       hide_hero: true
+      location:
+        name: Makerspace Partheland e.V.
+        street_address: August-Bebel-Strasse 12
+        postal_code: "04824"
+        locality: Beucha
+        country: DE
+
+
 

@@ -28,11 +28,13 @@ permalink: /austausch/
             </div>
             <div class="buttons is-centered button-group column">
               <a href="https://t.me/makerspacepartheland" target="_blank" rel="noreferrer noopener" 
-                 class="button is-primary is-large is-rounded has-text-weight-semibold full-width">
+                 class="button is-primary is-large is-rounded has-text-weight-semibold full-width"
+                 aria-label="Hauptkanal (öffnet in neuem Tab)">
                 Hauptkanal
               </a>
               <a href="https://t.me/+J04U0UCk43MxNTMy" target="_blank" rel="noreferrer noopener" 
-                 class="button is-success is-large is-rounded has-text-weight-semibold full-width">
+                 class="button is-success is-large is-rounded has-text-weight-semibold full-width"
+                 aria-label="Unsere Themenwelt (öffnet in neuem Tab)">
                 Unsere Themenwelt
               </a>
             </div>

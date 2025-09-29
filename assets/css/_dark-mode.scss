@@ -83,20 +83,90 @@
     /* 3D-Active-Effekt */
     box-shadow: 0 1px 0 #404040 !important;
   }
+
+  /* Kleine Buttons (is-small) für Dark Mode - überschreibt Inline-Styles */
+  .button.is-small.is-light {
+    background: var(--bulma-scheme-main-bis) !important;
+    border: 1px solid var(--bulma-scheme-main-ter) !important;
+    color: var(--bulma-text) !important;
+    box-shadow: 0 2px 0 #404040 !important;
+  }
+
+  .button.is-small.is-light:hover {
+    background: var(--bulma-scheme-main-ter) !important;
+    border-color: #404040 !important;
+    color: var(--bulma-text-strong) !important;
+    box-shadow: 0 3px 0 #404040 !important;
+  }
+
+  .button.is-small.is-light:active {
+    background: var(--bulma-scheme-main-ter) !important;
+    border-color: #404040 !important;
+    color: var(--bulma-text-strong) !important;
+    box-shadow: 0 1px 0 #404040 !important;
+  }
+
+  /* Buttons mit is-rounded für Dark Mode - überschreibt Inline-Styles */
+  .button.is-light.is-rounded {
+    background: var(--bulma-scheme-invert) !important;
+    border: 1px solid var(--bulma-scheme-invert-bis) !important;
+    color: var(--bulma-scheme-main) !important;
+    box-shadow: 0 2px 0 #404040 !important;
+  }
+
+  .button.is-light.is-rounded:hover {
+    background: var(--bulma-scheme-invert-bis) !important;
+    border-color: var(--bulma-scheme-invert-ter) !important;
+    color: var(--bulma-scheme-main) !important;
+    box-shadow: 0 3px 0 #404040 !important;
+  }
+
+  .button.is-light.is-rounded:active {
+    background: var(--bulma-scheme-invert-bis) !important;
+    border-color: var(--bulma-scheme-invert-ter) !important;
+    color: var(--bulma-scheme-main) !important;
+    box-shadow: 0 1px 0 #404040 !important;
+  }
 }
 
-/* Dark Mode Anpassungen für Event-Legende */
+/* Dark Mode: Überschreibt alle Light-Mode Button-Styles - muss am Ende stehen */
 @media (prefers-color-scheme: dark) {
-  .event-legend {
-    background: rgba(22, 27, 34, 0.95);
-    border-color: rgba(255, 255, 255, 0.1);
+  .button.is-light {
+    background: var(--bulma-scheme-invert) !important;
+    border: 1px solid var(--bulma-scheme-invert-bis) !important;
+    color: var(--bulma-scheme-main) !important;
+    box-shadow: 0 2px 0 #404040 !important;
+    border-radius: 12px !important;
+  }
+
+  .button.is-light:hover {
+    background: var(--bulma-scheme-invert-bis) !important;
+    border-color: var(--bulma-scheme-invert-ter) !important;
+    color: var(--bulma-scheme-main) !important;
+    box-shadow: 0 3px 0 #404040 !important;
+    transform: translateY(-1px) !important;
+  }
+
+  .button.is-light:active {
+    background: var(--bulma-scheme-invert-bis) !important;
+    border-color: var(--bulma-scheme-invert-ter) !important;
+    color: var(--bulma-scheme-main) !important;
+    box-shadow: 0 1px 0 #404040 !important;
+    transform: translateY(1px) !important;
+  }
+}
+
+
+/* Dark Mode Anpassungen für Termine-Cards - überschreibt Inline-Styles */
+@media (prefers-color-scheme: dark) {
+  .termine-card.accent-green {
+    box-shadow: 0 6px 25px rgba(68, 204, 68, 0.15) !important;
+    border-left: 4px solid var(--brand-green) !important;
   }
   
-  .event-legend-text {
-    color: var(--bulma-text-light);
+  .termine-card.accent-orange {
+    box-shadow: 0 6px 25px rgba(243, 156, 18, 0.15) !important;
+    border-left: 4px solid var(--brand-orange) !important;
   }
   
-  .members-only-icon svg {
-    fill: var(--brand-orange);
-  }
 }

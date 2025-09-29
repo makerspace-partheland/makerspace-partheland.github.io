@@ -2,7 +2,7 @@
 title: Reparatur‑Treff 2023
 date: 2023-12-09
 location: August-Bebel-Straße 60, 04824 Beucha
-excerpt: Gemeinsam reparieren statt wegwerfen – Reparatur‑Treff am 09.12.2023 (10–17 Uhr).
+excerpt: Gemeinsam reparieren statt wegwerfen – Reparatur‑Treff.
 permalink: /termine/reparatur-treff-2023-12-09/
 gallery:
   - image_path: /assets/images/events/2023-12-09/Eismaschine.jpg

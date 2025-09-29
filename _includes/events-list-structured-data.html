@@ -1,0 +1,87 @@
+{%- assign events = include.events -%}
+{%- assign list_name = include.list_name | default: 'Anstehende Termine Makerspace Partheland' -%}
+{%- if events and events.size > 0 -%}
+  {%- capture events_json -%}
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": {{ list_name | jsonify }},
+    "itemListElement": [
+      {%- for event in events -%}
+        {%- assign base_date = event.date | date: "%Y-%m-%d" -%}
+        {%- if event.start_datetime -%}
+          {%- assign ev_start_iso = event.start_datetime -%}
+        {%- elsif event.start_time -%}
+          {%- assign start_source = base_date | append: " " | append: event.start_time -%}
+          {%- assign ev_start_iso = start_source | date: "%Y-%m-%dT%H:%M:%S%:z" -%}
+        {%- else -%}
+          {%- assign ev_start_iso = event.date | date: "%Y-%m-%dT00:00:00%:z" -%}
+        {%- endif -%}
+        {%- if event.end_datetime -%}
+          {%- assign ev_end_iso = event.end_datetime -%}
+        {%- elsif event.end_time -%}
+          {%- assign end_source = base_date | append: " " | append: event.end_time -%}
+          {%- assign ev_end_iso = end_source | date: "%Y-%m-%dT%H:%M:%S%:z" -%}
+        {%- else -%}
+          {%- assign ev_end_iso = nil -%}
+        {%- endif -%}
+        {%- assign ev_mode = event.event_attendance_mode | default: "https://schema.org/OfflineEventAttendanceMode" -%}
+        {%- assign ev_status = event.event_status | default: "https://schema.org/EventScheduled" -%}
+        {%- assign ev_description = event.description | default: event.excerpt -%}
+        {%- assign ev_image = event.image | default: event.featured_image -%}
+        {%- assign ev_location_raw = event.location -%}
+        {%- assign ev_location_name = nil -%}
+        {%- assign ev_location_url = nil -%}
+        {%- assign ev_location_address = nil -%}
+        {%- if ev_location_raw -%}
+          {%- if ev_location_raw.name -%}
+            {%- assign ev_location_name = ev_location_raw.name -%}
+            {%- assign ev_location_url = ev_location_raw.url -%}
+            {%- assign ev_location_address = ev_location_raw -%}
+          {%- else -%}
+            {%- assign ev_location_name = ev_location_raw -%}
+          {%- endif -%}
+        {%- endif -%}
+        {
+          "@type": "ListItem",
+          "position": {{ forloop.index }},
+          "url": {{ event.url | absolute_url | jsonify }},
+          "item": {
+            "@type": "Event",
+            "name": {{ event.title | jsonify }},
+            "startDate": {{ ev_start_iso | jsonify }}{%- if ev_end_iso -%},
+            "endDate": {{ ev_end_iso | jsonify }}{%- endif -%},
+            "eventStatus": {{ ev_status | jsonify }},
+            "eventAttendanceMode": {{ ev_mode | jsonify }}{%- if ev_description -%},
+            "description": {{ ev_description | strip_html | strip_newlines | jsonify }}{%- endif -%}{%- if ev_image -%},
+            "image": [{{ ev_image | absolute_url | jsonify }}]{%- endif -%}{%- if site.organization -%},
+            "organizer": {
+              "@type": "Organization",
+              "name": {{ site.organization.name | jsonify }},
+              "url": {{ site.organization.url | default: site.url | jsonify }}
+            }{%- endif -%}{%- if ev_location_name -%},
+            "location": {
+              "@type": "Place",
+              "name": {{ ev_location_name | jsonify }}{%- if ev_location_url -%},
+              "url": {{ ev_location_url | jsonify }}{%- endif -%}{%- if ev_location_address and (ev_location_address.street_address or ev_location_address.postal_code or ev_location_address.locality or ev_location_address.region or ev_location_address.country) -%},
+              "address": {
+                "@type": "PostalAddress"{%- if ev_location_address.street_address -%},
+                "streetAddress": {{ ev_location_address.street_address | jsonify }}{%- endif -%}{%- if ev_location_address.postal_code -%},
+                "postalCode": {{ ev_location_address.postal_code | jsonify }}{%- endif -%}{%- if ev_location_address.locality -%},
+                "addressLocality": {{ ev_location_address.locality | jsonify }}{%- endif -%}{%- if ev_location_address.region -%},
+                "addressRegion": {{ ev_location_address.region | jsonify }}{%- endif -%}{%- if ev_location_address.country -%},
+                "addressCountry": {{ ev_location_address.country | jsonify }}{%- endif -%}
+              }{%- endif -%}
+            }{%- endif -%}{%- if event.offers -%},
+            "offers": {{ event.offers | jsonify }}{%- endif -%}{%- if event.performer -%},
+            "performer": {{ event.performer | jsonify }}{%- endif -%}
+          }
+        }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+    ]
+  }
+  {%- endcapture -%}
+  <script type="application/ld+json">
+    {{ events_json | strip }}
+  </script>
+{%- endif -%}
