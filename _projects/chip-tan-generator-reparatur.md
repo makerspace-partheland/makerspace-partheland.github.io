@@ -37,7 +37,10 @@ gallery:
     caption: Chip-TAN-Generator - Rückseite
 ---
 
-<img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/head_1.jpg" alt="Chip-TAN-Generator - Geöffnet" class="title-image">
+<picture>
+            <source type="image/webp" srcset="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/head_1.webp">
+            <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/head_1.jpg" alt="Chip-TAN-Generator - Geöffnet" class="title-image">
+          </picture>
 
 ## KOBIL Chip-TAN Generator Reparatur und Mod
 

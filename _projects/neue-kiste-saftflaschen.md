@@ -19,7 +19,10 @@ gallery:
     caption: TGL-Flasche - Typ
 ---
 
-<img src="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.jpg" alt="Neue Holzkiste für Saftflaschen" class="title-image">
+<picture>
+            <source type="image/webp" srcset="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.webp">
+            <img src="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.jpg" alt="Neue Holzkiste für Saftflaschen" class="title-image">
+          </picture>
 
 ## Neue Kiste für alte Saftflaschen
 

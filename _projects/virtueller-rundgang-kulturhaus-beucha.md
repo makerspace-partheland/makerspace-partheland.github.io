@@ -10,7 +10,10 @@ gallery:
     caption: Eingang Kulturhaus Beucha 2023
 ---
 
-<img src="/assets/images/projekte/sonstiges/kulturhaus-beucha/eingang-kulturhaus-beucha-2023.jpg" alt="Eingang Kulturhaus Beucha 2023" class="title-image">
+<picture>
+            <source type="image/webp" srcset="/assets/images/projekte/sonstiges/kulturhaus-beucha/eingang-kulturhaus-beucha-2023.webp">
+            <img src="/assets/images/projekte/sonstiges/kulturhaus-beucha/eingang-kulturhaus-beucha-2023.jpg" alt="Eingang Kulturhaus Beucha 2023" class="title-image">
+          </picture>
 
 ## Virtueller Rundgang: Das Kulturhaus Beucha erwacht zum Leben
 

@@ -25,7 +25,10 @@ gallery:
     caption: Verschlusskappe - Fusion 360 Ebenen
 ---
 
-<img src="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-fertig.jpg" alt="Verschlusskappe für Sirupflaschen - Fertig" class="title-image">
+<picture>
+            <source type="image/webp" srcset="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-fertig.webp">
+            <img src="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-fertig.jpg" alt="Verschlusskappe für Sirupflaschen - Fertig" class="title-image">
+          </picture>
 
 ## Verschlusskappe für Kaffeesirup Flaschen
 

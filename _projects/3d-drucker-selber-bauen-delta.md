@@ -16,7 +16,10 @@ gallery:
     caption: Delta-3D-Drucker - Mechanische Komponenten
 ---
 
-<img src="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-fertig.jpg" alt="Delta-3D-Drucker - Fertig aufgebaut" class="title-image">
+<picture>
+            <source type="image/webp" srcset="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-fertig.webp">
+            <img src="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-fertig.jpg" alt="Delta-3D-Drucker - Fertig aufgebaut" class="title-image">
+          </picture>
 
 ## 3D-Drucker selber bauen (Delta)
 

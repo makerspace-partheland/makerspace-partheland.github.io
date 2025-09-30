@@ -4,7 +4,10 @@
   <div class="home-sponsors__logos">
     {% for s in site.data.sponsors %}
       <a href="{{ s.url }}" target="_blank" rel="noopener" class="home-sponsors__item" aria-label="{{ s.name }} (öffnet in neuem Tab)">
-        <img src="{{ s.logo }}" alt="{{ s.alt | default: s.name }}" />
+        <picture>
+          <source type="image/webp" srcset="{{ s.logo | to_webp }}">
+          <img src="{{ s.logo }}" alt="{{ s.alt | default: s.name }}" />
+        </picture>
       </a>
     {% endfor %}
   </div>

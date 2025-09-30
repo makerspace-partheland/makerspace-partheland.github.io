@@ -6,7 +6,10 @@ excerpt: LoRaWAN-basierte Umweltsensoren für die intelligente Stadt der Zukunft
 category: Smart City & IoT
 ---
 
-<img src="/assets/images/projekte/smart-city/smart-city-header.jpg" alt="Smart City Partheland - Umweltsensoren" class="title-image">
+<picture>
+            <source type="image/webp" srcset="/assets/images/projekte/smart-city/smart-city-header.webp">
+            <img src="/assets/images/projekte/smart-city/smart-city-header.jpg" alt="Smart City Partheland - Umweltsensoren" class="title-image">
+          </picture>
 
 # Smart City Partheland
 

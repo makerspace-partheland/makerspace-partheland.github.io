@@ -6,7 +6,10 @@ excerpt: Bauanleitung für einen Geigerzähler mit SBM-20 Zählrohr und MySensor
 category: Elektronik & Sensoren
 ---
 
-<img src="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_fertig.jpg" alt="Geigerzähler mit SBM-20 Zählrohr - Fertig aufgebaut" class="title-image">
+<picture>
+            <source type="image/webp" srcset="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_fertig.webp">
+            <img src="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_fertig.jpg" alt="Geigerzähler mit SBM-20 Zählrohr - Fertig aufgebaut" class="title-image">
+          </picture>
 
 ## Geigerzähler mit Anbindung als MySensors-Node
 

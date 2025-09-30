@@ -63,6 +63,12 @@ exclude:
   - jekyll-env/
   - vendor/
   - start-jekyll.ps1
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - scripts/
+  - README-WebP-Optimierung.md
+  - nul
 
 
 defaults:

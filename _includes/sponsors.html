@@ -5,7 +5,10 @@
       <p class="subtitle is-6 mb-2">Unterstützt von</p>
       {% for sponsor in site.data.sponsors %}
         <a href="{{ sponsor.url }}" target="_blank" rel="noopener" aria-label="{{ sponsor.name }} (öffnet in neuem Tab)">
-          <img src="{{ sponsor.logo }}" alt="{{ sponsor.alt | default: sponsor.name }}" class="sponsor-logo">
+          <picture>
+            <source type="image/webp" srcset="{{ sponsor.logo | to_webp }}">
+            <img src="{{ sponsor.logo }}" alt="{{ sponsor.alt | default: sponsor.name }}" class="sponsor-logo">
+          </picture>
         </a>
       {% endfor %}
     </div>

@@ -16,7 +16,10 @@ gallery:
     caption: Anpassbare Konstruktion
 ---
 
-<img src="/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/parkhaus-modellautos.jpg" alt="Parkhaus für Modellautos - Selbstgebaut" class="title-image">
+<picture>
+            <source type="image/webp" srcset="/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/parkhaus-modellautos.webp">
+            <img src="/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/parkhaus-modellautos.jpg" alt="Parkhaus für Modellautos - Selbstgebaut" class="title-image">
+          </picture>
 
 ## Holzspielzeug selber gemacht
 

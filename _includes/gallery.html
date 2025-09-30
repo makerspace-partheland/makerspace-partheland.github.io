@@ -35,7 +35,10 @@ In beiden Fällen wird die Theme-Lightbox via image-modal.html genutzt.
               <div class="card-image">
                 <a href="#" data-index="{{ forloop.index0 }}" x-on:click.prevent="openAt({{ forloop.index0 }})">
                   <figure class="image">
-                    <img class="gallery-thumb" src="{{ item.image_path | relative_url }}" alt="{{ item.alt | default: '' }}" loading="lazy">
+                    <picture>
+                      <source type="image/webp" srcset="{{ item.image_path | to_webp | relative_url }}">
+                      <img class="gallery-thumb" src="{{ item.image_path | relative_url }}" alt="{{ item.alt | default: '' }}" loading="lazy">
+                    </picture>
                   </figure>
                 </a>
               </div>
@@ -116,7 +119,10 @@ In beiden Fällen wird die Theme-Lightbox via image-modal.html genutzt.
                 <div class="card-image">
                   <a href="#" data-index="{{ forloop.index0 }}" x-on:click.prevent="openAt({{ forloop.index0 }})">
                     <figure class="image">
-                      <img class="gallery-thumb" src="{{ image.link | relative_url }}" alt="{{ image.alt | default: '' }}" loading="lazy">
+                      <picture>
+                        <source type="image/webp" srcset="{{ image.link | to_webp | relative_url }}">
+                        <img class="gallery-thumb" src="{{ image.link | relative_url }}" alt="{{ image.alt | default: '' }}" loading="lazy">
+                      </picture>
                     </figure>
                   </a>
                 </div>

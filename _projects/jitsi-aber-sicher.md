@@ -13,7 +13,10 @@ gallery:
     caption: Hetzner Jitsi Konfiguration
 ---
 
-<img src="/assets/images/projekte/sonstiges/jitsi/jitsi.png" alt="Jitsi Meet Logo" class="title-image">
+<picture>
+            <source type="image/webp" srcset="/assets/images/projekte/sonstiges/jitsi/jitsi.webp">
+            <img src="/assets/images/projekte/sonstiges/jitsi/jitsi.png" alt="Jitsi Meet Logo" class="title-image">
+          </picture>
 
 ## Jitsi – aber sicher!
 

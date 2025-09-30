@@ -119,11 +119,17 @@
 /* Klickbare Cards - bessere UX */
 a.card.modern-card {
   cursor: pointer;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
 }
 
 a.card.modern-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 45px var(--brand-blue-hover) !important;
+  text-decoration: none;
+  color: inherit;
 }
 
 a.card.modern-card:active {

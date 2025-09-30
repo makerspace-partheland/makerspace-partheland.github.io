@@ -6,7 +6,10 @@ excerpt: Technische und praktische Gründe für die Wahl von LoRaWAN statt WiFi 
 category: Smart City & IoT
 ---
 
-<img src="/assets/images/projekte/smart-city/lorawan-station.jpg" alt="LoRaWAN Station - Umweltsensoren" class="title-image">
+<picture>
+            <source type="image/webp" srcset="/assets/images/projekte/smart-city/lorawan-station.webp">
+            <img src="/assets/images/projekte/smart-city/lorawan-station.jpg" alt="LoRaWAN Station - Umweltsensoren" class="title-image">
+          </picture>
 
 ## Warum nutzen wir LoRa und kein WiFi für die Umweltsensoren?
 
