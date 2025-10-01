@@ -17,17 +17,19 @@ permalink: /austausch/
       <div class="column is-6-desktop is-12-tablet">
         <div class="card modern-card standard-card full-height">
           <div class="card-content standard-card-content large centered">
-            <h2 class="title is-3 has-text-weight-bold primary-title mb-1rem">
-              Täglich aktive Telegram-Kanäle
-            </h2>
-            <h3 class="subtitle is-5 has-text-weight-medium secondary-title mb-1-5rem">
-              Hier ist immer etwas los
-            </h3>
-            <div class="content body-text mb-2rem">
-              <p>Täglich neue Ideen, Fragen und spannende Diskussionen in unseren Telegram-Kanälen.</p>
+            <div class="card-content-body">
+              <h2 class="title is-3 has-text-weight-bold primary-title mb-1rem">
+                Täglich aktive Telegram-Kanäle
+              </h2>
+              <h3 class="subtitle is-5 has-text-weight-medium secondary-title mb-1-5rem">
+                Hier ist immer etwas los
+              </h3>
+              <div class="content body-text mb-2rem">
+                <p>Täglich neue Ideen, Fragen und spannende Diskussionen in unseren Telegram-Kanälen.</p>
+              </div>
             </div>
-            <div class="buttons is-centered button-group column">
-              <a href="https://t.me/makerspacepartheland" target="_blank" rel="noreferrer noopener" 
+            <div class="buttons is-centered button-group column card-cta">
+              <a href="https://t.me/makerspacepartheland" target="_blank" rel="noreferrer noopener"
                  class="button is-primary is-large is-rounded has-text-weight-semibold full-width"
                  aria-label="Hauptkanal (öffnet in neuem Tab)">
                 Hauptkanal
@@ -41,31 +43,33 @@ permalink: /austausch/
       <div class="column is-6-desktop is-12-tablet">
         <div class="card modern-card standard-card full-height">
           <div class="card-content standard-card-content large centered">
-            <h2 class="title is-3 has-text-weight-bold primary-title mb-1rem">
-              Termine vor Ort
-            </h2>
-            <h3 class="subtitle is-5 has-text-weight-medium secondary-title mb-1-5rem">
-              Ehrenamtlich & unregelmäßig
-            </h3>
-            <div class="content body-text mb-2rem">
-              {% assign upcoming = site.events | where_exp: "e", "e.date" | where_exp: "e", "e.date >= site.time" | sort: "date" %}
-              {% if upcoming and upcoming.size > 0 %}
-                <p><strong>Anstehende Termine:</strong></p>
-                <ul class="text-left">
-                  {% for e in upcoming limit: 3 %}
-                    <li>
-                      <a href="{{ e.url }}">{{ e.title }}</a>
-                      {%- if e.date %} – {{ e.date | date: "%d.%m.%Y" }}{%- endif -%}
-                    </li>
-                  {% endfor %}
-                </ul>
-              {% else %}
-                <p>Aktuell sind keine Termine geplant.</p>
-                <p><em>Aber in unseren Telegram-Kanälen ist immer etwas los!</em></p>
-              {% endif %}
+            <div class="card-content-body">
+              <h2 class="title is-3 has-text-weight-bold primary-title mb-1rem">
+                Termine vor Ort
+              </h2>
+              <h3 class="subtitle is-5 has-text-weight-medium secondary-title mb-1-5rem">
+                Ehrenamtlich & unregelmäßig
+              </h3>
+              <div class="content body-text mb-2rem">
+                {% assign upcoming = site.events | where_exp: "e", "e.date" | where_exp: "e", "e.date >= site.time" | sort: "date" %}
+                {% if upcoming and upcoming.size > 0 %}
+                  <p><strong>Anstehende Termine:</strong></p>
+                  <ul class="text-left">
+                    {% for e in upcoming limit: 3 %}
+                      <li>
+                        <a href="{{ e.url }}">{{ e.title }}</a>
+                        {%- if e.date %} – {{ e.date | date: "%d.%m.%Y" }}{%- endif -%}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% else %}
+                  <p>Aktuell sind keine Termine geplant.</p>
+                  <p><em>Aber in unseren Telegram-Kanälen ist immer etwas los!</em></p>
+                {% endif %}
+              </div>
             </div>
-            <div class="has-text-centered mb-2rem">
-              <a href="/termine/" class="button is-primary is-medium is-rounded has-text-weight-semibold">
+            <div class="buttons is-centered button-group column card-cta">
+              <a href="/termine/" class="button is-primary is-large is-rounded has-text-weight-semibold full-width">
                 Vergangene ansehen
               </a>
             </div>
