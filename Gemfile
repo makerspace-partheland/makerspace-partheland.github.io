@@ -22,5 +22,5 @@ gem 'tzinfo-data', platforms: [:windows, :jruby]
 # sass-embedded (~> 1.75) verlangt google-protobuf < 4.32.
 # Bundler installierte zuletzt 4.32.0, was den Resolver in eine Schleife schickte.
 # Wir pinnen deshalb explizit auf 4.31.x.
-gem 'google-protobuf', '~> 4.32.1'
+gem 'google-protobuf', '~> 4.33.0'
 
