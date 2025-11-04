@@ -19,10 +19,10 @@ permalink: /verein/
     <div class="columns is-centered mb-4rem">
       <div class="column is-10-desktop is-12-tablet">
         <figure class="image">
-          <img src="/assets/images/header-startseite.png" 
-               alt="Makerspace Partheland - Header" 
-               class="title-image"
-               class="centered-image">
+          <picture>
+            <source type="image/webp" srcset="/assets/images/header-startseite.webp">
+            <img src="/assets/images/header-startseite.png" alt="Makerspace Partheland - Header" class="title-image">
+          </picture>
         </figure>
       </div>
     </div>
@@ -119,19 +119,15 @@ permalink: /verein/
       </div>
     </div>
 
-    <!-- Gründungsmitglieder -->
     <div class="columns is-centered mb-4rem">
       <div class="column is-6-desktop is-8-tablet">
         <div class="has-text-centered">
-          <h2 class="title is-5 primary-title mb-1rem">Unsere Anfänge</h2>
           <figure class="image mb-1rem">
-            <img src="/assets/images/verein/Bildschirmfoto-vom-2022-04-09-17-53-59.png" 
-                 alt="Gründungsmitglieder des Makerspace Partheland e.V." 
-                 class="small-rounded-image">
+            <picture>
+            <source type="image/webp" srcset="/assets/images/verein/Bildschirmfoto-vom-2022-04-09-17-53-59.webp">
+            <img src="/assets/images/verein/Bildschirmfoto-vom-2022-04-09-17-53-59.png" alt="Beleuchtetes Logo Makerspace Partheland e.V." class="small-rounded-image">
+          </picture>
           </figure>
-          <p class="is-size-6 body-text">
-            2022 offiziell als Verein organisiert – um gemeinsam noch mehr zu erreichen.
-          </p>
         </div>
       </div>
     </div>
