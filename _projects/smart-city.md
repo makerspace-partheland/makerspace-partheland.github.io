@@ -21,8 +21,6 @@ Alle stationären Umweltsensoren werden mittels <a rel="noreferrer noopener" hre
 
 ![LoRaWAN Station mit Sensorik](/assets/images/projekte/smart-city/lorawan-station.jpg)
 
-Wissenstransfer und Austausch mit Bürgern, Multiplikatoren und uns, erfolgt im eigenen Telegram Kanal: <a rel="noreferrer noopener" href="https://t.me/MakerspacePartheland_SmartCity" target="_blank">https://t.me/MakerspacePartheland_SmartCity</a>
-
 ## Bürgermessstationen
 
 Die Bürgermessstationen werden mittels **Patenschaft** betrieben. Dies bedeutet, es müssen ein paar **Regeln eingehalten** **werden**. Die Station wird durch die jeweilige Kommune **für die Bürger** bereitgestellt. Der Makerspace Partheland e.V. für Brandis, sowie die Multiplikatoren vor Ort im Partheland, befähigen den entsprechenden Paten zum Aufbau und geben Tipps. Der **Betrieb** und die (mindestens) jährliche **Wartung** wird **durch den Paten selbständig durchgeführt**.
@@ -35,35 +33,81 @@ Eine senseBox:home besteht im Partheland aus folgenden Sensoren:
 - Beleuchtungsstärke
 - UV-Intensität
 - Feinstaubsensor (PM10 und 2.5)
-- Lautstärke (Mittelwert des Lautstärkepegels über eine Minute – ohne Gesprächsaufzeichnung)
+- Lautstärke (Mittelwert des Lautstärkepegels über eine Minute ohne Gesprächsaufzeichnung)
 
-Visuell dargestellt werden die Daten auf der zu den senseBoxen zugehörigen Seite <a rel="noreferrer noopener" href="https://opensensemap.org" target="_blank">https://opensensemap.org</a> und auf unserer eigenen Sensoren Seite, für detailliertere und längerfristige Datenauswertungen: <a rel="noreferrer noopener" href="https://sensoren.makerspace-partheland.de/" target="_blank"><strong>https://sensoren.makerspace-partheland.de/</strong></a>
-
-Eine Karte aller Stationen und Gateways: <a rel="noreferrer noopener" href="https://map.makerspace-partheland.de" target="_blank">https://map.makerspace-partheland.de</a>
-
-Seit Juli 2023 stehen, für zum Beispiel Freunde der Heimautomatisierung, die Sensordaten aller Stationen via freiem MQTT Websocket zur Verfügung:  
-_wss://mqtt.makerspace-partheland.de:443/mqtt_
-
-{% raw %}
-Topic der Umweltmessstationen: senseBox:home/{%Stationsname%}  
-(weitere Sensoren und Topics folgen)
-{% endraw %}
-
-Es werden die decodierten Sensordaten, sowie Name der Station, Manager (ist es eine Makerspace oder eine Smart City Station), die LoRa Rohdaten, Netzwerkdaten wie Empfangsstärke, Aufstellungsort, Empfangszeitpunkt, genutztes Gateway und Zeitstempel als JSON ausgegeben, sobald ein Datenpaket von der jeweiligen Station empfangen wurde.
-
-Alles befindet sich aktuell im Aufbau, es kommen stetig mehr Stationen, Sensoren und Webseitenfunktionalitäten dazu. Haben wir Dein Interesse geweckt, hast Du Ideen, werden weitere Messwerte benötigt oder gibt es Fragen? Dann melde dich bei uns, den Multiplikatoren und allen Interessierten via <a rel="noreferrer noopener" href="https://t.me/MakerspacePartheland_SmartCity" target="_blank">https://t.me/MakerspacePartheland_SmartCity</a>
+Die Daten werden auf verschiedenen Plattformen visuell dargestellt. Auf der zu den senseBoxen zugehörigen Seite [openSenseMap](https://opensensemap.org) findest Du eine Übersicht aller Stationen. Für detailliertere und längerfristige Datenauswertungen steht unsere eigene [Sensoren-Seite](https://sensoren.makerspace-partheland.de/) zur Verfügung. Eine Karte aller Stationen und Gateways findest Du auf [map.makerspace-partheland.de](https://map.makerspace-partheland.de).
 
 ## LoRaWAN Netzwerk
 
-Damit die Messstationen unabhängig von Internet-Infrastruktur die Daten senden können, also auch vom Feld oder einer Wiese, nutzen wir die LoRaWAN Technik. Diese Abkürzung steht für _Long Range Wide Area Network_ und wurde für energieeffizientes Senden von Daten über größere Entfernungen entwickelt. Dies ermöglicht somit auch Batterie oder Photovoltaik-Akku-betriebene Sensoren, wie die beiden vom Makerspace aufgebauten Umweltmessstationen <a rel="noreferrer noopener" href="https://sensoren.makerspace-partheland.de/d/l2eL6qr4x/station-brandis-nummer-3" target="_blank">Station Brandis Nummer 3</a> oder <a rel="noreferrer noopener" href="https://sensoren.makerspace-partheland.de/d/erweVEQnG/station-naunhof" target="_blank">Station Naunhof</a>
+Erfahre mehr über das LoRaWAN-Netzwerk, Batterie- und Solarbetrieb sowie die Vorteile gegenüber WiFi, LTE und 5G.
 
-![senseBox:home solarbetrieben](/assets/images/projekte/smart-city/sensebox-home-solar.jpg)
-
-Damit die Daten der Sensoren bei uns ankommen, werden so genannte LoRa Gateways benötigt. Einfach erklärt: befindet sich ein Sensor im Empfangsgebiet eines beliebigen LoRa Gateways, empfängt dieser die Sensoren-Pakete, mittels einer ca. 80cm langen Stabantenne. Da das Gateway mit dem Internet verbunden ist, leitet es dann das Sensoren-Paket an uns weiter.
-
-Gesendet werden die Datenpakete auf einer Frequenz von 863 bis 870 MHz, welche europaweit lizenzfrei durch jeden nutzbar ist. Viel wird dieser Frequenzbereich auch für Alarmanlagen, Funktastaturen, Garagentorfernbedienungen und vieles mehr genutzt; ohne dass sich die Geräte in ihrem Betrieb gegenseitig stören.
-
-Der Betrieb und die Wartung der LoRaWAN Gateways in Brandis, samt Sensoren-Webseite wird durch uns, den Makerspace Partheland e.V. durchgeführt.  
-Der Betrieb und die Wartung der LoRaWAN Gateways in allen weiteren Partheland Kommunen erfolgt durch die jeweiligen Multiplikatoren.
-
-Mehr Hintergründe zu unserer Technologieentscheidung: <a href="/projekte/smart-city/warum-lora-statt-wifi/">Warum nutzen wir LoRa und kein WiFi für die Umweltsensoren?</a>
+<div class="columns is-multiline is-centered" style="margin-top: 2rem;">
+  <div class="column is-4-desktop is-6-tablet is-12-mobile">
+    <div class="card modern-card standard-card full-height">
+      <div class="card-content callout-card-content">
+        <div class="callout-card-body">
+          <h2 class="title is-3 has-text-weight-bold has-text-centered callout-title">
+            LoRaWAN
+          </h2>
+          <h3 class="subtitle is-5 has-text-weight-medium has-text-centered callout-subtitle">
+            Energieeffiziente Vernetzung
+          </h3>
+          <div class="content has-text-centered callout-content">
+            <p>Details zum Netzwerk, Batterie- und Solarbetrieb sowie Vorteile gegenüber WiFi, LTE und 5G.</p>
+          </div>
+        </div>
+        <div class="has-text-centered callout-actions">
+          <a href="/projekte/smart-city/lorawan/" class="button is-primary is-medium is-rounded has-text-weight-semibold" aria-label="Erkunden - LoRaWAN Netzwerk">
+            Erkunden
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column is-4-desktop is-6-tablet is-12-mobile">
+    <div class="card modern-card standard-card full-height">
+      <div class="card-content callout-card-content">
+        <div class="callout-card-body">
+          <h2 class="title is-3 has-text-weight-bold has-text-centered callout-title">
+            Daten nutzen
+          </h2>
+          <h3 class="subtitle is-5 has-text-weight-medium has-text-centered callout-subtitle">
+            Zugriff & Anwendung
+          </h3>
+          <div class="content has-text-centered callout-content">
+            <p>Alle Informationen zum Zugriff auf die Sensordaten sowie praktische Anwendungsbeispiele.</p>
+          </div>
+        </div>
+        <div class="has-text-centered callout-actions">
+          <a href="/projekte/smart-city/daten-nutzen/" class="button is-success is-medium is-rounded has-text-weight-semibold" aria-label="Erkunden - Sensordaten nutzen">
+            Erkunden
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column is-4-desktop is-6-tablet is-12-mobile">
+    <div class="card modern-card standard-card full-height">
+      <div class="card-content callout-card-content">
+        <div class="callout-card-body">
+          <h2 class="title is-3 has-text-weight-bold has-text-centered callout-title">
+            Interesse geweckt?
+          </h2>
+          <h3 class="subtitle is-5 has-text-weight-medium has-text-centered callout-subtitle">
+            Kontakt & Austausch
+          </h3>
+          <div class="content has-text-centered callout-content">
+            <p>Kontaktiere uns über unsere Telegram-Kanäle oder per E-Mail für Fragen, Ideen und Erfahrungsaustausch.</p>
+          </div>
+        </div>
+        <div class="has-text-centered callout-actions">
+          <a href="/austausch/" class="button is-primary is-medium is-rounded has-text-weight-semibold" aria-label="Entdecken - Kontakt & Austausch">
+            Entdecken
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
