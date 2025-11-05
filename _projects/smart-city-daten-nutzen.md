@@ -8,7 +8,7 @@ category: Smart City & IoT
 
 # Sensordaten nutzen
 
-Die Umweltdaten der Messstationen im gesamten Partheland stehen Dir kostenlos zur Verfügung. Ob Privatperson, Verein, Schule, Kommune oder Gewerbe – die Daten kannst Du frei nutzen.
+Die Umweltdaten der Messstationen im gesamten Partheland stehen Dir kostenlos zur Verfügung. Ob Privatperson, Verein, Schule, Kommune oder Gewerbe, die Daten kannst Du frei nutzen.
 
 ## Inhaltsverzeichnis
 
@@ -22,49 +22,57 @@ Die Umweltdaten der Messstationen im gesamten Partheland stehen Dir kostenlos zu
 
 ## Was messen wir?
 
-Überall im Partheland stehen Messstationen. Die meisten davon sind sogenannte "senseBox:home" Stationen – das sind kompakte Umweltsensoren, die verschiedene Werte erfassen:
+Überall im Partheland stehen Messstationen. Die meisten davon sind sogenannte "senseBox:home" Stationen, das sind kompakte Umweltsensoren, die verschiedene Werte erfassen:
 
-- **Temperatur und Luftfeuchte** – wie warm und feucht ist es gerade?
-- **Luftdruck** – ein Indikator für Wetteränderungen
-- **Helligkeit** – wie hell ist es draußen?
-- **UV-Intensität** – wie stark ist die Sonneneinstrahlung?
-- **Feinstaub** (PM10 und PM2.5) – winzige Partikel in der Luft, die Deine Gesundheit beeinflussen können
-- **Lautstärke** – wie laut ist es in der Umgebung?
+- **Temperatur und Luftfeuchte**: wie warm und feucht ist es gerade?
+- **Luftdruck**: ein Indikator für Wetteränderungen
+- **Helligkeit**: wie hell ist es draußen?
+- **UV-Intensität**: wie stark ist die Sonneneinstrahlung?
+- **Feinstaub** (PM10 und PM2.5): winzige Partikel in der Luft, die Deine Gesundheit beeinflussen können
+- **Lautstärke**: wie laut ist es in der Umgebung?
 
-**Was bedeutet "Median"?** Die Stationen senden nicht jeden einzelnen Messwert. Stattdessen berechnen sie einen Mittelwert über ein bestimmtes Zeitintervall – den sogenannten Median. Das filtert Ausreißer heraus und liefert verlässlichere Daten. Manche Stationen senden zusätzlich die höchsten gemessenen Werte (Maximalwerte). So erkennst Du zum Beispiel kurze Lärm- oder Feinstaubspitzen.
+**Was bedeutet "Median"?** Die Stationen senden nicht jeden einzelnen Messwert. Stattdessen berechnen sie einen Mittelwert über ein bestimmtes Zeitintervall, den sogenannten Median. Das filtert Ausreißer heraus und liefert verlässlichere Daten. Manche Stationen senden zusätzlich die höchsten gemessenen Werte (Maximalwerte). So erkennst Du zum Beispiel kurze Lärm- oder Feinstaubspitzen.
 
 Neben den senseBox:home Stationen gibt es auch spezialisierte Sensoren: **Pegelsensoren** messen Wasserstände in Bächen und Flüssen. **Wassertemperatursensoren** erfassen die Temperatur in Gewässern und manchmal auch die Lufttemperatur drumherum.
-
-### Wo findest Du die Stationen?
-
-Die Anzahl und Standorte der Stationen ändern sich laufend. Deshalb listen wir sie hier nicht einzeln auf. Aktuelle Übersichten findest Du hier:
-
-- **[sensoren.makerspace-partheland.de](https://sensoren.makerspace-partheland.de/)** – detaillierte Auswertungen und längerfristige Datenverläufe
-- **[map.makerspace-partheland.de](https://map.makerspace-partheland.de)** – eine Karte mit allen Stationen und LoRaWAN-Gateways
-- **[openSenseMap](https://opensensemap.org)** – alle Stationen, die Teil des openSenseMap-Netzwerks sind
 
 ---
 
 ## Wie kommst Du an die Daten?
 
-Je nachdem, was Du vorhast, gibt es verschiedene Wege, die Sensordaten abzurufen. Brauchst Du Echtzeitdaten für Dein Smart Home? Oder möchtest Du historische Daten für eine Analyse herunterladen?
+Du möchtest wissen, wo die Stationen stehen und welche Werte sie aktuell messen? Oder brauchst Du die Daten für Dein Smart Home oder eine Datenanalyse? Je nachdem, was Du vorhast, gibt es verschiedene Wege, von einfachen Karten bis hin zu technischen Schnittstellen.
+
+### Auf einen Blick: Karten und Visualisierungen
+
+Am einfachsten verschaffst Du Dir einen Überblick über unsere interaktive Karte. Die Anzahl und Standorte der Stationen ändern sich laufend, deshalb listen wir sie hier nicht einzeln auf, die Karten zeigen Dir immer die aktuellen Daten.
+
+**Unsere eigene Karte** unter [map.makerspace-partheland.de](https://map.makerspace-partheland.de) ist für alle Geräte mit Browser gedacht, ob Smartphone, Tablet oder Computer. Hier siehst Du nicht nur alle Stationen und ihre aktuellen Sensorwerte, sondern auch die LoRaWAN-Gateways. Diese Gateways sind die "Empfangsstationen", die die Daten von den Sensoren empfangen und weiterleiten, ähnlich wie ein Router bei Deinem WLAN zu Hause.
+
+Für detailliertere Auswertungen und längerfristige Datenverläufe gibt es unsere [Sensoren-Seite](https://sensoren.makerspace-partheland.de/). Hier kannst Du zum Beispiel sehen, wie sich die Temperatur oder der Feinstaubwert über Wochen oder Monate entwickelt hat.
+
+**Mobil unterwegs?** Die Partheland App (für [Android und iOS](https://partheland.de/2022/11/jetzt-gehts-app-im-partheland/)) zeigt die Sensordaten unter dem Menüpunkt "Umweltdaten" als Karte an. Die App wurde von den Partheland-Kommunen entwickelt und bildet eine zentrale Plattform für Verwaltungsangebote sowie Dienstleistungen der Region. So hast Du neben den Umweltdaten auch Zugriff auf aktuelle Informationen und Services der sieben Partheland-Kommunen, alles in einer App.
+
+Alle Stationen, die Teil des größeren openSenseMap-Netzwerks sind, findest Du zusätzlich auf [openSenseMap](https://opensensemap.org).
+
+### Technische Zugriffsmöglichkeiten
+
+Brauchst Du die Daten für Dein Smart Home oder möchtest Du eigene Programme damit entwickeln? Dann gibt es verschiedene technische Schnittstellen.
 
 ### Echtzeitdaten über MQTT WebSocket
 
-**Was ist MQTT?** Das ist ein Übertragungsprotokoll – eine Art digitale Sprache, mit der Geräte Daten austauschen. Es ist besonders energieeffizient und wird häufig im Internet der Dinge (IoT) eingesetzt. Du kannst Dir das wie einen Radio-Sender vorstellen: Die Messstation "sendet" ihre Daten, und Dein Gerät "hört mit", indem es sich auf den richtigen Kanal (Topic) einstellt.
+**Was ist MQTT?** Das ist ein Übertragungsprotokoll, eine Art digitale Sprache, mit der Geräte Daten austauschen. Es ist besonders energieeffizient und wird häufig im Internet der Dinge (IoT) eingesetzt. Du kannst Dir das wie einen Radio-Sender vorstellen: Die Messstation "sendet" ihre Daten, und Dein Gerät "hört mit", indem es sich auf den richtigen Kanal (Topic) einstellt.
 
 Die Verbindung läuft über `wss://mqtt.makerspace-partheland.de:443/mqtt`.
 
 **Topics – die Kanäle für Deine Daten:**
-- `senseBox:home/[Stationsname]` – Daten einer bestimmten senseBox:home Station
-- `sensoren/[Sensorname]` – Daten spezialisierter Sensoren (z.B. Wasserstand)
-- `senseBox:home/median` – Medianwerte für einzelne Orte oder das gesamte Partheland
+- `senseBox:home/[Stationsname]`: Daten einer bestimmten senseBox:home Station
+- `sensoren/[Sensorname]`: Daten spezialisierter Sensoren (z.B. Wasserstand)
+- `senseBox:home/median`: Medianwerte für einzelne Orte oder das gesamte Partheland
 
 **Wie genau funktioniert das?** Alle technischen Details, JSON-Formate und die komplette Topic-Struktur findest Du unter [api-docs.makerspace-partheland.de](http://api-docs.makerspace-partheland.de).
 
 ### Historische Daten über die REST-API
 
-**Was ist eine REST-API?** Stell Dir das wie eine Bibliothek vor: Du stellst eine Anfrage (z.B. "Gib mir die Temperaturdaten vom letzten Monat"), und die API liefert Dir die Daten zurück. Das funktioniert über normale Webadressen – perfekt für Webseiten, Apps oder Datenanalysen.
+**Was ist eine REST-API?** Stell Dir das wie eine Bibliothek vor: Du stellst eine Anfrage (z.B. "Gib mir die Temperaturdaten vom letzten Monat"), und die API liefert Dir die Daten zurück. Das funktioniert über normale Webadressen, perfekt für Webseiten, Apps oder Datenanalysen.
 
 Die Basis-URL lautet: `https://data.makerspace-partheland.de/`
 
@@ -79,7 +87,7 @@ Hier bekommst Du:
 
 ## Nutze die Daten in Deinem Smart Home
 
-Du hast ein Smart Home? Dann kannst Du die Sensordaten aus Deiner Region direkt einbinden. Warum solltest Du das tun? Weil die Daten aus Deiner unmittelbaren Umgebung stammen – nicht von einer Wetterstation 20 Kilometer entfernt.
+Du hast ein Smart Home? Dann kannst Du die Sensordaten aus Deiner Region direkt einbinden. Warum solltest Du das tun? Weil die Daten aus Deiner unmittelbaren Umgebung stammen, nicht von einer Wetterstation 20 Kilometer entfernt.
 
 ### Home Assistant
 
@@ -89,7 +97,7 @@ Wir haben eine fertige Integration für Home Assistant entwickelt. Du findest si
 
 ### ioBroker
 
-ioBroker unterstützt MQTT WebSocket von Haus aus – Du brauchst keine zusätzliche Bridge oder Erweiterung.
+ioBroker unterstützt MQTT WebSocket von Haus aus, Du brauchst keine zusätzliche Bridge oder Erweiterung.
 
 **So richtest Du es ein:**
 1. Öffne den MQTT-Adapter in ioBroker
@@ -99,11 +107,11 @@ ioBroker unterstützt MQTT WebSocket von Haus aus – Du brauchst keine zusätzl
 5. Path: `/mqtt`
 
 **Welche Daten willst Du empfangen?**
-- `senseBox:home/+` – alle senseBox:home Stationen
-- `senseBox:home/median` – Medianwerte
-- `sensoren/+` – spezialisierte Sensoren (Wasserstand etc.)
+- `senseBox:home/+`: alle senseBox:home Stationen
+- `senseBox:home/median`: Medianwerte
+- `sensoren/+`: spezialisierte Sensoren (Wasserstand etc.)
 
-ioBroker wandelt die Daten automatisch in Objekte um. Mit JavaScript-Scripts kannst Du die Daten noch weiter verarbeiten – zum Beispiel Durchschnittswerte berechnen oder Benachrichtigungen verschicken.
+ioBroker wandelt die Daten automatisch in Objekte um. Mit JavaScript-Scripts kannst Du die Daten noch weiter verarbeiten, zum Beispiel Durchschnittswerte berechnen oder Benachrichtigungen verschicken.
 
 ### Praxisbeispiele aus dem Partheland
 
@@ -113,7 +121,7 @@ Du willst konkrete Anwendungsfälle sehen? Auf unserer Seite [Praxisbeispiele](/
 
 ## Sensordaten im Unterricht
 
-Die Sensordaten eignen sich hervorragend für den Unterricht – und zwar in verschiedenen Fächern. Es gibt zwei grundsätzliche Ansätze:
+Die Sensordaten eignen sich hervorragend für den Unterricht, und zwar in verschiedenen Fächern. Es gibt zwei grundsätzliche Ansätze:
 
 ### Vorhandene Daten analysieren
 

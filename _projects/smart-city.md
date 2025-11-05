@@ -35,7 +35,7 @@ Eine senseBox:home besteht im Partheland aus folgenden Sensoren:
 - Feinstaubsensor (PM10 und 2.5)
 - Lautstärke (Mittelwert des Lautstärkepegels über eine Minute ohne Gesprächsaufzeichnung)
 
-Die Daten werden auf verschiedenen Plattformen visuell dargestellt. Auf der zu den senseBoxen zugehörigen Seite [openSenseMap](https://opensensemap.org) findest Du eine Übersicht aller Stationen. Für detailliertere und längerfristige Datenauswertungen steht unsere eigene [Sensoren-Seite](https://sensoren.makerspace-partheland.de/) zur Verfügung. Eine Karte aller Stationen und Gateways findest Du auf [map.makerspace-partheland.de](https://map.makerspace-partheland.de).
+Die Daten werden auf verschiedenen Plattformen visuell dargestellt. Auf der zu den senseBoxen zugehörigen Seite [openSenseMap](https://opensensemap.org) findest Du eine Übersicht aller Stationen. Für detailliertere und längerfristige Datenauswertungen steht unsere eigene [Sensoren-Seite](https://sensoren.makerspace-partheland.de/) zur Verfügung. Eine Karte aller Stationen mit Messwerten und Gateways findest Du auf [map.makerspace-partheland.de](https://map.makerspace-partheland.de). Die Sensordaten sind auch in der Partheland App (Android und iOS) unter dem Menüpunkt "Umweltdaten" als Karte verfügbar.
 
 ## LoRaWAN Netzwerk
 
