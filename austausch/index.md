@@ -91,9 +91,8 @@ permalink: /austausch/
               Vor Ort besuchen
             </h2>
             <div class="content body-text">
-              <p><strong>Temporärer Makerspace:</strong><br>
-              August-Bebel-Straße 12, 04824 Brandis, OT Beucha<br>
-              (Hintereingang, 1. Etage)</p>
+              <p><strong>Temporärer Makerspace im Coworking Brandis</strong><br>
+              Markt 8, 04821 Brandis<br></p>
               
               <p><strong>Öffnungszeiten:</strong><br>
               Nach Kontaktaufnahme per Telegram oder E-Mail</p>
