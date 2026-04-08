@@ -22,9 +22,9 @@ organization:
     contact_type: customer support
     url: /austausch/
   address:
-    street_address: August-Bebel-Strasse 12
-    postal_code: "04824"
-    locality: Beucha
+    street_address: Markt 8
+    postal_code: "04821"
+    locality: Brandis
     country: DE
 
 theme_color: "#ffffff"
@@ -84,10 +84,10 @@ defaults:
       layout: page
       hide_hero: true
       location:
-        name: Makerspace Partheland e.V.
-        street_address: August-Bebel-Strasse 12
-        postal_code: "04824"
-        locality: Beucha
+        name: Coworking Brandis
+        street_address: Markt 8
+        postal_code: "04821"
+        locality: Brandis
         country: DE
 
 
