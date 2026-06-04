@@ -8,8 +8,8 @@
     "serve": "bundle exec jekyll serve"
   },
   "devDependencies": {
-    "sharp": "^0.34.5",
-    "glob": "^10.3.10"
+    "glob": "^10.5.0",
+    "sharp": "^0.34.5"
   },
   "keywords": [
     "jekyll",
