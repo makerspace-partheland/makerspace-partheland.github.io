@@ -4,8 +4,15 @@ updates:
     directory: "/"
     schedule: { interval: "weekly", day: "friday", time: "08:00" }
     open-pull-requests-limit: 5
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule: { interval: "weekly", day: "friday", time: "08:00" }
+    open-pull-requests-limit: 5
+    cooldown:
+      default-days: 7
+      include:
+        - "*"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule: { interval: "weekly", day: "friday", time: "08:00" }
-
 
