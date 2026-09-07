@@ -2,13 +2,13 @@
   <div class="container is-fluid px-4">
     <div class="navbar-brand">
       <a href="{{ site.baseurl }}/" class="navbar-item is-hidden-desktop">{{ site.title }}</a>
-      <button class="navbar-burger burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navMenu" :class="{ 'is-active': openNav }" x-on:click="openNav = !openNav">
+      <button class="navbar-burger burger" aria-label="Menü öffnen" :aria-expanded="openNav" aria-controls="navMenu" :class="{ 'is-active': openNav }" x-on:click="openNav = !openNav">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </button>
     </div>
-    <div class="navbar-menu" id="navMenu" :class="{ 'is-active': openNav }" aria-hidden="true">
+    <div class="navbar-menu" id="navMenu" :class="{ 'is-active': openNav }">
       <div class="navbar-start">
         <a href="{{ site.baseurl }}/" class="navbar-item is-hidden-touch">{{ site.title }}</a>
         {% if site.data.navigation %}
