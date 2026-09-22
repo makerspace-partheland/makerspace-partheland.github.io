@@ -14,14 +14,13 @@ items:
     description: >
       Aufbau und Betrieb von Bürger-Umweltmessstationen im gesamten Partheland. 
       Mit LoRaWAN-Technologie erfassen wir Temperatur, Luftfeuchtigkeit, Feinstaub 
-      und weitere Umweltdaten für eine intelligente Region.
+      und weitere Umweltdaten für unsere Region.
     call_to_action_name: Erkunden
     call_to_action_link: /projekte/smart-city/
   - title: Projekte
-    subtitle: Kreative Lösungen und Innovationen
+    subtitle: Bastelprojekte und praktische Alltagshilfen
     description: >
-      Von 3D-Druck und Elektronik bis hin zu nachhaltigen Reparatur-Lösungen. 
-      Entdecke unsere kreativen Bastelprojekte, Konstruktionen und 
-      praktischen Alltagshilfen aus dem Makerspace.
+      3D-Druck, Elektronik und Reparaturen: Im Makerspace entstehen eigene
+      Konstruktionen und praktische Alltagshilfen.
     call_to_action_name: Stöbern
     call_to_action_link: /projekte/
