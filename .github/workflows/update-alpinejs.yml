@@ -9,18 +9,36 @@ on:
 jobs:
   update-alpinejs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Get latest Alpine.js version
+      - name: Get latest eligible Alpine.js version
         id: get-version
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          LATEST_VERSION=$(curl -s https://api.github.com/repos/alpinejs/alpine/releases/latest | jq -r '.tag_name' | sed 's/v//')
+          CUTOFF=$(date -u -d '7 days ago' '+%Y-%m-%dT%H:%M:%SZ')
+          RELEASES=$(gh api 'repos/alpinejs/alpine/releases?per_page=100')
+          RELEASE=$(jq -er --arg cutoff "$CUTOFF" \
+            '[.[] | select(.draft == false and .prerelease == false and .published_at <= $cutoff)] | first' \
+            <<< "$RELEASES")
+          TAG_NAME=$(jq -r '.tag_name' <<< "$RELEASE")
+          PUBLISHED_AT=$(jq -r '.published_at' <<< "$RELEASE")
+          LATEST_VERSION="${TAG_NAME#v}"
+
+          if [[ ! "$LATEST_VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::No eligible stable Alpine.js release found"
+            exit 1
+          fi
+
           echo "latest_version=$LATEST_VERSION" >> $GITHUB_OUTPUT
-          echo "Latest Alpine.js version: $LATEST_VERSION"
+          echo "Latest eligible Alpine.js version: $LATEST_VERSION (published $PUBLISHED_AT)"
 
       - name: Check if update needed
         id: check-update
@@ -49,7 +67,14 @@ jobs:
         if: steps.check-update.outputs.update_needed == 'true'
         run: |
           mkdir -p assets/js
-          curl -o assets/js/alpine.min.js https://unpkg.com/alpinejs@${{ steps.get-version.outputs.latest_version }}/dist/cdn.min.js
+          curl --fail --show-error --silent --location --retry 3 --retry-all-errors \
+            --output assets/js/alpine.min.js \
+            https://unpkg.com/alpinejs@${{ steps.get-version.outputs.latest_version }}/dist/cdn.min.js
+          DOWNLOADED_VERSION=$(grep -aoE 'version:"[0-9]+\.[0-9]+\.[0-9]+"' assets/js/alpine.min.js | head -1 | sed -E 's/.*"([^"]+)"/\1/' || true)
+          if [ "$DOWNLOADED_VERSION" != "${{ steps.get-version.outputs.latest_version }}" ]; then
+            echo "::error::Downloaded Alpine.js version does not match the selected release"
+            exit 1
+          fi
           echo "Downloaded Alpine.js ${{ steps.get-version.outputs.latest_version }} to assets/js/alpine.min.js"
 
       - name: Determine update type
