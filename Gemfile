@@ -19,8 +19,4 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'tzinfo', '~> 1.2' if Gem.win_platform?
 gem 'tzinfo-data', platforms: [:windows, :jruby]
 
-# sass-embedded (~> 1.75) verlangt google-protobuf < 4.32.
-# Bundler installierte zuletzt 4.32.0, was den Resolver in eine Schleife schickte.
-# Wir pinnen deshalb explizit auf 4.31.x.
 gem 'google-protobuf', '~> 4.36.2'
-
