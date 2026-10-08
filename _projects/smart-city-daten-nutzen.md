@@ -97,21 +97,30 @@ Wir haben eine fertige Integration für Home Assistant entwickelt. Du findest si
 
 ### ioBroker
 
-ioBroker unterstützt MQTT WebSocket von Haus aus, Du brauchst keine zusätzliche Bridge oder Erweiterung.
+Für unseren öffentlichen WebSocket-Zugang verwende den Adapter [MQTT-Client (`mqtt-client`)](https://github.com/iobroker-community-adapters/ioBroker.mqtt-client).
 
 **So richtest Du es ein:**
-1. Öffne den MQTT-Adapter in ioBroker
-2. Trage als URL ein: `wss://mqtt.makerspace-partheland.de:443/mqtt`
-3. Aktiviere "WebSocket" und "SSL"
-4. Port: `443`
-5. Path: `/mqtt`
+1. Installiere den Adapter **MQTT-Client** und öffne seine Instanzeinstellungen.
+2. Trage unter „MQTT Broker IP“ `mqtt.makerspace-partheland.de` und als Port `443` ein.
+3. Aktiviere „Verwende WebSockets“, „SSL“ und „Signierte Zertifikate erzwingen“.
+4. Wähle als „MQTT Version“ `3.1.1`. Lasse Benutzername und Kennwort leer.
+5. Entferne den voreingestellten Wert `ioBroker` aus „Präfix für subscribe Topics“.
+6. Trage unter „Zusätzliche subscriptions“ die gewünschten Topics durch Kommas getrennt ein, zum Beispiel:
+
+   ```text
+   senseBox:home/+,senseBox:home/median,sensoren/+
+   ```
+
+7. Speichere die Einstellungen und starte die Adapterinstanz.
+
+Der öffentliche Zugang akzeptiert auch den WebSocket-Pfad `/`, den dieser Adapter verwendet. Ein separates Feld für den Pfad `/mqtt` ist deshalb nicht erforderlich.
 
 **Welche Daten willst Du empfangen?**
 - `senseBox:home/+`: alle senseBox:home Stationen
 - `senseBox:home/median`: Medianwerte
 - `sensoren/+`: spezialisierte Sensoren (Wasserstand etc.)
 
-ioBroker wandelt die Daten automatisch in Objekte um. Mit JavaScript-Scripts kannst Du die Daten noch weiter verarbeiten, zum Beispiel Durchschnittswerte berechnen oder Benachrichtigungen verschicken.
+Der Adapter legt für empfangene Topics Datenpunkte an. Die JSON-Nachrichten kannst Du mit JavaScript-Skripten weiterverarbeiten, zum Beispiel Durchschnittswerte berechnen oder Benachrichtigungen verschicken.
 
 ### Praxisbeispiele aus dem Partheland
 
