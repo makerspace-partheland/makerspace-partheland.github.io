@@ -2,7 +2,7 @@
 layout: page
 title: 3D-Drucker selber bauen - Delta-Konstruktion
 permalink: /projekte/3d-druck-konstruktion/3d-drucker-selber-bauen-delta/
-excerpt: Bauanleitung für einen selbstgebauten Delta-3D-Drucker mit Open-Source-Komponenten
+excerpt: Projektbericht über einen selbstgebauten Delta-3D-Drucker mit Open-Source-Komponenten
 category: 3D-Druck & Konstruktion
 gallery:
   - image_path: /assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-fertig.jpg
@@ -23,11 +23,11 @@ gallery:
 
 ## 3D-Drucker selber bauen (Delta)
 
-Der Bau eines eigenen 3D-Druckers ist ein spannendes Projekt, das sowohl technisches Verständnis als auch handwerkliches Geschick erfordert. In diesem Artikel beschreibe ich den Bau eines Delta-3D-Druckers mit verbesserten Sicherheits- und Funktionsmerkmalen.
+Der Bau eines eigenen 3D-Druckers ist ein spannendes Projekt, das sowohl technisches Verständnis als auch handwerkliches Geschick erfordert. Der hier beschriebene Delta-3D-Drucker verfügt über verbesserte Sicherheits- und Funktionsmerkmale.
 
-## Sicherheitsverbesserungen
+## Sicherheits­verbesserungen
 
-Einer der wichtigsten Aspekte beim Bau eines 3D-Druckers ist die Sicherheit. Ich habe mehrere Verbesserungen implementiert:
+Einer der wichtigsten Aspekte beim Bau eines 3D-Druckers ist die Sicherheit. Die folgenden Verbesserungen wurden umgesetzt:
 
 ### Temperaturüberwachung
 - **Thermistor-Überwachung**: Kontinuierliche Überwachung der Düsen- und Bett-Temperatur
@@ -39,7 +39,7 @@ Einer der wichtigsten Aspekte beim Bau eines 3D-Druckers ist die Sicherheit. Ich
 - **Kurzschlussschutz**: Integrierte Sicherungen für alle Stromkreise
 - **Erdung**: Korrekte Erdung aller metallischen Komponenten
 
-## Funktionsverbesserungen
+## Funktions­verbesserungen
 
 ### Präzision
 - **Delta-Kinematik**: Optimierte Berechnung der Bewegungsabläufe
@@ -51,7 +51,7 @@ Einer der wichtigsten Aspekte beim Bau eines 3D-Druckers ist die Sicherheit. Ich
 - **WiFi-Anbindung**: Fernsteuerung über Netzwerk
 - **Filament-Überwachung**: Automatische Erkennung von Filament-Ende
 
-## Konstruktionsdetails
+## Konstruktions­details
 
 Der Drucker basiert auf der bewährten Delta-Konstruktion mit einigen eigenen Verbesserungen:
 
@@ -62,7 +62,7 @@ Der Drucker basiert auf der bewährten Delta-Konstruktion mit einigen eigenen Ve
 
 ## Software
 
-Die Steuerung erfolgt über Marlin-Firmware mit angepassten Einstellungen für die Delta-Kinematik. Alle Sicherheitsfunktionen sind in der Firmware implementiert.
+Die Steuerung erfolgt über Marlin-Firmware mit angepassten Einstellungen für die Delta-Kinematik.
 
 ## Fazit
 
