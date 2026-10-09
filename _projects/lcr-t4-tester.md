@@ -1,7 +1,8 @@
 ---
 layout: page
-title: "LCR-T4 Tester - Bauteile sicher identifizieren"
-date: 2019-10-01
+title: "LCR-T4-Tester mit gedrucktem Gehäuse"
+date: 2019-10-17
+excerpt: Ein LCR-T4-Bauteiltester erhält ein Gehäuse aus dem 3D-Drucker. Die CAD-Modelle zeigen Frontblende und Boden.
 category: Elektronik & Sensoren
 tags: [LCR-T4, Tester, Bauteile, 3D-Druck, Gehäuse]
 gallery:
@@ -18,15 +19,13 @@ gallery:
 
 <picture>
   <source type="image/webp" srcset="{{ '/assets/images/projekte/3d-druck-konstruktion/lcr-t4/LCR-T4_Tester.webp' | relative_url }}">
-  <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/lcr-t4/LCR-T4_Tester.jpg' | relative_url }}" alt="LCR-T4-Tester im grünen gedruckten Gehäuse" class="title-image" width="628" height="472" style="object-fit: contain;">
+  <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/lcr-t4/LCR-T4_Tester.jpg' | relative_url }}" alt="Detail des LCR-T4-Testers mit Display und blauem Taster im grünen Gehäuse" class="title-image" width="628" height="472" style="object-position: center 35%;">
 </picture>
 
-## LCR-T4 Tester - Bauteile sicher identifizieren
+## LCR-T4-Tester mit gedrucktem Gehäuse
 
-Um Bauteile, die versehentlich in einer Kiste gelandet sind, wieder zu sortieren, kann man mit Lupe und Multimeter vieles wieder zuordnen und verwerten.
+Beim Sortieren vermischter elektronischer Bauteile helfen Lupe und Multimeter, die Teile wieder zuzuordnen und weiterzuverwenden. Dafür lässt sich auch die Testplatine LCR-T4 verwenden. Im ursprünglichen Bericht von 2019 wurde ein Preis von etwa 5 € genannt.
 
-Für genau diesen Zweck gibt es eine günstige Testplatine, die man in Fernost für ca 5€ bekommt. "High Quality Brand New LCR-T4 ESR Meter Transistor Tester Diode Triode Capacitance SCR Inductance" wäre der passende Suchbegriff.
+Die Platine wurde ohne Gehäuse geliefert. Ein passendes Gehäuse wurde mit CAD-Software entworfen und auf dem 3D-Drucker hergestellt. Die Galerie zeigt den Tester sowie die CAD-Modelle von Frontblende und Boden.
 
-Leider fehlt dem Gerät das Gehäuse. Mit Hilfe von CAD Software ist sowas schnell erstellt und auf dem 3D Drucker ausgedruckt.
-
-Natürlich kann man das Gehäuse auch einfach [selber nachdrucken](https://www.thingiverse.com/thing:3335684) oder uns kontaktieren.
+Das [Gehäuse steht auf Thingiverse zum Nachdrucken bereit](https://www.thingiverse.com/thing:3335684). Bei Fragen ist der Makerspace über die [Kontaktseite]({{ '/austausch/' | relative_url }}) erreichbar.

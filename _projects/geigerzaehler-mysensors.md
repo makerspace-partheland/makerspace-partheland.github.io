@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Geigerzähler mit MySensors-Anbindung
+title: Geigerzähler mit SBM-20-Zählrohr
 permalink: /projekte/elektronik-sensoren/geigerzaehler-mysensors/
-excerpt: Bauanleitung für einen Geigerzähler mit SBM-20 Zählrohr und MySensors-Integration
+excerpt: Aufbau eines Geigerzählers mit SBM-20-Zählrohr, KiCAD-Dateien und Bauteilliste.
 category: Elektronik & Sensoren
 ---
 
@@ -11,7 +11,7 @@ category: Elektronik & Sensoren
             <img src="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_fertig.jpg" alt="Geigerzähler mit SBM-20 Zählrohr - Fertig aufgebaut" class="title-image">
           </picture>
 
-## Geigerzähler mit Anbindung als MySensors-Node
+## Geigerzähler mit SBM-20-Zählrohr
 
 Heute soll es um ein Projekt gehen, dass den Elektroniker oder die Elektronikerin in uns weckt. Seit Tschernobyl und Fukushima weiß eigentlich jeder im Großen und Ganzen, was ein Geigerzähler ist.
 
@@ -54,5 +54,3 @@ Ist die Hochspannung auf 400V eingestellt, kann jetzt die SBM-20 eingesetzt werd
 ![Pinbelegung und Lage der Testpunkte](/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_Anschluss.jpg)
 
 Ist alles soweit komplett, kann jetzt z.B. mit einem Oszilloskop an TP2 des Steckverbinders J3 gemessen werden, ob Zählimpuls ausgegeben werden. Da mit normaler Umgebungsstrahlung die Ausgabe von Impulsen in langen Abständen erfolgt, kann für eine schnelle Impulsfolge geschummelt werden. Einfach eine Armbanduhr oder einen Wecker, der über, im Dunklen grün leuchtende, Ziffern oder Zeiger verfügt, in ca. 1cm Abstand zu SBM-20 halten und sich über deutlich mehr Impulse freuen.
-
-So, die Schaltung ist soweit fertig. Jetzt muss die Messung des Geigerzählers als Umweltsensor auswertbar gemacht werden. Ich bin großer Fan des [MySensors](http://www.mysensors.org)-Ökosystems. Einen Arduino-Sketch zur MySensors-Integration des Geigerzählers findet ihr im ZIP-Archiv.
