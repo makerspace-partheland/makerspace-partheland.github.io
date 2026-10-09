@@ -2,7 +2,7 @@
 layout: page
 title: Smart City - Umweltsensoren und mehr
 permalink: /projekte/smart-city/
-excerpt: LoRaWAN-basierte Umweltsensoren für die intelligente Stadt der Zukunft
+excerpt: Umweltmessstationen und LoRaWAN im Partheland
 category: Smart City & IoT
 ---
 
@@ -13,9 +13,9 @@ category: Smart City & IoT
 
 # Smart City Partheland
 
-Im Rahmen des <a rel="noreferrer noopener" href="https://open-government-kommunen.de/" target="_blank">Regionalen Open Government Labor</a> der Stadt Brandis beteiligen wir uns seit 2022 am Aufbau und dem stetigen Betrieb von Bürger-Umweltmessstationen und eines LoRaWAN Netzwerkes in der Gemeinde Brandis. Hier kümmern wir uns ehrenamtlich um alle anfallenden Dinge.
+Im Rahmen des <a rel="noreferrer noopener" href="https://open-government-kommunen.de/" target="_blank">Regionalen Open Government Labor</a> der Stadt Brandis beteiligen wir uns seit 2022 am Aufbau und dem stetigen Betrieb von Bürger-Umweltmessstationen und eines LoRaWAN Netzwerkes in der Gemeinde Brandis. Diese Aufgaben übernehmen wir ehrenamtlich.
 
-Seit Dezember 2022 unterstützen wir alle weiteren <a rel="noreferrer noopener" href="https://partheland.de" target="_blank">Partheland</a> Kommunen (Borsdorf, Naunhof mit Belgershain und Parthenstein, Großpösna und Machern) im Rahmen des Smart City Projektes durch Schulung von sogenannten Multiplikatoren, welche vor Ort die jeweiligen Ansprechpartner sind. Zudem stellen wir hierfür ehrenamtlich die Software für die jeweiligen Umweltmessstationen zur Verfügung, bereiten im Hintergrund alles für den Datentransfer vor, überwachen stetig die Stationen und Infrastruktur und viele weitere Dinge die man nicht sieht.
+Seit Dezember 2022 unterstützen wir alle weiteren <a rel="noreferrer noopener" href="https://partheland.de" target="_blank">Partheland</a> Kommunen (Borsdorf, Naunhof mit Belgershain und Parthenstein, Großpösna und Machern) im Rahmen des Smart City Projektes durch Schulung von sogenannten Multiplikatoren, welche vor Ort die jeweiligen Ansprechpartner sind. Die Software für die Umweltmessstationen wird von uns bereitgestellt, und der Datentransfer wird vorbereitet. Zudem erfolgt eine laufende Überwachung der Stationen sowie der Infrastruktur, ergänzt durch weitere Hintergrundaktivitäten. Alle genannten Tätigkeiten werden ehrenamtlich ausgeführt.
 
 Alle stationären Umweltsensoren werden mittels <a rel="noreferrer noopener" href="https://sensebox.de/de/products-home" target="_blank">senseBox:home</a> und mit der stromsparenden <a href="https://www.thethingsnetwork.org" target="_blank" rel="noreferrer noopener">LoRaWAN </a>Anbindung realisiert und im gesamten Partheland aufgebaut.
 
