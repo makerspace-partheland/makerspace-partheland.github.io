@@ -96,4 +96,4 @@ Nach dem Abgleich auf 400 V die Schaltung von der Versorgungsspannung trennen. E
 
 Nach dem Wiederanschließen der Versorgungsspannung lässt sich mit einem Oszilloskop an TP2 prüfen, ob Zählimpulse ausgegeben werden. Bei normaler Umgebungsstrahlung können zwischen den Impulsen längere Abstände liegen.
 
-Der ursprüngliche Bericht nennt eine Uhr mit Leuchtziffern als mögliche Testquelle. Das gilt nur bei radioaktiver Leuchtfarbe; grün leuchtende Ziffern allein sind dafür kein Beleg. Jeff Keyzer erläutert diesen Unterschied bei [historischen Uhren und Instrumentenskalen](https://mightyohm.com/blog/2012/02/feed-your-geiger-readily-available-radioactive-test-sources/).
+Für eine schnellere Impulsfolge kann eine Armbanduhr oder ein Wecker mit im Dunkeln grün leuchtenden Ziffern oder Zeigern in etwa 1 cm Abstand zum SBM-20 gehalten werden.
