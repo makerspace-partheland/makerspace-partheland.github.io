@@ -44,12 +44,63 @@ gallery:
 
 ## KOBIL Chip-TAN-Generator: Reparatur und USB-Umbau
 
-Bei diesem KOBIL-Chip-TAN-Generator waren Teile der Displayzeichen nicht mehr lesbar. Das Gerät wurde geöffnet und die Stromversorgung von Batterien auf USB umgestellt.
+Für Banküberweisungen unterwegs wurde ein zweiter optischer Chip-TAN-Generator von KOBIL gesucht. Im Internet waren mehrere Geräte günstig als defekt angeboten. Häufig waren Buchstaben und Zahlen auf dem Display kaum noch lesbar. Auch das für dieses Projekt beschaffte Gerät hatte diesen Fehler: Am Displaykabel bestand ein Kontaktproblem.
 
-## Umbau auf USB
+### Teil 1: Displayreparatur
 
-Die USB-Buchse sitzt in einer seitlichen Öffnung des Gehäuses. Die Platine und die Leitungen sind im Bereich des Batteriefachs untergebracht. Die Fotos zeigen das geöffnete Gerät, die Verkabelung und den Anschluss von außen.
+#### Gehäuse öffnen
 
-## Ergebnis
+Zuerst werden die vier Schrauben der Rückwand gelöst, die im Bild gelb markiert sind. Nach dem Abnehmen der Rückwand folgen die beiden blau markierten Schrauben der Kartenführung. Sobald die Kartenführung und die Abdeckung der Fotosensoren entfernt sind, lässt sich die Platine herauskippen.
 
-Bei angeschlossenem USB-Kabel sind die Displaytexte wieder vollständig lesbar. Mit dem umgebauten Gerät wurden anschließend erste Überweisungen durchgeführt.
+<figure>
+  <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/Back.webp" alt="Rückwand mit vier gelb markierten Schraubenpositionen und geöffnetes Gerät mit zwei blau markierten Schrauben der Kartenführung." width="1024" loading="lazy">
+  <figcaption>Schrauben der Rückwand und der Kartenführung</figcaption>
+</figure>
+
+#### Kontakt am Displaykabel wiederherstellen
+
+Die Kontaktstellen des Displaykabels an der Platine und am Displayglas müssen wieder verbunden werden. Der markierte Bereich zeigt die Leiterbahnen unterhalb des Displays.
+
+<figure>
+  <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/front_blank.webp" alt="Vorderseite der Platine mit markierten Leiterbahnen am unteren Rand des Displays." width="430" loading="lazy">
+  <figcaption>Kontaktbereich des Displaykabels</figcaption>
+</figure>
+
+Die Kontaktflächen lassen sich auf drei Arten erwärmen:
+
+- **Heißluft:** Das Displayglas vor Hitze schützen, etwa mit einem Metallblättchen. Die Kontaktflächen mit einem Heißluftföhn erwärmen und mit einem Rakel bis zum Abkühlen andrücken. Eine dabei auftretende Verfärbung des Displays sollte nach einer Weile wieder verschwinden.
+- **Lötkolben:** Die Kontaktflächen mit einem einstellbaren Lötkolben und einer großflächigen Spitze erwärmen.
+- **Heißklebepistole:** Die Kontaktflächen mit der heißen Spitze erwärmen, ohne dabei Klebstoff in das Gerät einzubringen.
+
+Anschließend wird geprüft, ob das Display wieder alle Zeichen anzeigt. Falls weiterhin Zeichen fehlen, wird der Vorgang wiederholt. Zum Einschalten genügt eine passende Plastikkarte oder ein entsprechend zugeschnittenes Stück Pappe. Eine Bankkarte ist für diesen Displaytest nicht nötig.
+
+### Teil 2: USB-Stromversorgung
+
+Das Gerät verwendet normalerweise CR2025-Knopfzellen. Beim beschriebenen Umbau wurde es stattdessen mit 5 V über USB betrieben. Dazu wurde VCC mit V+ und Ground mit V− auf der Platine verbunden.
+
+<figure>
+  <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/back_blank.webp" alt="Rückseite der Platine mit gelb markierten Anschlusspunkten V+ und V− neben den Batteriehaltern." width="424" loading="lazy">
+  <figcaption>Anschlusspunkte für die Stromversorgung</figcaption>
+</figure>
+
+#### Micro-USB-Buchse einbauen
+
+Anstelle eines fest angeschlossenen USB-Kabels kam eine Micro-USB-Buchse auf einer kleinen Platine zum Einsatz. Diese ließ sich leichter verdrahten als eine einzelne Buchse. Für den Einbau wurden eine seitliche Buchsenöffnung und eine Aussparung für die kleine Platine im Bereich eines Batteriefachs in das Gehäuse geschnitten.
+
+<figure>
+  <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/usb_1.webp" alt="Geöffnetes Gehäuse neben der kleinen Platine mit Micro-USB-Buchse." width="1024" loading="lazy">
+  <figcaption>Micro-USB-Buchse auf einer separaten Platine</figcaption>
+</figure>
+
+Die Leitung zu V+ konnte direkt verlegt werden. Die Leitung zu V− wurde durch die vorhandene Aussparung der Batteriehalterung geführt. Eine zusätzliche kleine Öffnung im rechten Batteriefach schuf den Weg zum Kontakt. Alternativ lassen sich die Leitungen außen um die Batterieaussparungen führen.
+
+<figure>
+  <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/usb_2.webp" alt="Leitungen der USB-Stromversorgung im offenen Batteriefach." width="512" loading="lazy">
+  <figcaption>Kabelführung im Batteriefach</figcaption>
+</figure>
+
+Für die Tests war die kleine USB-Platine mit Isolierband umwickelt. Nach dem Verlöten wurden Platine und Kabel mit Heißkleber fixiert und die Abdeckung geschlossen. Der Kleber war beim Schließen bereits zu weit abgekühlt; dadurch blieb eine kleine Unebenheit. Die zusätzliche Fixierung des Kabels verhinderte, dass es beim Schließen der Batterieabdeckung verrutschte.
+
+### Ergebnis
+
+Nach der Displayreparatur und dem USB-Umbau funktionierte das Gerät wieder. Mit ihm wurden anschließend erste Überweisungen durchgeführt.
