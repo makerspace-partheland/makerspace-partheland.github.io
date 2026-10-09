@@ -8,7 +8,7 @@ category: Reparatur & Nachhaltigkeit
 
 <picture>
   <source type="image/webp" srcset="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.webp' | relative_url }}">
-  <img src="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.jpg' | relative_url }}" alt="Neue Holzkiste mit Saftflaschen" class="title-image" style="object-position: 50% 50%;">
+  <img src="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.jpg' | relative_url }}" alt="Neue Holzkiste mit Saftflaschen" class="title-image" style="object-position: 50% 25%;">
 </picture>
 
 ## Neue Kiste für alte Saftflaschen
