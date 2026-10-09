@@ -35,18 +35,16 @@ Wenn die relative Außenluftfeuchte unter etwa 70 % liegt und kein Regen erkannt
 
 ## Kellerentlüftung, Beispiel Belgershain
 
-Wenn die Außenluft trockener ist als im Keller, wird empfohlen, das Kellerfenster kurzzeitig zu öffnen.
-
-Das senkt die Feuchtigkeit und beugt Schimmelbildung vor.
+Enthält die Außenluft weniger Wasserdampf als die Kellerluft, kann kurzes Lüften Feuchtigkeit abführen. Die Prozentangaben der Feuchtesensoren reichen zum Vergleich nicht aus, weil sie von der Temperatur abhängen. Deshalb müssen innen und außen Temperatur und Luftfeuchtigkeit gemessen werden. Daraus lässt sich die Wasserdampfmenge pro Kubikmeter Luft berechnen und vergleichen. Diese Größe heißt absolute Luftfeuchtigkeit.
 
 **Hinweis:**
 
-Ein zusätzlicher Feuchtesensor im Keller ist erforderlich.
+Ein zusätzlicher Temperatur- und Feuchtesensor im Keller ist erforderlich.
 
 **Benötigt:**
 
-- Median Belgershain: Luftfeuchtigkeit
-- Innensensor im Keller: Luftfeuchtigkeit
+- Median Belgershain: Temperatur, Luftfeuchtigkeit
+- Innensensor im Keller: Temperatur, Luftfeuchtigkeit
 
 ---
 
@@ -109,7 +107,8 @@ Besonders praktisch bei wechselhaftem Wetter.
 
 ---
 
-## Wettertendenz-Vorbereitung, Beispiel Brandis
+## Wetterumschwung: Vorwarnung, Beispielfall Brandis
+{: #wettertendenz-vorbereitung-beispiel-brandis }
 
 Ein starker Abfall des Luftdrucks kündigt häufig Wind oder Regen an.
 
@@ -123,7 +122,7 @@ Das System kann eine Vorwarnung ausgeben ("Wetterumschwung steht bevor") oder be
 
 ## Badeempfehlung, Beispiel Kirchbruch Beucha
 
-Erreicht die Wassertemperatur eines Gewässers mindestens 22 °C und gleichzeitig die Lufttemperatur über 25 °C, erfolgt eine Benachrichtigung "Optimales Badewetter".
+Sobald die Wassertemperatur eines Gewässers mindestens 22 °C beträgt und die Lufttemperatur zugleich über 25 °C liegt, wird die Benachrichtigung „Optimales Badewetter“ versandt.
 
 Im Winter kann bei Temperaturen unter 5 °C eine "Eisbade-Info" ausgegeben werden.
 

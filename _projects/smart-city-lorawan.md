@@ -17,17 +17,17 @@ Wie kommen Messdaten von einer Wiese, einem Feld oder einem Kleingarten zu Dir n
 
 ## Batterie- und Solarbetrieb
 
-Stell Dir vor, ein Sensor läuft jahrelang mit einer einfachen Batterie. Klingt unrealistisch? Mit LoRaWAN ist genau das möglich. Der Energieverbrauch ist so gering, dass Sensoren mit Batterien oder kleinen Solarzellen und Akkus über Jahre hinweg autark arbeiten können. Kein Stromanschluss nötig, keine laufenden Kosten für Mobilfunkverträge oder Internet. Die Datenübertragung läuft über das öffentliche LoRaWAN-Netzwerk – kostenlos.
+Stell Dir vor, ein Sensor läuft jahrelang mit einer einfachen Batterie. Mit LoRaWAN ist genau das möglich. Der Energieverbrauch ist so gering, dass Sensoren mit Batterien oder kleinen Solarzellen und Akkus über Jahre hinweg autark arbeiten können. Kein Stromanschluss nötig, keine laufenden Kosten für Mobilfunkverträge oder Internet. Die Datenübertragung läuft über das öffentliche LoRaWAN-Netzwerk – kostenlos.
 
-Das eröffnet völlig neue Möglichkeiten: Du kannst Messstationen an Orten aufbauen, wo es weder Strom noch Internet gibt. In Kleingärten, auf Sportplätzen, an Badeseen, auf Grünflächen, Feldern, in Wäldern oder am Ortsrand. Überall dort, wo Du Daten brauchst, aber keine Infrastruktur hast.
+Du kannst Messstationen an Orten aufbauen, wo es weder Strom noch Internet gibt. In Kleingärten, auf Sportplätzen, an Badeseen, auf Grünflächen, Feldern, in Wäldern oder am Ortsrand. Überall dort, wo Du Daten brauchst, aber keine Infrastruktur hast.
 
 ## Warum LoRaWAN statt WLAN, LTE oder 5G?
 
-LoRaWAN wurde von Grund auf für Sensornetzwerke konzipiert und unterscheidet sich fundamental von den bekannten Funktechnologien. Die Reichweite? Im Freien mehrere Kilometer – deutlich mehr als die paar hundert Meter, die WLAN schafft.
+LoRaWAN wurde für Sensornetzwerke konzipiert. Die Reichweite? Im Freien mehrere Kilometer – deutlich mehr als die paar hundert Meter, die WLAN schafft.
 
-Aber LoRaWAN hat auch klare Grenzen. Die Datenübertragung ist langsam und eignet sich nur für kleine Datenmengen: Temperatur, Luftfeuchtigkeit, Füllstände. Willst Du Kamerastreams übertragen, Sprache in Echtzeit senden oder häufige Updates? Dann brauchst Du WLAN, LTE oder 5G. Auch die Gebäudedurchdringung ist schwächer – Sensoren in Gebäuden benötigen oft eine Außenantenne oder müssen nah am Fenster stehen.
+Aber LoRaWAN hat auch klare Grenzen. Die Datenübertragung ist langsam und eignet sich nur für kleine Datenmengen: Temperatur, Luftfeuchtigkeit, Füllstände. Willst Du Kamerastreams übertragen, Sprache in Echtzeit senden oder häufige Updates? Dann brauchst Du WLAN, LTE oder 5G. Wände und Decken können das Funksignal abschwächen. Auch innerhalb von Gebäuden ist LoRaWAN nutzbar. Reicht der Empfang am vorgesehenen Standort nicht aus, kann ein Platz näher am Fenster oder eine geeignete Außenantenne helfen.
 
-Für Umweltsensoren ist LoRaWAN dagegen perfekt. Alle paar Minuten ein paar Messwerte von einem Sensor auf dem Feld? Genau dafür wurde es gemacht. An abgelegenen Orten ohne Strom- oder Internetanschluss.
+Alle paar Minuten ein paar Messwerte von einem Sensor auf dem Feld? Genau dafür wurde es gemacht. An abgelegenen Orten ohne Strom- oder Internetanschluss.
 
 ## Funktionsweise
 
@@ -50,9 +50,9 @@ Den Betrieb und die Wartung der LoRaWAN-Gateways in Brandis und dessen Ortsteile
 
 ## Kostenfreier Zugang zum Netzwerk
 
-<div class="notification is-success is-light" style="border-left: 4px solid var(--brand-green); box-shadow: 0 4px 20px rgba(0, 170, 0, 0.1); margin: 2rem 0;">
+<div class="notification is-success is-light">
   <div class="content">
-    <p style="margin-bottom: 0; font-size: 1.1rem; font-weight: 500;">
+    <p>
       Das LoRaWAN-Netzwerk im Partheland ist für Dich <strong>kostenfrei zugänglich</strong>. Du kannst eigenständig Sensoren betreiben und das Netzwerk nutzen.
     </p>
   </div>
