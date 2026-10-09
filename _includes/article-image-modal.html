@@ -1,0 +1,39 @@
+<div
+  x-data="{
+    open: false,
+    src: '',
+    alt: '',
+    trigger: null,
+    wasClipped: false,
+    show(event) {
+      if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      const link = event.target.closest('#main-content figure.card .card-image a.image');
+      if (!link) return;
+      const image = link.querySelector('img');
+      if (!image) return;
+      event.preventDefault();
+      this.trigger = link;
+      this.src = link.href;
+      this.alt = image.alt;
+      this.wasClipped = document.documentElement.classList.contains('is-clipped');
+      document.documentElement.classList.add('is-clipped');
+      this.open = true;
+      this.$nextTick(() => this.$refs.close.focus());
+    },
+    close() {
+      this.open = false;
+      if (!this.wasClipped) document.documentElement.classList.remove('is-clipped');
+      this.trigger?.focus({ preventScroll: true });
+    }
+  }"
+  x-on:click.window="show($event)"
+  x-on:keydown.window="if (open &amp;&amp; $event.key === 'Escape') { $event.preventDefault(); close(); } else if (open &amp;&amp; $event.key === 'Tab') { $event.preventDefault(); $refs.close.focus(); }"
+>
+  <div class="modal is-active" x-show="open" style="display: none;" role="dialog" aria-modal="true" aria-label="Bildvergrößerung">
+    <div class="modal-background" x-on:click="close()" aria-hidden="true"></div>
+    <div class="modal-content">
+      <p class="image"><img x-bind:src="open ? src : null" x-bind:alt="alt"></p>
+    </div>
+    <button class="modal-close is-large" x-ref="close" aria-label="Bild schließen" x-on:click="close()"></button>
+  </div>
+</div>

@@ -19,7 +19,20 @@ Seit Dezember 2022 unterstützen wir alle weiteren <a rel="noreferrer noopener" 
 
 Alle stationären Umweltsensoren werden mittels <a rel="noreferrer noopener" href="home" target="_blank">senseBox:home</a> und mit der stromsparenden <a href="https://www.thethingsnetwork.org" target="_blank" rel="noreferrer noopener">LoRaWAN </a>Anbindung realisiert und im gesamten Partheland aufgebaut.
 
-![LoRaWAN Station mit Sensorik](/assets/images/projekte/smart-city/lorawan-station.jpg)
+<div class="columns is-centered">
+  <div class="column is-half-tablet">
+    <figure class="card">
+      <div class="card-image">
+        <a class="image" href="{{ '/assets/images/projekte/smart-city/lorawan-station.jpg' | relative_url }}">
+          <img src="/assets/images/projekte/smart-city/lorawan-station.jpg" alt="LoRaWAN Station mit Sensorik" loading="lazy">
+        </a>
+      </div>
+      <figcaption class="card-content">
+        <div class="content is-size-7 has-text-centered">LoRaWAN Station mit Sensorik</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
 ## Bürgermessstationen
 
