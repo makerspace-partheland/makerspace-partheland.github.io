@@ -2,41 +2,72 @@
 layout: page
 title: Holzspielzeug selber gemacht
 permalink: /projekte/reparatur-nachhaltigkeit/holzspielzeug-selber-gemacht/
-excerpt: Selbstgebautes Parkhaus für Modellautos aus Sperrholz und natürlichen Materialien
+excerpt: Parkhaus für Modellautos aus Sperrholz und Teilen eines alten Besenstiels
 category: Reparatur & Nachhaltigkeit
-gallery:
-  - image_path: /assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/parkhaus-modellautos.jpg
-    alt: Parkhaus für Modellautos
-    caption: Parkhaus für Modellautos
-  - image_path: /assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/dxf-files-nachbau.jpg
-    alt: DXF Files für den Nachbau
-    caption: DXF Files für den Nachbau
-  - image_path: /assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/anpassbare-konstruktion.jpg
-    alt: Anpassbare Konstruktion
-    caption: Anpassbare Konstruktion
 ---
 
 <picture>
-            <source type="image/webp" srcset="/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/parkhaus-modellautos.webp">
-            <img src="/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/parkhaus-modellautos.jpg" alt="Parkhaus für Modellautos - Selbstgebaut" class="title-image">
-          </picture>
+  <source type="image/webp" srcset="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/parkhaus-modellautos.webp' | relative_url }}">
+  <img src="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/parkhaus-modellautos.jpg' | relative_url }}" alt="Bunt bemaltes Parkhaus für Modellautos" class="title-image" style="object-position: 50% 35%;">
+</picture>
 
 ## Holzspielzeug selber gemacht
 
-Für Kinder ist es immer wieder schön, mit selbstgemachten Spielzeug zu spielen. Ein großer Wunsch war ein Parkhaus für Modellautos.
+Ausgangspunkt war der Wunsch eines Kindes nach einem Parkhaus für Modellautos. Es sollte aus einfachen, natürlichen Materialien selbst gebaut werden, ohne Weichmacher oder andere gefährliche Chemie.
 
-Natürlich kann man im Netz einfach eines aus Plastik kaufen und in ein paar Jahren wieder wegwerfen. Wir hatten die Idee, dieses Projekt aus einfachsten Materialien selber zu realisieren und dies mit natürlichen Werkstoffen ohne Weichmacher oder anderer gefährlicher Chemie.
+### Materialien und Konstruktion
 
-## Materialien und Konstruktion
+Das Parkhaus besteht aus preiswertem, 3 mm starkem Sperrholz. Die Säulen und die Rolle des Aufzugs sind aus einem alten Besenstiel passend zugesägt.
 
-Dabei besteht das Parkhaus aus 3mm Sperrholz, welches sehr günstig zu bekommen ist. Die Säulen und die Rolle des Aufzuges sind aus einem alten Besenstiel passend gesägt.
+<div class="columns is-centered is-multiline">
+<div class="column is-two-thirds-desktop">
+  <figure class="card">
+    <div class="card-image">
+      <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/parkhaus-modellautos.jpg' | relative_url }}">
+        <img src="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/parkhaus-modellautos.webp' | relative_url }}" alt="Parkhaus mit blauen Etagen, gelbem Aufzugsturm und roten Kanten" loading="lazy">
+      </a>
+    </div>
+    <figcaption class="card-content">
+      <div class="content is-size-7 has-text-centered">Das bemalte Parkhaus mit Aufzug und Rampen.</div>
+    </figcaption>
+  </figure>
+</div>
+</div>
 
-Fast alle Teile sind so konstruiert, dass alles steckbar ist, und auch später mit Holzleim fixiert werden kann. Wenn man keine CNC Fräse oder einen Lasercutter im Zugriff hat, kann man auch mit der Laubsäge loslegen.
+Fast alle Teile lassen sich zusammenstecken und später mit Holzleim fixieren. Für den Zuschnitt eignen sich eine CNC-Fräse, ein Lasercutter oder eine Laubsäge. Die [DXF-Dateien für den Nachbau](https://www.thingiverse.com/thing:1412154/files) lassen sich auch ausdrucken und auf das Holz übertragen.
 
-Die [passenden DXF Files](https://www.thingiverse.com/thing:1412154/files) kann man auch ausdrucken und dann aufs Holz übertragen.
+<div class="columns is-centered is-multiline">
+<div class="column is-two-thirds-desktop">
+  <figure class="card">
+    <div class="card-image">
+      <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/dxf-files-nachbau.jpg' | relative_url }}">
+        <img src="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/dxf-files-nachbau.webp' | relative_url }}" alt="Umrisse der flach angeordneten Parkhausteile" loading="lazy">
+      </a>
+    </div>
+    <figcaption class="card-content">
+      <div class="content is-size-7 has-text-centered">Zuschnitt der Einzelteile.</div>
+    </figcaption>
+  </figure>
+</div>
+</div>
 
-## Anpassbarkeit und Zusammenarbeit
+### Anpassungen und gemeinsamer Bau
 
-Im Prinzip kann das Modell auch leicht auf die besonderen Gegebenheiten angepasst werden. Gerade wenn man das Projekt mit dem Kind zusammenbaut und bemalt, bekommt es gleich einen ganz anderen Wert.
+Das Modell lässt sich an die jeweiligen Gegebenheiten anpassen. Der gemeinsame Aufbau und das Bemalen mit dem Kind können dem Spielzeug einen persönlichen Wert geben.
 
-Einige Arbeitsstunden sind aber einzuplanen. Das wird sicher nichts für ein Wochenende. Viel Spaß damit.
+<div class="columns is-centered is-multiline">
+<div class="column is-two-thirds-desktop">
+  <figure class="card">
+    <div class="card-image">
+      <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/anpassbare-konstruktion.jpg' | relative_url }}">
+        <img src="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/anpassbare-konstruktion.webp' | relative_url }}" alt="Graues CAD-Modell mit Etagen, Aufzugsturm und Rampe" loading="lazy">
+      </a>
+    </div>
+    <figcaption class="card-content">
+      <div class="content is-size-7 has-text-centered">CAD-Modell des Parkhauses.</div>
+    </figcaption>
+  </figure>
+</div>
+</div>
+
+Für den Bau sind einige Arbeitsstunden einzuplanen. Ein Wochenende reicht dafür nicht aus.
