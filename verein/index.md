@@ -108,7 +108,7 @@ permalink: /verein/
                 Unser Standort
               </h3>
               <div class="content body-text card-content-body">
-                <p><strong>Aktuell:</strong> Temporärer Makerspace im alten Gemeindeamt Beucha</p>
+                <p><strong>Aktuell:</strong> Coworking Brandis</p>
                 <p><strong>Zukunft:</strong> Kulturhaus Beucha (nach Restaurierung)</p>
                 <p><strong>Philosophie:</strong> Aus Spaß an der Freude, ohne Zwang oder Druck</p>
               </div>
