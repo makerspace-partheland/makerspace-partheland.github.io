@@ -58,8 +58,6 @@ Alte Holzkästen können nach jahrelanger Lagerung in feuchten Kellern oder Sche
 </div>
 </div>
 
-Das [CAD-Modell im SketchUp- und TurboCAD-Format](https://sync.coccius.net/index.php/s/HBNS99HHDFYcLFr) enthält die Konstruktion.
-
 ### Material und Maße
 
 Der Kasten besteht aus Holzlatten unterschiedlicher Länge. Alle Latten sind 60 mm breit und 15 mm dick. Für einen Kasten werden benötigt:
