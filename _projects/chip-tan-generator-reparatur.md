@@ -52,19 +52,39 @@ Für Banküberweisungen unterwegs wurde ein zweiter optischer Chip-TAN-Generator
 
 Zuerst werden die vier Schrauben der Rückwand gelöst, die im Bild gelb markiert sind. Nach dem Abnehmen der Rückwand folgen die beiden blau markierten Schrauben der Kartenführung. Sobald die Kartenführung und die Abdeckung der Fotosensoren entfernt sind, lässt sich die Platine herauskippen.
 
-<figure>
-  <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/Back.webp" alt="Rückwand mit vier gelb markierten Schraubenpositionen und geöffnetes Gerät mit zwei blau markierten Schrauben der Kartenführung." width="1024" loading="lazy">
-  <figcaption>Schrauben der Rückwand und der Kartenführung</figcaption>
-</figure>
+<div class="columns is-centered">
+  <div class="column is-two-thirds-desktop">
+    <figure class="card">
+      <div class="card-image">
+        <div class="image">
+          <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/Back.webp" alt="Rückwand mit vier gelb markierten Schraubenpositionen und geöffnetes Gerät mit zwei blau markierten Schrauben der Kartenführung." loading="lazy">
+        </div>
+      </div>
+      <figcaption class="card-content">
+        <div class="content is-size-7 has-text-centered">Schrauben der Rückwand und der Kartenführung</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
 #### Kontakt am Displaykabel wiederherstellen
 
 Die Kontaktstellen des Displaykabels an der Platine und am Displayglas müssen wieder verbunden werden. Der markierte Bereich zeigt die Leiterbahnen unterhalb des Displays.
 
-<figure>
-  <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/front_blank.webp" alt="Vorderseite der Platine mit markierten Leiterbahnen am unteren Rand des Displays." width="430" loading="lazy">
-  <figcaption>Kontaktbereich des Displaykabels</figcaption>
-</figure>
+<div class="columns is-centered">
+  <div class="column is-one-third-desktop is-half-tablet">
+    <figure class="card">
+      <div class="card-image">
+        <div class="image">
+          <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/front_blank.webp" alt="Vorderseite der Platine mit markierten Leiterbahnen am unteren Rand des Displays." loading="lazy">
+        </div>
+      </div>
+      <figcaption class="card-content">
+        <div class="content is-size-7 has-text-centered">Kontaktbereich des Displaykabels</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
 Die Kontaktflächen lassen sich auf drei Arten erwärmen:
 
@@ -78,26 +98,56 @@ Anschließend wird geprüft, ob das Display wieder alle Zeichen anzeigt. Falls w
 
 Das Gerät verwendet normalerweise CR2025-Knopfzellen. Beim beschriebenen Umbau wurde es stattdessen mit 5 V über USB betrieben. Dazu wurde VCC mit V+ und Ground mit V− auf der Platine verbunden.
 
-<figure>
-  <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/back_blank.webp" alt="Rückseite der Platine mit gelb markierten Anschlusspunkten V+ und V− neben den Batteriehaltern." width="424" loading="lazy">
-  <figcaption>Anschlusspunkte für die Stromversorgung</figcaption>
-</figure>
+<div class="columns is-centered">
+  <div class="column is-one-third-desktop is-half-tablet">
+    <figure class="card">
+      <div class="card-image">
+        <div class="image">
+          <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/back_blank.webp" alt="Rückseite der Platine mit gelb markierten Anschlusspunkten V+ und V− neben den Batteriehaltern." loading="lazy">
+        </div>
+      </div>
+      <figcaption class="card-content">
+        <div class="content is-size-7 has-text-centered">Anschlusspunkte für die Stromversorgung</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
 #### Micro-USB-Buchse einbauen
 
 Anstelle eines fest angeschlossenen USB-Kabels kam eine Micro-USB-Buchse auf einer kleinen Platine zum Einsatz. Diese ließ sich leichter verdrahten als eine einzelne Buchse. Für den Einbau wurden eine seitliche Buchsenöffnung und eine Aussparung für die kleine Platine im Bereich eines Batteriefachs in das Gehäuse geschnitten.
 
-<figure>
-  <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/usb_1.webp" alt="Geöffnetes Gehäuse neben der kleinen Platine mit Micro-USB-Buchse." width="1024" loading="lazy">
-  <figcaption>Micro-USB-Buchse auf einer separaten Platine</figcaption>
-</figure>
+<div class="columns is-centered">
+  <div class="column is-two-thirds-desktop">
+    <figure class="card">
+      <div class="card-image">
+        <div class="image">
+          <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/usb_1.webp" alt="Geöffnetes Gehäuse neben der kleinen Platine mit Micro-USB-Buchse." loading="lazy">
+        </div>
+      </div>
+      <figcaption class="card-content">
+        <div class="content is-size-7 has-text-centered">Micro-USB-Buchse auf einer separaten Platine</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
 Die Leitung zu V+ konnte direkt verlegt werden. Die Leitung zu V− wurde durch die vorhandene Aussparung der Batteriehalterung geführt. Eine zusätzliche kleine Öffnung im rechten Batteriefach schuf den Weg zum Kontakt. Alternativ lassen sich die Leitungen außen um die Batterieaussparungen führen.
 
-<figure>
-  <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/usb_2.webp" alt="Leitungen der USB-Stromversorgung im offenen Batteriefach." width="512" loading="lazy">
-  <figcaption>Kabelführung im Batteriefach</figcaption>
-</figure>
+<div class="columns is-centered">
+  <div class="column is-half-tablet">
+    <figure class="card">
+      <div class="card-image">
+        <div class="image">
+          <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/usb_2.webp" alt="Leitungen der USB-Stromversorgung im offenen Batteriefach." loading="lazy">
+        </div>
+      </div>
+      <figcaption class="card-content">
+        <div class="content is-size-7 has-text-centered">Kabelführung im Batteriefach</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
 Für die Tests war die kleine USB-Platine mit Isolierband umwickelt. Nach dem Verlöten wurden Platine und Kabel mit Heißkleber fixiert und die Abdeckung geschlossen. Der Kleber war beim Schließen bereits zu weit abgekühlt; dadurch blieb eine kleine Unebenheit. Die zusätzliche Fixierung des Kabels verhinderte, dass es beim Schließen der Batterieabdeckung verrutschte.
 
