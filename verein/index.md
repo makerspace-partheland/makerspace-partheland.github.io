@@ -78,8 +78,8 @@ permalink: /verein/
                 Smart City Partheland
               </h3>
               <div class="content body-text card-content-body">
-                <p>Unterstützung, Aufbau und Betrieb von Bürger-Umweltmessstationen und Senoren mit LoRaWAN-Netzwerk für das gesamte Partheland.</p>
-                <p><strong>Tätigkeiten:</strong> Software-Bereitstellung, Schulungungen, Betrieb und Überwachung der Infrastruktur</p>
+                <p>Unterstützung, Aufbau und Betrieb von Bürger-Umweltmessstationen und Sensoren mit LoRaWAN-Netzwerk für das gesamte Partheland.</p>
+                <p><strong>Tätigkeiten:</strong> Software-Bereitstellung, Schulungen, Betrieb und Überwachung der Infrastruktur</p>
               </div>
             </div>
           </a>
