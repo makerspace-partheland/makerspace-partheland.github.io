@@ -56,9 +56,7 @@ Zuerst werden die vier Schrauben der Rückwand gelöst, die im Bild gelb markier
   <div class="column is-two-thirds-desktop">
     <figure class="card">
       <div class="card-image">
-        <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/Back.jpg' | relative_url }}">
-          <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/Back.webp" alt="Rückwand mit vier gelb markierten Schraubenpositionen und geöffnetes Gerät mit zwei blau markierten Schrauben der Kartenführung." loading="lazy">
-        </a>
+        {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/Back.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/Back.jpg" alt="Rückwand mit vier gelb markierten Schraubenpositionen und geöffnetes Gerät mit zwei blau markierten Schrauben der Kartenführung." %}
       </div>
       <figcaption class="card-content">
         <div class="content is-size-7 has-text-centered">Schrauben der Rückwand und der Kartenführung</div>
@@ -75,9 +73,7 @@ Die Kontaktstellen des Displaykabels an der Platine und am Displayglas müssen w
   <div class="column is-one-third-desktop is-half-tablet">
     <figure class="card">
       <div class="card-image">
-        <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/front_blank.jpg' | relative_url }}">
-          <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/front_blank.webp" alt="Vorderseite der Platine mit markierten Leiterbahnen am unteren Rand des Displays." loading="lazy">
-        </a>
+        {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/front_blank.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/front_blank.jpg" alt="Vorderseite der Platine mit markierten Leiterbahnen am unteren Rand des Displays." %}
       </div>
       <figcaption class="card-content">
         <div class="content is-size-7 has-text-centered">Kontaktbereich des Displaykabels</div>
@@ -102,9 +98,7 @@ Das Gerät verwendet normalerweise CR2025-Knopfzellen. Beim beschriebenen Umbau 
   <div class="column is-one-third-desktop is-half-tablet">
     <figure class="card">
       <div class="card-image">
-        <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/back_blank.jpg' | relative_url }}">
-          <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/back_blank.webp" alt="Rückseite der Platine mit gelb markierten Anschlusspunkten V+ und V− neben den Batteriehaltern." loading="lazy">
-        </a>
+        {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/back_blank.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/back_blank.jpg" alt="Rückseite der Platine mit gelb markierten Anschlusspunkten V+ und V− neben den Batteriehaltern." %}
       </div>
       <figcaption class="card-content">
         <div class="content is-size-7 has-text-centered">Anschlusspunkte für die Stromversorgung</div>
@@ -121,9 +115,7 @@ Anstelle eines fest angeschlossenen USB-Kabels kam eine Micro-USB-Buchse auf ein
   <div class="column is-two-thirds-desktop">
     <figure class="card">
       <div class="card-image">
-        <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/usb_1.jpg' | relative_url }}">
-          <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/usb_1.webp" alt="Geöffnetes Gehäuse neben der kleinen Platine mit Micro-USB-Buchse." loading="lazy">
-        </a>
+        {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/usb_1.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/usb_1.jpg" alt="Geöffnetes Gehäuse neben der kleinen Platine mit Micro-USB-Buchse." %}
       </div>
       <figcaption class="card-content">
         <div class="content is-size-7 has-text-centered">Micro-USB-Buchse auf einer separaten Platine</div>
@@ -138,9 +130,7 @@ Die Leitung zu V+ konnte direkt verlegt werden. Die Leitung zu V− wurde durch 
   <div class="column is-half-tablet">
     <figure class="card">
       <div class="card-image">
-        <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/usb_2.jpg' | relative_url }}">
-          <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/usb_2.webp" alt="Leitungen der USB-Stromversorgung im offenen Batteriefach." loading="lazy">
-        </a>
+        {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/usb_2.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/usb_2.jpg" alt="Leitungen der USB-Stromversorgung im offenen Batteriefach." %}
       </div>
       <figcaption class="card-content">
         <div class="content is-size-7 has-text-centered">Kabelführung im Batteriefach</div>

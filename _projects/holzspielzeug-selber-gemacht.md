@@ -23,9 +23,7 @@ Das Parkhaus besteht aus preiswertem, 3 mm starkem Sperrholz. Die Säulen und di
 <div class="column is-two-thirds-desktop">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/parkhaus-modellautos.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/parkhaus-modellautos.webp' | relative_url }}" alt="Parkhaus mit blauen Etagen, gelbem Aufzugsturm und roten Kanten" loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/parkhaus-modellautos.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/parkhaus-modellautos.jpg" alt="Parkhaus mit blauen Etagen, gelbem Aufzugsturm und roten Kanten" %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Das bemalte Parkhaus mit Aufzug und Rampen.</div>
@@ -40,9 +38,7 @@ Fast alle Teile lassen sich zusammenstecken und später mit Holzleim fixieren. F
 <div class="column is-two-thirds-desktop">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/dxf-files-nachbau.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/dxf-files-nachbau.webp' | relative_url }}" alt="Umrisse der flach angeordneten Parkhausteile" loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/dxf-files-nachbau.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/dxf-files-nachbau.jpg" alt="Umrisse der flach angeordneten Parkhausteile" %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Zuschnitt der Einzelteile.</div>
@@ -59,9 +55,7 @@ Das Modell lässt sich an die jeweiligen Gegebenheiten anpassen. Der gemeinsame 
 <div class="column is-two-thirds-desktop">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/anpassbare-konstruktion.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/anpassbare-konstruktion.webp' | relative_url }}" alt="Graues CAD-Modell mit Etagen, Aufzugsturm und Rampe" loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/anpassbare-konstruktion.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/holzspielzeug/anpassbare-konstruktion.jpg" alt="Graues CAD-Modell mit Etagen, Aufzugsturm und Rampe" %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">CAD-Modell des Parkhauses.</div>

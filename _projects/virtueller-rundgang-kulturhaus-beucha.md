@@ -31,9 +31,7 @@ Der [virtuelle Rundgang durch das Kulturhaus Beucha](https://my.matterport.com/s
   <div class="column is-two-thirds-desktop">
     <figure class="card">
       <div class="card-image">
-        <a class="image" href="{{ '/assets/images/projekte/sonstiges/kulturhaus-beucha/eingang-kulturhaus-beucha-2023.jpg' | relative_url }}">
-          <img src="{{ '/assets/images/projekte/sonstiges/kulturhaus-beucha/eingang-kulturhaus-beucha-2023.webp' | relative_url }}" alt="Treppe und offene Türen im Eingangsbereich des Kulturhauses Beucha" loading="lazy">
-        </a>
+        {% include image-modal.html link="/assets/images/projekte/sonstiges/kulturhaus-beucha/eingang-kulturhaus-beucha-2023.webp" large_link="/assets/images/projekte/sonstiges/kulturhaus-beucha/eingang-kulturhaus-beucha-2023.jpg" alt="Treppe und offene Türen im Eingangsbereich des Kulturhauses Beucha" %}
       </div>
       <figcaption class="card-content">
         <div class="content is-size-7 has-text-centered">Eingangsbereich des Kulturhauses Beucha, 2023.</div>

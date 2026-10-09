@@ -19,9 +19,7 @@ Für selbst hergestellten Saft oder Sirup wurden hier 0,7-Liter-Glasflaschen aus
 <div class="column is-half-desktop">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/TGL-Flasche.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/TGL-Flasche.webp' | relative_url }}" alt="0,7-Liter-TGL-Saftflaschen in Klar, Grün und Braun." loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/TGL-Flasche.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/TGL-Flasche.jpg" alt="0,7-Liter-TGL-Saftflaschen in Klar, Grün und Braun." %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">0,7-Liter-TGL-Saftflaschen in Klar, Grün und Braun.</div>
@@ -36,9 +34,7 @@ Die passenden Transportkästen wurden zunächst aus Holz und ab den 1980er-Jahre
 <div class="column is-half-desktop">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kasten_Plaste.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kasten_Plaste.webp' | relative_url }}" alt="Roter Kunststoffkasten mit Glasflaschen" loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kasten_Plaste.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kasten_Plaste.jpg" alt="Roter Kunststoffkasten mit Glasflaschen" %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Kunststoffkasten für zwölf Saftflaschen.</div>
@@ -53,9 +49,7 @@ Alte Holzkästen können nach jahrelanger Lagerung in feuchten Kellern oder Sche
 <div class="column is-two-thirds-desktop">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_alt.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_alt.webp' | relative_url }}" alt="Der alte Holzkasten als Vorlage." loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_alt.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_alt.jpg" alt="Der alte Holzkasten als Vorlage." %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Der alte Holzkasten als Vorlage.</div>
@@ -92,9 +86,7 @@ Andere Lattenstärken sind möglich. Bei deutlicher Abweichung von 15 mm müssen
 <div class="column is-two-thirds-desktop">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.webp' | relative_url }}" alt="Die neue Holzkiste mit Saftflaschen." loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.jpg" alt="Die neue Holzkiste mit Saftflaschen." %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Die neue Holzkiste mit Saftflaschen.</div>

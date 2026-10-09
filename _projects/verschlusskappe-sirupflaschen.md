@@ -23,9 +23,7 @@ Als Grundlage dienen Fotos oder Zeichnungen des Ausgießers und seine Maße.
 <div class="column is-one-quarter-desktop is-half-tablet">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-mit-massen.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-mit-massen.webp' | relative_url }}" alt="Schwarzer Ausgießer mit Ausfluss- und Lufteinlassöffnung" loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-mit-massen.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-mit-massen.jpg" alt="Schwarzer Ausgießer mit Ausfluss- und Lufteinlassöffnung" %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Ausgießer von oben.</div>
@@ -35,9 +33,7 @@ Als Grundlage dienen Fotos oder Zeichnungen des Ausgießers und seine Maße.
 <div class="column is-one-quarter-desktop is-half-tablet">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-detail-oeffnung.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-detail-oeffnung.webp' | relative_url }}" alt="Seitliches Profil des schwarzen Ausgießers" loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-detail-oeffnung.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-detail-oeffnung.jpg" alt="Seitliches Profil des schwarzen Ausgießers" %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Seitenansicht des Ausgießers.</div>
@@ -47,9 +43,7 @@ Als Grundlage dienen Fotos oder Zeichnungen des Ausgießers und seine Maße.
 <div class="column is-one-quarter-desktop is-half-tablet">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-weitere-ansicht.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-weitere-ansicht.webp' | relative_url }}" alt="Ovale Ausflussöffnung des schwarzen Ausgießers" loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-weitere-ansicht.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-weitere-ansicht.jpg" alt="Ovale Ausflussöffnung des schwarzen Ausgießers" %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Blick auf die Ausflussöffnung.</div>
@@ -59,9 +53,7 @@ Als Grundlage dienen Fotos oder Zeichnungen des Ausgießers und seine Maße.
 <div class="column is-one-quarter-desktop is-half-tablet">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-von-oben.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-von-oben.webp' | relative_url }}" alt="Ausfluss und kleiner Lufteinlass von schräg oben" loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-von-oben.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/sirupflasche-von-oben.jpg" alt="Ausfluss und kleiner Lufteinlass von schräg oben" %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Die beiden Öffnungen.</div>
@@ -76,9 +68,7 @@ Die Kappe wurde in Autodesk Fusion 360 konstruiert, das damals für Privatanwend
 <div class="column is-three-quarters-desktop">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-ebenen-fusion360.png' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-ebenen-fusion360.webp' | relative_url }}" alt="Gelbe Ebenen und Skizzen der Verschlusskappe in Fusion 360" loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-ebenen-fusion360.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-ebenen-fusion360.png" alt="Gelbe Ebenen und Skizzen der Verschlusskappe in Fusion 360" %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Konstruktionsebenen in Fusion 360.</div>
@@ -90,9 +80,7 @@ Die Kappe wurde in Autodesk Fusion 360 konstruiert, das damals für Privatanwend
 <div class="column is-half-desktop">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-skizze-oben.png' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-skizze-oben.webp' | relative_url }}" alt="Bemaßte Skizze von oben." loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-skizze-oben.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-skizze-oben.png" alt="Bemaßte Skizze von oben." %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Bemaßte Skizze von oben.</div>
@@ -104,9 +92,7 @@ Die Kappe wurde in Autodesk Fusion 360 konstruiert, das damals für Privatanwend
 <div class="column is-three-quarters-desktop">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-skizzen-mit-massen.png' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-skizzen-mit-massen.webp' | relative_url }}" alt="Skizzen mit Ebenen und Maßen." loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-skizzen-mit-massen.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-skizzen-mit-massen.png" alt="Skizzen mit Ebenen und Maßen." %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Skizzen mit Ebenen und Maßen.</div>
@@ -123,9 +109,7 @@ Die fertige Konstruktion ließ sich als STL-Datei exportieren, drucken und teste
 <div class="column is-one-third-desktop">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-unten-nase.png' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-unten-nase.webp' | relative_url }}" alt="CAD-Ansicht der offenen Kappenunterseite mit einer Nase" loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-unten-nase.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-unten-nase.png" alt="CAD-Ansicht der offenen Kappenunterseite mit einer Nase" %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Unterseite mit der Nase für den Lufteinlass.</div>
@@ -135,9 +119,7 @@ Die fertige Konstruktion ließ sich als STL-Datei exportieren, drucken und teste
 <div class="column is-one-third-desktop">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-seite-schraeg.png' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-seite-schraeg.webp' | relative_url }}" alt="CAD-Modell der Kappe mit geschlossener Oberseite" loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-seite-schraeg.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-seite-schraeg.png" alt="CAD-Modell der Kappe mit geschlossener Oberseite" %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Konstruktion von schräg oben.</div>
@@ -147,9 +129,7 @@ Die fertige Konstruktion ließ sich als STL-Datei exportieren, drucken und teste
 <div class="column is-one-third-desktop">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-seite-gerade.png' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-seite-gerade.webp' | relative_url }}" alt="Seitliche CAD-Ansicht mit Abschrägung am unteren Rand" loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-seite-gerade.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-seite-gerade.png" alt="Seitliche CAD-Ansicht mit Abschrägung am unteren Rand" %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Die untere Abschrägung soll Sitz und Dichtigkeit verbessern.</div>
@@ -168,9 +148,7 @@ Für Version 2 wurde transparentes PETG verwendet, das für den Kontakt mit Lebe
 <div class="column is-one-third-desktop is-half-tablet">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-fertig.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-fertig.webp' | relative_url }}" alt="Sirupflaschen mit transparenten Verschlusskappen." loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-fertig.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-fertig.jpg" alt="Sirupflaschen mit transparenten Verschlusskappen." %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Sirupflaschen mit transparenten Verschlusskappen.</div>
@@ -180,9 +158,7 @@ Für Version 2 wurde transparentes PETG verwendet, das für den Kontakt mit Lebe
 <div class="column is-one-third-desktop is-half-tablet">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-gedruckt.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-gedruckt.webp' | relative_url }}" alt="Die Verschlusskappen auf den Ausgießern." loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-gedruckt.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-gedruckt.jpg" alt="Die Verschlusskappen auf den Ausgießern." %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Die Verschlusskappen auf den Ausgießern.</div>
@@ -199,9 +175,7 @@ Bei der Nachfrage im Oktober 2019 wurde kein weiterer Optimierungsbedarf genannt
 <div class="column is-half-tablet">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-im-einsatz.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-im-einsatz.webp' | relative_url }}" alt="Aufgesetzte Verschlusskappe." loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-im-einsatz.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-im-einsatz.jpg" alt="Aufgesetzte Verschlusskappe." %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Aufgesetzte Verschlusskappe.</div>
@@ -211,9 +185,7 @@ Bei der Nachfrage im Oktober 2019 wurde kein weiterer Optimierungsbedarf genannt
 <div class="column is-half-tablet">
   <figure class="card">
     <div class="card-image">
-      <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-montiert.jpg' | relative_url }}">
-        <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-montiert.webp' | relative_url }}" alt="Schwarzer Ausgießer mit transparenter Kappe aus niedriger Perspektive" loading="lazy">
-      </a>
+      {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-montiert.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/verschlusskappe-sirupflaschen/verschlusskappe-montiert.jpg" alt="Schwarzer Ausgießer mit transparenter Kappe aus niedriger Perspektive" %}
     </div>
     <figcaption class="card-content">
       <div class="content is-size-7 has-text-centered">Verschlusskappe von unten gesehen.</div>

@@ -19,9 +19,7 @@ Der Selbstbau mehrerer Delta-Drucker gehörte zu den ersten Projekten des Makers
   <div class="column is-two-thirds-desktop">
     <figure class="card">
       <div class="card-image">
-        <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-fertig.jpg' | relative_url }}">
-          <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-fertig.webp' | relative_url }}" alt="Delta-Drucker mit drei Führungen, Filamentrolle und gelbem Druckteil" loading="lazy">
-        </a>
+        {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-fertig.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-fertig.jpg" alt="Delta-Drucker mit drei Führungen, Filamentrolle und gelbem Druckteil" %}
       </div>
       <figcaption class="card-content">
         <div class="content is-size-7 has-text-centered">Der aufgebaute Delta-Drucker.</div>
@@ -51,9 +49,7 @@ Für die Konstruktion galten folgende Vorgaben:
   <div class="column is-two-thirds-desktop">
     <figure class="card">
       <div class="card-image">
-        <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-konstruktion.jpg' | relative_url }}">
-          <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-konstruktion.webp' | relative_url }}" alt="Blick auf das Netzteil, die Steuerplatine und drei Motoren am Drucker" loading="lazy">
-        </a>
+        {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-konstruktion.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-konstruktion.jpg" alt="Blick auf das Netzteil, die Steuerplatine und drei Motoren am Drucker" %}
       </div>
       <figcaption class="card-content">
         <div class="content is-size-7 has-text-centered">Elektronik, Netzteil, Motoren und Display.</div>
@@ -76,9 +72,7 @@ Für den Bau werden auch gedruckte Teile benötigt. Diese lassen sich in einem b
   <div class="column is-two-thirds-desktop">
     <figure class="card">
       <div class="card-image">
-        <a class="image" href="{{ '/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-detail.jpg' | relative_url }}">
-          <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-detail.webp' | relative_url }}" alt="Druckkopf und Gestänge des Delta-Druckers über einem gelben, gedrehten Druckteil" loading="lazy">
-        </a>
+        {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-detail.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-detail.jpg" alt="Druckkopf und Gestänge des Delta-Druckers über einem gelben, gedrehten Druckteil" %}
       </div>
       <figcaption class="card-content">
         <div class="content is-size-7 has-text-centered">Druckkopf über dem Druckteil.</div>

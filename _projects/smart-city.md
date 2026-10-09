@@ -23,9 +23,7 @@ Alle stationären Umweltsensoren werden mittels <a rel="noreferrer noopener" hre
   <div class="column is-half-tablet">
     <figure class="card">
       <div class="card-image">
-        <a class="image" href="{{ '/assets/images/projekte/smart-city/lorawan-station.jpg' | relative_url }}">
-          <img src="/assets/images/projekte/smart-city/lorawan-station.jpg" alt="LoRaWAN Station mit Sensorik" loading="lazy">
-        </a>
+        {% include image-modal.html link="/assets/images/projekte/smart-city/lorawan-station.jpg" large_link="/assets/images/projekte/smart-city/lorawan-station.jpg" alt="LoRaWAN Station mit Sensorik" %}
       </div>
       <figcaption class="card-content">
         <div class="content is-size-7 has-text-centered">LoRaWAN Station mit Sensorik</div>

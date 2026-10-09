@@ -24,9 +24,7 @@ Grundlagen zu Geiger-Müller-Zählrohren beschreibt die [japanischsprachige Seit
   <div class="column is-three-quarters-desktop">
     <figure class="card">
       <div class="card-image">
-        <a class="image" href="{{ '/assets/images/projekte/elektronik-sensoren/geigerzaehler/Datenblatt_SBM20.jpg' | relative_url }}">
-          <img src="{{ '/assets/images/projekte/elektronik-sensoren/geigerzaehler/Datenblatt_SBM20.webp' | relative_url }}" alt="Russischsprachiges Datenblatt des SBM-20 mit Maßzeichnung und elektrischen Kenndaten." loading="lazy">
-        </a>
+        {% include image-modal.html link="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Datenblatt_SBM20.webp" large_link="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Datenblatt_SBM20.jpg" alt="Russischsprachiges Datenblatt des SBM-20 mit Maßzeichnung und elektrischen Kenndaten." %}
       </div>
       <figcaption class="card-content">
         <div class="content is-size-7 has-text-centered">Datenblatt des SBM-20-Zählrohrs</div>
@@ -44,9 +42,7 @@ Grundlagen zu Geiger-Müller-Zählrohren beschreibt die [japanischsprachige Seit
   <div class="column is-three-quarters-desktop">
     <figure class="card">
       <div class="card-image">
-        <a class="image" href="{{ '/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_Anschluss.jpg' | relative_url }}">
-          <img src="{{ '/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_Anschluss.webp' | relative_url }}" alt="Bestückte Platine mit markierten Testpunkten TP1 und TP2 sowie den Anschlüssen GND, TTL-Ausgang und +5 V." loading="lazy">
-        </a>
+        {% include image-modal.html link="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_Anschluss.webp" large_link="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_Anschluss.jpg" alt="Bestückte Platine mit markierten Testpunkten TP1 und TP2 sowie den Anschlüssen GND, TTL-Ausgang und +5 V." %}
       </div>
       <figcaption class="card-content">
         <div class="content is-size-7 has-text-centered">Pinbelegung und Lage der Testpunkte</div>
@@ -77,9 +73,7 @@ Bei einem Multimeter mit 10 MΩ Eingangswiderstand entsprechen die 400 V an TP1 
   <div class="column is-three-quarters-desktop">
     <figure class="card">
       <div class="card-image">
-        <a class="image" href="{{ '/assets/images/projekte/elektronik-sensoren/geigerzaehler/Spannungsteiler_erklärt.png' | relative_url }}">
-          <img src="{{ '/assets/images/projekte/elektronik-sensoren/geigerzaehler/Spannungsteiler_erklärt.webp' | relative_url }}" alt="Messschaltung mit 1-GΩ-Vorwiderstand und 10-MΩ-Multimeter zwischen TP1 und GND; 3,96 V Anzeige entsprechen 400 V an TP1." loading="lazy">
-        </a>
+        {% include image-modal.html link="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Spannungsteiler_erklärt.webp" large_link="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Spannungsteiler_erklärt.png" alt="Messschaltung mit 1-GΩ-Vorwiderstand und 10-MΩ-Multimeter zwischen TP1 und GND; 3,96 V Anzeige entsprechen 400 V an TP1." %}
       </div>
       <figcaption class="card-content">
         <div class="content is-size-7 has-text-centered">Messung der Hochspannung mit Vorwiderstand und Multimeter</div>
