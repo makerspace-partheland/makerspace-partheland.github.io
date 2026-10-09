@@ -33,7 +33,7 @@ gallery:
     caption: Das cocobello, als Werbetafel und Raum
 ---
 
-Wie angekündigt, fand am 25.06.2022 der Tag der Möglichkeiten im, am und um das Kulturhaus Beucha statt. Wir haben verschiedene Dinge ausgestellt, gezeigt und erklärt und dabei auch neue Ideen und Anregungen von vielen Besuchern zurück bekommen. Für alle, die nicht teilnehmen konnten oder nachträglich nochmal darüber lesen möchten, folgt hier die konsolidierte Zusammenfassung der dreiteiligen Reihe.
+Wie angekündigt, fand am 25.06.2022 der Tag der Möglichkeiten im, am und um das Kulturhaus Beucha statt. Wir haben verschiedene Dinge ausgestellt, gezeigt und erklärt und dabei auch neue Ideen und Anregungen von vielen Besuchern zurückbekommen. Für alle, die nicht teilnehmen konnten oder nachträglich nochmal darüber lesen möchten, folgt hier die konsolidierte Zusammenfassung der dreiteiligen Reihe.
 
 ## Eröffnung temporärer Makerspace und Logo
 
@@ -45,7 +45,8 @@ Vor und während der Veranstaltung war unser Vereinsnachwuchs kreativ und hat ei
 
 Anfassbare, via Sonne betriebene senseBox:home; Sensordaten live am Display. Übersicht und Live‑Karten unter [sensoren.makerspace-partheland.de](https://sensoren.makerspace-partheland.de/).
 
-## 3D‑Druck des neuen Kulturhaus Beucha – mit Strom aus der Sonne
+## 3D‑Druck des neuen Kulturhauses Beucha – mit Strom aus der Sonne
+{: id="3ddruck-des-neuen-kulturhaus-beucha--mit-strom-aus-der-sonne" }
 
 3D‑Drucker mit Selbstbau‑Stromspeicher (Laptopakkus) und PV‑Ladung. Gedruckte Modelle des Kulturhauses waren sehr gefragt.
 
