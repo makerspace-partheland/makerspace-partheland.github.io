@@ -69,7 +69,7 @@ Die Bauteile in dieser Reihenfolge bestücken: Widerstände, Dioden, Kondensator
 
 Ohne eingesetztes Zählrohr die Betriebsspannung von 5 V anlegen: +5 V an Pin 1 von J3, Masse an Pin 3. Die Hochspannung wird anschließend mit dem Trimmpoti VR1 auf 400 V eingestellt.
 
-Ein direkt an TP1 angeschlossenes Multimeter belastet die Hochspannungserzeugung und verfälscht die Messung. Beim im Projekt verwendeten UNI-T61D mit 10 MΩ Eingangswiderstand sank die Spannung dabei auf etwa 200 bis 260 V. Für die Messung wird deshalb ein Widerstand von 1 GΩ in Reihe zum Multimeter geschaltet.
+Die Hochspannungsschaltung ist für das SBM-20 mit einem Innenwiderstand von rund 1 GΩ ausgelegt. Ein Multimeter hat im Spannungsmessbereich gewöhnlich einen Eingangswiderstand von etwa 1 bis 10 MΩ. Wird es direkt an TP1 angeschlossen, ergeben sich grobe Messfehler. Beim im Projekt verwendeten UNI-T61D mit 10 MΩ Eingangswiderstand sank die Spannung dabei auf etwa 200 bis 260 V. Für die Messung wird deshalb ein Widerstand von 1 GΩ in Reihe zum Multimeter geschaltet.
 
 Bei einem Multimeter mit 10 MΩ Eingangswiderstand entsprechen die 400 V an TP1 einer Anzeige von etwa 3,96 V. Dieser Wert gilt für den in der Abbildung gezeigten Spannungsteiler aus 1 GΩ und 10 MΩ.
 

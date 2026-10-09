@@ -115,7 +115,7 @@ Das Gerät verwendet normalerweise CR2025-Knopfzellen. Beim beschriebenen Umbau 
 
 #### Micro-USB-Buchse einbauen
 
-Anstelle eines fest angeschlossenen USB-Kabels kam eine Micro-USB-Buchse auf einer kleinen Platine zum Einsatz. Diese ließ sich leichter verdrahten als eine einzelne Buchse. Für den Einbau wurden eine seitliche Buchsenöffnung und eine Aussparung für die kleine Platine im Bereich eines Batteriefachs in das Gehäuse geschnitten.
+Anstelle eines fest angeschlossenen USB-Kabels kam eine Micro-USB-Buchse auf einer kleinen Platine zum Einsatz. Das Löten einer einzelnen Buchse wurde bei diesem Umbau als zu anstrengend empfunden. Für den Einbau wurden eine seitliche Buchsenöffnung und eine Aussparung für die kleine Platine im Bereich eines Batteriefachs in das Gehäuse geschnitten.
 
 <div class="columns is-centered">
   <div class="column is-two-thirds-desktop">
@@ -149,7 +149,7 @@ Die Leitung zu V+ konnte direkt verlegt werden. Die Leitung zu V− wurde durch 
   </div>
 </div>
 
-Für die Tests war die kleine USB-Platine mit Isolierband umwickelt. Nach dem Verlöten wurden Platine und Kabel mit Heißkleber fixiert und die Abdeckung geschlossen. Der Kleber war beim Schließen bereits zu weit abgekühlt; dadurch blieb eine kleine Unebenheit. Die zusätzliche Fixierung des Kabels verhinderte, dass es beim Schließen der Batterieabdeckung verrutschte.
+Für die Tests war die kleine USB-Platine mit Isolierband umwickelt. Nach dem Verlöten wurden Platine und Kabel mit Heißkleber fixiert und die Abdeckung geschlossen. Durch zu langsames Arbeiten blieb eine kleine Unebenheit. Die zusätzliche Fixierung des Kabels verhinderte, dass es beim Schließen der Batterieabdeckung verrutschte.
 
 ### Ergebnis
 

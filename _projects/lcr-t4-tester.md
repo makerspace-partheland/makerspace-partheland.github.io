@@ -26,6 +26,6 @@ gallery:
 
 Beim Sortieren vermischter elektronischer Bauteile helfen Lupe und Multimeter, die Teile wieder zuzuordnen und weiterzuverwenden. Dafür lässt sich auch die Testplatine LCR-T4 verwenden. Im ursprünglichen Bericht von 2019 wurde ein Preis von etwa 5 € genannt.
 
-Die Platine wurde ohne Gehäuse geliefert. Ein passendes Gehäuse wurde mit CAD-Software entworfen und auf dem 3D-Drucker hergestellt. Die Galerie zeigt den Tester sowie die CAD-Modelle von Frontblende und Boden.
+Dem Gerät fehlt ein Gehäuse. Ein passendes Gehäuse wurde mit CAD-Software entworfen und auf dem 3D-Drucker hergestellt. Die Galerie zeigt den Tester sowie die CAD-Modelle von Frontblende und Boden.
 
 Das [Gehäuse steht auf Thingiverse zum Nachdrucken bereit](https://www.thingiverse.com/thing:3335684). Bei Fragen ist der Makerspace über die [Kontaktseite]({{ '/austausch/' | relative_url }}) erreichbar.
