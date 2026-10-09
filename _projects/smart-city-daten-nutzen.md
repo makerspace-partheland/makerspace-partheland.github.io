@@ -16,7 +16,7 @@ Die Umweltdaten der Messstationen im gesamten Partheland stehen Dir kostenlos zu
 - [Wie kommst Du an die Daten?](#wie-kommst-du-an-die-daten)
 - [Nutze die Daten in Deinem Smart Home](#nutze-die-daten-in-deinem-smart-home)
 - [Sensordaten im Unterricht](#sensordaten-im-unterricht)
-- [Fragen? Kontaktiere uns!](#fragen-kontaktiere-uns)
+- [Fragen? Kontaktiere uns!](/austausch/)
 
 ---
 
@@ -31,7 +31,7 @@ Die Umweltdaten der Messstationen im gesamten Partheland stehen Dir kostenlos zu
 - **Feinstaub** (PM10 und PM2.5): winzige Partikel in der Luft, die Deine Gesundheit beeinflussen können
 - **Lautstärke**: wie laut ist es in der Umgebung?
 
-**Was bedeutet "Median"?** Die Stationen senden nicht jeden einzelnen Messwert. Stattdessen berechnen sie einen Mittelwert über ein bestimmtes Zeitintervall, den sogenannten Median. Das filtert Ausreißer heraus und liefert verlässlichere Daten. Manche Stationen senden zusätzlich die höchsten gemessenen Werte (Maximalwerte). So erkennst Du zum Beispiel kurze Lärm- oder Feinstaubspitzen.
+**Was bedeutet "Median"?** Für den Median werden die Messwerte der Größe nach sortiert. Der Wert in der Mitte ist der Median. Bei den Temperaturen 18, 19, 20, 21 und 40 °C sind das 20 °C. Der einzelne hohe Wert fällt dadurch weniger ins Gewicht als beim Durchschnitt. Bei einer geraden Anzahl von Messwerten wird der Durchschnitt der beiden mittleren Werte genommen. Manche Stationen senden zusätzlich die höchsten gemessenen Werte (Maximalwerte). So erkennst Du zum Beispiel kurze Lärm- oder Feinstaubspitzen.
 
 Neben den senseBox:home Stationen gibt es auch spezialisierte Sensoren: **Pegelsensoren** messen Wasserstände in Bächen und Flüssen. **Wassertemperatursensoren** erfassen die Temperatur in Gewässern und manchmal auch die Lufttemperatur drumherum.
 
@@ -43,7 +43,7 @@ Du möchtest wissen, wo die Stationen stehen und welche Werte sie aktuell messen
 
 ### Auf einen Blick: Karten und Visualisierungen
 
-Am einfachsten verschaffst Du Dir einen Überblick über unsere interaktive Karte. Die Anzahl und Standorte der Stationen ändern sich laufend, deshalb listen wir sie hier nicht einzeln auf, die Karten zeigen Dir immer die aktuellen Daten.
+Am einfachsten verschaffst Du Dir einen Überblick über unsere interaktive Karte. Die Anzahl und Standorte der Stationen ändern sich laufend. Die Karten zeigen Dir immer die aktuellen Daten.
 
 **Unsere eigene Karte** unter [map.makerspace-partheland.de](https://map.makerspace-partheland.de) ist für alle Geräte mit Browser gedacht, ob Smartphone, Tablet oder Computer. Hier siehst Du nicht nur alle Stationen und ihre aktuellen Sensorwerte, sondern auch die LoRaWAN-Gateways. Diese Gateways sind die "Empfangsstationen", die die Daten von den Sensoren empfangen und weiterleiten, ähnlich wie ein Router bei Deinem WLAN zu Hause.
 
@@ -87,7 +87,7 @@ Hier bekommst Du:
 
 ## Nutze die Daten in Deinem Smart Home
 
-Du hast ein Smart Home? Dann kannst Du die Sensordaten aus Deiner Region direkt einbinden. Warum solltest Du das tun? Weil die Daten aus Deiner unmittelbaren Umgebung stammen, nicht von einer Wetterstation 20 Kilometer entfernt.
+Du hast ein Smart Home? Dann kannst Du die Sensordaten aus Deiner Region direkt einbinden. So erfährst Du, was die Stationen hier im Partheland messen, statt auf die Werte einer weit entfernten Wetterstation angewiesen zu sein.
 
 ### Home Assistant
 
@@ -97,21 +97,30 @@ Wir haben eine fertige Integration für Home Assistant entwickelt. Du findest si
 
 ### ioBroker
 
-ioBroker unterstützt MQTT WebSocket von Haus aus, Du brauchst keine zusätzliche Bridge oder Erweiterung.
+Für unseren öffentlichen WebSocket-Zugang verwende den Adapter [MQTT-Client (`mqtt-client`)](https://github.com/iobroker-community-adapters/ioBroker.mqtt-client).
 
 **So richtest Du es ein:**
-1. Öffne den MQTT-Adapter in ioBroker
-2. Trage als URL ein: `wss://mqtt.makerspace-partheland.de:443/mqtt`
-3. Aktiviere "WebSocket" und "SSL"
-4. Port: `443`
-5. Path: `/mqtt`
+1. Installiere den Adapter **MQTT-Client** und öffne seine Instanzeinstellungen.
+2. Trage unter „MQTT Broker IP“ `mqtt.makerspace-partheland.de` und als Port `443` ein.
+3. Aktiviere „Verwende WebSockets“, „SSL“ und „Signierte Zertifikate erzwingen“.
+4. Wähle als „MQTT Version“ `3.1.1`. Lasse Benutzername und Kennwort leer.
+5. Entferne den voreingestellten Wert `ioBroker` aus „Präfix für subscribe Topics“.
+6. Trage unter „Zusätzliche subscriptions“ die gewünschten Topics durch Kommas getrennt ein, zum Beispiel:
+
+   ```text
+   senseBox:home/+,senseBox:home/median,sensoren/+
+   ```
+
+7. Speichere die Einstellungen und starte die Adapterinstanz.
+
+Der öffentliche Zugang akzeptiert auch den WebSocket-Pfad `/`, den dieser Adapter verwendet. Ein separates Feld für den Pfad `/mqtt` ist deshalb nicht erforderlich.
 
 **Welche Daten willst Du empfangen?**
 - `senseBox:home/+`: alle senseBox:home Stationen
 - `senseBox:home/median`: Medianwerte
 - `sensoren/+`: spezialisierte Sensoren (Wasserstand etc.)
 
-ioBroker wandelt die Daten automatisch in Objekte um. Mit JavaScript-Scripts kannst Du die Daten noch weiter verarbeiten, zum Beispiel Durchschnittswerte berechnen oder Benachrichtigungen verschicken.
+Der Adapter legt für empfangene Topics Datenpunkte an. Die JSON-Nachrichten kannst Du mit JavaScript-Skripten weiterverarbeiten, zum Beispiel Durchschnittswerte berechnen oder Benachrichtigungen verschicken.
 
 ### Praxisbeispiele aus dem Partheland
 
@@ -121,7 +130,7 @@ Du willst konkrete Anwendungsfälle sehen? Auf unserer Seite [Praxisbeispiele](/
 
 ## Sensordaten im Unterricht
 
-Die Sensordaten eignen sich hervorragend für den Unterricht, und zwar in verschiedenen Fächern. Es gibt zwei grundsätzliche Ansätze:
+Die Sensordaten eignen sich für den Unterricht in verschiedenen Fächern. Es gibt zwei grundsätzliche Ansätze:
 
 ### Vorhandene Daten analysieren
 

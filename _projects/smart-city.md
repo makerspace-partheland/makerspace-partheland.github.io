@@ -2,7 +2,7 @@
 layout: page
 title: Smart City - Umweltsensoren und mehr
 permalink: /projekte/smart-city/
-excerpt: LoRaWAN-basierte Umweltsensoren für die intelligente Stadt der Zukunft
+excerpt: Umweltmessstationen und LoRaWAN im Partheland
 category: Smart City & IoT
 ---
 
@@ -13,17 +13,28 @@ category: Smart City & IoT
 
 # Smart City Partheland
 
-Im Rahmen des <a rel="noreferrer noopener" href="https://open-government-kommunen.de/" target="_blank">Regionalen Open Government Labor</a> der Stadt Brandis beteiligen wir uns seit 2022 am Aufbau und dem stetigen Betrieb von Bürger-Umweltmessstationen und eines LoRaWAN Netzwerkes in der Gemeinde Brandis. Hier kümmern wir uns ehrenamtlich um alle anfallenden Dinge.
+Im Rahmen des <a rel="noreferrer noopener" href="https://open-government-kommunen.de/" target="_blank">Regionalen Open Government Labor</a> der Stadt Brandis beteiligen wir uns seit 2022 am Aufbau und dem stetigen Betrieb von Bürger-Umweltmessstationen und eines LoRaWAN Netzwerkes in der Gemeinde Brandis. Diese Aufgaben übernehmen wir ehrenamtlich.
 
-Seit Dezember 2022 unterstützen wir alle weiteren <a rel="noreferrer noopener" href="https://partheland.de" target="_blank">Partheland</a> Kommunen (Borsdorf, Naunhof mit Belgershain und Parthenstein, Großpösna und Machern) im Rahmen des Smart City Projektes durch Schulung von sogenannten Multiplikatoren, welche vor Ort die jeweiligen Ansprechpartner sind. Zudem stellen wir hierfür ehrenamtlich die Software für die jeweiligen Umweltmessstationen zur Verfügung, bereiten im Hintergrund alles für den Datentransfer vor, überwachen stetig die Stationen und Infrastruktur und viele weitere Dinge die man nicht sieht.
+Seit Dezember 2022 unterstützen wir alle weiteren <a rel="noreferrer noopener" href="https://partheland.de" target="_blank">Partheland</a> Kommunen (Borsdorf, Naunhof mit Belgershain und Parthenstein, Großpösna und Machern) im Rahmen des Smart City Projektes durch Schulung von sogenannten Multiplikatoren, welche vor Ort die jeweiligen Ansprechpartner sind. Die Software für die Umweltmessstationen wird von uns bereitgestellt, und der Datentransfer wird vorbereitet. Zudem erfolgt eine laufende Überwachung der Stationen sowie der Infrastruktur, ergänzt durch weitere Hintergrundaktivitäten. Alle genannten Tätigkeiten werden ehrenamtlich ausgeführt.
 
-Alle stationären Umweltsensoren werden mittels <a rel="noreferrer noopener" href="home" target="_blank">senseBox:home</a> und mit der stromsparenden <a href="https://www.thethingsnetwork.org" target="_blank" rel="noreferrer noopener">LoRaWAN </a>Anbindung realisiert und im gesamten Partheland aufgebaut.
+Alle stationären Umweltsensoren werden mittels <a rel="noreferrer noopener" href="https://sensebox.de/de/products-home" target="_blank">senseBox:home</a> und mit der stromsparenden <a href="https://www.thethingsnetwork.org" target="_blank" rel="noreferrer noopener">LoRaWAN </a>Anbindung realisiert und im gesamten Partheland aufgebaut.
 
-![LoRaWAN Station mit Sensorik](/assets/images/projekte/smart-city/lorawan-station.jpg)
+<div class="columns is-centered">
+  <div class="column is-half-tablet">
+    <figure class="card">
+      <div class="card-image">
+        {% include image-modal.html link="/assets/images/projekte/smart-city/lorawan-station.jpg" large_link="/assets/images/projekte/smart-city/lorawan-station.jpg" alt="LoRaWAN Station mit Sensorik" %}
+      </div>
+      <figcaption class="card-content">
+        <div class="content is-size-7 has-text-centered">LoRaWAN Station mit Sensorik</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
 ## Bürgermessstationen
 
-Die Bürgermessstationen werden mittels **Patenschaft** betrieben. Dies bedeutet, es müssen ein paar **Regeln eingehalten** **werden**. Die Station wird durch die jeweilige Kommune **für die Bürger** bereitgestellt. Der Makerspace Partheland e.V. für Brandis, sowie die Multiplikatoren vor Ort im Partheland, befähigen den entsprechenden Paten zum Aufbau und geben Tipps. Der **Betrieb** und die (mindestens) jährliche **Wartung** wird **durch den Paten selbständig durchgeführt**.
+Die Bürgermessstationen werden durch **Patenschaft** betrieben. Dabei müssen einige **Regeln eingehalten werden**. Die Station wird durch die jeweilige Kommune **für die Bürger** bereitgestellt. Der Makerspace Partheland e.V. für Brandis sowie die Multiplikatoren vor Ort im Partheland befähigen den entsprechenden Paten zum Aufbau und geben Tipps. Der **Betrieb** und die (mindestens) jährliche **Wartung** werden **durch den Paten selbständig durchgeführt**.
 
 Eine senseBox:home besteht im Partheland aus folgenden Sensoren:
 
@@ -32,7 +43,7 @@ Eine senseBox:home besteht im Partheland aus folgenden Sensoren:
 - Luftdruck
 - Beleuchtungsstärke
 - UV-Intensität
-- Feinstaubsensor (PM10 und 2.5)
+- Feinstaubsensor (PM10 und PM2.5)
 - Lautstärke (Mittelwert des Lautstärkepegels über eine Minute ohne Gesprächsaufzeichnung)
 
 Die Daten werden auf verschiedenen Plattformen visuell dargestellt. Auf der zu den senseBoxen zugehörigen Seite [openSenseMap](https://opensensemap.org) findest Du eine Übersicht aller Stationen. Für detailliertere und längerfristige Datenauswertungen steht unsere eigene [Sensoren-Seite](https://sensoren.makerspace-partheland.de/) zur Verfügung. Eine Karte aller Stationen mit Messwerten und Gateways findest Du auf [map.makerspace-partheland.de](https://map.makerspace-partheland.de). Die Sensordaten sind auch in der Partheland App (Android und iOS) unter dem Menüpunkt "Umweltdaten" als Karte verfügbar.

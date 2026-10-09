@@ -10,6 +10,11 @@
 
 /* === CUSTOM COMPONENTS - Erweiterte CSS-Variablen === */
 
+/* Text-Codeblöcke verwenden die Hell-/Dunkel-Farben des Themes. */
+.language-text .highlight {
+  background-color: var(--bulma-pre-background);
+  color: var(--bulma-pre);
+}
 
 .button.is-success {
   color: white !important;  /* Explizit weißer Text für Vereinsgrün */

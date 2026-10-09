@@ -1,58 +1,93 @@
 ---
 layout: page
-title: Geigerzähler mit MySensors-Anbindung
+title: Geigerzähler mit SBM-20-Zählrohr
 permalink: /projekte/elektronik-sensoren/geigerzaehler-mysensors/
-excerpt: Bauanleitung für einen Geigerzähler mit SBM-20 Zählrohr und MySensors-Integration
+date: 2019-11-26
+excerpt: Aufbau eines Geigerzählers mit SBM-20-Zählrohr, KiCAD-Dateien und Bauteilliste.
 category: Elektronik & Sensoren
 ---
 
 <picture>
-            <source type="image/webp" srcset="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_fertig.webp">
-            <img src="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_fertig.jpg" alt="Geigerzähler mit SBM-20 Zählrohr - Fertig aufgebaut" class="title-image">
-          </picture>
+  <source type="image/webp" srcset="{{ '/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_fertig.webp' | relative_url }}">
+  <img src="{{ '/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_fertig.jpg' | relative_url }}" alt="Bestückte Geigerzähler-Platine mit eingesetztem SBM-20-Zählrohr" class="title-image">
+</picture>
 
-## Geigerzähler mit Anbindung als MySensors-Node
+## Geigerzähler mit SBM-20-Zählrohr
 
-Heute soll es um ein Projekt gehen, dass den Elektroniker oder die Elektronikerin in uns weckt. Seit Tschernobyl und Fukushima weiß eigentlich jeder im Großen und Ganzen, was ein Geigerzähler ist.
+Dieser Geigerzähler verwendet ein SBM-20-Zählrohr zur Erfassung von Beta- und Gamma-Strahlung. Die Schaltung basiert auf den [Arbeiten von Jeff Keyzer (MightyOhm)](https://mightyohm.com/blog/products/geiger-counter/). Für das Projekt wurden Schaltung und Platine in KiCAD umgesetzt.
 
-Bis vor einiger Zeit war die private Beschaffung oder der Bau eines Geigerzählers für die meisten uninteressant und unrentabel. Die Ereignisse in Fukushima haben das Interesse an der Realisierung eines eigenen Geigerzählers steigen lassen. Eine große Anzahl privater Geigerzähler haben in der Gegend von Fukushima geholfen, valide Messergebnisse der Strahlenbelastung neben den staatlichen Messungen und den Messungen von Tepco zu sammeln.
+Das Zählrohr wird mit 400 V betrieben. Die Schaltung besteht aus einer Hochspannungserzeugung mit einem 555-basierten Flyback-Treiber und einem Impulsformer. Dieser gibt die Zählimpulse mit 5-V-TTL-Pegel aus. Der Ausgang lässt sich mit einem dafür geeigneten digitalen Eingang eines Arduino verbinden.
 
-Die Basics über die generelle Funktionsweise eines Geigerzählers bzw. der darin eingesetzten Geiger-Müller-Zählröhren lasse ich hier weg. Wer sich darüber informieren möchte, dem empfehle ich diese tolle Webseite zum Thema: [http://einstlab.web.fc2.com/geiger/geiger.html](http://einstlab.web.fc2.com/geiger/geiger.html) (Die Webseite ist in japanisch verfasst. Eine Übersetzung per Browser reicht zum Verständnis weitgehend aus).
+Grundlagen zu Geiger-Müller-Zählrohren beschreibt die [japanischsprachige Seite von Einstlab](http://einstlab.web.fc2.com/geiger/geiger.html).
 
-Das Projekt stützt sich auf die Arbeiten von Jeff Keyzer ([https://mightyohm.com/blog/products/geiger-counter/](https://mightyohm.com/blog/products/geiger-counter/)).
+<div class="columns is-centered">
+  <div class="column is-three-quarters-desktop">
+    <figure class="card">
+      <div class="card-image">
+        {% include image-modal.html link="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Datenblatt_SBM20.webp" large_link="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Datenblatt_SBM20.jpg" alt="Russischsprachiges Datenblatt des SBM-20 mit Maßzeichnung und elektrischen Kenndaten." %}
+      </div>
+      <figcaption class="card-content">
+        <div class="content is-size-7 has-text-centered">Datenblatt des SBM-20-Zählrohrs</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
-Ich habe die Schaltung in einer robusten und universellen Platinenanordnung für das Geiger-Müller-Zählrohr SBM-20 aus russischer Produktion realisiert. Die SBM-20 ist eine Zählrohr zur Detektion von Beta- und Gamma-Strahlung und arbeitet mit einer Betriebsspannung von 400V. Der Impulsausgang mit 5V TTL-Pegel kann direkt an einem Digital I/O eines Arduino angeschlossen werden.
+### Schaltung und Bauteile
 
-![Datenblatt der SBM-20](/assets/images/projekte/elektronik-sensoren/geigerzaehler/Datenblatt_SBM20.jpg)
+- [KiCAD-Dateien für Schaltung und Platine (ZIP)]({{ '/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_KiCAD.zip' | relative_url }})
+- [Bauteilliste (ODS)]({{ '/assets/images/projekte/elektronik-sensoren/geigerzaehler/BOM.ods' | relative_url }})
 
-Schaltung und Platine wurde in KiCAD realisiert und stehen als ZIP-Archiv zu Verfügung.
+<div class="columns is-centered">
+  <div class="column is-three-quarters-desktop">
+    <figure class="card">
+      <div class="card-image">
+        {% include image-modal.html link="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_Anschluss.webp" large_link="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_Anschluss.jpg" alt="Bestückte Platine mit markierten Testpunkten TP1 und TP2 sowie den Anschlüssen GND, TTL-Ausgang und +5 V." %}
+      </div>
+      <figcaption class="card-content">
+        <div class="content is-size-7 has-text-centered">Pinbelegung und Lage der Testpunkte</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
-**Downloads:**
-- [Geigerzähler KiCAD-Dateien](/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_KiCAD.zip)
-- [Bauteilliste (BOM)](/assets/images/projekte/elektronik-sensoren/geigerzaehler/BOM.ods)
+<div class="notification is-danger">
+  <strong>Achtung: Hochspannung.</strong> Die Schaltung arbeitet mit 400 V und kann auch deutlich höhere Spannungen erzeugen. Bei Inbetriebnahme und Betrieb ist deshalb Vorsicht erforderlich. Die angegebenen Bauteilwerte und insbesondere die Spannungsfestigkeit müssen eingehalten werden. Nur die Bauteile aus der Stückliste verwenden.
+</div>
 
-Die Originalschaltung ist relativ unspektakulär und besteht aus zwei funktionellen Abschnitten. Zum einen die Hochspannungserzeugung für das Zählrohr per 555-basierender Flyback-Treiber-Schaltung und zum anderen der Impulsformer für die Ausgabe der Zählimpulse im 5V TTL-Pegel.
+### Aufbau und Inbetriebnahme
 
-> **⚠️ Wichtiger Hinweis:**  
-> Die Schaltung arbeitet mit einer Hochspannung von 400V! Die Hochspannungserzeugung ist in der Lage, noch wesentlich höhere Spannungen zu generieren! Auch wenn die Schaltung keine signifikanten Ströme bereitstellen kann, ist dennoch mit Vorsicht bei der Inbetriebnahme und während des Betriebes zu arbeiten! Die angegebenen Bauteilwerte, vor allem hinsichtlich der Spannungsbelastbarkeit sind unbedingt einzuhalten und nur die Bauteile aus der Stückliste sind zu verwenden!
+#### Platine bestücken
 
-## Aufbau und Inbetriebnahme
+Die Bauteile in dieser Reihenfolge bestücken: Widerstände, Dioden, Kondensatoren, Transistoren, IC, Trimmpoti, Spule und Steckverbinder. **Das SBM-20-Zählrohr bleibt zunächst ausgebaut.**
 
-Die Platine wird in der Reihenfolge Widerstände, Dioden, Kondensatoren, Transistoren, IC, Trimmpoti, Spule und Steckverbinder bestückt. Wichtig: Die SBM-20 wird jetzt noch nicht montiert.
+#### Hochspannung einstellen
 
-Zur Inbetriebnahme (immer noch ohne SBM-20!) wird die Betriebsspannung von 5V (+5V an Pin 1 von J3, Masse an Pin 3 von J3) angelegt. Als nächstes wird über das Trimmpoti VR1 die Hochspannung zur Versorgung der SBM-20 auf 400V eingestellt.
+Ohne eingesetztes Zählrohr die Betriebsspannung von 5 V anlegen: +5 V an Pin 1 von J3, Masse an Pin 3. Die Hochspannung wird anschließend mit dem Trimmpoti VR1 auf 400 V eingestellt.
 
-Dazu einige Hinweise:  
-Die Hochspannungsschaltung ist dafür ausgelegt, die SBM-20 (Innenwiderstand von rund 1GOhm) zu versorgen. Ein Multimeter hat im Spannungsmessbereich gewöhnlich einen Eingangswiderstand von rund 1MOhm bis 10MOhm. Wird das Multimeter direkt mit Testpunkt TP1 verbunden, ergeben sich grobe Messfehler. Die 10MOhm Eingangswiderstand meines, für die Messung genutzten, UNI-T61D-Multimeters reichen als Last aus, die Hochspannungserzeugung auf einen Wert von ca. 200-260V zusammen-brechen zu lassen. Um die Hochspannung fehlerfrei zu messen, ist ein 1GOhm-Widerstand in Reihe zum Multimeter zu schalten.
+Die Hochspannungsschaltung ist für das SBM-20 mit einem Innenwiderstand von rund 1 GΩ ausgelegt. Ein Multimeter hat im Spannungsmessbereich gewöhnlich einen Eingangswiderstand von etwa 1 bis 10 MΩ. Wird es direkt an TP1 angeschlossen, ergeben sich grobe Messfehler. Beim im Projekt verwendeten UNI-T61D mit 10 MΩ Eingangswiderstand sank die Spannung dabei auf etwa 200 bis 260 V. Für die Messung wird deshalb ein Widerstand von 1 GΩ in Reihe zum Multimeter geschaltet.
 
-![Messung und Einstellen der Hochspannung für die SBM-20 mit einem Multimeter](/assets/images/projekte/elektronik-sensoren/geigerzaehler/Spannungsteiler_erklärt.png)
+Bei einem Multimeter mit 10 MΩ Eingangswiderstand entsprechen die 400 V an TP1 einer Anzeige von etwa 3,96 V. Dieser Wert gilt für den in der Abbildung gezeigten Spannungsteiler aus 1 GΩ und 10 MΩ.
 
-Wenn ihr diesen Schritt des Hochspannungsabgleiches nicht selbst durchführen wollt, unterstützen Euch Leute im Makerspace gern bei dieser Arbeit.
+<div class="columns is-centered">
+  <div class="column is-three-quarters-desktop">
+    <figure class="card">
+      <div class="card-image">
+        {% include image-modal.html link="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Spannungsteiler_erklärt.webp" large_link="/assets/images/projekte/elektronik-sensoren/geigerzaehler/Spannungsteiler_erklärt.png" alt="Messschaltung mit 1-GΩ-Vorwiderstand und 10-MΩ-Multimeter zwischen TP1 und GND; 3,96 V Anzeige entsprechen 400 V an TP1." %}
+      </div>
+      <figcaption class="card-content">
+        <div class="content is-size-7 has-text-centered">Messung der Hochspannung mit Vorwiderstand und Multimeter</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
-Ist die Hochspannung auf 400V eingestellt, kann jetzt die SBM-20 eingesetzt werden. Dazu die Schaltung unbedingt von der Versorgungsspannung abklemmen und die Polung der SBM-20 beachten (die Anode ist meist mit einem "+"-Symbol markiert).
+Beim Hochspannungsabgleich kann der Makerspace unterstützen.
 
-![Pinbelegung und Lage der Testpunkte](/assets/images/projekte/elektronik-sensoren/geigerzaehler/Geigerzähler_Anschluss.jpg)
+#### Zählrohr einsetzen und Impulse prüfen
 
-Ist alles soweit komplett, kann jetzt z.B. mit einem Oszilloskop an TP2 des Steckverbinders J3 gemessen werden, ob Zählimpuls ausgegeben werden. Da mit normaler Umgebungsstrahlung die Ausgabe von Impulsen in langen Abständen erfolgt, kann für eine schnelle Impulsfolge geschummelt werden. Einfach eine Armbanduhr oder einen Wecker, der über, im Dunklen grün leuchtende, Ziffern oder Zeiger verfügt, in ca. 1cm Abstand zu SBM-20 halten und sich über deutlich mehr Impulse freuen.
+Nach dem Abgleich auf 400 V die Schaltung von der Versorgungsspannung trennen. Erst danach das SBM-20 einsetzen und dabei die Polung beachten. Die Anode ist meist mit „+“ markiert.
 
-So, die Schaltung ist soweit fertig. Jetzt muss die Messung des Geigerzählers als Umweltsensor auswertbar gemacht werden. Ich bin großer Fan des [MySensors](http://www.mysensors.org)-Ökosystems. Einen Arduino-Sketch zur MySensors-Integration des Geigerzählers findet ihr im ZIP-Archiv.
+Nach dem Wiederanschließen der Versorgungsspannung lässt sich mit einem Oszilloskop an TP2 prüfen, ob Zählimpulse ausgegeben werden. Bei normaler Umgebungsstrahlung können zwischen den Impulsen längere Abstände liegen.
+
+Für eine schnellere Impulsfolge kann eine Armbanduhr oder ein Wecker mit im Dunkeln grün leuchtenden Ziffern oder Zeigern in etwa 1 cm Abstand zum SBM-20 gehalten werden.

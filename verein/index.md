@@ -78,8 +78,8 @@ permalink: /verein/
                 Smart City Partheland
               </h3>
               <div class="content body-text card-content-body">
-                <p>Unterstützung, Aufbau und Betrieb von Bürger-Umweltmessstationen und Senoren mit LoRaWAN-Netzwerk für das gesamte Partheland.</p>
-                <p><strong>Tätigkeiten:</strong> Software-Bereitstellung, Schulungungen, Betrieb und Überwachung der Infrastruktur</p>
+                <p>Unterstützung, Aufbau und Betrieb von Bürger-Umweltmessstationen und Sensoren mit LoRaWAN-Netzwerk für das gesamte Partheland.</p>
+                <p><strong>Tätigkeiten:</strong> Software-Bereitstellung, Schulungen, Betrieb und Überwachung der Infrastruktur</p>
               </div>
             </div>
           </a>
@@ -108,7 +108,7 @@ permalink: /verein/
                 Unser Standort
               </h3>
               <div class="content body-text card-content-body">
-                <p><strong>Aktuell:</strong> Temporärer Makerspace im alten Gemeindeamt Beucha</p>
+                <p><strong>Aktuell:</strong> Coworking Brandis</p>
                 <p><strong>Zukunft:</strong> Kulturhaus Beucha (nach Restaurierung)</p>
                 <p><strong>Philosophie:</strong> Aus Spaß an der Freude, ohne Zwang oder Druck</p>
               </div>

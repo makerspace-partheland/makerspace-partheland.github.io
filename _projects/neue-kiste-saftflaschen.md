@@ -2,60 +2,97 @@
 layout: page
 title: Neue Kiste für alte Saftflaschen
 permalink: /projekte/reparatur-nachhaltigkeit/neue-kiste-saftflaschen/
-excerpt: Nachhaltige Lösung für die Aufbewahrung von wiederverwendbaren Saftflaschen
+excerpt: Nachbau einer Holzkiste für 0,7-Liter-Saftflaschen mit Maßen und Bauanleitung
 category: Reparatur & Nachhaltigkeit
-gallery:
-  - image_path: /assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_alt.jpg
-    alt: Alte Kiste - Verschleiß
-    caption: Alte Kiste - Verschleiß
-  - image_path: /assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.jpg
-    alt: Neue Kiste - Fertig
-    caption: Neue Kiste - Fertig
-  - image_path: /assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kasten_Plaste.jpg
-    alt: Plastikkasten - Vergleich
-    caption: Plastikkasten - Vergleich
-  - image_path: /assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/TGL-Flasche.jpg
-    alt: TGL-Flasche - Typ
-    caption: TGL-Flasche - Typ
 ---
 
 <picture>
-            <source type="image/webp" srcset="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.webp">
-            <img src="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.jpg" alt="Neue Holzkiste für Saftflaschen" class="title-image">
-          </picture>
+  <source type="image/webp" srcset="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.webp' | relative_url }}">
+  <img src="{{ '/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.jpg' | relative_url }}" alt="Neue Holzkiste mit Saftflaschen" class="title-image" style="object-position: 50% 25%;">
+</picture>
 
 ## Neue Kiste für alte Saftflaschen
 
-Ich nutze zum Abfüllen von selbst hergestellten Saft oder Sirup gern die 0,7l Glasflaschen aus DDR-Zeiten, auch TGL*-Flasche genannt. Diese Glasflaschen sind recht dickwandig, in drei Farben (klar, grün und braun) verfügbar und können mit Standard 26mm-Kronenkorken verschlossen werden. Von der Form her sehen sie den 0,5l-"Euro"-Bierflaschen ähnlich. Auf Dachböden, in Kellern oder Scheunen finden sich hin und wieder größere Bestände, die meist über Kleinanzeigen veräußert werden.
+Für selbst hergestellten Saft oder Sirup wurden hier 0,7-Liter-Glasflaschen aus DDR-Zeiten verwendet, auch TGL*-Flaschen genannt. Sie sind dickwandig, in Klar, Grün und Braun erhältlich und lassen sich mit Standard-Kronenkorken mit 26 mm Durchmesser verschließen. Ihre Form ähnelt den 0,5-Liter-Euro-Bierflaschen. Größere Altbestände aus Dachböden, Kellern oder Scheunen werden häufig über Kleinanzeigen angeboten.
 
-Für den Transport dieser Flaschen gibt es ebenfalls passende Kästen. Erst als Holzkasten, ab den 1980er-Jahren auch als Plastikkästen hergestellt. Die Plastikkästen sind natürlich nicht sehr umwelt-freundlich im Recycling, außerdem verflüchtigt sich nach den vielen Jahren der Weichmacher.
+<div class="columns is-centered is-multiline">
+<div class="column is-half-desktop">
+  <figure class="card">
+    <div class="card-image">
+      {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/TGL-Flasche.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/TGL-Flasche.jpg" alt="0,7-Liter-TGL-Saftflaschen in Klar, Grün und Braun." %}
+    </div>
+    <figcaption class="card-content">
+      <div class="content is-size-7 has-text-centered">0,7-Liter-TGL-Saftflaschen in Klar, Grün und Braun.</div>
+    </figcaption>
+  </figure>
+</div>
+</div>
 
-Die Holzkästen überstehen die jahrelange Lagerung in feuchten Kellern oder Scheunen nicht und haben dann einen entsprechend miesen Zustand. Da mir mehrere Transportkästen für meine Flaschen fehlten, lag die Idee nahe, die Holzkästen nachzubauen. Zum Glück stand mir ein einzelner, morscher und wurmzerfressener Kasten zur Verfügung, von dem ich die Konstruktion inkl. der Maße abnehmen konnte. Das CAD-Modell im Sketchup-Format bzw. im TurboCAD-Format findet Ihr [hier](https://sync.coccius.net/index.php/s/HBNS99HHDFYcLFr).
+Die passenden Transportkästen wurden zunächst aus Holz und ab den 1980er-Jahren auch aus Kunststoff hergestellt. Bei den Kunststoffkästen sind das Recycling und die über die Jahre entweichenden Weichmacher nachteilig.
 
-## Konstruktion
+<div class="columns is-centered is-multiline">
+<div class="column is-half-desktop">
+  <figure class="card">
+    <div class="card-image">
+      {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kasten_Plaste.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kasten_Plaste.jpg" alt="Roter Kunststoffkasten mit Glasflaschen" %}
+    </div>
+    <figcaption class="card-content">
+      <div class="content is-size-7 has-text-centered">Kunststoffkasten für zwölf Saftflaschen.</div>
+    </figcaption>
+  </figure>
+</div>
+</div>
 
-Die Konstruktion ist recht simpel. Der Kasten besteht aus Holzlatten unterschiedlicher Länge. Die Latten haben eine einheitliche Dicke von 15mm und eine einheitliche Breite von 60mm.
+Alte Holzkästen können nach jahrelanger Lagerung in feuchten Kellern oder Scheunen stark beschädigt sein. Für die vorhandenen Flaschen fehlten mehrere Transportkästen, deshalb sollten neue Holzkästen entstehen. Ein morscher, wurmzerfressener Kasten diente als Vorlage für Konstruktion und Maße.
 
-Für einen Kasten wird folgendes Material benötigt:
+<div class="columns is-centered is-multiline">
+<div class="column is-two-thirds-desktop">
+  <figure class="card">
+    <div class="card-image">
+      {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_alt.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_alt.jpg" alt="Der alte Holzkasten als Vorlage." %}
+    </div>
+    <figcaption class="card-content">
+      <div class="content is-size-7 has-text-centered">Der alte Holzkasten als Vorlage.</div>
+    </figcaption>
+  </figure>
+</div>
+</div>
 
-- **6x Holzlatte** 380mm Länge, 60mm Breite, 15mm Dicke (Seitenteile lang; Cyan im CAD-Modell markiert)
-- **2x Holzlatte** 300mm Länge, 60mm Breite, 15mm Dicke (Verstärkung Boden; Grau im CAD-Modell markiert)
-- **4x Holzlatte** 290mm Länge, 60mm Breite, 15mm Dicke (Pfosten; Blau im CAD-Modell markiert)
-- **4x Holzlatte** 270mm Länge, 60mm Breite, 15mm Dicke (Boden; Magenta im CAD-Modell markiert)
-- **6x Holzlatte** 240mm Länge, 60mm Breite, 15mm Dicke (Seitenteile kurz; Grün im CAD-Modell markiert)
-- **Nägel** 25mm lang
-- **Schrauben Senkkopf** 3,5x35mm, ideal sind Edelstahlschrauben
+### Material und Maße
 
-Es können auch Holzlatten unterschiedlicher Dicken verarbeitet werden. Bei starker Abweichung von 15mm Dicke, sind die Längenmaße der einzelnen Latten entsprechend anzupassen.
+Der Kasten besteht aus Holzlatten unterschiedlicher Länge. Alle Latten sind 60 mm breit und 15 mm dick. Für einen Kasten werden benötigt:
 
-## Aufbau
+- **6 Holzlatten, 380 mm lang:** lange Seitenteile, im CAD-Modell cyan markiert
+- **2 Holzlatten, 300 mm lang:** Bodenverstärkung, grau markiert
+- **4 Holzlatten, 290 mm lang:** Pfosten, blau markiert
+- **4 Holzlatten, 270 mm lang:** Boden, magenta markiert
+- **6 Holzlatten, 240 mm lang:** kurze Seitenteile, grün markiert
+- **Nägel, 25 mm lang**
+- **Senkkopfschrauben, 3,5 × 35 mm**, vorzugsweise aus Edelstahl
 
-Der Aufbau geht wie folgt:
+Andere Lattenstärken sind möglich. Bei deutlicher Abweichung von 15 mm müssen die Längen der einzelnen Latten entsprechend angepasst werden.
 
-Zuerst werden die beiden kurzen Seitenteile hergestellt. Dazu die Pfosten mit den kurzen Seitenteilen mit den Abstandsmaßen nach dem CAD-Modell vernageln (2-3 Nägel Verbindung). Dann die vollständigen kurzen Seitenteile mit den langen Seitenteilen verbinden. Dazu ebenfalls Nägel verwenden. Für die Fixierung der unteren langen Seitenlatte links und rechts an den Pfosten werden jeweils zwei Schrauben pro Verbindung verwendet. Im Anschluß wird der Boden aus den vier Bodenlatten und den zwei Latten zur Bodenverstärkung hergestellt (Verbindungen mit Nägeln ausführen) und mit den unteren langen Seitenlatten links und rechts verschraubt.
+### Zusammenbau
 
-Viel Spaß beim Nachbauen!
+1. Die beiden kurzen Seitenteile herstellen: Pfosten und kurze Seitenlatten mit den Abständen aus dem CAD-Modell vernageln. Pro Verbindung zwei bis drei Nägel verwenden.
+2. Die kurzen Seitenteile mit den langen Seitenlatten verbinden und ebenfalls vernageln.
+3. Die untere lange Seitenlatte links und rechts mit jeweils zwei Schrauben pro Verbindung an den Pfosten befestigen.
+4. Den Boden aus den vier Bodenlatten und den zwei Verstärkungslatten zusammennageln.
+5. Den Boden mit den unteren langen Seitenlatten links und rechts verschrauben.
+
+<div class="columns is-centered is-multiline">
+<div class="column is-two-thirds-desktop">
+  <figure class="card">
+    <div class="card-image">
+      {% include image-modal.html link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.webp" large_link="/assets/images/projekte/reparatur-nachhaltigkeit/saftflaschen/Kiste_neu.jpg" alt="Die neue Holzkiste mit Saftflaschen." %}
+    </div>
+    <figcaption class="card-content">
+      <div class="content is-size-7 has-text-centered">Die neue Holzkiste mit Saftflaschen.</div>
+    </figcaption>
+  </figure>
+</div>
+</div>
 
 ---
 
-*TGL bedeutet "Technischen Normen, Gütevorschriften und Lieferbedingungen" und beschrieb zu DDR-Zeiten Standards, ähnlich wie die DIN ("Deutsche Industrie-Norm") der Bundesrepublik. Im Gegensatz zu DIN, deren Inhalte Empfehlungen darstellen, hatte die TGL Gesetzescharakter.*
+*TGL bedeutet „Technische Normen, Gütevorschriften und Lieferbedingungen“ und bezeichnete zu DDR-Zeiten Standards, ähnlich der DIN („Deutsche Industrie-Norm“) in der Bundesrepublik. Im Gegensatz zur DIN, deren Inhalte Empfehlungen darstellen, hatte die TGL Gesetzescharakter.*

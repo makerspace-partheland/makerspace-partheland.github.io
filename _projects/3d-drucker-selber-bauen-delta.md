@@ -1,69 +1,82 @@
 ---
 layout: page
-title: 3D-Drucker selber bauen - Delta-Konstruktion
+title: 3D-Drucker selber bauen – Delta-Konstruktion
 permalink: /projekte/3d-druck-konstruktion/3d-drucker-selber-bauen-delta/
-excerpt: Bauanleitung für einen selbstgebauten Delta-3D-Drucker mit Open-Source-Komponenten
+excerpt: Selbstbau von Delta-Druckern mit abgetrenntem Elektronikraum und anpassbarer Höhe
 category: 3D-Druck & Konstruktion
-gallery:
-  - image_path: /assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-fertig.jpg
-    alt: Delta-3D-Drucker - Fertig aufgebaut
-    caption: Delta-3D-Drucker - Fertig aufgebaut
-  - image_path: /assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-konstruktion.jpg
-    alt: Delta-3D-Drucker - Konstruktionsdetails
-    caption: Delta-3D-Drucker - Konstruktionsdetails
-  - image_path: /assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-detail.jpg
-    alt: Delta-3D-Drucker - Mechanische Komponenten
-    caption: Delta-3D-Drucker - Mechanische Komponenten
 ---
 
 <picture>
-            <source type="image/webp" srcset="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-fertig.webp">
-            <img src="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-fertig.jpg" alt="Delta-3D-Drucker - Fertig aufgebaut" class="title-image">
-          </picture>
+  <source type="image/webp" srcset="{{ '/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-detail.webp' | relative_url }}">
+  <img src="{{ '/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-detail.jpg' | relative_url }}" alt="Druckkopf des Delta-Druckers über einem gelben Druckteil" class="title-image" style="object-position: 50% 40%;">
+</picture>
 
-## 3D-Drucker selber bauen (Delta)
+## 3D-Drucker selber bauen – Delta-Konstruktion
 
-Der Bau eines eigenen 3D-Druckers ist ein spannendes Projekt, das sowohl technisches Verständnis als auch handwerkliches Geschick erfordert. In diesem Artikel beschreibe ich den Bau eines Delta-3D-Druckers mit verbesserten Sicherheits- und Funktionsmerkmalen.
+Der Selbstbau mehrerer Delta-Drucker gehörte zu den ersten Projekten des Makerspaces. Ziel war eine Konstruktion, die sich mit wenig Aufwand nachbauen lässt.
 
-## Sicherheitsverbesserungen
+<div class="columns is-centered">
+  <div class="column is-two-thirds-desktop">
+    <figure class="card">
+      <div class="card-image">
+        {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-fertig.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-fertig.jpg" alt="Delta-Drucker mit drei Führungen, Filamentrolle und gelbem Druckteil" %}
+      </div>
+      <figcaption class="card-content">
+        <div class="content is-size-7 has-text-centered">Der aufgebaute Delta-Drucker.</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
-Einer der wichtigsten Aspekte beim Bau eines 3D-Druckers ist die Sicherheit. Ich habe mehrere Verbesserungen implementiert:
+### Konstruktionsvorgaben
 
-### Temperaturüberwachung
-- **Thermistor-Überwachung**: Kontinuierliche Überwachung der Düsen- und Bett-Temperatur
-- **Überhitzungsschutz**: Automatische Abschaltung bei kritischen Temperaturen
-- **Fehlerbehandlung**: Sofortige Reaktion auf Sensorfehler
+Für die Konstruktion galten folgende Vorgaben:
 
-### Elektrische Sicherheit
-- **Spannungsüberwachung**: Überwachung der 12V-Versorgung
-- **Kurzschlussschutz**: Integrierte Sicherungen für alle Stromkreise
-- **Erdung**: Korrekte Erdung aller metallischen Komponenten
+- Schutz vor versehentlichem Berühren der 230-V-Versorgung
+- Abgetrennter Elektronikraum mit 70 mm Höhe
+- Ordentliche, möglichst unsichtbare Kabelverlegung
+- Fußplatte, die auf den Fotos nicht zu sehen ist
+- Verbesserter Strömungsverlauf der Hotendkühlung
+- Abgesetztes Display
+- Bowden-Extruder
+- Geräuschreduzierung durch Gleitlager
+- Internes Netzteil und Kaltgeräteanschluss
+- Einfacher Nachbau ohne unnötige Verzierungen
+- Höhere Druckgeschwindigkeiten als üblich
+- Leicht anpassbare Höhe
 
-## Funktionsverbesserungen
+<div class="columns is-centered">
+  <div class="column is-two-thirds-desktop">
+    <figure class="card">
+      <div class="card-image">
+        {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-konstruktion.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-konstruktion.jpg" alt="Blick auf das Netzteil, die Steuerplatine und drei Motoren am Drucker" %}
+      </div>
+      <figcaption class="card-content">
+        <div class="content is-size-7 has-text-centered">Elektronik, Netzteil, Motoren und Display.</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
 
-### Präzision
-- **Delta-Kinematik**: Optimierte Berechnung der Bewegungsabläufe
-- **Schrittmotor-Treiber**: Hochauflösende Treiber für bessere Genauigkeit
-- **Kalibrierung**: Automatische Kalibrierung der Achsen
+### Höhe anpassen
 
-### Benutzerfreundlichkeit
-- **Touchscreen**: Intuitive Bedienung über Touchscreen
-- **WiFi-Anbindung**: Fernsteuerung über Netzwerk
-- **Filament-Überwachung**: Automatische Erkennung von Filament-Ende
+Für eine andere Höhe werden die Führungsstangen auf das gewünschte Maß gebracht und die Riemen angepasst. Anschließend wird die neue Größe in der Software eingetragen.
 
-## Konstruktionsdetails
+### Nachbau
 
-Der Drucker basiert auf der bewährten Delta-Konstruktion mit einigen eigenen Verbesserungen:
+Das Projekt war zum Zeitpunkt des Berichts abgeschlossen, wurde aber gelegentlich weiter verbessert. Die [Dateien zum Nachbau](https://www.thingiverse.com/thing:1634863/files) sind auf Thingiverse hinterlegt.
 
-- **Rahmen**: Aluminium-Profile für maximale Stabilität
-- **Bewegung**: Präzise Linearführungen
-- **Antrieb**: Schrittmotoren mit Mikroschritt-Treibern
-- **Düse**: Wechselbare Düsen für verschiedene Materialien
+Für den Bau werden auch gedruckte Teile benötigt. Diese lassen sich in einem befreundeten Makerspace drucken. Der Makerspace Partheland unterstützt beim Nachbau und hat bereits Delta-, Prusa- und CoreXY-Drucker gebaut.
 
-## Software
-
-Die Steuerung erfolgt über Marlin-Firmware mit angepassten Einstellungen für die Delta-Kinematik. Alle Sicherheitsfunktionen sind in der Firmware implementiert.
-
-## Fazit
-
-Der selbstgebaute Delta-3D-Drucker bietet nicht nur eine kostengünstige Alternative zu kommerziellen Modellen, sondern ermöglicht auch eine vollständige Kontrolle über alle Aspekte des Druckers. Die implementierten Sicherheitsverbesserungen machen ihn zu einem sicheren und zuverlässigen Werkzeug für den Makerspace.
+<div class="columns is-centered">
+  <div class="column is-two-thirds-desktop">
+    <figure class="card">
+      <div class="card-image">
+        {% include image-modal.html link="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-detail.webp" large_link="/assets/images/projekte/3d-druck-konstruktion/delta-drucker/delta-drucker-detail.jpg" alt="Druckkopf und Gestänge des Delta-Druckers über einem gelben, gedrehten Druckteil" %}
+      </div>
+      <figcaption class="card-content">
+        <div class="content is-size-7 has-text-centered">Druckkopf über dem Druckteil.</div>
+      </figcaption>
+    </figure>
+  </div>
+</div>
