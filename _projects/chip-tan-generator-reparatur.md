@@ -39,7 +39,7 @@ gallery:
 
 <picture>
             <source type="image/webp" srcset="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/head_1.webp">
-            <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/head_1.jpg" alt="Auf dem Display fehlen Teile der Zeichen." class="title-image" style="height: auto; aspect-ratio: 2 / 1; object-position: center top;">
+            <img src="/assets/images/projekte/reparatur-nachhaltigkeit/chip-tan-generator/head_1.jpg" alt="Auf dem Display fehlen Teile der Zeichen." class="title-image" style="object-fit: contain;">
           </picture>
 
 ## KOBIL Chip-TAN-Generator: Reparatur und USB-Umbau
