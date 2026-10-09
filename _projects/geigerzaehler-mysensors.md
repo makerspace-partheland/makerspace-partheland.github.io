@@ -55,7 +55,9 @@ Grundlagen zu Geiger-Müller-Zählrohren beschreibt die [japanischsprachige Seit
   </div>
 </div>
 
-> **Achtung: Hochspannung.** Die Schaltung arbeitet mit 400 V und kann auch deutlich höhere Spannungen erzeugen. Bei Inbetriebnahme und Betrieb ist deshalb Vorsicht erforderlich. Die angegebenen Bauteilwerte und insbesondere die Spannungsfestigkeit müssen eingehalten werden. Nur die Bauteile aus der Stückliste verwenden.
+<div class="notification is-danger">
+  <strong>Achtung: Hochspannung.</strong> Die Schaltung arbeitet mit 400 V und kann auch deutlich höhere Spannungen erzeugen. Bei Inbetriebnahme und Betrieb ist deshalb Vorsicht erforderlich. Die angegebenen Bauteilwerte und insbesondere die Spannungsfestigkeit müssen eingehalten werden. Nur die Bauteile aus der Stückliste verwenden.
+</div>
 
 ### Aufbau und Inbetriebnahme
 
