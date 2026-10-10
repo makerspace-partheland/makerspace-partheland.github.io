@@ -12,7 +12,7 @@ hero_link_text: Antrag stellen
 permalink: /mitglied-werden/
 ---
 
-<section class="section main-section">
+<section class="section main-section pt-0">
   <div class="container">
     
     <!-- Mitgliedsantrag Prozess -->

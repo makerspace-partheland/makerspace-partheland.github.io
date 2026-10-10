@@ -1,0 +1,22 @@
+{% unless page.url == '/' %}
+    {% assign breadcrumb_parts = page.url | split: '/' %}
+    {% assign breadcrumb_path = '' %}
+    <nav class="breadcrumb site-breadcrumbs" aria-label="Brotkrümelnavigation">
+        <ul>
+            <li><a href="{{ '/' | relative_url }}">Startseite</a></li>
+            {% for part in breadcrumb_parts %}
+                {% unless part == '' %}
+                    {% assign breadcrumb_path = breadcrumb_path | append: '/' | append: part %}
+                    {% assign breadcrumb_url = breadcrumb_path | append: '/' %}
+                    {% unless forloop.last %}
+                        {% assign breadcrumb_parent = site.pages | where: 'url', breadcrumb_url | first %}
+                        {% if breadcrumb_parent.title %}
+                            <li><a href="{{ breadcrumb_parent.url | relative_url }}">{{ breadcrumb_parent.title | escape }}</a></li>
+                        {% endif %}
+                    {% endunless %}
+                {% endunless %}
+            {% endfor %}
+            <li class="is-active"><span aria-current="page">{{ page.title | escape }}</span></li>
+        </ul>
+    </nav>
+{% endunless %}
