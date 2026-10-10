@@ -110,7 +110,7 @@ permalink: /verein/
               <div class="content body-text card-content-body">
                 <p><strong>Aktuell:</strong> Coworking Brandis</p>
                 <p><strong>Zukunft:</strong> Kulturhaus Beucha (nach Restaurierung)</p>
-                <p><strong>Philosophie:</strong> Aus Spaß an der Freude, ohne Zwang oder Druck</p>
+                <p><strong>Philosophie:</strong> Freude am Mitmachen, ohne Zwang oder Druck.</p>
               </div>
             </div>
           </a>
@@ -142,7 +142,7 @@ permalink: /verein/
             </h2>
             <div class="content body-text mb-2rem">
               <p class="is-size-5 mb-1rem">
-                Interesse geweckt? Wir freuen uns über neue Gesichter!
+                Wer sich einbringen möchte, ist bei uns willkommen.
               </p>
               <p class="is-size-6">
                 Ob als aktives oder förderndes Mitglied – jede Unterstützung hilft uns bei unserem gemeinnützigen Auftrag.
@@ -194,7 +194,7 @@ permalink: /verein/
               Vereinssatzung
             </h3>
             <div class="content body-text card-content-body mb-1-5rem">
-              <p class="is-size-7">Regelt wie der Makerspace funktioniert</p>
+              <p class="is-size-7">Regelt, wie der Makerspace funktioniert</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener"
                class="button is-small is-light is-rounded"
