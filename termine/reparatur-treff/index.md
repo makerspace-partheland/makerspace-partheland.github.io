@@ -10,7 +10,7 @@ hero_description: Ehrenamtliche unterstützen beim Analysieren und Reparieren de
 permalink: /termine/reparatur-treff/
 ---
 
-<section class="section main-section">
+<section class="section main-section pt-0">
   <div class="container">
     
     <!-- Konzept Card -->

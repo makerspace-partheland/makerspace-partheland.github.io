@@ -365,5 +365,44 @@ a.card.modern-card:active {
   margin: 0 0.5rem;
 }
 
+.site-breadcrumbs {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  --bulma-breadcrumb-item-color: var(--brand-blue);
+  --bulma-breadcrumb-item-hover-color: var(--brand-blue);
+}
+
+.site-breadcrumbs li {
+  min-width: 0;
+}
+
+.site-breadcrumbs a,
+.site-breadcrumbs [aria-current="page"] {
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.site-breadcrumbs a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-breadcrumbs a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.site-breadcrumbs a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.site-breadcrumbs [aria-current="page"] {
+  color: var(--bulma-text);
+  padding: var(--bulma-breadcrumb-item-padding-vertical) var(--bulma-breadcrumb-item-padding-horizontal);
+}
+
 /* === EVENT SYSTEM: Farben und Icons === */
 

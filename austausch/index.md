@@ -9,7 +9,7 @@ hero_show_subtitle: true
 permalink: /austausch/
 ---
 
-<section class="section main-section">
+<section class="section main-section pt-0">
   <div class="container">
     <div class="columns is-multiline is-centered">
       

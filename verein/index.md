@@ -12,7 +12,7 @@ hero_link_text: Mitglied werden
 permalink: /verein/
 ---
 
-<section class="section main-section">
+<section class="section main-section pt-0">
   <div class="container">
     
     <!-- Titelbild -->

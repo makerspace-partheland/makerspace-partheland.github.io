@@ -38,6 +38,7 @@
                         </div>
                     {% endif %}
                     <main class="column {{ content_width }}" id="main-content">
+                        {% include breadcrumbs.html %}
                         {% include tabs.html %}
                         {% include showcase.html %}
                         {{ content }}
