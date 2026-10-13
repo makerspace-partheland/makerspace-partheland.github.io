@@ -98,7 +98,7 @@ So bleibt der Helligkeitseindruck im Raum konstant und angenehm.
 
 Wird Regen erkannt oder der Luftdruck fällt stark, erfolgt eine Benachrichtigung zum Schließen offener Fenster oder Hereinholen von Wäsche und Geräten.
 
-Besonders praktisch bei wechselhaftem Wetter.
+Diese Warnung unterstützt das Handeln bei unbeständigem Wetter.
 
 **Benötigt:**
 
