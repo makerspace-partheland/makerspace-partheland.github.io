@@ -16,6 +16,20 @@
   color: var(--bulma-pre);
 }
 
+/* Inhaltslinks verwenden dieselbe Vereinsfarbe wie die Brotkrümelnavigation. */
+#main-content .content a:not(.button):not(.card) {
+  color: var(--brand-blue);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--brand-blue);
+  }
+
+  &:focus-visible {
+    outline-color: currentColor;
+  }
+}
+
 .button.is-success {
   color: white !important;  /* Explizit weißer Text für Vereinsgrün */
 }
