@@ -11,7 +11,7 @@
 
 /* Titles */
 .termine-section-title {
-  color: #2c3e50;
+  color: var(--bulma-text-strong);
   margin-bottom: 2rem;
 }
 
@@ -63,7 +63,7 @@
 
 /* Event Titles */
 .termine-event-title {
-  color: #2c3e50;
+  color: var(--bulma-text-strong);
   margin-bottom: 0.5rem;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .termine-event-title.past {
-  color: #34495e;
+  color: var(--bulma-text);
 }
 
 /* Event Dates */
@@ -83,13 +83,13 @@
 }
 
 .termine-event-date.past {
-  color: #5a6c7d;
+  color: var(--bulma-text);
   margin-bottom: 0.75rem;
 }
 
 /* Event Content */
 .termine-event-content {
-  color: #5a6c7d;
+  color: var(--bulma-text);
   line-height: 1.5;
 }
 
@@ -159,15 +159,15 @@
 
 /* Common Text Styles */
 .primary-title {
-  color: #2c3e50;
+  color: var(--bulma-text-strong);
 }
 
 .secondary-title {
-  color: #34495e;
+  color: var(--bulma-text);
 }
 
 .body-text {
-  color: #5a6c7d;
+  color: var(--bulma-text);
   line-height: 1.6;
 }
 
@@ -272,12 +272,12 @@
 }
 
 .process-step h3 {
-  color: #2c3e50;
+  color: var(--bulma-text-strong);
   margin-bottom: 1rem;
 }
 
 .process-step p {
-  color: #5a6c7d;
+  color: var(--bulma-text, #5a6c7d);
   line-height: 1.6;
 }
 
@@ -294,12 +294,12 @@
 }
 
 .membership-card-content h3 {
-  color: #2c3e50;
+  color: var(--bulma-text-strong);
   margin-bottom: 1rem;
 }
 
 .membership-card-content .content {
-  color: #5a6c7d;
+  color: var(--bulma-text);
   line-height: 1.6;
   flex-grow: 1;
 }
@@ -313,12 +313,12 @@
 }
 
 .membership-price {
-  color: #2c3e50;
+  color: var(--bulma-text-strong, #2c3e50);
   margin-bottom: 1rem;
 }
 
 .membership-note {
-  color: #34495e;
+  color: var(--bulma-text, #34495e);
 }
 
 /* === PROJECT INDEX STYLES === */
@@ -346,17 +346,17 @@
 }
 
 .callout-title {
-  color: #2c3e50;
+  color: var(--bulma-text-strong);
   margin-bottom: 1rem;
 }
 
 .callout-subtitle {
-  color: #34495e;
+  color: var(--bulma-text);
   margin-bottom: 1.5rem;
 }
 
 .callout-content {
-  color: #5a6c7d;
+  color: var(--bulma-text);
   line-height: 1.6;
 }
 

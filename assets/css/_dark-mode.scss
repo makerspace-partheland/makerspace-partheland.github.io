@@ -18,7 +18,6 @@
     --bulma-scheme-invert-ter: #e6edf3;
     
     /* Text-Farben */
-    --bulma-text: #e6edf3;
     --bulma-text-strong: #f0f6fc;
     --bulma-text-light: #7d8590;
     
@@ -41,11 +40,11 @@
   }
 
   .card.modern-card .subtitle {
-    color: var(--bulma-text) !important;
+    color: color-mix(in srgb, var(--bulma-text) 60%, var(--bulma-text-strong)) !important;
   }
 
   .card.modern-card .content {
-    color: var(--bulma-text-light) !important;
+    color: var(--bulma-text) !important;
   }
 
   .card.modern-card .card-content {

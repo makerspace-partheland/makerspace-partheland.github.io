@@ -127,7 +127,7 @@ permalink: /mitglied-werden/
                   <strong>Beitrag:</strong> Individuell verhandelt
                 </p>
                 <p class="is-size-7 membership-note">
-                  Beiträge werden mit Vorstand individuell festgelegt.
+                  Beiträge werden mit dem Vorstand individuell festgelegt.
                 </p>
               </div>
             </div>
@@ -144,15 +144,15 @@ permalink: /mitglied-werden/
       <div class="column is-4-desktop is-6-tablet is-12-mobile">
         <div class="card modern-card standard-card full-height">
           <div class="card-content standard-card-content centered">
-            <h3 class="title is-6 has-text-weight-bold primary-title mb-1rem">
+            <h3 class="title is-5 has-text-weight-bold primary-title mb-1rem">
               Vereinssatzung
             </h3>
             <div class="content body-text card-content-body mb-1-5rem">
-              <p class="is-size-7">Unsere Satzung regelt wie der Makerspace funktioniert und definiert Rechte und Pflichten der Mitglieder.</p>
+              <p>Unsere Satzung regelt, wie der Makerspace funktioniert, und definiert Rechte und Pflichten der Mitglieder.</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" 
                target="_blank" rel="noreferrer noopener"
-               class="button is-small is-primary is-rounded"
+               class="button is-primary is-rounded"
                aria-label="Satzung lesen (öffnet in neuem Tab)">
               Satzung lesen
             </a>
@@ -164,15 +164,15 @@ permalink: /mitglied-werden/
       <div class="column is-4-desktop is-6-tablet is-12-mobile">
         <div class="card modern-card standard-card full-height">
           <div class="card-content standard-card-content centered">
-            <h3 class="title is-6 has-text-weight-bold primary-title mb-1rem">
+            <h3 class="title is-5 has-text-weight-bold primary-title mb-1rem">
               Beitragsordnung
             </h3>
             <div class="content body-text card-content-body mb-1-5rem">
-              <p class="is-size-7">Aktuelle Mitgliedsbeiträge, Zahlungsmodalitäten und soziale Staffelung für alle Mitgliedschaftsarten.</p>
+              <p>Aktuelle Mitgliedsbeiträge, Zahlungsmodalitäten und soziale Staffelung für alle Mitgliedschaftsarten.</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Beitragsordnung%20-%20Makerspace%20Partheland%20e.V.pdf" 
                target="_blank" rel="noreferrer noopener"
-               class="button is-small is-primary is-rounded"
+               class="button is-primary is-rounded"
                aria-label="Beiträge ansehen (öffnet in neuem Tab)">
               Beiträge ansehen
             </a>
@@ -184,15 +184,15 @@ permalink: /mitglied-werden/
       <div class="column is-4-desktop is-12-tablet is-12-mobile">
         <div class="card modern-card standard-card full-height">
           <div class="card-content standard-card-content centered">
-            <h3 class="title is-6 has-text-weight-bold primary-title mb-1rem">
+            <h3 class="title is-5 has-text-weight-bold primary-title mb-1rem">
               Vereinsdokumente
             </h3>
             <div class="content body-text card-content-body mb-1-5rem">
-              <p class="is-size-7">Alle Vereinsdokumente, Sitzungsprotokolle und Transparenz-Informationen in unserem öffentlichen Repository.</p>
+              <p>Alle Vereinsdokumente, Sitzungsprotokolle und Transparenz-Informationen in unserem öffentlichen Repository.</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente" 
                target="_blank" rel="noreferrer noopener"
-               class="button is-small is-primary is-rounded"
+               class="button is-primary is-rounded"
                aria-label="GitHub Repository (öffnet in neuem Tab)">
               GitHub Repository
             </a>

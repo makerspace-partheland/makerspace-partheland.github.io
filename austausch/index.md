@@ -19,13 +19,10 @@ permalink: /austausch/
           <div class="card-content standard-card-content large centered">
             <div class="card-content-body">
               <h2 class="title is-3 has-text-weight-bold primary-title mb-1rem">
-                Täglich aktive Telegram-Kanäle
+                Telegram-Kanäle
               </h2>
-              <h3 class="subtitle is-5 has-text-weight-medium secondary-title mb-1-5rem">
-                Hier ist immer etwas los
-              </h3>
               <div class="content body-text mb-2rem">
-                <p>Täglich neue Ideen, Fragen und spannende Diskussionen in unseren Telegram-Kanälen.</p>
+                <p>In unseren Telegram-Kanälen werden täglich Ideen diskutiert und Fragen beantwortet.</p>
               </div>
             </div>
             <div class="buttons is-centered button-group column card-cta">
@@ -47,10 +44,8 @@ permalink: /austausch/
               <h2 class="title is-3 has-text-weight-bold primary-title mb-1rem">
                 Termine vor Ort
               </h2>
-              <h3 class="subtitle is-5 has-text-weight-medium secondary-title mb-1-5rem">
-                Ehrenamtlich & unregelmäßig
-              </h3>
               <div class="content body-text mb-2rem">
+                <p>Veranstaltungen finden unregelmäßig statt.</p>
                 {% assign upcoming = site.events | where_exp: "e", "e.date" | where_exp: "e", "e.date >= site.time" | sort: "date" %}
                 {% if upcoming and upcoming.size > 0 %}
                   <p><strong>Anstehende Termine:</strong></p>
@@ -64,7 +59,7 @@ permalink: /austausch/
                   </ul>
                 {% else %}
                   <p>Aktuell sind keine Termine geplant.</p>
-                  <p><em>Aber in unseren Telegram-Kanälen ist immer etwas los!</em></p>
+                  <p>Austausch ist auch außerhalb der Termine über Telegram möglich.</p>
                 {% endif %}
               </div>
             </div>
@@ -100,7 +95,7 @@ permalink: /austausch/
               <p><strong>E-Mail:</strong> {% include email.html user="info" domain="makerspace-partheland.de" %}</p>
               
               <p class="font-small">
-                Ehrenamtliche können über Telegram flexibler antworten und sich ihre Zeit frei einteilen.
+                Unser Verein arbeitet vollständig ehrenamtlich. Über Telegram können wir Anfragen zeitlich flexibel beantworten.
               </p>
             </div>
           </div>

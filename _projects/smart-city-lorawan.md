@@ -13,25 +13,25 @@ category: Smart City & IoT
 
 # LoRaWAN Netzwerk
 
-Wie kommen Messdaten von einer Wiese, einem Feld oder einem Kleingarten zu Dir nach Hause – ohne Internet oder Mobilfunk? Die Antwort heißt LoRaWAN. Diese Abkürzung steht für _Long Range Wide Area Network_, also ein Funknetz für große Entfernungen. Es wurde speziell entwickelt, um kleine Datenmengen extrem energiesparend über mehrere Kilometer zu übertragen.
+LoRaWAN übermittelt Messwerte von einer Wiese, einem Feld oder einem Kleingarten zu Dir nach Hause, ohne dass am Messstandort Internet oder Mobilfunk benötigt wird. Die Abkürzung steht für _Long Range Wide Area Network_, also ein Funknetz für große Entfernungen. Es wurde speziell entwickelt, um kleine Datenmengen extrem energiesparend über mehrere Kilometer zu übertragen.
 
 ## Batterie- und Solarbetrieb
 
-Stell Dir vor, ein Sensor läuft jahrelang mit einer einfachen Batterie. Mit LoRaWAN ist genau das möglich. Der Energieverbrauch ist so gering, dass Sensoren mit Batterien oder kleinen Solarzellen und Akkus über Jahre hinweg autark arbeiten können. Kein Stromanschluss nötig, keine laufenden Kosten für Mobilfunkverträge oder Internet. Die Datenübertragung läuft über das öffentliche LoRaWAN-Netzwerk – kostenlos.
+LoRaWAN ermöglicht es, Sensoren über lange Zeiträume mit einer simplen Batterie zu versorgen. Der Energieverbrauch ist so gering, dass Sensoren mit Batterien oder kleinen Solarzellen und Akkus über Jahre hinweg autark arbeiten können. Ein Stromanschluss entfällt. Laufende Ausgaben für Mobilfunkverträge oder Internet fallen nicht an. Die Datenübertragung über das öffentliche LoRaWAN-Netzwerk ist kostenlos.
 
-Du kannst Messstationen an Orten aufbauen, wo es weder Strom noch Internet gibt. In Kleingärten, auf Sportplätzen, an Badeseen, auf Grünflächen, Feldern, in Wäldern oder am Ortsrand. Überall dort, wo Du Daten brauchst, aber keine Infrastruktur hast.
+Du kannst Messstationen dort aufbauen, wo Du Daten brauchst, aber weder Strom noch Internet verfügbar sind: in Kleingärten, auf Sportplätzen, an Badeseen, auf Grünflächen, Feldern, in Wäldern oder am Ortsrand.
 
 ## Warum LoRaWAN statt WLAN, LTE oder 5G?
 
-LoRaWAN wurde für Sensornetzwerke konzipiert. Die Reichweite? Im Freien mehrere Kilometer – deutlich mehr als die paar hundert Meter, die WLAN schafft.
+LoRaWAN wurde für Sensornetzwerke konzipiert. Die Reichweite beträgt im Freien mehrere Kilometer, deutlich mehr als die paar hundert Meter, die WLAN schafft.
 
 Aber LoRaWAN hat auch klare Grenzen. Die Datenübertragung ist langsam und eignet sich nur für kleine Datenmengen: Temperatur, Luftfeuchtigkeit, Füllstände. Willst Du Kamerastreams übertragen, Sprache in Echtzeit senden oder häufige Updates? Dann brauchst Du WLAN, LTE oder 5G. Wände und Decken können das Funksignal abschwächen. Auch innerhalb von Gebäuden ist LoRaWAN nutzbar. Reicht der Empfang am vorgesehenen Standort nicht aus, kann ein Platz näher am Fenster oder eine geeignete Außenantenne helfen.
 
-Alle paar Minuten ein paar Messwerte von einem Sensor auf dem Feld? Genau dafür wurde es gemacht. An abgelegenen Orten ohne Strom- oder Internetanschluss.
+Zu diesem Zweck wurde LoRaWAN entworfen, um alle paar Minuten wenige Messwerte von einem Sensor auf dem Feld zu übertragen. Solche Übertragungen sind auch an abgelegenen Orten ohne Strom- oder Internetanschluss möglich.
 
 ## Funktionsweise
 
-Wie kommen die Daten vom Sensor zu Dir? Dafür braucht es sogenannte LoRa-Gateways. Stell Dir das wie einen Briefkasten vor: Befindet sich ein Sensor im Empfangsgebiet eines Gateways, empfängt dieses die Datenpakete über eine 30 bis 80 cm lange Stabantenne. Das Gateway ist mit dem Internet verbunden und leitet die Pakete weiter – fertig.
+Von dem Sensor aus werden die Daten über LoRa-Gateways an Dich übermittelt. Ein solches Gateway kann man sich wie einen Briefkasten vorstellen. Liegt ein Sensor im Empfangsbereich eines Gateways, nimmt dieses die Datenpakete über eine Stabantenne auf, deren Länge zwischen 30 und 80 cm liegt. Da das Gateway eine Internetverbindung besitzt, leitet es die empfangenen Pakete weiter.
 
 Die Datenpakete werden auf einer Frequenz zwischen 863 und 870 MHz gesendet. Diese Frequenz ist europaweit lizenzfrei nutzbar – jeder darf sie verwenden. Auch Alarmanlagen, Funktastaturen oder Garagentorfernbedienungen nutzen diesen Bereich, ohne sich gegenseitig zu stören.
 
@@ -69,10 +69,10 @@ Ist Dein Standort bereits abgedeckt? Prüfe die aktuelle Netzabdeckung im Parthe
     <div class="card modern-card standard-card full-height">
       <div class="card-content callout-card-content">
         <div class="callout-card-body">
-          <h2 class="title is-3 has-text-weight-bold has-text-centered callout-title">
+          <h2 class="title is-3 is-spaced has-text-weight-bold has-text-centered callout-title">
             Daten nutzen
           </h2>
-          <h3 class="subtitle is-5 has-text-weight-medium has-text-centered callout-subtitle">
+          <h3 class="subtitle is-5 mt-0 has-text-weight-medium has-text-centered callout-subtitle">
             Zugriff & Anwendung
           </h3>
           <div class="content has-text-centered callout-content">
@@ -92,12 +92,9 @@ Ist Dein Standort bereits abgedeckt? Prüfe die aktuelle Netzabdeckung im Parthe
     <div class="card modern-card standard-card full-height">
       <div class="card-content callout-card-content">
         <div class="callout-card-body">
-          <h2 class="title is-3 has-text-weight-bold has-text-centered callout-title">
+          <h2 class="title is-3 is-spaced has-text-weight-bold has-text-centered callout-title">
             Praxisbeispiele
           </h2>
-          <h3 class="subtitle is-5 has-text-weight-medium has-text-centered callout-subtitle">
-            Anwendungsbeispiele
-          </h3>
           <div class="content has-text-centered callout-content">
             <p>Detaillierte Anwendungsbeispiele mit echten Standorten aus dem Partheland.</p>
           </div>
@@ -115,12 +112,9 @@ Ist Dein Standort bereits abgedeckt? Prüfe die aktuelle Netzabdeckung im Parthe
     <div class="card modern-card standard-card full-height">
       <div class="card-content callout-card-content">
         <div class="callout-card-body">
-          <h2 class="title is-3 has-text-weight-bold has-text-centered callout-title">
-            Interesse geweckt?
-          </h2>
-          <h3 class="subtitle is-5 has-text-weight-medium has-text-centered callout-subtitle">
+          <h2 class="title is-3 is-spaced has-text-weight-bold has-text-centered callout-title">
             Kontakt & Austausch
-          </h3>
+          </h2>
           <div class="content has-text-centered callout-content">
             <p>Kontaktiere uns über unsere Telegram-Kanäle oder per E-Mail für Fragen, Ideen und Erfahrungsaustausch.</p>
           </div>
