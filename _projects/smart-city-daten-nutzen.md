@@ -49,7 +49,7 @@ Am einfachsten verschaffst Du Dir einen Überblick über unsere interaktive Kart
 
 Für detailliertere Auswertungen und längerfristige Datenverläufe gibt es unsere [Sensoren-Seite](https://sensoren.makerspace-partheland.de/). Hier kannst Du zum Beispiel sehen, wie sich die Temperatur oder der Feinstaubwert über Wochen oder Monate entwickelt hat.
 
-**Mobil unterwegs?** Die Partheland App (für [Android und iOS](https://partheland.de/2022/11/jetzt-gehts-app-im-partheland/)) zeigt die Sensordaten unter dem Menüpunkt "Umweltdaten" als Karte an. Die App wurde von den Partheland-Kommunen entwickelt und bildet eine zentrale Plattform für Verwaltungsangebote sowie Dienstleistungen der Region. So hast Du neben den Umweltdaten auch Zugriff auf aktuelle Informationen und Services der sieben Partheland-Kommunen, alles in einer App.
+Die Partheland App (für [Android und iOS](https://partheland.de/2022/11/jetzt-gehts-app-im-partheland/)) zeigt die Sensordaten unter dem Menüpunkt „Umweltdaten“ als Karte an. Die App wurde von den Partheland-Kommunen entwickelt. Sie bündelt Verwaltungsangebote und Dienstleistungen der Region sowie aktuelle Informationen und Services der sieben Partheland-Kommunen.
 
 Alle Stationen, die Teil des größeren openSenseMap-Netzwerks sind, findest Du zusätzlich auf [openSenseMap](https://opensensemap.org).
 
@@ -72,7 +72,7 @@ Die Verbindung läuft über `wss://mqtt.makerspace-partheland.de:443/mqtt`.
 
 ### Historische Daten über die REST-API
 
-**Was ist eine REST-API?** Stell Dir das wie eine Bibliothek vor: Du stellst eine Anfrage (z.B. "Gib mir die Temperaturdaten vom letzten Monat"), und die API liefert Dir die Daten zurück. Das funktioniert über normale Webadressen, perfekt für Webseiten, Apps oder Datenanalysen.
+**Was ist eine REST-API?** Stell Dir das wie eine Bibliothek vor: Du stellst eine Anfrage (z.B. "Gib mir die Temperaturdaten vom letzten Monat"), und die API liefert Dir die Daten zurück. Du greifst über herkömmliche Webadressen auf Informationen zu. Diese Daten lassen sich in Webseiten, Apps oder Datenanalysen einsetzen.
 
 Die Basis-URL lautet: `https://data.makerspace-partheland.de/`
 
@@ -87,13 +87,13 @@ Hier bekommst Du:
 
 ## Nutze die Daten in Deinem Smart Home
 
-Du hast ein Smart Home? Dann kannst Du die Sensordaten aus Deiner Region direkt einbinden. So erfährst Du, was die Stationen hier im Partheland messen, statt auf die Werte einer weit entfernten Wetterstation angewiesen zu sein.
+Du kannst die Sensordaten aus Deiner Region direkt in Dein Smart Home einbinden. So erfährst Du, was die Stationen hier im Partheland messen, statt auf die Werte einer weit entfernten Wetterstation angewiesen zu sein.
 
 ### Home Assistant
 
 Wir haben eine fertige Integration für Home Assistant entwickelt. Du findest sie in unserem [GitHub Repository](https://github.com/makerspace-partheland/smartcity-sensorbridge-partheland).
 
-**Was bringt Dir das?** Nach der Installation siehst Du lokale Umweltdaten direkt in Deinem Smart Home Dashboard. Die Integration legt für jede Messstation ein eigenes Gerät an, unter dem alle verfügbaren Sensoren aufgelistet werden. Die Daten aktualisieren sich in Echtzeit.
+Nach der Installation siehst Du lokale Umweltdaten direkt in Deinem Smart Home Dashboard. Die Integration legt für jede Messstation ein eigenes Gerät an, unter dem alle verfügbaren Sensoren aufgelistet werden. Die Daten aktualisieren sich in Echtzeit.
 
 ### ioBroker
 
@@ -124,7 +124,7 @@ Der Adapter legt für empfangene Topics Datenpunkte an. Die JSON-Nachrichten kan
 
 ### Praxisbeispiele aus dem Partheland
 
-Du willst konkrete Anwendungsfälle sehen? Auf unserer Seite [Praxisbeispiele](/projekte/smart-city/praxisbeispiele/) zeigen wir Dir, wie die Sensordaten in echten Szenarien genutzt werden. Dort findest Du auch Standorte und detaillierte Beschreibungen.
+Auf unserer Seite [Praxisbeispiele](/projekte/smart-city/praxisbeispiele/) zeigen wir Dir, wie die Sensordaten in echten Szenarien genutzt werden. Dort findest Du auch Standorte und detaillierte Beschreibungen.
 
 ---
 
