@@ -171,14 +171,14 @@ permalink: /verein/
       <div class="column is-4-desktop is-6-tablet is-12-mobile">
         <div class="card modern-card standard-card full-height">
           <div class="card-content standard-card-content centered">
-            <h3 class="title is-6 has-text-weight-bold primary-title mb-1rem">
+            <h3 class="title is-5 has-text-weight-bold primary-title mb-1rem">
               Vereinsdokumente
             </h3>
             <div class="content body-text card-content-body mb-1-5rem">
-              <p class="is-size-7">Satzung, Beitragsordnung und weitere Informationen</p>
+              <p>Satzung, Beitragsordnung und weitere Informationen</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente" target="_blank" rel="noreferrer noopener"
-               class="button is-small is-light is-rounded"
+               class="button is-primary is-rounded"
                aria-label="GitHub Repository (öffnet in neuem Tab)">
               GitHub Repository
             </a>
@@ -190,14 +190,14 @@ permalink: /verein/
       <div class="column is-4-desktop is-6-tablet is-12-mobile">
         <div class="card modern-card standard-card full-height">
           <div class="card-content standard-card-content centered">
-            <h3 class="title is-6 has-text-weight-bold primary-title mb-1rem">
+            <h3 class="title is-5 has-text-weight-bold primary-title mb-1rem">
               Vereinssatzung
             </h3>
             <div class="content body-text card-content-body mb-1-5rem">
-              <p class="is-size-7">Regelt, wie der Makerspace funktioniert</p>
+              <p>Regelt, wie der Makerspace funktioniert</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener"
-               class="button is-small is-light is-rounded"
+               class="button is-primary is-rounded"
                aria-label="Aktuelle Fassung der Satzung (öffnet in neuem Tab)">
               Aktuelle Fassung
             </a>
@@ -209,14 +209,14 @@ permalink: /verein/
       <div class="column is-4-desktop is-12-tablet is-12-mobile">
         <div class="card modern-card standard-card full-height">
           <div class="card-content standard-card-content centered">
-            <h3 class="title is-6 has-text-weight-bold primary-title mb-1rem">
+            <h3 class="title is-5 has-text-weight-bold primary-title mb-1rem">
               Beitragsordnung
             </h3>
             <div class="content body-text card-content-body mb-1-5rem">
-              <p class="is-size-7">Mitgliedsbeiträge und Abwicklung</p>
+              <p>Mitgliedsbeiträge und Abwicklung</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Beitragsordnung%20-%20Makerspace%20Partheland%20e.V.pdf" target="_blank" rel="noreferrer noopener"
-               class="button is-small is-light is-rounded"
+               class="button is-primary is-rounded"
                aria-label="Beiträge ansehen (öffnet in neuem Tab)">
               Beiträge ansehen
             </a>

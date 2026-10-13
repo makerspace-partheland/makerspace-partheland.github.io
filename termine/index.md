@@ -50,7 +50,7 @@ permalink: /termine/
           {% endif %}
             <div class="card-content termine-card-content">
               <div class="termine-card-body">
-                <h3 class="title is-5 has-text-weight-bold has-text-centered termine-event-title">
+                <h3 class="title is-5 is-spaced has-text-weight-bold has-text-centered termine-event-title">
                   <a href="{{ next_reparatur.url }}">{{ next_reparatur.title }}</a>
                 </h3>
                 <p class="subtitle is-6 has-text-weight-medium has-text-centered termine-event-date">
@@ -88,7 +88,7 @@ permalink: /termine/
           {% endif %}
             <div class="card-content termine-card-content">
               <div class="termine-card-body">
-                <h3 class="title is-5 has-text-weight-bold has-text-centered termine-event-title">
+                <h3 class="title is-5 is-spaced has-text-weight-bold has-text-centered termine-event-title">
                   <a href="{{ e.url }}">{{ e.title }}</a>
                 </h3>
                 {% if e.date %}
@@ -129,11 +129,11 @@ permalink: /termine/
           <div class="card modern-card termine-card past">
             <div class="card-content termine-card-content past">
               <div class="termine-card-body">
-                <h3 class="title is-6 has-text-weight-semibold has-text-centered termine-event-title past">
+                <h3 class="title is-5 is-spaced has-text-weight-bold has-text-centered termine-event-title past">
                   <a href="{{ e.url }}">{{ e.title }}</a>
                 </h3>
                 {% if e.date %}
-                  <p class="subtitle is-7 has-text-weight-medium has-text-centered termine-event-date past">
+                  <p class="subtitle is-6 has-text-weight-medium has-text-centered termine-event-date past">
                     {{ e.date | date: "%d.%m.%Y" }}{% if e.start_time %}, {{ e.start_time }}{% if e.end_time %} - {{ e.end_time }}{% endif %}{% endif %}
                   </p>
                 {% endif %}

@@ -17,7 +17,7 @@
 }
 
 /* Inhaltslinks verwenden dieselbe Vereinsfarbe wie die Brotkrümelnavigation. */
-#main-content .content a:not(.button):not(.card) {
+#main-content .content a:not(.button):not(.card):not(.termine-event-title a) {
   color: var(--brand-blue);
 
   &:hover,

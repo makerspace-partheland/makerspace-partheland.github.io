@@ -57,10 +57,10 @@ Erfahre mehr über das LoRaWAN-Netzwerk, Batterie- und Solarbetrieb sowie die Vo
     <div class="card modern-card standard-card full-height">
       <div class="card-content callout-card-content">
         <div class="callout-card-body">
-          <h2 class="title is-3 has-text-weight-bold has-text-centered callout-title">
+          <h2 class="title is-3 is-spaced has-text-weight-bold has-text-centered callout-title">
             LoRaWAN
           </h2>
-          <h3 class="subtitle is-5 has-text-weight-medium has-text-centered callout-subtitle">
+          <h3 class="subtitle is-5 mt-0 has-text-weight-medium has-text-centered callout-subtitle">
             Energieeffiziente Vernetzung
           </h3>
           <div class="content has-text-centered callout-content">
@@ -80,10 +80,10 @@ Erfahre mehr über das LoRaWAN-Netzwerk, Batterie- und Solarbetrieb sowie die Vo
     <div class="card modern-card standard-card full-height">
       <div class="card-content callout-card-content">
         <div class="callout-card-body">
-          <h2 class="title is-3 has-text-weight-bold has-text-centered callout-title">
+          <h2 class="title is-3 is-spaced has-text-weight-bold has-text-centered callout-title">
             Daten nutzen
           </h2>
-          <h3 class="subtitle is-5 has-text-weight-medium has-text-centered callout-subtitle">
+          <h3 class="subtitle is-5 mt-0 has-text-weight-medium has-text-centered callout-subtitle">
             Zugriff & Anwendung
           </h3>
           <div class="content has-text-centered callout-content">
@@ -103,10 +103,10 @@ Erfahre mehr über das LoRaWAN-Netzwerk, Batterie- und Solarbetrieb sowie die Vo
     <div class="card modern-card standard-card full-height">
       <div class="card-content callout-card-content">
         <div class="callout-card-body">
-          <h2 class="title is-3 has-text-weight-bold has-text-centered callout-title">
+          <h2 class="title is-3 is-spaced has-text-weight-bold has-text-centered callout-title">
             Interesse geweckt?
           </h2>
-          <h3 class="subtitle is-5 has-text-weight-medium has-text-centered callout-subtitle">
+          <h3 class="subtitle is-5 mt-0 has-text-weight-medium has-text-centered callout-subtitle">
             Kontakt & Austausch
           </h3>
           <div class="content has-text-centered callout-content">

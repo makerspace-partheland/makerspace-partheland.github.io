@@ -2,7 +2,6 @@ style: is-light
 height: is-medium
 items:
   - title: Austausch & Begegnung
-    subtitle: Für Neugierige und Interessierte
     description: >
       Unsere Telegram-Kanäle bieten täglichen Ideenaustausch.
       Reparatur-Treffs finden unregelmäßig und je nach Nachfrage statt.
@@ -11,15 +10,13 @@ items:
     call_to_action_name: Entdecken
     call_to_action_link: /austausch/
   - title: Smart City
-    subtitle: Umweltsensoren und Messnetzwerk
     description: >
-      Aufbau und Betrieb von Bürger-Umweltmessstationen im gesamten Partheland. 
+      Aufbau und Betrieb eines Messnetzes aus Bürger-Umweltmessstationen im gesamten Partheland.
       Mit LoRaWAN-Technologie erfassen wir Temperatur, Luftfeuchtigkeit, Feinstaub 
       und weitere Umweltdaten für unsere Region.
     call_to_action_name: Erkunden
     call_to_action_link: /projekte/smart-city/
   - title: Projekte
-    subtitle: Bastelprojekte und praktische Alltagshilfen
     description: >
       3D-Druck, Elektronik und Reparaturen: Im Makerspace entstehen eigene
       Konstruktionen und praktische Alltagshilfen.
