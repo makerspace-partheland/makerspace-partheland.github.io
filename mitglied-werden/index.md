@@ -127,7 +127,7 @@ permalink: /mitglied-werden/
                   <strong>Beitrag:</strong> Individuell verhandelt
                 </p>
                 <p class="is-size-7 membership-note">
-                  Beiträge werden mit Vorstand individuell festgelegt.
+                  Beiträge werden mit dem Vorstand individuell festgelegt.
                 </p>
               </div>
             </div>
@@ -148,7 +148,7 @@ permalink: /mitglied-werden/
               Vereinssatzung
             </h3>
             <div class="content body-text card-content-body mb-1-5rem">
-              <p class="is-size-7">Unsere Satzung regelt wie der Makerspace funktioniert und definiert Rechte und Pflichten der Mitglieder.</p>
+              <p class="is-size-7">Unsere Satzung regelt, wie der Makerspace funktioniert, und definiert Rechte und Pflichten der Mitglieder.</p>
             </div>
             <a href="https://github.com/makerspace-partheland/Vereinsdokumente/blob/f2fa5fe92b422313d272f059c50a4c5431a2f777/Satzung%20-%20Makerspace%20Partheland%20e.V.pdf" 
                target="_blank" rel="noreferrer noopener"

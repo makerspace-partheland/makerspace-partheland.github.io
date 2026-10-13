@@ -277,7 +277,7 @@
 }
 
 .process-step p {
-  color: #5a6c7d;
+  color: var(--bulma-text, #5a6c7d);
   line-height: 1.6;
 }
 
@@ -313,12 +313,12 @@
 }
 
 .membership-price {
-  color: #2c3e50;
+  color: var(--bulma-text-strong, #2c3e50);
   margin-bottom: 1rem;
 }
 
 .membership-note {
-  color: #34495e;
+  color: var(--bulma-text, #34495e);
 }
 
 /* === PROJECT INDEX STYLES === */
