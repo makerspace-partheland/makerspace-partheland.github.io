@@ -8,7 +8,12 @@ permalink: /termine/lora-lorawan-kommunen-2026-11-06/
 location: "Coworking Space Brandis, Markt 8, 04821 Brandis"
 ---
 
-**Ort:** Coworking Space Brandis, Markt 8, 04821 Brandis
+**Details**
+
+- **Datum:** Freitag, 6. November 2026
+- **Uhrzeit:** 10:00–13:00 Uhr
+- **Ort:** Coworking Space Brandis, Markt 8, 04821 Brandis
+- **Teilnahme:** Kostenlos, keine Anmeldung erforderlich
 
 Robert Bogs vom **IoT-Shop** berichtet über den praktischen Einsatz von LoRa und LoRaWAN in Kommunen und Gemeinden.
 
@@ -21,5 +26,3 @@ Er bringt verschiedene Sensoren und Anwendungsbeispiele mit und zeigt, welche L�
 - Erfahrungen aus bereits umgesetzten Projekten
 - Nutzen, Aufwand und Grenzen entsprechender Lösungen
 - Austausch über eigene Ideen und mögliche Anwendungen in unserer Region
-
-Die Teilnahme ist kostenlos und ohne Anmeldung möglich.
