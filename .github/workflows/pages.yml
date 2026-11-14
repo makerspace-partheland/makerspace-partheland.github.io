@@ -21,6 +21,26 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          check-latest: true
+      - name: npm-Version aus der Projektkonfiguration verwenden
+        run: |
+          set -euo pipefail
+          version=$(node -p "require('./package.json').devDependencies.npm")
+          [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          npm install --global --prefix "$RUNNER_TEMP/npm" --ignore-scripts --min-release-age=7 "npm@$version"
+          printf '%s\n' "$RUNNER_TEMP/npm/bin" >> "$GITHUB_PATH"
+      - name: JavaScript-Abhängigkeiten prüfen und Alpine.js bereitstellen
+        run: |
+          npm ci --ignore-scripts
+          npm audit --audit-level=high
+          npm audit signatures
+          npm run prepare-assets
+      - name: Bildskript prüfen
+        if: github.event_name == 'pull_request'
+        run: npm run check:images
       - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - name: Setup Ruby
         uses: ruby/setup-ruby@de492cf36cbab201753d720ce4f4e336cd688c94 # v1.336.0
@@ -35,6 +55,11 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --trace --destination ./_site
+      - name: Menü und Galerie im gebauten Seitenstand prüfen
+        if: github.event_name == 'pull_request'
+        run: |
+          npx --no-install playwright install --with-deps chromium
+          npm run check:browser
       - name: Upload artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
@@ -57,3 +82,55 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+
+  merge-dependabot:
+    needs: build
+    if: >-
+      github.event_name == 'pull_request' &&
+      github.actor == 'dependabot[bot]' &&
+      github.event.pull_request.user.login == 'dependabot[bot]' &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      github.event.pull_request.base.ref == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+      pull-requests: write
+      actions: write
+    concurrency:
+      group: dependabot-integration
+      queue: max
+      cancel-in-progress: false
+    steps:
+      # Kein Checkout und keine Ausführung von PR-Code mit Schreibrechten.
+      - name: Signierte Dependabot-Metadaten prüfen
+        id: metadata
+        uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98 # v3
+        with:
+          github-token: ${{ github.token }}
+      - name: Geprüftes Update übernehmen und Pages starten
+        if: >-
+          steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
+          steps.metadata.outputs.update-type == 'version-update:semver-minor'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          EXPECTED_SHA: ${{ github.event.pull_request.head.sha }}
+          EXPECTED_BASE: ${{ github.event.pull_request.base.sha }}
+        run: |
+          set -euo pipefail
+          files=$(gh pr diff "$PR_NUMBER" --name-only)
+          if [ -z "$files" ] || printf '%s\n' "$files" | grep -Evq '^(Gemfile(\.lock)?|package(-lock)?\.json|\.github/workflows/pages\.yml)$'; then
+            echo 'Das Update enthält Änderungen außerhalb der Abhängigkeitsdateien.'
+            exit 0
+          fi
+          test "$(gh pr view "$PR_NUMBER" --json headRefOid --jq .headRefOid)" = "$EXPECTED_SHA"
+          if [ "$(gh api "repos/$GH_REPO/git/ref/heads/main" --jq .object.sha)" != "$EXPECTED_BASE" ]; then
+            echo 'Die Basis hat sich geändert; das Update benötigt einen aktuellen PR-Build.'
+            exit 0
+          fi
+          gh pr merge "$PR_NUMBER" --squash --match-head-commit "$EXPECTED_SHA" \
+            --subject "Abhängigkeiten aktualisiert (#$PR_NUMBER)" --body ""
+          echo 'Update übernommen; Pages-Veröffentlichung wird angefordert.'
+          gh workflow run pages.yml --ref main

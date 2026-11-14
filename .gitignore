@@ -6,6 +6,9 @@ vendor/
 
 # Node.js
 node_modules/
+assets/js/alpine.min.js
+test-results/
+playwright-report/
 **/nul
 
 github-pages-fahrplan.md

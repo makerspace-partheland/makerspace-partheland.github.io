@@ -67,6 +67,10 @@ exclude:
   - package.json
   - package-lock.json
   - scripts/
+  - tests/
+  - playwright.config.cjs
+  - test-results/
+  - playwright-report/
   - README-WebP-Optimierung.md
   - nul
 

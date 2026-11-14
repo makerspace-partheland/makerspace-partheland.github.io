@@ -3,12 +3,20 @@
   "version": "1.0.0",
   "description": "Website für Makerspace Partheland e.V.",
   "scripts": {
+    "prepare-assets": "node scripts/prepare-assets.js",
     "optimize-images": "node scripts/optimize-images.js",
-    "build": "npm run optimize-images && bundle exec jekyll build",
-    "serve": "bundle exec jekyll serve"
+    "check:images": "node --test tests/image-tools.test.cjs",
+    "check:browser": "playwright test",
+    "build": "npm run prepare-assets && npm run optimize-images && bundle exec jekyll build",
+    "serve": "npm run prepare-assets && bundle exec jekyll serve"
+  },
+  "dependencies": {
+    "alpinejs": "3.17.5"
   },
   "devDependencies": {
+    "@playwright/test": "1.65.0",
     "glob": "^14.0.3",
+    "npm": "12.2.2",
     "sharp": "^0.35.5"
   },
   "keywords": [
