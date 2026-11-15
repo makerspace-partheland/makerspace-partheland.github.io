@@ -1,31 +1,76 @@
-name: Build & Deploy (Jekyll)
+name: Webseite prüfen und veröffentlichen
 
 on:
   push:
     branches: ["main"]
   pull_request:
+    types: [opened, synchronize, reopened, edited, ready_for_review]
     branches: ["*"]
   workflow_dispatch:
+    inputs:
+      candidate_run_id:
+        description: Erfolgreicher PR-Prüflauf für die unveränderte Webseite
+        type: string
+        default: ''
   schedule:
     - cron: "17 3 * * 1"
 
 permissions: {}
 
 jobs:
+  major:
+    name: Update prüfen
+    if: >-
+      github.event_name == 'pull_request' && github.actor == 'dependabot[bot]' &&
+      github.event.pull_request.user.login == 'dependabot[bot]' &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    permissions:
+      contents: read
+      pull-requests: write
+    uses: ./.github/workflows/major-policy.yml
+
   build:
+    needs: major
+    if: >-
+      always() && !cancelled() &&
+      (needs.major.result == 'success' || needs.major.result == 'skipped') &&
+      github.event.pull_request.draft != true && needs.major.outputs.defer != 'true'
+    name: Webseite prüfen
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
       contents: read
+      actions: read
     steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Quellcode laden
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Archivübernahme testen
+        run: python3 -B .github/test-pages-artifact.py
+      - name: Bereits geprüfte Webseite suchen
+        id: reusable
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE_RUN: ${{ inputs.candidate_run_id }}
+        run: python3 -B .github/pages-artifact.py resolve "$CANDIDATE_RUN"
+
+      - name: Geprüftes Seitenarchiv herunterladen
+        if: steps.reusable.outputs.reuse == 'true'
+        id: reuse-download
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 -B .github/pages-artifact.py download
+
+      - name: Node.js einrichten
+        if: steps.reusable.outputs.reuse != 'true'
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: '24'
+          node-version-file: .node-version
           check-latest: true
       - name: npm-Version aus der Projektkonfiguration verwenden
+        if: steps.reusable.outputs.reuse != 'true'
         run: |
           set -euo pipefail
           version=$(node -p "require('./package.json').devDependencies.npm")
@@ -33,39 +78,75 @@ jobs:
           npm install --global --prefix "$RUNNER_TEMP/npm" --ignore-scripts --min-release-age=7 "npm@$version"
           printf '%s\n' "$RUNNER_TEMP/npm/bin" >> "$GITHUB_PATH"
       - name: JavaScript-Abhängigkeiten prüfen und Alpine.js bereitstellen
+        if: steps.reusable.outputs.reuse != 'true'
         run: |
           npm ci --ignore-scripts
           npm audit --audit-level=high
           npm audit signatures
           npm run prepare-assets
       - name: Bildskript prüfen
-        if: github.event_name == 'pull_request'
+        if: steps.reusable.outputs.reuse != 'true'
         run: npm run check:images
-      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
-      - name: Setup Ruby
+      - name: Pages-Veröffentlichung vorbereiten
+        if: steps.reusable.outputs.reuse != 'true'
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+      - name: Ruby einrichten
+        if: steps.reusable.outputs.reuse != 'true'
         uses: ruby/setup-ruby@b3aaceaef7e0ee231b499e7b5f49c03fc1d32199 # v1.338.0
         with:
-          ruby-version: '3.4'
           bundler-cache: false
-      - name: Add Linux platform to lockfile
+      - name: Linux-Plattform im Lockfile ergänzen
+        if: steps.reusable.outputs.reuse != 'true'
         run: bundle lock --add-platform x86_64-linux
-      - name: Install dependencies
+      - name: Ruby-Pakete installieren
+        if: steps.reusable.outputs.reuse != 'true'
         run: bundle install --jobs 4 --retry 3
-      - name: Build site with Jekyll
+      - name: Webseite mit Jekyll erstellen
+        if: steps.reusable.outputs.reuse != 'true'
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --trace --destination ./_site
-      - name: Menü und Galerie im gebauten Seitenstand prüfen
-        if: github.event_name == 'pull_request'
+      - name: Menü und Galerie testen
+        if: steps.reusable.outputs.reuse != 'true'
         run: |
           npx --no-install playwright install --with-deps chromium
           npm run check:browser
-      - name: Upload artifact
+      - name: Webseite speichern
+        if: steps.reusable.outputs.reuse != 'true'
+        id: pages
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: ./_site
+      - name: Geprüftes Seitenarchiv für Pages bereitstellen
+        if: steps.reusable.outputs.reuse == 'true'
+        id: pages-reused
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          compression-level: 0
+          overwrite: true
+          retention-days: 1
+
+      - name: Quellstand und Artefakt-ID speichern
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAGES_WORKFLOW_SHA: ${{ github.workflow_sha }}
+          PAGES_ARTIFACT: ${{ steps.pages.outputs.artifact_id || steps.pages-reused.outputs.artifact-id }}
+          ORIGINAL_TEST_RUN: ${{ steps.reuse-download.outputs.test_run }}
+        run: python3 -B .github/pages-artifact.py record "$PAGES_ARTIFACT" "$ORIGINAL_TEST_RUN"
+
+      - name: Gebundenen Pages-Bericht speichern
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: pages-source-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/pages-source.json
+          overwrite: true
+          retention-days: 1
+
 
   deploy:
+    name: Webseite veröffentlichen
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
@@ -74,16 +155,28 @@ jobs:
       group: github-pages
       cancel-in-progress: false
     permissions:
+      contents: read
       pages: write
       id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
+      - name: Aktuellen Hauptbranch prüfen
+        id: current
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          current=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq .object.sha)
+          echo "publish=$([ "$current" = "$GITHUB_SHA" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+      - name: Webseite auf GitHub Pages veröffentlichen
+        if: steps.current.outputs.publish == 'true'
+        id: deployment
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
 
   merge-dependabot:
+    name: Update übernehmen
     needs: build
     if: >-
       github.event_name == 'pull_request' &&
@@ -103,12 +196,12 @@ jobs:
       cancel-in-progress: false
     steps:
       # Kein Checkout und keine Ausführung von PR-Code mit Schreibrechten.
-      - name: Signierte Dependabot-Metadaten prüfen
+      - name: Dependabot-PR auslesen
         id: metadata
         uses: dependabot/fetch-metadata@25dd0e34f4fe68f24cc83900b1fe3fe149efef98 # v3
         with:
           github-token: ${{ github.token }}
-      - name: Geprüftes Update übernehmen und Pages starten
+      - name: Update übernehmen und Webseite veröffentlichen
         if: >-
           steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
           steps.metadata.outputs.update-type == 'version-update:semver-minor'
@@ -130,7 +223,17 @@ jobs:
             echo 'Die Basis hat sich geändert; das Update benötigt einen aktuellen PR-Build.'
             exit 0
           fi
+          live=$(gh api "repos/$GH_REPO/pulls/$PR_NUMBER")
+          jq -e --arg sha "$EXPECTED_SHA" --arg base "$EXPECTED_BASE" --arg repo "$GH_REPO" \
+            '.state == "open" and .draft == false and .head.sha == $sha and .head.repo.full_name == $repo and .base.ref == "main" and .base.sha == $base' <<< "$live" > /dev/null
+          preview=$(jq -er .merge_commit_sha <<< "$live")
+          [[ "$preview" =~ ^[a-f0-9]{40}$ ]]
+          test "$(gh api "repos/$GH_REPO/commits/$preview" --jq .commit.tree.sha)" = "$(gh api "repos/$GH_REPO/commits/$EXPECTED_SHA" --jq .commit.tree.sha)"
           gh pr merge "$PR_NUMBER" --squash --match-head-commit "$EXPECTED_SHA" \
             --subject "Abhängigkeiten aktualisiert (#$PR_NUMBER)" --body ""
+          merged=$(gh pr view "$PR_NUMBER" --json mergeCommit --jq .mergeCommit.oid)
+          test "$(gh api "repos/$GH_REPO/git/ref/heads/main" --jq .object.sha)" = "$merged"
+          test "$(gh api "repos/$GH_REPO/commits/$merged" --jq .commit.verification.verified)" = true
+          test "$(gh api "repos/$GH_REPO/commits/$merged" --jq .commit.tree.sha)" = "$(gh api "repos/$GH_REPO/commits/$EXPECTED_SHA" --jq .commit.tree.sha)"
           echo 'Update übernommen; Pages-Veröffentlichung wird angefordert.'
-          gh workflow run pages.yml --ref main
+          gh workflow run pages.yml --ref main -f candidate_run_id="$GITHUB_RUN_ID"
