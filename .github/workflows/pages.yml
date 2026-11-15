@@ -147,7 +147,7 @@ jobs:
 
   deploy:
     name: Webseite veröffentlichen
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    if: always() && needs.build.result == 'success' && github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -179,6 +179,7 @@ jobs:
     name: Update übernehmen
     needs: build
     if: >-
+      always() && needs.build.result == 'success' &&
       github.event_name == 'pull_request' &&
       github.actor == 'dependabot[bot]' &&
       github.event.pull_request.user.login == 'dependabot[bot]' &&
@@ -242,6 +243,7 @@ jobs:
     name: Werkzeugupdate übernehmen
     needs: build
     if: >-
+      always() && needs.build.result == 'success' &&
       github.event_name == 'pull_request' &&
       github.actor == format('{0}[bot]', vars.NICLAS_UPDATER_APP_SLUG) &&
       github.event.pull_request.user.login == format('{0}[bot]', vars.NICLAS_UPDATER_APP_SLUG) &&
