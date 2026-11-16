@@ -215,7 +215,7 @@ jobs:
         run: |
           set -euo pipefail
           files=$(gh pr diff "$PR_NUMBER" --name-only)
-          if [ -z "$files" ] || printf '%s\n' "$files" | grep -Evq '^(Gemfile(\.lock)?|package(-lock)?\.json|\.github/workflows/pages\.yml)$'; then
+          if [ -z "$files" ] || printf '%s\n' "$files" | grep -Evq '^(Gemfile(\.lock)?|package(-lock)?\.json|\.github/workflows/(pages|major-policy)\.yml)$'; then
             echo 'Das Update enthält Änderungen außerhalb der Abhängigkeitsdateien.'
             exit 0
           fi
