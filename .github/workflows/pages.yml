@@ -47,6 +47,10 @@ jobs:
         with:
           persist-credentials: false
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Stabile npm-Versionen im Lockfile prüfen
+        run: |
+          jq -e 'all(.packages | to_entries[] | select(.key != ""); .value.version | test("^[0-9]+[.][0-9]+[.][0-9]+([+][0-9A-Za-z.-]+)?$"))' package-lock.json
+
       - name: Archivübernahme testen
         run: python3 -B .github/test-pages-artifact.py
       - name: Bereits geprüfte Webseite suchen
@@ -97,7 +101,9 @@ jobs:
           bundler-cache: false
       - name: Linux-Plattform im Lockfile ergänzen
         if: steps.reusable.outputs.reuse != 'true'
-        run: bundle lock --add-platform x86_64-linux
+        run: |
+          bundle lock --add-platform x86_64-linux
+          ruby -rbundler -e 'specs = Bundler::LockfileParser.new(File.read("Gemfile.lock")).specs; abort("Ruby-Vorabversionen: #{specs.select { |spec| spec.version.prerelease? }.map(&:full_name).join(", ")}") if specs.any? { |spec| spec.version.prerelease? }'
       - name: Ruby-Pakete installieren
         if: steps.reusable.outputs.reuse != 'true'
         run: bundle install --jobs 4 --retry 3
