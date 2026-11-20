@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@playwright/test": "1.65.0",
-    "glob": "^14.0.4",
+    "glob": "^14.0.6",
     "npm": "12.2.2",
     "sharp": "^0.35.5"
   },
