@@ -1,3 +1,5 @@
+import contextlib
+import io
 import importlib.util
 import os
 from pathlib import Path
@@ -39,5 +41,48 @@ class InventoryTests(unittest.TestCase):
         with patch.object(m,'api',side_effect=RuntimeError('permission denied')):
             with self.assertRaisesRegex(RuntimeError,'permission denied'):
                 m.affected('actions',['actions/checkout@7.0.1'])
+    def test_main_only_publishes_a_summary_of_public_sources(self):
+        versioned_finding = {'ghsa_id': 'GHSA-versioned', 'cve_id': 'CVE-2099-1234'}
+
+        def public_api(path):
+            if path == 'repos/upstream/validation/tags?per_page=100':
+                return []
+            if path.startswith('advisories?'):
+                if 'affects=actions%2Fcheckout%407.0.1&' in path:
+                    return [versioned_finding]
+            raise AssertionError(path)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            output_path = Path(tmp) / 'output'
+            summary_path = Path(tmp) / 'summary'
+            stdout = io.StringIO()
+            environment = {'GITHUB_REPOSITORY': 'example/project', 'GITHUB_OUTPUT': str(output_path),
+                           'GITHUB_STEP_SUMMARY': str(summary_path)}
+            references = [('actions/checkout', 'v7.0.1'), ('upstream/validation', 'main')]
+            kev = b'{"vulnerabilities":[{"cveID":"CVE-2099-1234"},{"cveID":"CVE-2099-4567"}]}'
+            with patch.dict(os.environ, environment), \
+                    patch.object(m, 'api', side_effect=public_api), \
+                    patch.object(m, 'action_references', return_value=references), \
+                    patch.object(m.Path, 'is_file', return_value=False), \
+                    patch.object(m.urllib.request, 'urlopen', return_value=io.BytesIO(kev)), \
+                    contextlib.redirect_stdout(stdout):
+                m.main()
+
+            self.assertEqual(stdout.getvalue(), '')
+            self.assertFalse(output_path.exists())
+            summary = summary_path.read_text()
+            self.assertIn('Öffentliche Sicherheitshinweise zu geprüften Versionen (1)', summary)
+            self.assertIn('Zugehörige CVE im CISA-Katalog (1)', summary)
+            self.assertIn('Action-Referenzen ohne eindeutige Versionszuordnung (1)', summary)
+            for detail in ('GHSA-', 'CVE-2099-', 'actions/checkout', 'upstream/validation'):
+                self.assertNotIn(detail, summary)
+
+            with patch.dict(os.environ, environment), \
+                    patch.object(m, 'api', side_effect=RuntimeError('Abruf fehlgeschlagen')), \
+                    patch.object(m, 'action_references', return_value=references):
+                with self.assertRaisesRegex(RuntimeError, 'Abruf fehlgeschlagen'):
+                    m.main()
+            self.assertEqual(summary_path.read_text(), summary)
+
 
 if __name__=='__main__':unittest.main()
