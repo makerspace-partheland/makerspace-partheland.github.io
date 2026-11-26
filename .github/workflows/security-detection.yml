@@ -1,0 +1,50 @@
+name: Sicherheit der Webseite prüfen
+
+'on':
+  schedule:
+    - cron: '38 5 * * *'
+      timezone: Europe/Berlin
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: security-detection
+  cancel-in-progress: false
+
+jobs:
+  alerts:
+    name: Abhängigkeitsmeldungen prüfen
+    if: github.server_url == 'https://github.com' && github.repository == 'makerspace-partheland/makerspace-partheland.github.io' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      vulnerability-alerts: read
+    steps:
+      - name: Quellcode laden
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Meldungen prüfen
+        env:
+          GH_SERVER_URL: ${{ github.server_url }}
+          GH_TOKEN: ${{ github.token }}
+        run: python3 -IB .github/website-security.py alerts
+
+  actions:
+    name: Öffentliche Action-Advisories prüfen
+    if: github.server_url == 'https://github.com' && github.repository == 'makerspace-partheland/makerspace-partheland.github.io' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Quellcode laden
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Öffentlichen Bericht erstellen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 -IB .github/website-security.py actions
